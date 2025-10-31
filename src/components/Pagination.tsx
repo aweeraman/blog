@@ -15,7 +15,7 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
       {currentPage > 1 && (
         <Link
           to={currentPage === 2 ? '/' : `/page/${currentPage - 1}`}
-          className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100"
+          className="px-4 py-2 border border-theme-border-primary rounded text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
           Previous
         </Link>
@@ -26,10 +26,10 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
           <Link
             key={page}
             to={page === 1 ? '/' : `/page/${page}`}
-            className={`px-4 py-2 border rounded ${
+            className={`px-4 py-2 border rounded transition-colors ${
               page === currentPage
-                ? 'bg-blue-600 text-white border-blue-600'
-                : 'border-gray-300 hover:bg-gray-100'
+                ? 'bg-theme-accent-primary text-white border-theme-accent-primary'
+                : 'border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-tertiary'
             }`}
           >
             {page}
@@ -40,7 +40,7 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
       {currentPage < totalPages && (
         <Link
           to={`/page/${currentPage + 1}`}
-          className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100"
+          className="px-4 py-2 border border-theme-border-primary rounded text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
           Next
         </Link>

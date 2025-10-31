@@ -14,8 +14,8 @@ export function Home() {
     <div className="min-h-screen bg-theme-bg-primary">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-theme-text-primary mb-2">My Blog</h1>
-          <p className="text-theme-text-tertiary">A simple blog built with React, TypeScript, and Vite</p>
+          <h1 className="text-4xl font-bold text-theme-text-primary mb-2">Anuradha Weeraman</h1>
+          <p className="text-theme-text-tertiary">A practitioner's views on computers, operating systems and technology</p>
         </header>
 
         <main>
