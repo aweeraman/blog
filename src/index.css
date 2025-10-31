@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Theme Color Variables
+ * Theme Configuration
  * Change these values to customize your site's appearance
  */
 @theme {
@@ -23,6 +23,11 @@
   /* Border colors */
   --color-theme-border-primary: #475569;
   --color-theme-border-secondary: #334155;
+
+  /* Font families - Change these to use different fonts */
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Custom styles for better paragraph spacing and dark theme prose */

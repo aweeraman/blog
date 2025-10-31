@@ -32,6 +32,13 @@ export default {
           },
         },
       },
+      fontFamily: {
+        // Font families - configured in src/index.css @theme section
+        // Change font stacks in index.css to use different fonts across the entire site
+        sans: ['var(--font-family-sans)'],
+        serif: ['var(--font-family-serif)'],
+        mono: ['var(--font-family-mono)'],
+      },
     },
   },
   plugins: [],
