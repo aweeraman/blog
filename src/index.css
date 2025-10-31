@@ -139,5 +139,13 @@ body {
 
 .prose img {
   margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Center align image captions (italic text following images) */
+.prose img + p,
+.prose p:has(> em:only-child) {
+  text-align: center;
+  margin-top: 0.5em;
   margin-bottom: 2em;
 }
