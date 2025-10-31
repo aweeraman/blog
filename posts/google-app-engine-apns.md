@@ -36,7 +36,9 @@ In, the add screen, enter any description and select the â€œPush Notificationsâ€
 
 Also, in the bundle ID section, remember to include an explicit fully qualified bundle Id in the reverse domain notation, as wild-cards are not supported for push notifications:
 
-![Bundle Id](/images/2024/03/0-osxwzpxvgnitej_v.png)** Create a new push certificate**
+![Bundle Id](/images/2024/03/0-osxwzpxvgnitej_v.png)
+
+**Create a new push certificate**
 Now, navigate to the certificates section, and create a new one. During creation, select the combo box as indicated below:
 
 ![Development certificate](/images/2024/03/0-ekfcscrq_ledhr6h.png)

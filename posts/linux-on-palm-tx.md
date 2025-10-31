@@ -21,16 +21,24 @@ For the impatient, here’s the list of steps to get you up and running:
 - Download the root image with your choice of environment
 
 [GPE](http://downloads.sourceforge.net/hackndev/gpe-image-v0.8.4-rc3-palmtx-0.0.2-rootfs.ext2.tar.gz?modtime=1155500677&big_mirror=0) — GTK+ widget toolkit/X Windows
-[Opie](http://downloads.sourceforge.net/hackndev/opie-image-v0.8.4-rc3-palmtx-0.0.2-rootfs.ext2.tar.gz?modtime=1155500677&big_mirror=0) — a fork of [Qtopia](http://trolltech.com/products/qtopia/index.html) developed by TrolltechThe links for the root images above are for version 0.8.4-RC3 of the [Familiar distribution](http://familiar.handhelds.org/) and are somewhat dated.- Copy the root image(s) to the SD card
+[Opie](http://downloads.sourceforge.net/hackndev/opie-image-v0.8.4-rc3-palmtx-0.0.2-rootfs.ext2.tar.gz?modtime=1155500677&big_mirror=0) — a fork of [Qtopia](http://trolltech.com/products/qtopia/index.html) developed by Trolltech
+
+The links for the root images above are for version 0.8.4-RC3 of the [Familiar distribution](http://familiar.handhelds.org/) and are somewhat dated.
+
+- Copy the root image(s) to the SD card
 
 - Create 32M swap file in SD card
 
 dd if=/dev/zero of=swap.fs bs=1k count=32k
-mkswap swap.fs- Edit *linux.boot.cfg* and uncomment the line with the root image that you wish to boot
+mkswap swap.fs
+
+- Edit *linux.boot.cfg* and uncomment the line with the root image that you wish to boot
 
 - Uncomment the following line
 
-SWAP_DEV=/media/mmc1/swap.fs- Unmount SD card, giving it ample time to flush its buffers
+SWAP_DEV=/media/mmc1/swap.fs
+
+- Unmount SD card, giving it ample time to flush its buffers
 
 - Pop the card in the Palm TX
 

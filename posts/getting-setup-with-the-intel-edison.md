@@ -58,11 +58,16 @@ Which will initiate a serial connection to the Edison at a baud rate of 115200. 
 
 ```
 Poky (Yocto Project Reference Distro) 1.6 edison ttyMFD2
-edison login: 
+edison login:
+```
 
 Enter 'root' for the login and you'll be dropped into a root shell on the Edison. By default it does not have a password. You may also notice that the first character that you type is lost in some occasions. This is due to the Edison being on low power mode at the time that causes the first character to be lost, before it spins up the device.
+
 One thing to note is that exiting a 'screen' session is not as straightforward as a telnet or ssh session. You will need to type CTRL-a followed by CTRL-\ to get a prompt to exit the session.
+
 Finally, to configure wifi on the Edison, run configure_edision --wifi command:
+
+```
 Configure Edison: WiFi Connection
 Scanning: 1 seconds left
 0 :     Rescan for networks
@@ -85,8 +90,12 @@ PING google.com (222.165.163.20): 56 data bytes
 1 packets transmitted, 1 packets received, 0% packet loss
 round-trip min/avg/max = 32.917/32.917/32.917 ms
 root@edison:~#
+```
 
 This allows you to ssh into your Edison over wifi using:
-ssh root@192.168.1.3
-And you're all set. Yocto comes preloaded with Node and gcc, so now you have in your hands a network enabled system on a chip for building that next great smart device.
+
 ```
+ssh root@192.168.1.3
+```
+
+And you're all set. Yocto comes preloaded with Node and gcc, so now you have in your hands a network enabled system on a chip for building that next great smart device.

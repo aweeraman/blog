@@ -30,6 +30,11 @@
   --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* Set default font to sans */
+body {
+  font-family: var(--font-family-sans);
+}
+
 /* Custom styles for better paragraph spacing and dark theme prose */
 .prose {
   color: var(--color-theme-text-secondary);

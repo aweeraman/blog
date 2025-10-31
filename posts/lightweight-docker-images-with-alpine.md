@@ -9,7 +9,11 @@ feature_image: "/images/2024/03/1-rijmo9q803d6uwxx8pmhoq-jpeg.jpg"
 One of the challenges in building Docker images, is keeping it small and lean. For example, let’s take a simple app that prints a simple message to the console, and containerize it in Docker. Here’s the code of the application in Go:
 
 ```go
-package mainimport "fmt"func main() {
+package main
+
+import "fmt"
+
+func main() {
  fmt.Println("lightweight docker go")
 }
 ```
@@ -54,9 +58,13 @@ For this, we can leverage multi-stage builds in Docker 17.05+, so that we can bu
 ```
 FROM golang:1.10 AS build-env
 COPY . /app
-RUN cd /app && go build -o hello hello.goFROM alpine
+RUN cd /app && go build -o hello hello.go
+
+FROM alpine
 WORKDIR /app
-COPY --from=build-env /app/hello /app/helloENTRYPOINT /app/hello
+COPY --from=build-env /app/hello /app/hello
+
+ENTRYPOINT /app/hello
 ```
 Here, you’d notice that we have two “FROM” directives. The first one will be used for the base image for building the application and the second one for the final image. The built binaries are copied over from the first image over to the second and the application entrypoint defined.
 
@@ -67,10 +75,14 @@ Additionally, you may want to run the application as a non-root user, to reduce 
 ```
 FROM golang:1.10 AS build-env
 COPY . /app
-RUN cd /app && go build -o hello hello.goFROM alpine
+RUN cd /app && go build -o hello hello.go
+
+FROM alpine
 WORKDIR /app
 COPY --from=build-env /app/hello /app/hello
 RUN chown nobody:nogroup /app
-USER nobodyENTRYPOINT /app/hello
+USER nobody
+
+ENTRYPOINT /app/hello
 ```
 The Github repo with the code above is available [here](https://github.com/aweeraman/lightweight-docker-go).

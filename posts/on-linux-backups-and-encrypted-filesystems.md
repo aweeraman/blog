@@ -76,8 +76,12 @@ In case someone finds it useful, here’s the “backup” script that I use to 
 if [ $EUID != 0 ]; then
  echo "Please run this script as root."
  exit 1
-fiMOUNT_DIR=/mnt
-BACKUP_DIR=/home/anuradhaecho "List of disks on /dev/sda"
+fi
+
+MOUNT_DIR=/mnt
+BACKUP_DIR=/home/anuradha
+
+echo "List of disks on /dev/sda"
 fdisk -l /dev/sda
 echo
 echo -n "Disk to backup to: "
@@ -85,7 +89,9 @@ read DISK
 if [ ! -e ${DISK} ]; then
  echo "Disk doesn't exist!"
  exit 1
-fimounts=$(mount | grep ${MOUNT_DIR} | wc -l)
+fi
+
+mounts=$(mount | grep ${MOUNT_DIR} | wc -l)
 if [ ${mounts} -ne "0" ]; then
  echo "Mount already in use, attempting to unmount..."
  umount ${MOUNT_DIR}
@@ -104,8 +110,12 @@ if [ -e /dev/mapper/backup ]; then
 fi
 echo "Mounting ${DISK}..."
 cryptsetup open ${DISK} backup
-mount -t ext4 /dev/mapper/backup ${MOUNT_DIR}echo "Syncing..."
-rsync -aAXv --delete ${BACKUP_DIR} ${MOUNT_DIR}/backupif [ $? == 0 ]; then
+mount -t ext4 /dev/mapper/backup ${MOUNT_DIR}
+
+echo "Syncing..."
+rsync -aAXv --delete ${BACKUP_DIR} ${MOUNT_DIR}/backup
+
+if [ $? == 0 ]; then
  echo "Backed up successfully!"
 else
  echo "Error during backup!"

@@ -17,16 +17,19 @@ Reinforcement Learning (RL) has been successfully used in the past by Google's D
 DeepMind went on to build a series of Alpha* projects that achieved many notable feats using RL:
 
 - ***AlphaGo***, defeated the world champion Lee Seedol in the game of Go
--***AlphaZero***, a generalized system that learned to play games such as Chess, Shogi and Go without human input
--***AlphaStar***, achieved high performance in the complex real-time strategy game StarCraft II.
--***AlphaFold***, a tool for predicting protein structures which significantly advanced computational biology.
--***AlphaCode***, a model designed to generate computer programs, performing competitively in coding challenges.
--***AlphaDev***, a system developed to discover novel algorithms, notably optimizing sorting algorithms beyond human-derived methods.
+- ***AlphaZero***, a generalized system that learned to play games such as Chess, Shogi and Go without human input
+- ***AlphaStar***, achieved high performance in the complex real-time strategy game StarCraft II.
+- ***AlphaFold***, a tool for predicting protein structures which significantly advanced computational biology.
+- ***AlphaCode***, a model designed to generate computer programs, performing competitively in coding challenges.
+- ***AlphaDev***, a system developed to discover novel algorithms, notably optimizing sorting algorithms beyond human-derived methods.
+
 All of these systems achieved mastery in its own area through self-training/self-play and by optimizing and maximizing the cumulative reward over time by interacting with its environment where intelligence was observed as an emergent property of the system.
 
 ![](/images/2025/02/image-6.png)
 
-The RL feedback loopRL mimics the process through which a baby would learn to walk, through trial, error and first principles.
+*The RL feedback loop*
+
+RL mimics the process through which a baby would learn to walk, through trial, error and first principles.
 
 ## R1 model training pipeline
 
@@ -34,7 +37,9 @@ At a technical level, DeepSeek-R1 leverages a combination of Reinforcement Learn
 
 ![](/images/2025/02/image-1.png)
 
-DeepSeek-R1 Model Training PipelineUsing RL and DeepSeek-v3, an interim reasoning model was built, called DeepSeek-R1-Zero, purely based on RL without relying on SFT, which demonstrated superior reasoning capabilities that matched the performance of OpenAI's o1 in certain benchmarks such as AIME 2024.
+*DeepSeek-R1 Model Training Pipeline*
+
+Using RL and DeepSeek-v3, an interim reasoning model was built, called DeepSeek-R1-Zero, purely based on RL without relying on SFT, which demonstrated superior reasoning capabilities that matched the performance of OpenAI's o1 in certain benchmarks such as AIME 2024.
 
 The model was however affected by poor readability and language-mixing and is only an interim-reasoning model built on RL principles and self-evolution.
 

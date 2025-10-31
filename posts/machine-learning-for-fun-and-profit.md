@@ -24,7 +24,11 @@ There are many such classification algorithms out there, each with it’s own st
 
 For this, you’re going to need [Python](https://www.python.org/) and [scikit-learn](http://scikit-learn.org/stable/index.html). I’ll assume you have Python setup already and have some working knowledge of the language, and if you don’t, [an hour is all you need](https://www.youtube.com/watch?v=oy4GOI9vn5M). I’ll assume Python 3+ for this exercise and for folks who would like to simplify their lives when using both Python 3+ and 2.7, do check out the [Anaconda distribution](https://www.continuum.io/anaconda-overview).
 
-To get started:pip3 install scikit-learn
+To get started:
+
+```
+pip3 install scikit-learn
+```
 
 Let us now build and train the classifier in 4 lines of Python code:
 
@@ -33,7 +37,11 @@ from sklearn import datasets, svm
 iris = datasets.load_iris()
 svm_classifier = svm.SVC(gamma=0.001)
 svm_classifier.fit(iris.data, iris.target)
-```** Line 1:** Import datasets and svm objects from the sklearn module** Line 2:** The scikit-learn package comes with the iris dataset built in, so a simple call to datasets.load_iris() pulls up the features that you saw in the table earlier.
+```
+
+**Line 1:** Import datasets and svm objects from the sklearn module
+
+**Line 2:** The scikit-learn package comes with the iris dataset built in, so a simple call to datasets.load_iris() pulls up the features that you saw in the table earlier.
 
 The data looks a little like this:
 
@@ -45,7 +53,11 @@ The data looks a little like this:
 [ 5. ,  3.6,  1.4,  0.2],
 ...
 ```
-This is a list of arrays with sepal and petal lengths and widths of the Iris flower.** Line 3:** This is where the appropriate classification algorithm is instantiated. Here we choose to instantiate the SVM algorithm. Each algorithm comes with it’s own set of tunables that can be used to tweak the functioning of the model and its accuracy.** Line 4:** This is where the training happens. We take the features from the data set and tell the classifier what each of them are supposed to be. The iris.target object contains an array of 150 elements that map to each of the arrays in the data set that tell the classifier the associated species of the flower.
+This is a list of arrays with sepal and petal lengths and widths of the Iris flower.
+
+**Line 3:** This is where the appropriate classification algorithm is instantiated. Here we choose to instantiate the SVM algorithm. Each algorithm comes with it’s own set of tunables that can be used to tweak the functioning of the model and its accuracy.
+
+**Line 4:** This is where the training happens. We take the features from the data set and tell the classifier what each of them are supposed to be. The iris.target object contains an array of 150 elements that map to each of the arrays in the data set that tell the classifier the associated species of the flower.
 
 ```
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
