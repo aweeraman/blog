@@ -39,6 +39,22 @@ export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((post) => post.slug === slug);
 }
 
+export function filterPosts(posts: Post[], searchQuery: string): Post[] {
+  if (!searchQuery || searchQuery.trim() === '') {
+    return posts;
+  }
+
+  const query = searchQuery.toLowerCase().trim();
+
+  return posts.filter((post) => {
+    const titleMatch = post.frontmatter.title.toLowerCase().includes(query);
+    const excerptMatch = post.frontmatter.excerpt?.toLowerCase().includes(query) || false;
+    const contentMatch = post.content.toLowerCase().includes(query);
+
+    return titleMatch || excerptMatch || contentMatch;
+  });
+}
+
 export function paginatePosts(posts: Post[], page: number, postsPerPage: number) {
   const startIndex = (page - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
