@@ -8,7 +8,7 @@ feature_image: "https://images.unsplash.com/photo-1567356270285-a001028c648d?cro
 
 If you’ve done anything in the Kubernetes space in recent years, you’ve most likely come across the words “Service Mesh”. It’s backed by a set of mature technologies that provides cross-cutting networking, security, infrastructure capabilities to be used by workloads running in Kubernetes in a manner that is transparent to the actual workload. This abstraction enables application developers to not worry about building in otherwise sophisticated capabilities for networking, routing, circuit-breaking and security, and simply rely on the services offered by the service mesh.
 
-In this post, I’ll be covering [Linkerd](https://linkerd.io/), which is an alternative to [Istio](https://weeraman.com/building-a-service-mesh-with-istio-be5ccce1bf98). It has gone through a significant re-write when it transitioned from the JVM to a **Go-based Control Plane** and a **Rust-based Data Plane** a few years back and is now a part of the CNCF and is backed by Buoyant. It has proven itself widely for use in production workloads and has a healthy community and release cadence.
+In this post, I’ll be covering [Linkerd](https://linkerd.io/), which is an alternative to [Istio](https://weeraman.com/building-a-service-mesh-with-istio-be5ccce1bf98). It has gone through a significant re-write when it transitioned from the JVM to a** Go-based Control Plane** and a** Rust-based Data Plane** a few years back and is now a part of the CNCF and is backed by Buoyant. It has proven itself widely for use in production workloads and has a healthy community and release cadence.
 
 It achieves this with a side-car container that communicates with a Linkerd control plane that allows central management of policy, telemetry, mutual TLS, traffic routing, shaping, retries, load balancing, circuit-breaking and other cross-cutting concerns before the traffic hits the container. This has made the task of implementing the application services much simpler as it is managed by container orchestrator and service mesh. I covered Istio in a prior post a few years back, and much of the content is still applicable for this post, [if you’d like to have a look](https://weeraman.com/building-a-service-mesh-with-istio-be5ccce1bf98).
 
@@ -18,13 +18,13 @@ Here are the broad architectural components of Linkerd:
 
 The components are separated into the control plane and the data plane.
 
-The **control plane components** live in its own namespace and consists of a **controller** that the Linkerd CLI interacts with via the Kubernetes API. The **destination service** is used for service discovery, TLS identity, policy on access control for inter-service communication and service profile information on routing, retries, timeouts. The **identity service** acts as the Certificate Authority which responds to Certificate Signing Requests (CSRs) from proxies for initialization and for service-to-service encrypted traffic. The **proxy injector** is an admission webhook that injects the Linkerd proxy side car and the init container automatically into a pod when the “linkerd.io/inject: enabled” is available on the namespace or workload.
+The** control plane components** live in its own namespace and consists of a** controller** that the Linkerd CLI interacts with via the Kubernetes API. The** destination service** is used for service discovery, TLS identity, policy on access control for inter-service communication and service profile information on routing, retries, timeouts. The** identity service** acts as the Certificate Authority which responds to Certificate Signing Requests (CSRs) from proxies for initialization and for service-to-service encrypted traffic. The** proxy injector** is an admission webhook that injects the Linkerd proxy side car and the init container automatically into a pod when the “linkerd.io/inject: enabled” is available on the namespace or workload.
 
-On the data plane side are two components. First, **the init container**, which is responsible for automatically forwarding incoming and outgoing traffic through the Linkerd proxy via iptables rules. Second, the **Linkerd proxy**, which is a lightweight micro-proxy written in Rust, is the data plane itself.
+On the data plane side are two components. First,** the init container**, which is responsible for automatically forwarding incoming and outgoing traffic through the Linkerd proxy via iptables rules. Second, the** Linkerd proxy**, which is a lightweight micro-proxy written in Rust, is the data plane itself.
 
 I will be walking you through the setup of Linkerd (2.12.2 at the time of writing) on a Kubernetes cluster.
 
-Let’s see what’s running on the cluster currently. This assumes you have a cluster running and **kubectl** is installed and available on the PATH.
+Let’s see what’s running on the cluster currently. This assumes you have a cluster running and** kubectl** is installed and available on the PATH.
 
 ```
 $ kubectl get pods -A
@@ -93,7 +93,7 @@ Linkerd core checks
 ```
 All the pre-requisites appear to be good right now, and so installation can proceed.
 
-The first step of the installation is to setup the Custom Resource Definitions (CRDs) that Linkerd requires. The linkerd cli only prints the resource YAMLs to standard output and does not create them directly in Kubernetes, so you would need to pipe the output to **kubectl apply **to create the resources in the cluster that you’re working with.
+The first step of the installation is to setup the Custom Resource Definitions (CRDs) that Linkerd requires. The linkerd cli only prints the resource YAMLs to standard output and does not create them directly in Kubernetes, so you would need to pipe the output to** kubectl apply** to create the resources in the cluster that you’re working with.
 
 ```
 $ linkerd install --crds | kubectl apply -f -
@@ -159,7 +159,7 @@ linkerd       linkerd-destination-67b9cc8749-xqcbx       4/4     Running   0    
 linkerd       linkerd-identity-59b46789cc-ntfcx          2/2     Running   0              69s
 linkerd       linkerd-proxy-injector-7fc85556bf-vnvw6    1/2     Running   0              69s
 ```
-The components are running in the new **linkerd namespace**.
+The components are running in the new** linkerd namespace**.
 
 To verify the setup, run a check:
 
@@ -291,7 +291,7 @@ linkerd-viz   tap-64f5c8597b-rqgbk                       2/2     Running   0    
 linkerd-viz   tap-injector-7c75cfff4c-wl9mx              2/2     Running   0              34s
 linkerd-viz   web-8c444745-jhzr5                         2/2     Running   0              34s
 ```
-The viz components live in the **linkerd-viz namespace**.
+The viz components live in the** linkerd-viz namespace**.
 
 You can now checkout the viz dashboard:
 
@@ -832,13 +832,13 @@ status:
   qosClass: Burstable
   startTime: "2022-11-05T19:44:15Z"
 ```
-At this point, the necessary components are setup for you to explore Linkerd further. You can also try out the **jaeger** and **multicluster** extensions, similar to the process of installing and using the viz extension and try out their capabilities.
+At this point, the necessary components are setup for you to explore Linkerd further. You can also try out the** jaeger** and** multicluster** extensions, similar to the process of installing and using the viz extension and try out their capabilities.
 
 #### Inject Linkerd data plane automatically
 
 In this approach, we shall we how to instruct Kubernetes to automatically inject the Linkerd data plane to workloads at deployment time.
 
-We can achieve this by adding the **linkerd.io/inject annotation** to the deployment descriptor which causes the proxy injector admission hook to execute and inject linkerd data plane components automatically at the time of deployment.
+We can achieve this by adding the** linkerd.io/inject annotation** to the deployment descriptor which causes the proxy injector admission hook to execute and inject linkerd data plane components automatically at the time of deployment.
 
 ```
 $ cat deploy.yaml 

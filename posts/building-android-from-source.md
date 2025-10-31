@@ -16,9 +16,7 @@ What you need:
 - A decent broadband connection (to download a significant portion of the internet)
 - Some time and patience
 - A healthy belief in the supernatural, and their inevitable involvement in the building of large complex codebases
-Everything you need to know about the process is [right here](http://source.android.com/source/index.html). Feel free to skimp through these docs first to get an overview of the entire process. What’s below is mostly a summary + a few things not explicitly mentioned that would stump the newbies.
-
-**Step 1**
+Everything you need to know about the process is [right here](http://source.android.com/source/index.html). Feel free to skimp through these docs first to get an overview of the entire process. What’s below is mostly a summary + a few things not explicitly mentioned that would stump the newbies.** Step 1**
 
 Prep your OS and install any dependencies. At the minimum you’re going to need java, python, C/C++, make, and git so make sure they’re installed using your favorite package manager. If you’re on Debian/Ubuntu, you’d run something similar to below:
 
@@ -27,16 +25,13 @@ sudo apt-get install openjdk-8-jdk git-core gnupg flex bison gperf build-essenti
 ```
 If you find that you need something else down the line that’s not mentioned above, be a man/woman, and just apt-get it. Also, your package names may vary depending on your choice of distribution.
 
-Run the commands manually to do a quick sanity test that things are installed properly.
-
-**Step 2**
+Run the commands manually to do a quick sanity test that things are installed properly.** Step 2**
 
 Linux may require some configuration to udev to allow non-root users to work with USB devices, which is going to be required later on, so execute this command:
 
 ```
-wget -S -O - http://source.android.com/source/51-android.rules | sed "s/&lt;username&gt;/$USER/" | sudo tee &gt;/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
-```
-**Step 3 (Optional)**
+wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
+```** Step 3 (Optional)**
 
 Setup ccache to get extract some performance out of the build, by putting the following into your .bashrc:
 
@@ -48,15 +43,14 @@ Set the cache size to 50G using the following:
 
 ```
 prebuilts/misc/linux-x86/ccache/ccache -M 50G
-```
-**Step 4**
+```** Step 4**
 
-The Android Open Source Project is a behemoth of a code base with multiple third party open source components and frameworks included such that it required its own layer on top of git just to manage the dependencies. That’s what **repo** is. On the positive side, it’s quite easy to get it working.
+The Android Open Source Project is a behemoth of a code base with multiple third party open source components and frameworks included such that it required its own layer on top of git just to manage the dependencies. That’s what** repo** is. On the positive side, it’s quite easy to get it working.
 
 Download the repo tool to your ~/bin directory as follows:
 
 ```
-$ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
 ```
 Make sure that ~/bin is in your $PATH. Type repo a few times and watch it barf in your face while saying:
@@ -86,13 +80,9 @@ This will download the internet. This will run for an inordinate amount of time.
 - watch the poles melt
 A rough approximation, and the internet is very divided on this topic, is that it will require anywhere from 12 to 15 GB which will automatically expand to around 34GB on disk after it’s downloaded. In my experience, I’ve only been awake till about the 13GB mark, so didn’t quite get to see the transformation to its final glory. Add 50GB for the ccache and with some room to spare and you see why you need a lot of disk space to go through this.
 
-Now you wait.
+Now you wait.** Step 5**
 
-**Step 5**
-
-In my case, I needed to run the build on my Nexus 5. The AOSP source tree doesn’t have everything you need to build images specifically for Nexus 5, so I had to go to [this link](https://developers.google.com/android/nexus/drivers), scroll down to Nexus 5 and download the Broadcom, LG and Qualcomm binary blobs for the hardware on the Nexus 5. Put them in the root of the Android source tree, and execute it, where it self extracts. This is a needed step if you want to run the image on the device later on.
-
-**Step 6**
+In my case, I needed to run the build on my Nexus 5. The AOSP source tree doesn’t have everything you need to build images specifically for Nexus 5, so I had to go to [this link](https://developers.google.com/android/nexus/drivers), scroll down to Nexus 5 and download the Broadcom, LG and Qualcomm binary blobs for the hardware on the Nexus 5. Put them in the root of the Android source tree, and execute it, where it self extracts. This is a needed step if you want to run the image on the device later on.** Step 6**
 
 Now comes the compilation step. This is actually the easiest part.
 
@@ -116,9 +106,7 @@ Things to do while this runs:
 - Read Game of Thrones (all the books)
 - Have a fabulous mid-life crisis
 - Watch Lawrence of Arabia
-To be fair, it’s not that bad, just a few hours depending on your setup.
-
-**Step 7**
+To be fair, it’s not that bad, just a few hours depending on your setup.** Step 7**
 
 Once the building is done, you will have a bunch of files under out/target/product/{device} which you can now start flashing.
 
@@ -134,8 +122,7 @@ This would wipe the data on the device. To further clean things up, execute the 
 ```
 fastboot format cache
 fastboot format userdata
-```
-**Step 8**
+```** Step 8**
 
 Navigate once again to the out/target/product/{device} directory and execute the following to flash the built images to the device:
 

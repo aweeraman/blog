@@ -8,7 +8,7 @@ feature_image: "/images/2024/03/photo-1645968092760-605b63706272.jpeg"
 
 UNIX has a colorful history that goes back many decades and the stories of how certain aspects of the operating system evolved or came to be, usually at the hands of one luminary or the other over a weekend, is now well documented in the lore of this sub-culture, and continues to kept alive and passed orally from generation to generation in the back alleys of Usenet and IRC. Some stories have also been known to surface on YouTube, every now and then.
 
-One of these stories is how Ken Thompson implemented ***grep***, based on the regular expressions implementation of ***ed*** — the canonical line editor. Similarly, many of the core utils of UNIX followed a similar pattern of genesis from a very practical need to do one thing, and do it well, which was the basis of its entire philosophy.
+One of these stories is how Ken Thompson implemented ***grep***, based on the regular expressions implementation of***ed*** — the canonical line editor. Similarly, many of the core utils of UNIX followed a similar pattern of genesis from a very practical need to do one thing, and do it well, which was the basis of its entire philosophy.
 
 Thus began the journey of many forks, implementations and blood lines of UNIX that live on to this day in the form of BSDs, Linux and commercial UNIX variants that shall not be named.
 

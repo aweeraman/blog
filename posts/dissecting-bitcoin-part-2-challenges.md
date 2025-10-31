@@ -31,11 +31,15 @@ Unlike traditional bank transactions, all Bitcoin transactions are in the public
 
 ![](/images/2024/03/1-jyengnfv8gthvlzjzarakq.png)
 
-Reference: Nakamoto, Satoshi. “Bitcoin: A Peer-to-Peer Electronic Cash System.” (2008).Here’s a transaction of 300 BTC between two parties:
+*Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
+
+Here's a transaction of 300 BTC between two parties:
 
 ![](/images/2024/03/1-7phxl0i9g3lkbhvkn6sh4g.png)
 
-Source: [https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339](https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339)Its not completely anonymous as most tend to believe. Exchanges already know a great deal of information about their users that they can link to known Bitcoin wallets. It would be possible for anyone to analyze the blockchain and start working out the transaction graph to monitor, correlate and infer the activity, and even tie it back to identities with the help of exchanges, law enforcement and even retailers. People who know what they’re doing will know enough to cover their tracks if they want to, but anonymity is an illusion for the casual user. Currencies like [Monero](https://getmonero.org/) and [zCash](https://z.cash/) are designed to protect information that can be used to trace individuals and transactions and provide stronger privacy protections than Bitcoin.
+*Source: [https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339](https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339)*
+
+Its not completely anonymous as most tend to believe. Exchanges already know a great deal of information about their users that they can link to known Bitcoin wallets. It would be possible for anyone to analyze the blockchain and start working out the transaction graph to monitor, correlate and infer the activity, and even tie it back to identities with the help of exchanges, law enforcement and even retailers. People who know what they're doing will know enough to cover their tracks if they want to, but anonymity is an illusion for the casual user. Currencies like [Monero](https://getmonero.org/) and [zCash](https://z.cash/) are designed to protect information that can be used to trace individuals and transactions and provide stronger privacy protections than Bitcoin.
 
 #### 51% problem
 

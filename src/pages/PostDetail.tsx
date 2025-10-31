@@ -1,10 +1,12 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getPostBySlug } from '../utils/posts';
+import { Header } from '../components/Header';
 
 export function PostDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
 
   if (!slug) {
     return <Navigate to="/" replace />;
@@ -16,12 +18,16 @@ export function PostDetail() {
     return (
       <div className="min-h-screen bg-theme-bg-primary">
         <div className="max-w-4xl mx-auto px-4 py-12">
+          <Header />
           <div className="text-center">
             <h1 className="text-4xl font-bold text-theme-text-primary mb-4">Post Not Found</h1>
             <p className="text-theme-text-secondary mb-6">The post you're looking for doesn't exist.</p>
-            <Link to="/" className="text-theme-accent-primary hover:text-theme-accent-hover underline">
-              Go back to home
-            </Link>
+            <button
+              onClick={() => navigate(-1)}
+              className="text-theme-accent-primary hover:text-theme-accent-hover underline cursor-pointer"
+            >
+              Go back
+            </button>
           </div>
         </div>
       </div>
@@ -38,9 +44,14 @@ export function PostDetail() {
   return (
     <div className="min-h-screen bg-theme-bg-primary">
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <Link to="/" className="text-theme-accent-primary hover:text-theme-accent-hover mb-8 inline-block">
+        <Header />
+
+        <button
+          onClick={() => navigate(-1)}
+          className="text-theme-accent-primary hover:text-theme-accent-hover mb-8 inline-block cursor-pointer"
+        >
           ← Back to all posts
-        </Link>
+        </button>
 
         <article className="bg-theme-bg-secondary rounded-lg shadow-lg shadow-black/20 overflow-hidden">
           <header className="p-8 pb-0">

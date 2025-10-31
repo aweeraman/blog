@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { getAllPosts, paginatePosts } from '../utils/posts';
 import { PostList } from '../components/PostList';
+import { Header } from '../components/Header';
 import { POSTS_PER_PAGE } from '../config';
 
 export function Home() {
@@ -13,10 +14,7 @@ export function Home() {
   return (
     <div className="min-h-screen bg-theme-bg-primary">
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-12">
-          <h1 className="text-4xl font-bold text-theme-text-primary mb-2">Anuradha Weeraman</h1>
-          <p className="text-theme-text-tertiary">A practitioner's views on computers, operating systems and technology</p>
-        </header>
+        <Header />
 
         <main>
           <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />

@@ -18,11 +18,13 @@ At its heart, the peer to peer system proposed by Satoshi Nakomoto is meant to a
 
 ![](/images/2024/03/1-d2odgp9ix6jlxai5noz08q.png)
 
-Reference: Nakamoto, Satoshi. “Bitcoin: A Peer-to-Peer Electronic Cash System.” (2008).At its foundation, the protocol relies on the following concepts.
+*Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
+
+At its foundation, the protocol relies on the following concepts.
 
 **Proof-of-Work**
 
-In this system where the base unit is a block of transactions, a new block is created approximately every ten minutes through a process known as mining and involves solving a [very difficult math problem](https://en.bitcoin.it/wiki/Proof_of_work) that requires considerable compute cycles but is very easy to verify once solved. For example, the string “Hello, world” hashes to the following using SHA256:
+In this system where the base unit is a block of transactions, a new block is created approximately every ten minutes through a process known as mining and involves solving a [very difficult math problem](https://en.bitcoin.it/wiki/Proof_of_work) that requires considerable compute cycles but is very easy to verify once solved. For example, the string "Hello, world" hashes to the following using SHA256:
 
 315f5bdb76d078c43b8ac0064e4a0164612b1fce77c869345bfc94c75894edd3
 
@@ -36,17 +38,13 @@ To further illustrate, here’s a simple Python script that demonstrates a simpl
 
 The key point here is that the problem is hard to solve, but easy to verify. As part of the mining process, each block is validated for consistency and correctness, and invalid blocks are simply discarded by the network as it makes its way. This provides the self regulatory framework in the network to circumvent malicious actors.
 
-Modifying a particular block requires completing the proof-of-work on each subsequent block and therefore gets increasingly difficult due to the proof of work that needs to be done.
-
-**Distributed Network**
+Modifying a particular block requires completing the proof-of-work on each subsequent block and therefore gets increasingly difficult due to the proof of work that needs to be done.** Distributed Network**
 
 Fundamentally, Bitcoin solves a distributed computing problem, and so requires a geographically distributed peer-to-peer network that doesn’t require trust, much like Bittorrent. Each node in the network has a copy of the entire block chain and is capable of computing the proof-of-work needed to create new blocks. When it finds a new block, it is broadcast to the network and it is verified by its peers and propagates across the network.
 
 As this network is completely decentralized, multiple versions of the blockchain can exist at any given time, but the network is designed to pick the longest chain from the different variants and so eventually gravitates to that.
 
-The network assumes no trust in its peers and validates each block for consistency and erroneous or malformed blocks are discarded.
-
-**Incentives**
+The network assumes no trust in its peers and validates each block for consistency and erroneous or malformed blocks are discarded.** Incentives**
 
 Mining is a critical part of the running Bitcoin network, and there are incentives in the protocol to make it worthwhile for miners to solve these computationally intensive problems that are required to keep the network in operation. Each mined block has a reward associated with it, so whoever wins the race to generate the correct block gets 50 Bitcoins. This number halves every 210,000 blocks.
 
@@ -54,8 +52,12 @@ As of today, the reward for mining a Bitcoin is 12.5 BTC.
 
 ![](/images/2024/03/1-deub_ulydlka735lwdj8ea.png)
 
-Source: [https://en.bitcoin.it/wiki/Controlled_supply](https://en.bitcoin.it/wiki/Controlled_supply)When mining is no longer possible, the miner who successfully generates a new block is also incentivized with transaction fees. This is the difference between the input and the output of a transaction.
+*Source: [https://en.bitcoin.it/wiki/Controlled_supply](https://en.bitcoin.it/wiki/Controlled_supply)*
+
+When mining is no longer possible, the miner who successfully generates a new block is also incentivized with transaction fees. This is the difference between the input and the output of a transaction.
 
 ![](/images/2024/03/1-ba8k-16cpqh8euhm7dqq8w.png)
 
-Reference: Nakamoto, Satoshi. “Bitcoin: A Peer-to-Peer Electronic Cash System.” (2008).Armed with this knowledge, [proceed to part 2](/dissecting-bitcoin-part-2-challenges) of this three part series on Dissecting Bitcoin that will cover some challenges in Bitcoin.
+*Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
+
+Armed with this knowledge, [proceed to part 2](/dissecting-bitcoin-part-2-challenges) of this three part series on Dissecting Bitcoin that will cover some challenges in Bitcoin.

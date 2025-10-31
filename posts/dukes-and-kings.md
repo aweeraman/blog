@@ -31,7 +31,7 @@ The flow of execution is controlled by arrows (v > < ^) in a two-dimensional spa
 #!/usr/bin/perl
 # Yet Another BF Interpreter
 #
-# (C) Anuradha Weeraman &lt;anuradha AT gnuromancer dot org&gt;
+# (C) Anuradha Weeraman <anuradha AT gnuromancer dot org>
 # Released under WTFPL
 #
 # This program is free software. It comes without any warranty, to
@@ -39,20 +39,20 @@ The flow of execution is controlled by arrows (v > < ^) in a two-dimensional spa
 # and/or modify it under the terms of the Do What The Fuck You Want
 # To Public License, Version 2, as published by Sam Hocevar. See
 # http://sam.zoy.org/wtfpl/COPYING for more details.sub next_token {
-    return substr ($cd, $ch_ptr, 1) if ($ch_ptr &lt; length($cd));
+    return substr ($cd, $ch_ptr, 1) if ($ch_ptr < length($cd));
 }sub prev_token {
-    return substr ($cd, $ch_ptr, 1) if ($ch_ptr &gt;= 0);}sub jump_ahead {
-    if ($cell[$cl_ptr] &lt;= 0) {$nesting = 1;
-        while ($ch_ptr &lt; length($cd)) {$ch_ptr++;
+    return substr ($cd, $ch_ptr, 1) if ($ch_ptr >= 0);}sub jump_ahead {
+    if ($cell[$cl_ptr] <= 0) {$nesting = 1;
+        while ($ch_ptr < length($cd)) {$ch_ptr++;
             $c = next_token;$nesting++ if ($c eq '[');
-            $nesting-- if ($c eq ']');last if ($nesting == 0 &amp;&amp; $c eq ']');
+            $nesting-- if ($c eq ']');last if ($nesting == 0 && $c eq ']');
         }}
 }sub jump_behind {
-    if ($cell[$cl_ptr] &gt; 0) {$nesting = 1;
-        while ($ch_ptr &gt;= 0) {
+    if ($cell[$cl_ptr] > 0) {$nesting = 1;
+        while ($ch_ptr >= 0) {
             $ch_ptr--;
             $c = prev_token;$nesting++ if ($c eq ']');
-            $nesting-- if ($c eq '[');last if ($nesting == 0 &amp;&amp; $c eq '[');
+            $nesting-- if ($c eq '[');last if ($nesting == 0 && $c eq '[');
         }}
 }sub fatal_error {
     $message = shift;
@@ -63,16 +63,16 @@ The flow of execution is controlled by arrows (v > < ^) in a two-dimensional spa
 usage if (! defined ($file));fatal_error "Specified file does not exist!"    if (! (-e $file));
 fatal_error "Specified file is not readable!"   if (! (-r $file));
 fatal_error "Specified file must be text-only!" if (! (-T $file));open (FILE, $file);
-$cd .= $_ while &lt;FILE&gt;;
+$cd .= $_ while <FILE>;
 close (FILE);while (1) {
     exit if ($ch_ptr == length($cd));
-    $ch = next_token;($ch eq '&gt;') &amp;&amp; $cl_ptr++;
-    ($ch eq '&lt;') &amp;&amp; $cl_ptr--;
-    ($ch eq '+') &amp;&amp; $cell[$cl_ptr]++;
-    ($ch eq '-') &amp;&amp; $cell[$cl_ptr]--;
-    ($ch eq '.') &amp;&amp; (($_ = chr($cell[$cl_ptr])) &amp;&amp; print);
-    ($ch eq ',') &amp;&amp; ($cell[$cl_ptr] = ord(getc(STDIN)));
-    ($ch eq '[') &amp;&amp; jump_ahead;
-    ($ch eq ']') &amp;&amp; jump_behind;$ch_ptr++;
+    $ch = next_token;($ch eq '>') && $cl_ptr++;
+    ($ch eq '<') && $cl_ptr--;
+    ($ch eq '+') && $cell[$cl_ptr]++;
+    ($ch eq '-') && $cell[$cl_ptr]--;
+    ($ch eq '.') && (($_ = chr($cell[$cl_ptr])) && print);
+    ($ch eq ',') && ($cell[$cl_ptr] = ord(getc(STDIN)));
+    ($ch eq '[') && jump_ahead;
+    ($ch eq ']') && jump_behind;$ch_ptr++;
 }
 ```

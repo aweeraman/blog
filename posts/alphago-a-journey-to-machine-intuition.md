@@ -30,7 +30,9 @@ The solution that AlphaGo provides, is a deep convolutional neural network that 
 
 ![](/images/2024/03/1-nf5xwsmfbsrgwx3nned-rg.png)
 
-Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)In the first stage of the training pipeline, a Supervised Learning (SL) policy network of 13 layers, is trained with 30 million positions from the KGS Go Server achieving an accuracy of 55.7% using only raw board positions and move history as inputs. This was an improvement over 44.4% which was the state-of-the-art at the time. This was however expensive to compute, so an additional less accurate but more performant fast rollout policy network was trained to achieve an accuracy of 24.2% and which was capable of executing in 2 microseconds as opposed to 3 milliseconds to select an action.
+*Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
+
+In the first stage of the training pipeline, a Supervised Learning (SL) policy network of 13 layers, is trained with 30 million positions from the KGS Go Server achieving an accuracy of 55.7% using only raw board positions and move history as inputs. This was an improvement over 44.4% which was the state-of-the-art at the time. This was however expensive to compute, so an additional less accurate but more performant fast rollout policy network was trained to achieve an accuracy of 24.2% and which was capable of executing in 2 microseconds as opposed to 3 milliseconds to select an action.
 
 In the second stage of the pipeline, a Reinforcement Learning (RL) policy network that is identical in structure to the SL policy network is initialized with the same weights. It is then made to play with a randomly selected previous iteration of the policy network with an attached reward function that is used to maximize the expected outcome. When the RL policy network is made to play against the SL policy network, the former won 80% of the time. It also played against an open source Go engine, [Pachi](http://pachi.or.cz/), that is based on MCTS and which executes 100,000 simulations per move. AlphaGo won 85% of the games against Pachi. The previous state of the art was only capable of winning 11% of the games with Pachi, for comparison.
 
@@ -40,13 +42,12 @@ The policy and value networks are then combined in an MCTS algorithm that search
 
 ![](/images/2024/03/1-f8f3v6pidj7lnuxh7icyzg.png)
 
-Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)**Selection **— selecting an edge with the maximum action value and stored prior probability for that edge
+*Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
 
-**Expansion** — leaf node is expanded and processed by the policy network and stored as prior probabilities for each action
-
-**Evaluation **— the leaf node is then evaluated using the value network and by rolling out to the end of the game using the fast rollout policy
-
-**Backup** — action values are updated for the already run evaluations
+- **Selection** — selecting an edge with the maximum action value and stored prior probability for that edge
+- **Expansion** — leaf node is expanded and processed by the policy network and stored as prior probabilities for each action
+- **Evaluation** — the leaf node is then evaluated using the value network and by rolling out to the end of the game using the fast rollout policy
+- **Backup** — action values are updated for the already run evaluations
 
 A great deal of computation power is required to efficiently combine MCTS and deep neural networks. To achieve this scale, AlphaGo finally used a distributed system of 48 CPUs, 8 GPUs, 40 search threads to perform an asynchronous multi-threaded search of simulations.
 
@@ -56,7 +57,9 @@ AlphaGo was made to compete against several other Go engines, both free and comm
 
 ![](/images/2024/03/1-id685dexnti2231akxuwqa.png)
 
-Comparison of AlphaGo vs Free and commercial Go programs. Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)It was then sparred with Fan Hui, a 2 dan professional and European champion which AlphaGo won 5–0. This was the first time that AlphaGo won against a human professional.
+Comparison of AlphaGo vs Free and commercial Go programs. Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)
+
+It was then sparred with Fan Hui, a 2 dan professional and European champion which AlphaGo won 5–0. This was the first time that AlphaGo won against a human professional.
 
 During 9–15 March 2016, [AlphaGo played against Lee Sedol](https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol) in a competition of 5 matches and won the tournament 4–1, and was awarded an honorary 9 dan for its efforts.
 

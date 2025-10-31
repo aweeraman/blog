@@ -45,9 +45,9 @@ Next, mount the myriad of virtual filesystems and chroot into the rootfs:
 Setup /etc/crypttab with the encrypted partitions:
 
 ```
-cryptroot UUID=&lt;UUID&gt; none cipher=aes-xts-plain64,size=256,hash=sha1
-crypthome UUID=&lt;UUID&gt; none cipher=aes-xts-plain64,size=256,hash=sha1
-cryptswap UUID=&lt;UUID&gt; /dev/urandom swap,offset=1024,cipher=aes-xts-plain64,size=512
+cryptroot UUID=<UUID> none cipher=aes-xts-plain64,size=256,hash=sha1
+crypthome UUID=<UUID> none cipher=aes-xts-plain64,size=256,hash=sha1
+cryptswap UUID=<UUID> /dev/urandom swap,offset=1024,cipher=aes-xts-plain64,size=512
 ```
 Configure /etc/fstab:
 

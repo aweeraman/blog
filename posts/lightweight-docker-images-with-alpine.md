@@ -18,7 +18,7 @@ To containerize this, we have the following Dockerfile:
 ```
 FROM golang:1.10
 COPY . /app
-RUN cd /app &amp;&amp; go build -o hello hello.go
+RUN cd /app && go build -o hello hello.go
 ENTRYPOINT /app/hello
 ```
 Let’s build and run this Docker image:
@@ -27,16 +27,16 @@ Let’s build and run this Docker image:
 $ docker build -t lightweight-docker-go .
 Sending build context to Docker daemon  3.072kB
 Step 1/4 : FROM golang:1.10
- ---&gt; 9257089f13de
+ ---> 9257089f13de
 Step 2/4 : COPY . /app
- ---&gt; Using cache
- ---&gt; cc89ebc2e4e0
-Step 3/4 : RUN cd /app &amp;&amp; go build -o hello hello.go
- ---&gt; Using cache
- ---&gt; a2458fdd22f9
+ ---> Using cache
+ ---> cc89ebc2e4e0
+Step 3/4 : RUN cd /app && go build -o hello hello.go
+ ---> Using cache
+ ---> a2458fdd22f9
 Step 4/4 : ENTRYPOINT /app/hello
- ---&gt; Using cache
- ---&gt; 836d07d36a8f
+ ---> Using cache
+ ---> 836d07d36a8f
 Successfully built 836d07d36a8f
 Successfully tagged lightweight-docker-go:latest$ docker images | grep lightweight-docker-go
 lightweight-docker-go  latest  836d07d36a8f  7 minutes ago  796MB
@@ -54,7 +54,7 @@ For this, we can leverage multi-stage builds in Docker 17.05+, so that we can bu
 ```
 FROM golang:1.10 AS build-env
 COPY . /app
-RUN cd /app &amp;&amp; go build -o hello hello.goFROM alpine
+RUN cd /app && go build -o hello hello.goFROM alpine
 WORKDIR /app
 COPY --from=build-env /app/hello /app/helloENTRYPOINT /app/hello
 ```
@@ -67,7 +67,7 @@ Additionally, you may want to run the application as a non-root user, to reduce 
 ```
 FROM golang:1.10 AS build-env
 COPY . /app
-RUN cd /app &amp;&amp; go build -o hello hello.goFROM alpine
+RUN cd /app && go build -o hello hello.goFROM alpine
 WORKDIR /app
 COPY --from=build-env /app/hello /app/hello
 RUN chown nobody:nogroup /app

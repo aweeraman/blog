@@ -73,7 +73,7 @@ Enter 0 to rescan for networks.
 Enter 1 to input a hidden network SSID.
 Enter a number between 2 to 3 to choose one of the listed network SSIDs: 3
 Is ninsei correct? [Y or N]: y
-What is the network password?: ********
+What is the network password?:********
 Initiating connection to ninsei...
 Done. Network access should be available shortly, please check 'wpa_cli status'.
 Connected. Please go to 192.168.1.3 in your browser to check if this is correct.

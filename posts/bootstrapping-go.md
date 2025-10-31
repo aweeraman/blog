@@ -27,8 +27,4 @@ A caveat is that the C parser from step 1 is a very specialized one built accord
 
 Once converted to Go, the process of refactoring, profiling and restructuring can take place to evolve the code base using the Go toolchain.
 
-And that’s how it’s done, folks.
-
-Lightweight Docker images with AlpineOne of the challenges in building Docker images, is keeping it small and lean. For example, let’s take a simple app…
-
-![](/images/2024/03/1-rijmo9q803d6uwxx8pmhoq-jpeg-1.jpg)
+And that's how it's done, folks.

@@ -17,11 +17,11 @@ Reinforcement Learning (RL) has been successfully used in the past by Google's D
 DeepMind went on to build a series of Alpha* projects that achieved many notable feats using RL:
 
 - ***AlphaGo***, defeated the world champion Lee Seedol in the game of Go
-- ***AlphaZero***, a generalized system that learned to play games such as Chess, Shogi and Go without human input
-- ***AlphaStar***, achieved high performance in the complex real-time strategy game StarCraft II.
-- ***AlphaFold***, a tool for predicting protein structures which significantly advanced computational biology.
-- ***AlphaCode***, a model designed to generate computer programs, performing competitively in coding challenges.
-- ***AlphaDev***, a system developed to discover novel algorithms, notably optimizing sorting algorithms beyond human-derived methods.
+-***AlphaZero***, a generalized system that learned to play games such as Chess, Shogi and Go without human input
+-***AlphaStar***, achieved high performance in the complex real-time strategy game StarCraft II.
+-***AlphaFold***, a tool for predicting protein structures which significantly advanced computational biology.
+-***AlphaCode***, a model designed to generate computer programs, performing competitively in coding challenges.
+-***AlphaDev***, a system developed to discover novel algorithms, notably optimizing sorting algorithms beyond human-derived methods.
 All of these systems achieved mastery in its own area through self-training/self-play and by optimizing and maximizing the cumulative reward over time by interacting with its environment where intelligence was observed as an emergent property of the system.
 
 ![](/images/2025/02/image-6.png)

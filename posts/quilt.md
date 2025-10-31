@@ -14,7 +14,7 @@ If you take something like the kernel sources, you would eventually need to appl
 
 Here’s how you would use quilt to simplify this madness.
 
-Simply make a **patches/** directory inside your kernel source tree, and dump all your patches in it. Create a **patches/series** file and list all your patches in the order that it should be applied. Once you’re done, back from the root of the kernel source tree, type ‘**quilt push -a**’. If everything applies cleanly you’re good to go. To see which patches have been applied ‘**quilt applied**’. To revert the last patch, ‘**quilt pop**’. To revert everything ‘**quilt pop -a**’. It’s really that simple. Quilt takes a stack oriented approach to patching which is extremely intuitive.
+Simply make a** patches/** directory inside your kernel source tree, and dump all your patches in it. Create a** patches/series** file and list all your patches in the order that it should be applied. Once you’re done, back from the root of the kernel source tree, type ‘**quilt push -a**’. If everything applies cleanly you’re good to go. To see which patches have been applied ‘**quilt applied**’. To revert the last patch, ‘**quilt pop**’. To revert everything ‘**quilt pop -a**’. It’s really that simple. Quilt takes a stack oriented approach to patching which is extremely intuitive.
 
 The patches can be kept elsewhere and symlinked from within the patches folder. That way you can maintain multiple kernel trees with different patchsets and a common repository with all your patches for easy maintenance.
 

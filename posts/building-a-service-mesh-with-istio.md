@@ -10,13 +10,17 @@ If you’re looking to build a modern microservices architecture that is highly 
 
 ![](/images/2024/03/service-mesh.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)For those new to the subject, a service mesh is a layer of infrastructure between a service and a network that frees the developers from network and policy considerations and provides operators with controls for monitoring, policy enforcement, networking and resiliency concerns.
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+For those new to the subject, a service mesh is a layer of infrastructure between a service and a network that frees the developers from network and policy considerations and provides operators with controls for monitoring, policy enforcement, networking and resiliency concerns.
 
 It does so by taking the existing pattern of the central reverse proxy that sits in front of a large number of services, and colocates a lighter variant of it with each individual service. In addition to being a reverse proxy, this “sidecar” proxy (so named due to the fact that it sits alongside each service in a tightly bound configuration), is able to perform traffic routing, inter-service communication, policy enforcement, throttling and a myriad of other capabilities that make this pattern very powerful.
 
 ![](/images/2024/03/1-w944xb2kpc2ninvpzjmcxq.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)All communication in and out of the service is mediated through the sidecar, which is now capable of performing a number of cross cutting capabilities that both free up the developer from networking aspects, and empower the operators to uniformly apply capabilities that concern them.
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+All communication in and out of the service is mediated through the sidecar, which is now capable of performing a number of cross cutting capabilities that both free up the developer from networking aspects, and empower the operators to uniformly apply capabilities that concern them.
 
 Istio builds upon a battle tested sidecar known as Envoy, developed and used in production at [Lyft](https://www.lyft.com/) for many years. Built using C++, it has a low memory footprint and supports dynamic configuration updates, zone aware load balancing, traffic splitting, routing, circuit breakers, timeouts, retries, fault injection, HTTP/2, gRPC and orchestrated across the network by a “Pilot”.
 
@@ -26,19 +30,27 @@ Each Envoy publishes metrics to a “Mixer”, which has adapters for popular mo
 
 ![](/images/2024/03/1-d3v53ldxktbknch1qb1dja.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)The Envoy, being both a Layer 4 and Layer 7 reverse proxy, is capable of performing complex traffic control based on rules pushed by the operators and can be made to take effect immediately without a restart. This makes the infrastructure extremely nimble for the operations team. For example, below is an example of how 1% of the traffic can be routed to an alternate route for A/B testing:
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+The Envoy, being both a Layer 4 and Layer 7 reverse proxy, is capable of performing complex traffic control based on rules pushed by the operators and can be made to take effect immediately without a restart. This makes the infrastructure extremely nimble for the operations team. For example, below is an example of how 1% of the traffic can be routed to an alternate route for A/B testing:
 
 ![](/images/2024/03/1-foh7a_kptjkqnrs_o0_dvw.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)This could be made possible by pushing out the following policy change to the Envoy:
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+This could be made possible by pushing out the following policy change to the Envoy:
 
 ![](/images/2024/03/1-gt5cfto782nf77tbuhbpsw.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)Envoy can also perform L7 routing for traffic steering based on HTTP headers as in the scenario below:
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+Envoy can also perform L7 routing for traffic steering based on HTTP headers as in the scenario below:
 
 ![](/images/2024/03/1-bkt41fq-uyohjeojn9yzew.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)Envoy also takes care of generating spans and integrating with tools such as Zipkin that provides distributed tracing capabilities which makes observing a complicated distributed interaction and correlating causality a feature of the service mesh, and not something developers have to individually account for and build into their services.
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+Envoy also takes care of generating spans and integrating with tools such as Zipkin that provides distributed tracing capabilities which makes observing a complicated distributed interaction and correlating causality a feature of the service mesh, and not something developers have to individually account for and build into their services.
 
 Metrics captured by the monitoring backends can be visualized through many of the existing tools available such as Grafana for a real time view into the state and health of the service mesh.
 
@@ -48,6 +60,8 @@ For example, service A can be configured to only be allowed to invoke service B,
 
 ![](/images/2024/03/1-qgformcys-aq0yljucxamw.png)
 
-Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)In the case of possible security compromise, the certificates bound to the identities can be can be individually revoked giving fine grained control over the blast radius.
+*Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
+
+In the case of possible security compromise, the certificates bound to the identities can be can be individually revoked giving fine grained control over the blast radius.
 
 At the time of writing, Istio is at version 0.6 and has not reached GA. Nevertheless, it’s definitely a technology to watch out for in 2018.

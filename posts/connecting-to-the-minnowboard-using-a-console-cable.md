@@ -18,11 +18,15 @@ You can explore the components of the Minnowboard at the link below:
 
 ![](/images/2024/03/1-zglzsrlxk4ojv7ygjxwnpw.png)
 
-Source: [https://minnowboard.org/minnowboard-turbot/board-explorer](https://minnowboard.org/minnowboard-turbot/board-explorer)Just like the Raspberry Pi, you would need to connect it to a monitor using the mini-HDMI port available on the board, and a USB keyboard or mouse to begin using it. The operating system can be loaded on to a mico-SD card slot that it has available for the purpose of booting. Alternatively, you can connect to the board from a computer using a serial connection with a USB to Serial FTDI cable.
+*Source: [https://minnowboard.org/minnowboard-turbot/board-explorer](https://minnowboard.org/minnowboard-turbot/board-explorer)*
+
+Just like the Raspberry Pi, you would need to connect it to a monitor using the mini-HDMI port available on the board, and a USB keyboard or mouse to begin using it. The operating system can be loaded on to a mico-SD card slot that it has available for the purpose of booting. Alternatively, you can connect to the board from a computer using a serial connection with a USB to Serial FTDI cable.
 
 ![](/images/2024/03/1-bnccb0wenj1gk6cq2se9xg-jpeg.jpg)
 
-Source: [https://www.amazon.com/gp/product/B00SK8LK1W/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1](https://www.amazon.com/gp/product/B00SK8LK1W/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)For this example, we will be using Linux, specifically Arch Linux for the other computer that is used to connect to the Minnowboard, but the instructions should work just as well on any other distribution. As a first step, connect the FTDI cable to your host computer and take a look at the dmesg output to see what serial device is detected that you will need for subsequent steps.
+*Source: [https://www.amazon.com/gp/product/B00SK8LK1W/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1](https://www.amazon.com/gp/product/B00SK8LK1W/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)*
+
+For this example, we will be using Linux, specifically Arch Linux for the other computer that is used to connect to the Minnowboard, but the instructions should work just as well on any other distribution. As a first step, connect the FTDI cable to your host computer and take a look at the dmesg output to see what serial device is detected that you will need for subsequent steps.
 
 ```
 $ dmesg | tail -n 9

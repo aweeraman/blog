@@ -33,10 +33,7 @@ from sklearn import datasets, svm
 iris = datasets.load_iris()
 svm_classifier = svm.SVC(gamma=0.001)
 svm_classifier.fit(iris.data, iris.target)
-```
-**Line 1:** Import datasets and svm objects from the sklearn module
-
-**Line 2: **The scikit-learn package comes with the iris dataset built in, so a simple call to datasets.load_iris() pulls up the features that you saw in the table earlier.
+```** Line 1:** Import datasets and svm objects from the sklearn module** Line 2:** The scikit-learn package comes with the iris dataset built in, so a simple call to datasets.load_iris() pulls up the features that you saw in the table earlier.
 
 The data looks a little like this:
 
@@ -48,11 +45,7 @@ The data looks a little like this:
 [ 5. ,  3.6,  1.4,  0.2],
 ...
 ```
-This is a list of arrays with sepal and petal lengths and widths of the Iris flower.
-
-**Line 3:** This is where the appropriate classification algorithm is instantiated. Here we choose to instantiate the SVM algorithm. Each algorithm comes with it’s own set of tunables that can be used to tweak the functioning of the model and its accuracy.
-
-**Line 4:** This is where the training happens. We take the features from the data set and tell the classifier what each of them are supposed to be. The iris.target object contains an array of 150 elements that map to each of the arrays in the data set that tell the classifier the associated species of the flower.
+This is a list of arrays with sepal and petal lengths and widths of the Iris flower.** Line 3:** This is where the appropriate classification algorithm is instantiated. Here we choose to instantiate the SVM algorithm. Each algorithm comes with it’s own set of tunables that can be used to tweak the functioning of the model and its accuracy.** Line 4:** This is where the training happens. We take the features from the data set and tell the classifier what each of them are supposed to be. The iris.target object contains an array of 150 elements that map to each of the arrays in the data set that tell the classifier the associated species of the flower.
 
 ```
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
