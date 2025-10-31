@@ -1,6 +1,55 @@
 @import "tailwindcss";
 
-/* Custom styles for better paragraph spacing */
+/*
+ * Theme Color Variables
+ * Change these values to customize your site's appearance
+ */
+@theme {
+  /* Background colors */
+  --color-theme-bg-primary: #0f172a;
+  --color-theme-bg-secondary: #1e293b;
+  --color-theme-bg-tertiary: #334155;
+
+  /* Text colors */
+  --color-theme-text-primary: #f1f5f9;
+  --color-theme-text-secondary: #cbd5e1;
+  --color-theme-text-tertiary: #94a3b8;
+
+  /* Accent colors */
+  --color-theme-accent-primary: #60a5fa;
+  --color-theme-accent-hover: #3b82f6;
+  --color-theme-accent-muted: #93c5fd;
+
+  /* Border colors */
+  --color-theme-border-primary: #475569;
+  --color-theme-border-secondary: #334155;
+}
+
+/* Custom styles for better paragraph spacing and dark theme prose */
+.prose {
+  color: var(--color-theme-text-secondary);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: var(--color-theme-text-primary);
+}
+
+.prose a {
+  color: var(--color-theme-accent-primary);
+}
+
+.prose a:hover {
+  color: var(--color-theme-accent-hover);
+}
+
+.prose code {
+  color: var(--color-theme-accent-muted);
+}
+
+.prose strong {
+  color: var(--color-theme-text-primary);
+}
+
 .prose p {
   margin-top: 1.5em;
   margin-bottom: 1.5em;

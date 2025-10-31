@@ -14,14 +14,14 @@ export function PostCard({ post }: PostCardProps) {
   });
 
   return (
-    <article className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+    <article className="border border-theme-border-primary rounded-lg p-6 hover:shadow-lg hover:shadow-black/20 transition-all hover:border-theme-border-secondary bg-theme-bg-secondary/50">
       <Link to={frontmatter.path} className="block">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2 hover:text-blue-600">
+        <h2 className="text-2xl font-bold text-theme-text-primary mb-2 hover:text-theme-accent-primary transition-colors">
           {frontmatter.title}
         </h2>
-        <time className="text-sm text-gray-500 mb-3 block">{formattedDate}</time>
+        <time className="text-sm text-theme-text-tertiary mb-3 block">{formattedDate}</time>
         {frontmatter.excerpt && (
-          <p className="text-gray-700 leading-relaxed">{frontmatter.excerpt}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{frontmatter.excerpt}</p>
         )}
       </Link>
     </article>
