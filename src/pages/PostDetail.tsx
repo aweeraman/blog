@@ -41,13 +41,23 @@ export function PostDetail() {
           ← Back to all posts
         </Link>
 
-        <article className="bg-white rounded-lg shadow-md p-8">
-          <header className="mb-8">
+        <article className="bg-white rounded-lg shadow-md overflow-hidden">
+          <header className="p-8 pb-0">
             <h1 className="text-4xl font-bold text-gray-900 mb-3">{frontmatter.title}</h1>
             <time className="text-gray-500">{formattedDate}</time>
           </header>
 
-          <div className="prose prose-lg max-w-none">
+          {frontmatter.feature_image && (
+            <div className="px-8 py-6">
+              <img
+                src={frontmatter.feature_image}
+                alt={frontmatter.title}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          )}
+
+          <div className="prose prose-lg max-w-none p-8">
             <ReactMarkdown>{content}</ReactMarkdown>
           </div>
         </article>

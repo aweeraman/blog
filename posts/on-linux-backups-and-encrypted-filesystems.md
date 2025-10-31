@@ -1,0 +1,114 @@
+---
+title: "On Linux, backups and encrypted filesystems"
+date: "2019-03-10"
+path: "/posts/on-linux-backups-and-encrypted-filesystems"
+excerpt: "Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way, that I can:"
+feature_image: "https://images.unsplash.com/photo-1579702662656-f26205285141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDM1fHx0YXBlJTIwZHJpdmV8ZW58MHx8fHwxNzExMTI4NDA3fDA&ixlib=rb-4.0.3&q=80&w=2000"
+---
+
+Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way, that I can:
+
+1. $1
+2. $1
+3. $1
+As it is the case with most things in Linux, there are many ways that this could be done. In this case, I’m sticking to rsync as the tool for taking the backup. It can be used to create a replica of a given directory structure in a different location, either on a different filesystem or even on a different networked host fairly easily. In this example, I’ll be using a USB disk that I use for offline storage.
+
+Next, encryption. I would really like to avoid the self encrypting disks especially with the disclosure of issues recently with several leading storage manufacturers that revealed serious vulnerabilities in how the encryption is performed that can lead to compromise of the data fairly trivially. The encryption keys, ciphers and technologies used is something that I would like to control for my backups. Which leads me to encrypted file systems on Linux. There are [several options](https://wiki.archlinux.org/index.php/disk_encryption), when it comes to this topic, and the ones I short-listed are dm-crypt and EncFS. The former is natively supported in most distros, is mature and works at the block level. The latter works in the user space and is simple to get started with. I quickly eliminated EncFS due to the many security issues surrounding it that was discovered as part of a [security audit](https://defuse.ca/audits/encfs.htm) of its implementation some time back.
+
+So now, the tools we will be dealing with are rsync + dm-crypt on Linux with a simple script to make the process simple.
+
+First, create a partition on the external storage to house the backup. Tools such as fdisk, gdisk and cfdisk can be used for this.
+
+To encrypt the volume for use with the backup, follow the steps below:
+
+```
+# cryptsetup -v --type luks --cipher aes-xts-plain64 --key-size 256 --hash sha256 --iter-time 2000 --use-urandom --verify-passphrase luksFormat /dev/sdcX
+```
+This sets up a new dm-crypt device in LUKS encryption mode and encrypts the master key with a key derivation algorithm that uses sha256 and 2000 rounds in the example above. It sets up the LUKS device header in the device with this configuration, but we still need to create the file system in order to start using it. We achieve this by:
+
+```
+# cryptsetup open /dev/sdcX backup 
+# mkfs.ext4 /dev/mapper/backup
+```
+As you can see, the path provided to mkfs.ext4 is the “mapped” device, which allows dm-crypt to intercept the calls to the file system and perform the encryption behind the scenes in a manner that is transparent to calling applications. At this point, the file system is created and can be mounted as follows:
+
+```
+# mount -t ext4 /dev/mapper/backup /mnt
+```
+Now that we have an encrypted file system, let’s synchronize our root file system over to the /mnt file system with the following command:
+
+```
+rsync -aAXv --delete --exclude=/dev/*        \ 
+                     --exclude=/proc/*       \ 
+                     --exclude=/sys/*        \ 
+                     --exclude=/tmp/*        \ 
+                     --exclude=/run/*        \ 
+                     --exclude=/mnt/*        \ 
+                     --exclude=/backup/*     \ 
+                     --exclude=/lost+found/* \ 
+                     --exclude="Downloads"   \ 
+                     --exclude=.cache        \ 
+                     --exclude=/shared/*     / /mnt
+```
+This will take a while initially, but in subsequent runs, rsync will only ship the differences and will be much quicker. It will keep the two file systems completely in sync quite efficiently.
+
+You can find a more complete version of the backup script [here](https://github.com/aweeraman/arch_linux/blob/master/scripts/backup).
+
+Once the backup is complete, the backup filesystem can be unmounted as follows:
+
+```
+# umount /mnt 
+# cryptsetup close backup
+```
+Any backup strategy is incomplete without confirmation that restoration is tested to be possible. For this, create a bootable USB or SD card with your favorite distro or rescue disk, and boot into it. Once booted, attempt to mount both the backup storage disk and the file system to restore to and run the following command, tweaking it to your environment as necessary:
+
+```
+# rsync -aAXv --dry-run --delete --exclude="lost+found" --exclude="boot" --exclude="var" /backup/ /source/
+```
+For this I have included the dry-run argument, which prevents any actual changes to the file system. The changes to be performed will be output to the console, and if it includes the files that you’re looking to restore from the backup and you’re happy with what you see, you can re-run the command without the dry-run argument and let rsync synchronize the two file systems. You can also choose to cherry pick what you need from the backup file system if you just want to restore a specific file.
+
+In case someone finds it useful, here’s the “backup” script that I use to perform the weekly backup of my home directory.
+
+```sh
+#!/bin/bash
+if [ $EUID != 0 ]; then
+ echo "Please run this script as root."
+ exit 1
+fiMOUNT_DIR=/mnt
+BACKUP_DIR=/home/anuradhaecho "List of disks on /dev/sda"
+fdisk -l /dev/sda
+echo
+echo -n "Disk to backup to: "
+read DISK
+if [ ! -e ${DISK} ]; then
+ echo "Disk doesn't exist!"
+ exit 1
+fimounts=$(mount | grep ${MOUNT_DIR} | wc -l)
+if [ ${mounts} -ne "0" ]; then
+ echo "Mount already in use, attempting to unmount..."
+ umount ${MOUNT_DIR}
+ if [ $? != 0 ]; then
+  echo "Error unmounting ${MOUNT_DIR}"
+  exit 1
+ fi
+fi
+if [ -e /dev/mapper/backup ]; then
+ echo "Backup volume exists, closing mapper..."
+ cryptsetup close backup
+ if [ $? != 0 ]; then
+  echo "Error closing mapper"
+  exit 1
+ fi
+fi
+echo "Mounting ${DISK}..."
+cryptsetup open ${DISK} backup
+mount -t ext4 /dev/mapper/backup ${MOUNT_DIR}echo "Syncing..."
+rsync -aAXv --delete ${BACKUP_DIR} ${MOUNT_DIR}/backupif [ $? == 0 ]; then
+ echo "Backed up successfully!"
+else
+ echo "Error during backup!"
+fi
+umount ${MOUNT_DIR} || echo "Error while unmounting ${MOUNT_DIR}"
+cryptsetup close backup || echo "Error while closing mapper: backup"
+```
+This is simple enough, and helps me achieve the three objectives that I laid out initially.

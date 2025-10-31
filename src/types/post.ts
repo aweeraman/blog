@@ -3,6 +3,7 @@ export interface PostFrontmatter {
   date: string;
   path: string;
   excerpt?: string;
+  feature_image?: string;
 }
 
 export interface Post {

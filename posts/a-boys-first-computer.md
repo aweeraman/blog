@@ -1,0 +1,21 @@
+---
+title: "A boy’s first computer"
+date: "2013-01-12"
+path: "/posts/a-boys-first-computer"
+excerpt: ""
+feature_image: "https://images.unsplash.com/photo-1554921027-b91f0beeb07d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDU4fHxyZXRybyUyMGNvbXB1dGVyfGVufDB8fHx8MTcxMTI4Nzc5OXww&ixlib=rb-4.0.3&q=80&w=2000"
+---
+
+The week so far has been an eventful one. Being bed-ridden has made me pensive and nostalgic about my childhood, and long for the simpler days. I was specifically dwelling on the subject of interpreters and compilers which took me back to when I was nine, when I asked my uncle, who I considered as the pre-eminent guru in all things computers at the time, how to compile a .bat file.
+
+At that time I was given an old 286 to play with. And when we moved around, so did my computer. Every week I flip open the large case case using a convenient latch on the two sides and peek in. I was enamored by the machine and eventually learnt what some of its parts were, and wondered how they worked. I sought books and the help of my uncle to learn about it. I once spent a weekend at my uncle’s where he showed me the difference between dir /p and dir /w, and told me to try it out for about twenty minutes while he went to speak to someone. He taught me the basics of DOS which I was usually very eager to try out on my own machine.
+
+After I was done peeking, I usually close the box up and meticulously clean it. It was kept in perfect condition next to my work desk on a blue color custom built table for a computer which had a pull out keyboard and a place to keep a printer as well as some shelves below for various things. It was pretty big by today’s standards, but then everything was so. The computer case was about 2.5' x 2.5' x 10". It was big, I couldn’t carry it by myself but I made sure I packed it safely during my vacation trips.
+
+It also featured a 4 MB hard drive, 1 MB of RAM, a 14" monochrome monitor and a 5.25" floppy disk drive. There was a lot of trial and error to figure it out and spent many late nights trying to understand DOS, WordStar, WordPerfect, DBase III+, BASIC, Lotus 123. The command line baffled me, and piqued my interest, and I learnt to love the blinking cursor on the green screen waiting for the next command to be input.
+
+It was a used machine at the time, so it came with some customizations and funky DOS shell like interface which was navigable through function keys, but also let you escape into the shell. I spent a lot of time trying to figure out how it worked and how to modify it. It also came with a couple of games which I still fondly remember: digger, pacman and paratrooper. I played very little games after that. I recently tracked this down to skill-envy (a pseudo psychology construct that I just coined), as playing games made me wonder too much how it was constructed, and not having the skills to build a similar game myself made me envious of the game author and the knowledge of the black art he possessed. Hence I preferred to stay away from games. I know, it’s childish, but in my defense I was a child.
+
+Part of this black art was machine language. Printing the contents of .exe files showed a series of unintelligible characters and yet the only executable programs I could create at the time were plain text and readable .bat file. That was when I asked my uncle how I could convert a .bat file to the .exe file which I viewed as being inherently superior due to its mysterious nature. Knowing what I was trying to get at, he suggested I learn QuickBasic. I only had GWBasic installed on the computer. I came to realize that the syntax of QuickBasic was more or less the same, minus the explicit line numbers, so I taught myself GWBasic on my 286. Later I got a copy of QuickBasic and lo and behold, there was an option to compile programs into the mysterious .exe file format that I can directly execute from the command line. This revelation was a turning point for me and I was hooked on QB.
+
+Having outgrown the 286 I pestered my father to purchase a newer computer, and this time a 66MHZ 486 DX2 with the “turbo” button. If turbo was turned off the computer ran slower, which baffled me. The computer also featured a 40 MB hard drive. That should last forever, I thought at the time.
