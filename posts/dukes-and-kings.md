@@ -12,7 +12,10 @@ The BSF4Rexx talk sparked an interest in [Rexx](http://en.wikipedia.org/wiki/Rex
 
 Speaking of interpreters, after a feverish bout of debugging, I managed to fix a subtle off-by-one error in my [BrainF**k](http://en.wikipedia.org/wiki/Brainfuck) interpreter. BrainF**k, or BF, as some of you know, is a simple, Turing-complete, esoteric language, that is extremely simple to implement. The [initial interpreter](http://www.lklug.pdn.ac.lk/lurker/message/20060304.000843.eb9ee87f.en.html) that I wrote was a mere 25 lines of perl script. But I cleaned it up somewhat, made it a bit more readable, added support for nested loops and full Turing capability. It still comes to about 80 lines. Its a wonderful toy language and great if you don’t mind having an aneurysm every time you want to debug something. I believe that’s how the name came about.
 
-I’m eyeing [befunge](http://en.wikipedia.org/wiki/Befunge) next. It’s got a wicked reflective programming syntax. Here’s an example I leeched from Wikipedia :vv  <      <
+I'm eyeing [befunge](http://en.wikipedia.org/wiki/Befunge) next. It's got a wicked reflective programming syntax. Here's an example I leeched from Wikipedia:
+
+```
+vv  <      <
     2
     ^  v<
  v13v4
@@ -24,8 +27,9 @@ I’m eyeing [befunge](http://en.wikipedia.org/wiki/Befunge) next. It’s got a 
     8
  .  >  >   ^
 ^<
+```
 
-The flow of execution is controlled by arrows (v > < ^) in a two-dimensional space. Start from the beginning and follow the arrows to see where it leads you. It’s stack-based and Turing-complete, but like bf, strictly a toy language. 
+The flow of execution is controlled by arrows (v > < ^) in a two-dimensional space. Start from the beginning and follow the arrows to see where it leads you. It's stack-based and Turing-complete, but like bf, strictly a toy language.
 
 ```perl
 #!/usr/bin/perl

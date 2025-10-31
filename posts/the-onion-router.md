@@ -11,6 +11,7 @@ I recently tried out TOR for the first time as this has been something in my TOD
 ```
 apt-get install tor privoxy
 ```
+
 Adding the following line in /etc/privoxy/config
 
 ```
