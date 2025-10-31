@@ -5,24 +5,24 @@
  * Change these values to customize your site's appearance
  */
 @theme {
-  /* Background colors */
-  --color-theme-bg-primary: #0f172a;
-  --color-theme-bg-secondary: #1e293b;
-  --color-theme-bg-tertiary: #334155;
+  /* Background colors - Deep dark with warm undertones */
+  --color-theme-bg-primary: #0a0e1a;
+  --color-theme-bg-secondary: #111827;
+  --color-theme-bg-tertiary: #1f2937;
 
-  /* Text colors */
-  --color-theme-text-primary: #f1f5f9;
-  --color-theme-text-secondary: #cbd5e1;
-  --color-theme-text-tertiary: #94a3b8;
+  /* Text colors - Warm whites and grays */
+  --color-theme-text-primary: #f9fafb;
+  --color-theme-text-secondary: #d1d5db;
+  --color-theme-text-tertiary: #9ca3af;
 
-  /* Accent colors */
-  --color-theme-accent-primary: #60a5fa;
-  --color-theme-accent-hover: #3b82f6;
-  --color-theme-accent-muted: #93c5fd;
+  /* Accent colors - Emerald/teal for tech aesthetic */
+  --color-theme-accent-primary: #10b981;
+  --color-theme-accent-hover: #059669;
+  --color-theme-accent-muted: #34d399;
 
-  /* Border colors */
-  --color-theme-border-primary: #475569;
-  --color-theme-border-secondary: #334155;
+  /* Border colors - Subtle gray borders */
+  --color-theme-border-primary: #374151;
+  --color-theme-border-secondary: #1f2937;
 
   /* Font families - Change these to use different fonts */
   --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -43,7 +43,7 @@ body {
 }
 
 .prose h1 {
-  color: var(--color-theme-text-primary);
+  color: var(--color-theme-accent-primary);
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
@@ -52,7 +52,7 @@ body {
 }
 
 .prose h2 {
-  color: var(--color-theme-text-primary);
+  color: var(--color-theme-accent-primary);
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
@@ -61,7 +61,7 @@ body {
 }
 
 .prose h3 {
-  color: var(--color-theme-text-primary);
+  color: var(--color-theme-accent-primary);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.4;
@@ -70,7 +70,7 @@ body {
 }
 
 .prose h4 {
-  color: var(--color-theme-text-primary);
+  color: var(--color-theme-accent-primary);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5;
@@ -79,7 +79,7 @@ body {
 }
 
 .prose h5, .prose h6 {
-  color: var(--color-theme-text-primary);
+  color: var(--color-theme-accent-primary);
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
