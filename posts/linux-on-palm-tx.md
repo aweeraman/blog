@@ -1,7 +1,7 @@
 ---
 title: "Linux on Palm TX"
 date: "2008-03-03"
-path: "/posts/linux-on-palm-tx"
+path: "/linux-on-palm-tx"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1533108871748-7c8c4da74fe0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyNHx8cGFsbXxlbnwwfHx8fDE3MTEyODg1NTd8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

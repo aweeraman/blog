@@ -1,7 +1,7 @@
 ---
 title: "Getting setup with the Intel Edison"
 date: "2015-10-03"
-path: "/posts/getting-setup-with-the-intel-edison"
+path: "/getting-setup-with-the-intel-edison"
 excerpt: ""
 feature_image: "/images/2024/03/1-lscj2g5rosteomulkeaeka-jpeg.jpg"
 ---

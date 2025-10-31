@@ -1,7 +1,7 @@
 ---
 title: "Dissecting Bitcoin, Part 1 — The Technology"
 date: "2017-07-22"
-path: "/posts/dissecting-bitcoin-part-1-the-technology"
+path: "/dissecting-bitcoin-part-1-the-technology"
 excerpt: "Recently, I decided to pull up Satoshi Nakamoto’s paper with the hope of getting a deeper appreciation for Bitcoin and the machinations of…"
 feature_image: "/images/2024/03/1-qkeglmhjnyzqqrkdqjobpg-1.png"
 ---

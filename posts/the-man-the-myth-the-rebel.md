@@ -1,7 +1,7 @@
 ---
 title: "The man, the myth, the rebel"
 date: "2019-07-14"
-path: "/posts/the-man-the-myth-the-rebel"
+path: "/the-man-the-myth-the-rebel"
 excerpt: "As we get ready for another Wimbledon finals between Federer and Djokovic in a few hours, I look back upon a past champion whose story I…"
 feature_image: "https://images.unsplash.com/photo-1499510318569-1a3d67dc3976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDExfHx0ZW5uaXN8ZW58MHx8fHwxNzExMDkxNDA2fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Mahavilachchiya — day two"
 date: "2006-10-22"
-path: "/posts/mahavilachchiya-day-two"
+path: "/mahavilachchiya-day-two"
 excerpt: ""
 feature_image: "/images/2024/03/277102384_685b5bded9_b.jpg"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Debian is 27"
 date: "2020-08-17"
-path: "/posts/debian-is-27"
+path: "/debian-is-27"
 excerpt: "Today, Debian celebrates its 27th birthday. It is now one of the oldest and most widespread Linux distributions with many offshoots and…"
 feature_image: "https://images.unsplash.com/photo-1660907887769-f3fbce192205?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ3fHx2aW50YWdlJTIwYmlydGhkYXl8ZW58MHx8fHwxNzExMTI4NTk0fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

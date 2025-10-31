@@ -1,7 +1,7 @@
 ---
 title: "Software Freedom Day 2008"
 date: "2008-09-24"
-path: "/posts/software-freedom-day-2008"
+path: "/software-freedom-day-2008"
 excerpt: ""
 feature_image: "/images/2024/03/2884017200_3d2bd94d57_k.jpg"
 ---

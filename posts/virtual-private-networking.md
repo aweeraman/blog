@@ -1,7 +1,7 @@
 ---
 title: "Virtual Private Networking"
 date: "2006-03-20"
-path: "/posts/virtual-private-networking"
+path: "/virtual-private-networking"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1601898532125-bb05b244b90e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fHZwbnxlbnwwfHx8fDE3MTEyOTE4OTR8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

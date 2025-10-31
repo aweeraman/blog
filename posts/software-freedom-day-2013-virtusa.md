@@ -1,7 +1,7 @@
 ---
 title: "Software Freedom Day 2013 @ Virtusa"
 date: "2013-09-22"
-path: "/posts/software-freedom-day-2013-virtusa"
+path: "/software-freedom-day-2013-virtusa"
 excerpt: ""
 feature_image: "/images/2024/03/664006476_5ea029521a_k.jpg"
 ---

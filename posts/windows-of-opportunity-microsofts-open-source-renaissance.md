@@ -1,7 +1,7 @@
 ---
 title: "Windows of Opportunity: Microsoft's Open Source Renaissance"
 date: "2024-07-13"
-path: "/posts/windows-of-opportunity-microsofts-open-source-renaissance"
+path: "/windows-of-opportunity-microsofts-open-source-renaissance"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDN8fHRyYW5zZm9ybWF0aW9ufGVufDB8fHx8MTcyMDg3NzM3Nnww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

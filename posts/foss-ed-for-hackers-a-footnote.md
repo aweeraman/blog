@@ -1,7 +1,7 @@
 ---
 title: "FOSS-ed for Hackers, a footnote"
 date: "2006-05-30"
-path: "/posts/foss-ed-for-hackers-a-footnote"
+path: "/foss-ed-for-hackers-a-footnote"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1562412692-26406e1bf600?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGNyZWF0aXZlJTIwY29tbW9uc3xlbnwwfHx8fDE3MTEyOTExMjV8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

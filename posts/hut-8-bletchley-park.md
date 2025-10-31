@@ -1,7 +1,7 @@
 ---
 title: "Hut 8, Bletchley Park"
 date: "2006-03-18"
-path: "/posts/hut-8-bletchley-park"
+path: "/hut-8-bletchley-park"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1667124060448-443a70c09923?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDd8fGVuaWdtYXxlbnwwfHx8fDE3MTEyOTE5NTd8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

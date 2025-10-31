@@ -1,7 +1,7 @@
 ---
 title: "Bootstrapping Go"
 date: "2017-04-10"
-path: "/posts/bootstrapping-go"
+path: "/bootstrapping-go"
 excerpt: "Over the weekend, I came across a couple of videos on how the Go compiler was migrated from C to Go. The Go compiler was originally written…"
 feature_image: "/images/2024/03/1-kneu6qbr0ghdb31etvrfqg-jpeg-1.jpg"
 ---

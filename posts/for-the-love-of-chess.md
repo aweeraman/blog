@@ -1,7 +1,7 @@
 ---
 title: "For the love of chess"
 date: "2017-05-07"
-path: "/posts/for-the-love-of-chess"
+path: "/for-the-love-of-chess"
 excerpt: "Nearly twenty years to this day, in May 1997, a machine that IBM built challenged then world chess champion Garry Kasparov to a six game…"
 feature_image: "/images/2024/03/1-dkqxrmcqxvbnehhxqs2tig-jpeg-2.jpg"
 ---

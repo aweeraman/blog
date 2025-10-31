@@ -1,7 +1,7 @@
 ---
 title: "From Mahavilachchiya, with love"
 date: "2006-10-21"
-path: "/posts/from-mahavilachchiya-with-love"
+path: "/from-mahavilachchiya-with-love"
 excerpt: ""
 feature_image: "/images/2024/03/277102005_a59a1bbfa9_b.jpg"
 ---

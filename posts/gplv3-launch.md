@@ -1,7 +1,7 @@
 ---
 title: "GPLv3 Launch"
 date: "2007-07-01"
-path: "/posts/gplv3-launch"
+path: "/gplv3-launch"
 excerpt: ""
 feature_image: "/images/2024/03/663101907_6a3ae3ae5b_k.jpg"
 ---

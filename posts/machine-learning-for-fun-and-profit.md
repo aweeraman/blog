@@ -1,7 +1,7 @@
 ---
 title: "Machine learning for fun and profit"
 date: "2017-04-15"
-path: "/posts/machine-learning-for-fun-and-profit"
+path: "/machine-learning-for-fun-and-profit"
 excerpt: "Machine learning and artificial intelligence has been going through a phase of democratization to the point that in recent years the…"
 feature_image: "/images/2024/03/1-ggcalx43tz-7heh3a407da-1.png"
 ---

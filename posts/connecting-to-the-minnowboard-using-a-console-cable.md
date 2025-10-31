@@ -1,7 +1,7 @@
 ---
 title: "Connecting to the Minnowboard over Serial"
 date: "2019-03-17"
-path: "/posts/connecting-to-the-minnowboard-using-a-console-cable"
+path: "/connecting-to-the-minnowboard-using-a-console-cable"
 excerpt: "In this post, I will walk you through the process of connecting to a Minnowboard over a serial console connection, so that you can use it…"
 feature_image: "https://images.unsplash.com/photo-1475903057958-80a11c1f01d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fG1pbm5vd3xlbnwwfHx8fDE3MTExMjkyMDJ8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

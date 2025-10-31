@@ -1,7 +1,7 @@
 ---
 title: "Dukes and Kings"
 date: "2006-08-24"
-path: "/posts/dukes-and-kings"
+path: "/dukes-and-kings"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1699735129501-32ea51130e7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyMHx8Y3Jhenl8ZW58MHx8fHwxNzExMjkwNjg0fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

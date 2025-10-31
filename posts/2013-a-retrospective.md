@@ -1,7 +1,7 @@
 ---
 title: "2013, a retrospective"
 date: "2013-12-24"
-path: "/posts/2013-a-retrospective"
+path: "/2013-a-retrospective"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1613694435357-f3f822bad3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUyfHxzdW5yaXNlJTIwc3JpJTIwbGFua2F8ZW58MHx8fHwxNzExMjg2ODEwfDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Getting started with Linkerd"
 date: "2022-11-05"
-path: "/posts/getting-started-with-linkerd"
+path: "/getting-started-with-linkerd"
 excerpt: "If you’ve done anything in the Kubernetes space in recent years, you’ve most likely come across the words “Service Mesh”. It’s backed by a…"
 feature_image: "https://images.unsplash.com/photo-1567356270285-a001028c648d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNpZGVjYXJ8ZW58MHx8fHwxNzExMDQ1NzcwfDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

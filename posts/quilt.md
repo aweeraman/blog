@@ -1,7 +1,7 @@
 ---
 title: "Quilt"
 date: "2006-09-29"
-path: "/posts/quilt"
+path: "/quilt"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1594526761005-4ccdbd608d2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHF1aWx0fGVufDB8fHx8MTcxMTI5MDI0Mnww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

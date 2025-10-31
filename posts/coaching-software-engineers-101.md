@@ -1,7 +1,7 @@
 ---
 title: "Coaching software engineers 101"
 date: "2017-03-11"
-path: "/posts/coaching-software-engineers-101"
+path: "/coaching-software-engineers-101"
 excerpt: "Software engineers are a breed apart and coaching them to bring out their best has almost been a passion for me. I’ve had the pleasure of…"
 feature_image: "/images/2024/03/1-lyszbfqzc5rko-jdiprxqa-jpeg.jpg"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Sahana receives FSF award"
 date: "2007-03-25"
-path: "/posts/sahana-receives-fsf-award"
+path: "/sahana-receives-fsf-award"
 excerpt: ""
 feature_image: "/images/2024/03/433039002_7e3451828a_k.jpg"
 ---

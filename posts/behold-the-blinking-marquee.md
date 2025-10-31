@@ -1,7 +1,7 @@
 ---
 title: "Behold, the blinking marquee"
 date: "2010-10-11"
-path: "/posts/behold-the-blinking-marquee"
+path: "/behold-the-blinking-marquee"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGNzc3xlbnwwfHx8fDE3MTEyODc5OTV8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

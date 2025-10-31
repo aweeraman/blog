@@ -1,7 +1,7 @@
 ---
 title: "Chicken, meet egg. Egg, Chicken. Egg. Chicken."
 date: "2006-05-04"
-path: "/posts/chicken-meet-egg-egg-chicken-egg-chicken"
+path: "/chicken-meet-egg-egg-chicken-egg-chicken"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1601182207230-1b165dea2212?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDMzfHxkaW5vc2F1cnxlbnwwfHx8fDE3MTEyOTEyNjl8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Git guts"
 date: "2013-01-14"
-path: "/posts/git-guts"
+path: "/git-guts"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGdpdHxlbnwwfHx8fDE3MTEyODc2OTR8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

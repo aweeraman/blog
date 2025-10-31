@@ -1,7 +1,7 @@
 ---
 title: "On blood-lines, forks and survivors"
 date: "2021-10-02"
-path: "/posts/on-blood-lines-forks-and-survivors"
+path: "/on-blood-lines-forks-and-survivors"
 excerpt: "The lineage of a classic operating system"
 feature_image: "/images/2024/03/photo-1645968092760-605b63706272.jpeg"
 ---

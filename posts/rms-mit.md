@@ -1,7 +1,7 @@
 ---
 title: "RMS @ MIT"
 date: "2006-04-06"
-path: "/posts/rms-mit"
+path: "/rms-mit"
 excerpt: ""
 feature_image: "/images/2024/03/433043007_80d4632352_k.jpg"
 ---

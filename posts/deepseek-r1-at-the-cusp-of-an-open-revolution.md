@@ -1,7 +1,7 @@
 ---
 title: "DeepSeek-R1, at the cusp of an open revolution"
 date: "2025-02-02"
-path: "/posts/deepseek-r1-at-the-cusp-of-an-open-revolution"
+path: "/deepseek-r1-at-the-cusp-of-an-open-revolution"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1594267238512-d6d02583c5ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI3Mnx8ZGVlcHxlbnwwfHx8fDE3Mzg0ODE2MTV8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

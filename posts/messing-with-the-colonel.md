@@ -1,7 +1,7 @@
 ---
 title: "Messing with the Colonel"
 date: "2006-09-25"
-path: "/posts/messing-with-the-colonel"
+path: "/messing-with-the-colonel"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxsaW51eHxlbnwwfHx8fDE3MTEyOTA0MzB8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

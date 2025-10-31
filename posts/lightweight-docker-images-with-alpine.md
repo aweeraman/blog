@@ -1,7 +1,7 @@
 ---
 title: "Lightweight Docker images with Alpine"
 date: "2018-05-06"
-path: "/posts/lightweight-docker-images-with-alpine"
+path: "/lightweight-docker-images-with-alpine"
 excerpt: "One of the challenges in building Docker images, is keeping it small and lean. For example, let’s take a simple app that prints a simple…"
 feature_image: "/images/2024/03/1-rijmo9q803d6uwxx8pmhoq-jpeg.jpg"
 ---

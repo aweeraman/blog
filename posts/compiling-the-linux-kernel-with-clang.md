@@ -1,7 +1,7 @@
 ---
 title: "Compiling the Linux Kernel with Clang"
 date: "2020-02-20"
-path: "/posts/compiling-the-linux-kernel-with-clang"
+path: "/compiling-the-linux-kernel-with-clang"
 excerpt: "I decided to give Clang a spin to compile the kernel, and given that I’m not exactly an early adopter in attempting this, it was pretty…"
 feature_image: "https://images.unsplash.com/photo-1633015691473-86db52be1e1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxjeW1iYWxzfGVufDB8fHx8MTcxMTEyMjc2NHww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

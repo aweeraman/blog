@@ -1,7 +1,7 @@
 ---
 title: "Way to blue"
 date: "2006-06-02"
-path: "/posts/way-to-blue"
+path: "/way-to-blue"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1540492649367-c8565a571e4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE5fHxmcnVpdCUyMHRyZWV8ZW58MHx8fHwxNzExMjkxMDA2fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Mahavilachchiya needs you!"
 date: "2010-09-23"
-path: "/posts/mahavilachchiya-needs-you"
+path: "/mahavilachchiya-needs-you"
 excerpt: ""
 feature_image: "/images/2024/03/277101707_0328772906_b.jpg"
 ---

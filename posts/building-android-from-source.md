@@ -1,7 +1,7 @@
 ---
 title: "Building Android from source"
 date: "2016-05-15"
-path: "/posts/building-android-from-source"
+path: "/building-android-from-source"
 excerpt: ""
 feature_image: "/images/2024/03/1-p5nna6monwk97lcwjnw34a-jpeg.jpg"
 ---

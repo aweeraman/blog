@@ -1,7 +1,7 @@
 ---
 title: "Musings on Git"
 date: "2012-12-31"
-path: "/posts/musings-on-git"
+path: "/musings-on-git"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHZlcnNpb24lMjBjb250cm9sfGVufDB8fHx8MTcxMTI4Nzg4Nnww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "On Perl and Poetry"
 date: "2014-06-02"
-path: "/posts/on-perl-and-poetry"
+path: "/on-perl-and-poetry"
 excerpt: ""
 feature_image: "/images/2024/03/1-8udlzvnxsobvdt1kaq5gta-jpeg.jpg"
 ---

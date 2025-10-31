@@ -1,7 +1,7 @@
 ---
 title: "Sony Reader Wishlist"
 date: "2007-01-19"
-path: "/posts/sony-reader-wishlist"
+path: "/sony-reader-wishlist"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI1fHxib29rfGVufDB8fHx8MTcxMTI4OTY2MHww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

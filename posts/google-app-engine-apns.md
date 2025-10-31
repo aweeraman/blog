@@ -1,7 +1,7 @@
 ---
 title: "Google App Engine + APNS"
 date: "2013-04-21"
-path: "/posts/google-app-engine-apns"
+path: "/google-app-engine-apns"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1632298095711-d546888879ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHB1c2glMjBub3RpZmljYXRpb25zfGVufDB8fHx8MTcxMTI4NzYxNHww&ixlib=rb-4.0.3&q=80&w=2000"
 ---

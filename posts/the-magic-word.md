@@ -1,7 +1,7 @@
 ---
 title: "The Magic Word"
 date: "2006-08-08"
-path: "/posts/the-magic-word"
+path: "/the-magic-word"
 excerpt: ""
 feature_image: "https://images.unsplash.com/photo-1498019559366-a1cbd07b5160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE0fHxtYWdpY3xlbnwwfHx8fDE3MTEyMTQ5MDd8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---

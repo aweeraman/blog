@@ -1,7 +1,7 @@
 ---
 title: "On key signing and trust"
 date: "2015-01-11"
-path: "/posts/on-key-signing-and-trust"
+path: "/on-key-signing-and-trust"
 excerpt: ""
 feature_image: "/images/2024/03/1-z7rdzjxzyiiz0pe_ulwn0q-jpeg.jpg"
 ---

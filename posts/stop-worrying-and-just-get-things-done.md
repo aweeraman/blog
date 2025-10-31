@@ -1,7 +1,7 @@
 ---
 title: "Stop worrying, and just get things done"
 date: "2016-07-08"
-path: "/posts/stop-worrying-and-just-get-things-done"
+path: "/stop-worrying-and-just-get-things-done"
 excerpt: "Two years ago, I pulled out my dusty copy of David Allen’s “Getting Things Done” and decided to do a another skim through. Things were…"
 feature_image: "/images/2024/03/1-sniwfoqcn2x-uzbmn1_sig-jpeg.jpg"
 ---
