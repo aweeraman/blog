@@ -6,7 +6,7 @@ excerpt: "When IBM’s Deep Blue beat Gary Kasparov, I was fifteen years old. I 
 feature_image: "https://images.unsplash.com/photo-1633974026122-2861ae7b6087?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGdvJTIwZ2FtZXxlbnwwfHx8fDE3MTEyMjIzMDZ8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 
-When [IBM’s Deep Blue beat Gary Kasparov](__GHOST_URL__/for-the-love-of-chess/), I was fifteen years old. I didn’t know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade. It was a really huge deal, as it proved that machines were capable of accomplishing something that was clearly the domain of humans, requiring ingenuity and skill that nobody expected an algorithm, much less a machine, to match.
+When [IBM’s Deep Blue beat Gary Kasparov](/for-the-love-of-chess), I was fifteen years old. I didn’t know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade. It was a really huge deal, as it proved that machines were capable of accomplishing something that was clearly the domain of humans, requiring ingenuity and skill that nobody expected an algorithm, much less a machine, to match.
 
 Less than twenty years later, a similar feat was achieved when AlphaGo beat Lee Sedol in the game of Go, an achievement ten years ahead of its time. AlphaGo, a system built on the foundations of supervised and reinforcement learning and a state-of-the-art Monte Carlo tree search algorithm that combed through many generations of self-play, faced Lee Sedol, a 9 dan professional widely acclaimed to be the best in the game.
 

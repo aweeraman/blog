@@ -6,7 +6,7 @@ excerpt: "In the previous part, we discussed the core technology behind Bitcoin 
 feature_image: "https://images.unsplash.com/photo-1615992174118-9b8e9be025e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxjcnlwdG98ZW58MHx8fHwxNzExMjg1MTk2fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 
-In the [previous part](__GHOST_URL__/dissecting-bitcoin-part-1-the-technology), we discussed the core technology behind Bitcoin and the concepts that make it tick, namely:
+In the [previous part](/dissecting-bitcoin-part-1-the-technology), we discussed the core technology behind Bitcoin and the concepts that make it tick, namely:
 
 1. Chain of transactions using hash-based proof-of-work
 

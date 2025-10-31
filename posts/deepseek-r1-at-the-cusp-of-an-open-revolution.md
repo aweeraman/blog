@@ -12,7 +12,7 @@ GPT AI improvement was starting to show signs of slowing down, and has been obse
 
 ## Intelligence as an emergent property of Reinforcement Learning (RL)
 
-Reinforcement Learning (RL) has been successfully used in the past by Google's DeepMind team to build highly intelligent and specialized systems where intelligence is observed as an emergent property through rewards-based training approach that yielded achievements like AlphaGo (see my post on it here - [AlphaGo: a journey to machine intuition](__GHOST_URL__/alphago-a-journey-to-machine-intuition/)).
+Reinforcement Learning (RL) has been successfully used in the past by Google's DeepMind team to build highly intelligent and specialized systems where intelligence is observed as an emergent property through rewards-based training approach that yielded achievements like AlphaGo (see my post on it here - [AlphaGo: a journey to machine intuition](/alphago-a-journey-to-machine-intuition)).
 
 DeepMind went on to build a series of Alpha* projects that achieved many notable feats using RL:
 

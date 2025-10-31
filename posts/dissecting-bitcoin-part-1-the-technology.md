@@ -58,4 +58,4 @@ Source: [https://en.bitcoin.it/wiki/Controlled_supply](https://en.bitcoin.it/wik
 
 ![](/images/2024/03/1-ba8k-16cpqh8euhm7dqq8w.png)
 
-Reference: Nakamoto, Satoshi. “Bitcoin: A Peer-to-Peer Electronic Cash System.” (2008).Armed with this knowledge, [proceed to part 2](__GHOST_URL__/dissecting-bitcoin-part-2-challenges/) of this three part series on Dissecting Bitcoin that will cover some challenges in Bitcoin.
+Reference: Nakamoto, Satoshi. “Bitcoin: A Peer-to-Peer Electronic Cash System.” (2008).Armed with this knowledge, [proceed to part 2](/dissecting-bitcoin-part-2-challenges) of this three part series on Dissecting Bitcoin that will cover some challenges in Bitcoin.
