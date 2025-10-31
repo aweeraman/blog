@@ -66,3 +66,17 @@ export function paginatePosts(posts: Post[], page: number, postsPerPage: number)
     totalPosts: posts.length,
   };
 }
+
+export function getAdjacentPosts(slug: string): { previous: Post | null; next: Post | null } {
+  const posts = getAllPosts();
+  const currentIndex = posts.findIndex((post) => post.slug === slug);
+
+  if (currentIndex === -1) {
+    return { previous: null, next: null };
+  }
+
+  return {
+    next: currentIndex > 0 ? posts[currentIndex - 1] : null, // Newer post
+    previous: currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null, // Older post
+  };
+}

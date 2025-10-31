@@ -21,7 +21,7 @@ export function PostList({ posts, currentPage, totalPages }: PostListProps) {
     <div>
       <div className="space-y-6">
         {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
+          <PostCard key={post.slug} post={post} currentPage={currentPage} />
         ))}
       </div>
       <Pagination currentPage={currentPage} totalPages={totalPages} />
