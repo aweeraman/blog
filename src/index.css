@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* Custom styles for better paragraph spacing */
+.prose p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.prose p:first-child {
+  margin-top: 0;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.prose h3 {
+  margin-top: 1.75em;
+  margin-bottom: 0.75em;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose pre {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+.prose img {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
