@@ -8,9 +8,11 @@ feature_image: "https://images.unsplash.com/photo-1579702662656-f26205285141?cro
 
 Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way, that I can:
 
-1. $1
-2. $1
-3. $1
+1. Perform it fairly frequently without much of a hassle. More hassle means that it will not get done as frequently as I would like, and defeating the purpose of maintaining backups
+
+2. Is secure. The media that I want to backup to is very portable, and has a high chance of being misplaced or lost. Encryption of the contents is therefore a requirement.
+
+3. I would like the restoration process to be fairly painless and be able to perform it without many dependencies, preferably by booting into an Arch Linux installation image, for example.
 As it is the case with most things in Linux, there are many ways that this could be done. In this case, I’m sticking to rsync as the tool for taking the backup. It can be used to create a replica of a given directory structure in a different location, either on a different filesystem or even on a different networked host fairly easily. In this example, I’ll be using a USB disk that I use for offline storage.
 
 Next, encryption. I would really like to avoid the self encrypting disks especially with the disclosure of issues recently with several leading storage manufacturers that revealed serious vulnerabilities in how the encryption is performed that can lead to compromise of the data fairly trivially. The encryption keys, ciphers and technologies used is something that I would like to control for my backups. Which leads me to encrypted file systems on Linux. There are [several options](https://wiki.archlinux.org/index.php/disk_encryption), when it comes to this topic, and the ones I short-listed are dm-crypt and EncFS. The former is natively supported in most distros, is mature and works at the block level. The latter works in the user space and is simple to get started with. I quickly eliminated EncFS due to the many security issues surrounding it that was discovered as part of a [security audit](https://defuse.ca/audits/encfs.htm) of its implementation some time back.

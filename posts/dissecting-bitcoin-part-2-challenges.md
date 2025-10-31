@@ -8,9 +8,11 @@ feature_image: "https://images.unsplash.com/photo-1615992174118-9b8e9be025e7?cro
 
 In the [previous part](__GHOST_URL__/dissecting-bitcoin-part-1-the-technology), we discussed the core technology behind Bitcoin and the concepts that make it tick, namely:
 
-1. $1
-2. $1
-3. $1
+1. Chain of transactions using hash-based proof-of-work
+
+2. Distributed peer-to-peer network that doesn’t require trust
+
+3. Coin creation and incentives for miners
 These core capabilities are what drives the implementation of the transferrable asset known as Bitcoin on an immutable ledger that solves the problem of double spending with no central authority — what enables bitcoin to serve as a currency and a store of value. In this post, we will be covering some challenges Bitcoin faces as its adoption grows at a rapid rate.
 
 #### Barriers to entry

@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { getPostBySlug } from '../utils/posts';
 
 export function PostDetail() {
@@ -58,7 +59,7 @@ export function PostDetail() {
           )}
 
           <div className="prose prose-lg max-w-none p-8">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
           </div>
         </article>
       </div>

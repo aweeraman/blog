@@ -14,11 +14,15 @@ And here’s a session by Rob Pike the following year on how it went, with furth
 
 The approach is brilliant in theory and goes somewhat like this:
 
-1. $1
-2. $1
-3. $1
-4. $1
-5. $1
+1. Parse the C code using a simple yacc parser
+
+2. Generate parse tree. Tweak the tree to fix and re-write C-isms
+
+3. Traverse the parse tree and output corresponding Go code
+
+4. Compile Go code and validate output by comparing with C-based Go compiler
+
+5. Repeat till both compilers generate the same output
 A caveat is that the C parser from step 1 is a very specialized one built according to a very specific dialect followed by the original authors and not intended to be a general purpose converter which is a much bigger problem. Also, it was not a 100% automatic process and there’s still some code that needs to be hand rolled, but this makes the job of conversion easier, which would otherwise have been a tedious job.
 
 Once converted to Go, the process of refactoring, profiling and restructuring can take place to evolve the code base using the Go toolchain.

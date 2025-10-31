@@ -8,13 +8,19 @@ feature_image: "/images/2024/03/1-z7rdzjxzyiiz0pe_ulwn0q-jpeg.jpg"
 
 Key signing is a hallowed tradition in the open source world with a very specific protocol for validating and confirming an identity before accepting someone to the web of trust. It’s almost never done without meeting the person being admitted into the trust relationship and it goes like this:
 
-1. $1
-2. $1
-3. $1
-4. $1
-5. $1
-6. $1
-7. $1
+1. Individuals meet for a beer, or at a key signing party (for those who just went wtf, yes, these things are real, and they are crazy fun! see below for the type of shenanigans that take place at these reality-altering parties)
+
+2. They exchange strips of paper or business cards with their name, email address, key fingerprint and key ID
+
+3. They validate each other’s identity using Government issued photo IDs
+
+4. Once cleared, they pull down each other’s key from the key servers
+
+5. They validate that the fingerprint of the downloaded key matches what’s written on the piece of paper and the photo IDs exchanged at introduction
+
+6. If everything checks out, they sign each other’s key
+
+7. For additional security, the signed key is encrypted using the public key of the recipient and emailed to the address indicated in the key
 Let’s look at this unnerving and highly nerdy exchange that has replaced the “Hi, I’m Tom” with “Hi, I’m Tom and here’s my fingerprint and Government issued photo Id”. Here’s the rationale for some of the steps in this workflow.
 
 The key is a personal identification and privacy instrument that is backed by strong science to assure [non-repudiation](http://en.wikipedia.org/wiki/Non-repudiation). I will not go into the science in this post, but [here’s](http://en.wikipedia.org/wiki/RSA_%28cryptosystem%29) where you may want to get started if you’re curious. An aspect about this workflow is that nothing is trusted until verified and the protocol is there to make sure that no compromise takes place.
