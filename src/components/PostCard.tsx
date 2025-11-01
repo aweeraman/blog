@@ -31,7 +31,7 @@ export function PostCard({ post, currentPage = 1 }: PostCardProps) {
         <h2 className="text-xl sm:text-2xl md:text-2xl font-extrabold text-theme-accent-primary mb-2 md:mb-3 hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
           {frontmatter.title}
         </h2>
-        <time className="text-xs sm:text-sm text-theme-text-tertiary mb-2 md:mb-3 block tracking-wide font-medium">{formattedDate}</time>
+        <time className="text-xs sm:text-sm text-theme-text-tertiary mb-2 md:mb-3 block tracking-wide font-medium uppercase">{formattedDate}</time>
         {frontmatter.excerpt && (
           <p className="text-sm sm:text-base text-theme-text-secondary leading-relaxed line-clamp-3">{frontmatter.excerpt}</p>
         )}

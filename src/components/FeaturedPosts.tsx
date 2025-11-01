@@ -115,7 +115,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
                         {frontmatter.title}
                       </h3>
-                      <time className="text-sm md:text-base text-theme-text-tertiary block tracking-wide font-medium mb-6 md:mb-8">
+                      <time className="text-sm md:text-base text-theme-text-tertiary block tracking-wide font-medium mb-6 md:mb-8 uppercase">
                         {formattedDate}
                       </time>
                       {frontmatter.excerpt && (
