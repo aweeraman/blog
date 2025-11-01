@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 
 interface HeaderProps {
   searchQuery?: string;
@@ -6,27 +7,71 @@ interface HeaderProps {
 }
 
 export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isSearchOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  const handleSearchToggle = () => {
+    if (isSearchOpen && searchQuery === '') {
+      setIsSearchOpen(false);
+    } else {
+      setIsSearchOpen(true);
+    }
+  };
+
+  const handleSearchBlur = () => {
+    if (searchQuery === '') {
+      setIsSearchOpen(false);
+    }
+  };
+
   return (
     <header className="border-b border-theme-border-primary mb-8 md:mb-12">
       <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
-        <Link to="/" className="block">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
-            Anuradha Weeraman
-          </h1>
-          <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
-        </Link>
+        <div className="flex items-start justify-between gap-4">
+          <Link to="/" className="block flex-1">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
+              Anuradha Weeraman
+            </h1>
+            <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
+          </Link>
 
-        {onSearchChange && (
-          <div className="mt-4 md:mt-6">
-            <input
-              type="text"
-              placeholder="Search posts..."
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              className="w-full px-3 py-2 md:px-4 md:py-2.5 bg-theme-bg-secondary text-theme-text-primary border border-theme-border rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-accent-primary focus:border-transparent placeholder-theme-text-tertiary text-sm md:text-base"
-            />
-          </div>
-        )}
+          {onSearchChange && (
+            <div className="flex items-center gap-2 mt-1">
+              <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48 sm:w-64 md:w-80' : 'w-0'} overflow-hidden`}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Search posts..."
+                  value={searchQuery}
+                  onChange={(e) => onSearchChange(e.target.value)}
+                  onBlur={handleSearchBlur}
+                  className="w-full px-1 py-2 bg-transparent text-theme-text-primary border-b-2 border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
+                />
+              </div>
+              <button
+                onClick={handleSearchToggle}
+                className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors rounded-lg hover:bg-theme-bg-secondary"
+                aria-label="Search"
+              >
+                {isSearchOpen && searchQuery ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
