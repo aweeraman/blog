@@ -7,25 +7,27 @@ interface HeaderProps {
 
 export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   return (
-    <header className="mb-4 md:mb-6">
-      <Link to="/" className="block">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
-          Anuradha Weeraman
-        </h1>
-        <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
-      </Link>
+    <header className="border-b border-theme-border-primary mb-8 md:mb-12">
+      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
+        <Link to="/" className="block">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
+            Anuradha Weeraman
+          </h1>
+          <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
+        </Link>
 
-      {onSearchChange && (
-        <div className="mt-4 md:mt-6">
-          <input
-            type="text"
-            placeholder="Search posts..."
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-            className="w-full px-3 py-2 md:px-4 md:py-2.5 bg-theme-bg-secondary text-theme-text-primary border border-theme-border rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-accent-primary focus:border-transparent placeholder-theme-text-tertiary text-sm md:text-base"
-          />
-        </div>
-      )}
+        {onSearchChange && (
+          <div className="mt-4 md:mt-6">
+            <input
+              type="text"
+              placeholder="Search posts..."
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              className="w-full px-3 py-2 md:px-4 md:py-2.5 bg-theme-bg-secondary text-theme-text-primary border border-theme-border rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-accent-primary focus:border-transparent placeholder-theme-text-tertiary text-sm md:text-base"
+            />
+          </div>
+        )}
+      </div>
     </header>
   );
 }

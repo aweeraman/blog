@@ -34,22 +34,21 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
-      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 flex-1">
-        <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+      <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
-        <main>
-          {searchQuery && (
-            <div className="mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base text-theme-text-secondary">
-              {filteredPosts.length === 0 ? (
-                <p>No posts found for "{searchQuery}"</p>
-              ) : (
-                <p>Found {filteredPosts.length} post{filteredPosts.length !== 1 ? 's' : ''} for "{searchQuery}"</p>
-              )}
-            </div>
-          )}
-          <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
-        </main>
-      </div>
+      <main className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex-1 pb-8 md:pb-12">
+        {searchQuery && (
+          <div className="mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base text-theme-text-secondary">
+            {filteredPosts.length === 0 ? (
+              <p>No posts found for "{searchQuery}"</p>
+            ) : (
+              <p>Found {filteredPosts.length} post{filteredPosts.length !== 1 ? 's' : ''} for "{searchQuery}"</p>
+            )}
+          </div>
+        )}
+        <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+      </main>
+
       <Footer />
     </div>
   );

@@ -22,8 +22,8 @@ export function PostDetail() {
   if (!post) {
     return (
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 flex-1">
-          <Header />
+        <Header />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 flex-1 pb-8 md:pb-12">
           <div className="text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-theme-text-primary mb-3 md:mb-4">Post Not Found</h1>
             <p className="text-sm sm:text-base text-theme-text-secondary mb-4 md:mb-6">The post you're looking for doesn't exist.</p>
@@ -51,9 +51,9 @@ export function PostDetail() {
 
   return (
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 flex-1">
-        <Header />
+      <Header />
 
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 flex-1 pb-8 md:pb-12">
         <Link
           to={backToPath}
           className="text-xs sm:text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-2 md:mb-3 inline-flex items-center gap-1.5 group"
