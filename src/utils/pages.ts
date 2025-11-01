@@ -1,9 +1,5 @@
-import { Buffer } from 'buffer';
 import matter from 'gray-matter';
 import type { Page, PageFrontmatter } from '../types/page';
-
-// Make Buffer available globally for gray-matter
-(globalThis as any).Buffer = Buffer;
 
 // Use Vite's import.meta.glob to import all markdown files
 const pageFiles = import.meta.glob('../../pages/*.md', {

@@ -26,6 +26,7 @@ export default function Page() {
             <a
               href="/"
               className="text-sm sm:text-base text-theme-accent-primary hover:text-theme-accent-hover underline cursor-pointer"
+              aria-label="Return to homepage"
             >
               Go back to home
             </a>
@@ -56,18 +57,20 @@ export default function Page() {
           <a
             href="/"
             className="text-xs sm:text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-2 md:mb-3 inline-flex items-center gap-1.5 group"
+            aria-label="Back to homepage"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             <span>Back</span>
           </a>
 
           {(previous || next) && (
-            <nav className="mb-4 md:mb-6">
+            <nav className="mb-4 md:mb-6" aria-label="Post navigation">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 {previous && (
                   <a
                     href={`/${previous.slug}`}
                     className="group block p-3 sm:p-4 rounded-lg bg-theme-bg-secondary hover:bg-theme-bg-tertiary transition-colors border border-theme-border-primary"
+                    aria-label={`Previous post: ${previous.frontmatter.title}`}
                   >
                     <div className="text-xs sm:text-sm text-theme-text-tertiary mb-1.5 sm:mb-2">← Previous</div>
                     <div className="text-sm sm:text-base text-theme-accent-primary group-hover:text-theme-accent-hover font-medium line-clamp-2">
@@ -79,6 +82,7 @@ export default function Page() {
                   <a
                     href={`/${next.slug}`}
                     className={`group block p-3 sm:p-4 rounded-lg bg-theme-bg-secondary hover:bg-theme-bg-tertiary transition-colors border border-theme-border-primary ${!previous ? 'md:col-start-2' : ''}`}
+                    aria-label={`Next post: ${next.frontmatter.title}`}
                   >
                     <div className="text-xs sm:text-sm text-theme-text-tertiary mb-1.5 sm:mb-2 text-right">Next →</div>
                     <div className="text-sm sm:text-base text-theme-accent-primary group-hover:text-theme-accent-hover font-medium text-right line-clamp-2">
@@ -111,12 +115,13 @@ export default function Page() {
             </div>
 
             {(previous || next) && (
-              <nav className="border-t border-theme-border-primary p-4 sm:p-6 md:p-8">
+              <nav className="border-t border-theme-border-primary p-4 sm:p-6 md:p-8" aria-label="Additional post navigation">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
                   {previous && (
                     <a
                       href={`/${previous.slug}`}
                       className="group block p-3 sm:p-4 rounded-lg bg-theme-bg-tertiary hover:bg-theme-bg-primary transition-colors"
+                      aria-label={`Previous post: ${previous.frontmatter.title}`}
                     >
                       <div className="text-xs sm:text-sm text-theme-text-tertiary mb-1.5 sm:mb-2">← Previous</div>
                       <div className="text-sm sm:text-base text-theme-accent-primary group-hover:text-theme-accent-hover font-medium line-clamp-2">
@@ -128,6 +133,7 @@ export default function Page() {
                     <a
                       href={`/${next.slug}`}
                       className={`group block p-3 sm:p-4 rounded-lg bg-theme-bg-tertiary hover:bg-theme-bg-primary transition-colors ${!previous ? 'md:col-start-2' : ''}`}
+                      aria-label={`Next post: ${next.frontmatter.title}`}
                     >
                       <div className="text-xs sm:text-sm text-theme-text-tertiary mb-1.5 sm:mb-2 text-right">Next →</div>
                       <div className="text-sm sm:text-base text-theme-accent-primary group-hover:text-theme-accent-hover font-medium text-right line-clamp-2">
@@ -158,6 +164,7 @@ export default function Page() {
           <a
             href="/"
             className="text-xs sm:text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-2 md:mb-3 inline-flex items-center gap-1.5 group"
+            aria-label="Back to homepage"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
             <span>Back</span>

@@ -26,7 +26,7 @@ export function PostCard({ post }: PostCardProps) {
       <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-secondary/70 via-theme-bg-secondary/85 to-theme-bg-secondary/95 group-hover:from-theme-bg-secondary/65 group-hover:via-theme-bg-secondary/80 group-hover:to-theme-bg-secondary/90 transition-all"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(17,24,39,0.4)_70%)]"></div>
 
-      <a href={frontmatter.path} className="block relative z-10 h-full flex flex-col">
+      <a href={frontmatter.path} className="block relative z-10 h-full flex flex-col" aria-label={`Read article: ${frontmatter.title}`}>
         <h2 className="text-xl sm:text-2xl md:text-2xl font-extrabold text-theme-accent-primary mb-2 md:mb-3 hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
           {frontmatter.title}
         </h2>

@@ -33,26 +33,31 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
     <header className="sticky top-0 z-50 bg-theme-bg-primary border-b border-theme-border-primary mb-8 md:mb-12">
       <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          {/* Profile and Title */}
           <div className="flex items-center gap-3 md:gap-4 md:flex-1">
-            <a href="/bio" className="flex-shrink-0">
+            <a href="/bio" className="flex-shrink-0" aria-label="View bio page">
               <img
                 src="/images/anuradha-weeraman.jpg"
                 alt="Anuradha Weeraman"
                 className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-theme-accent-primary hover:ring-theme-accent-hover transition-all mt-0.5 sm:mt-1"
               />
             </a>
-            <a href="/" className="flex-1 min-w-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
-                Anuradha Weeraman
-              </h1>
-              <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on software development, systems programming and technology</p>
-            </a>
+            <div className="flex-1 min-w-0">
+              <a href="/" aria-label="Go to homepage">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
+                  Anuradha Weeraman
+                </h1>
+                <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on software development, systems programming and technology</p>
+              </a>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4 md:mt-1">
+          {/* Desktop: Bio and Search */}
+          <div className="hidden md:flex items-center gap-4 md:mt-1">
             <a
               href="/bio"
               className="text-sm md:text-base font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
+              aria-label="View bio page"
             >
               Bio
             </a>
@@ -67,6 +72,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                   onChange={(e) => onSearchChange(e.target.value)}
                   onBlur={handleSearchBlur}
                   className="w-full px-1 py-2 bg-transparent text-theme-text-primary border-b-2 border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
+                  aria-label="Search blog posts"
                 />
               </div>
               <button
@@ -87,6 +93,48 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Mobile: Bio and Search below title/subtitle */}
+        <div className="flex md:hidden items-center justify-center gap-4 mt-4">
+          <a
+            href="/bio"
+            className="text-sm font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
+            aria-label="View bio page"
+          >
+            Bio
+          </a>
+          {onSearchChange && (
+            <div className="flex items-center gap-2">
+              <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48' : 'w-0'} overflow-hidden`}>
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Search posts..."
+                  value={searchQuery}
+                  onChange={(e) => onSearchChange(e.target.value)}
+                  onBlur={handleSearchBlur}
+                  className="w-full px-1 py-2 bg-transparent text-theme-text-primary border-b-2 border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
+                  aria-label="Search blog posts"
+                />
+              </div>
+              <button
+                onClick={handleSearchToggle}
+                className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors rounded-lg hover:bg-theme-bg-secondary"
+                aria-label="Search"
+              >
+                {isSearchOpen && searchQuery ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                )}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </header>
