@@ -39,11 +39,6 @@ body {
   font-feature-settings: "liga" 1, "calt" 1; /* Enable ligatures */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-
-html {
-  overflow-x: hidden;
 }
 
 /* Custom styles for better paragraph spacing and dark theme prose */
@@ -326,6 +321,8 @@ html {
 }
 
 .prose img {
+  max-width: 100%;
+  height: auto;
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
