@@ -16,7 +16,7 @@ export function PostCard({ post, currentPage = 1 }: PostCardProps) {
 
   return (
     <article
-      className="relative border border-theme-border-primary rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg hover:shadow-black/20 transition-all hover:border-theme-border-secondary overflow-hidden group"
+      className="relative border border-theme-border-primary rounded-lg p-4 sm:p-5 md:p-6 hover:shadow-lg hover:shadow-black/20 transition-all hover:border-theme-border-secondary overflow-hidden group h-full min-h-[280px] sm:min-h-[300px]"
       style={frontmatter.feature_image ? {
         backgroundImage: `url(${frontmatter.feature_image})`,
         backgroundSize: 'cover',
@@ -26,13 +26,13 @@ export function PostCard({ post, currentPage = 1 }: PostCardProps) {
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-theme-bg-secondary/85 group-hover:bg-theme-bg-secondary/80 transition-colors"></div>
 
-      <Link to={frontmatter.path} state={{ fromPage: currentPage }} className="block relative z-10">
+      <Link to={frontmatter.path} state={{ fromPage: currentPage }} className="block relative z-10 h-full flex flex-col">
         <h2 className="text-xl sm:text-2xl md:text-2xl font-extrabold text-theme-accent-primary mb-2 md:mb-3 hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
           {frontmatter.title}
         </h2>
         <time className="text-xs sm:text-sm text-theme-text-tertiary mb-2 md:mb-3 block tracking-wide font-medium">{formattedDate}</time>
         {frontmatter.excerpt && (
-          <p className="text-sm sm:text-base text-theme-text-secondary leading-relaxed">{frontmatter.excerpt}</p>
+          <p className="text-sm sm:text-base text-theme-text-secondary leading-relaxed line-clamp-3">{frontmatter.excerpt}</p>
         )}
       </Link>
     </article>

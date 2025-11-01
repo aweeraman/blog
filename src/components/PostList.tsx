@@ -19,7 +19,7 @@ export function PostList({ posts, currentPage, totalPages }: PostListProps) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-6 auto-rows-fr">
         {posts.map((post) => (
           <PostCard key={post.slug} post={post} currentPage={currentPage} />
         ))}

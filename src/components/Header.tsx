@@ -7,9 +7,9 @@ interface HeaderProps {
 
 export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   return (
-    <header className="mb-8 md:mb-12">
+    <header className="mb-4 md:mb-6">
       <Link to="/" className="block">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-2 md:mb-3 hover:text-theme-accent-hover transition-colors tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
           Anuradha Weeraman
         </h1>
         <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
