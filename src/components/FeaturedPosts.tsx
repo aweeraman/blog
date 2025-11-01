@@ -67,30 +67,28 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             return (
               <article
                 key={index}
-                className={`absolute inset-0 w-full h-full transition-all duration-700 ease-in-out ${
+                className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out ${
                   isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
                 }`}
-                style={{
-                  transform: `translateX(${offset * 100}%)`,
-                }}
+                style={{ transform: `translateX(${offset * 100}%)` }}
               >
                 {/* Background image layer with slower parallax movement */}
                 {frontmatter.feature_image && (
                   <div
-                    className="absolute inset-0 transition-transform duration-1000 ease-in-out"
+                    className="absolute inset-0 transition-transform duration-700 ease-in-out"
                     style={{
                       backgroundImage: `url(${frontmatter.feature_image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       transform: `translateX(${offset * 30}%) scale(1.1)`,
                     }}
-                  />
+                  >
+                    {/* Enhanced radial transparency overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-secondary/50 via-theme-bg-secondary/60 to-theme-bg-secondary/70"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,transparent_0%,rgba(17,24,39,0.2)_40%,rgba(17,24,39,0.5)_100%)]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,transparent_0%,rgba(17,24,39,0.3)_50%)]"></div>
+                  </div>
                 )}
-
-                {/* Enhanced radial transparency overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-secondary/50 via-theme-bg-secondary/60 to-theme-bg-secondary/70"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,transparent_0%,rgba(17,24,39,0.2)_40%,rgba(17,24,39,0.5)_100%)]"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,transparent_0%,rgba(17,24,39,0.3)_50%)]"></div>
 
                 {/* Featured badge - responsive positioning */}
                 <div className="absolute top-4 left-4 sm:top-auto sm:left-auto sm:bottom-24 sm:right-20 md:right-24 z-20">
@@ -103,12 +101,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                 </div>
 
                 {/* Content layer with faster parallax movement */}
-                <div
-                  className="relative z-10 h-full flex flex-col justify-center px-6 sm:pl-20 sm:pr-8 md:pl-24 md:pr-10 lg:pr-12 pb-32 sm:pb-28 pt-20 sm:pt-24 transition-transform duration-700 ease-in-out pointer-events-none"
-                  style={{
-                    transform: `translateX(${offset * 105}%)`,
-                  }}
-                >
+                <div className="relative z-10 h-full flex flex-col justify-center px-6 sm:pl-20 sm:pr-8 md:pl-24 md:pr-10 lg:pr-12 pb-32 sm:pb-28 pt-20 sm:pt-24 pointer-events-none">
                   <div className="max-w-3xl mt-2 pointer-events-auto">
                     <a href={frontmatter.path} className="block group">
                       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight drop-shadow-lg">
