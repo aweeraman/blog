@@ -17,6 +17,28 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Separate React and React-DOM into their own chunk
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react-vendor';
+          }
+          // Separate markdown rendering into its own chunk
+          if (id.includes('node_modules/react-markdown') || id.includes('node_modules/remark-gfm')) {
+            return 'markdown-vendor';
+          }
+          // Vike runtime
+          if (id.includes('node_modules/vike')) {
+            return 'vike-vendor';
+          }
+        },
+      },
+    },
+    // Increase chunk size warning limit
+    chunkSizeWarningLimit: 600,
+  },
   preview: {
     port: 8000,
     strictPort: false,

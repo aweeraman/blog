@@ -1,10 +1,10 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import { Suspense } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 import { getPostBySlug, getAdjacentPosts } from '../../src/utils/posts';
 import { getPageBySlug } from '../../src/utils/pages';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
+import { MarkdownRenderer } from '../../src/components/MarkdownRenderer';
 
 export default function Page() {
   const pageContext = usePageContext();
@@ -110,9 +110,10 @@ export default function Page() {
               </div>
             )}
 
-            <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none p-4 sm:p-6 md:p-8">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-            </div>
+            <MarkdownRenderer
+              content={content}
+              className="prose prose-sm sm:prose-base md:prose-lg max-w-none p-4 sm:p-6 md:p-8"
+            />
 
             {(previous || next) && (
               <nav className="border-t border-theme-border-primary p-4 sm:p-6 md:p-8" aria-label="Additional post navigation">
@@ -175,9 +176,10 @@ export default function Page() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-theme-accent-primary mb-0 tracking-tight leading-tight">{frontmatter.title}</h1>
             </header>
 
-            <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none px-4 sm:px-6 md:px-8 pt-0 pb-4 sm:pb-6 md:pb-8 [&>*:first-child]:mt-2 [&>*:first-child]:sm:mt-3 [&>*:first-child]:md:mt-4">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-            </div>
+            <MarkdownRenderer
+              content={content}
+              className="prose prose-sm sm:prose-base md:prose-lg max-w-none px-4 sm:px-6 md:px-8 pt-0 pb-4 sm:pb-6 md:pb-8 [&>*:first-child]:mt-2 [&>*:first-child]:sm:mt-3 [&>*:first-child]:md:mt-4"
+            />
           </article>
         </div>
         <Footer />
