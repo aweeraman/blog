@@ -1,9 +1,13 @@
 import { defineConfig } from 'vite'
+import vike from 'vike/plugin'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    vike({ prerender: true })
+  ],
   define: {
     'global': 'globalThis',
   },

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 
 interface HeaderProps {
@@ -35,28 +34,28 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
       <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <div className="flex items-center gap-3 md:gap-4 md:flex-1">
-            <Link to="/bio" className="flex-shrink-0">
+            <a href="/bio" className="flex-shrink-0">
               <img
                 src="/images/anuradha-weeraman.jpg"
                 alt="Anuradha Weeraman"
                 className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-theme-accent-primary hover:ring-theme-accent-hover transition-all mt-0.5 sm:mt-1"
               />
-            </Link>
-            <Link to="/" className="flex-1 min-w-0">
+            </a>
+            <a href="/" className="flex-1 min-w-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
                 Anuradha Weeraman
               </h1>
-              <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
-            </Link>
+              <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on software development, systems programming and technology</p>
+            </a>
           </div>
 
           <div className="flex items-center gap-4 md:mt-1">
-            <Link
-              to="/bio"
+            <a
+              href="/bio"
               className="text-sm md:text-base font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
             >
               Bio
-            </Link>
+            </a>
             {onSearchChange && (
               <div className="flex items-center gap-2">
               <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48 sm:w-64 md:w-80' : 'w-0'} overflow-hidden`}>

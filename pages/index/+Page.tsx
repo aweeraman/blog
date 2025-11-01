@@ -1,19 +1,14 @@
-import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
-import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../utils/posts';
-import { PostList } from '../components/PostList';
-import { FeaturedPosts } from '../components/FeaturedPosts';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { POSTS_PER_PAGE } from '../config';
+import { useState } from 'react';
+import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../../src/utils/posts';
+import { PostList } from '../../src/components/PostList';
+import { FeaturedPosts } from '../../src/components/FeaturedPosts';
+import { Header } from '../../src/components/Header';
+import { Footer } from '../../src/components/Footer';
+import { POSTS_PER_PAGE } from '../../src/config';
 
-export function Home() {
-  const { page } = useParams<{ page?: string }>();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const currentPage = page ? parseInt(page, 10) : 1;
-
-  // Get search query from URL
-  const searchQuery = searchParams.get('q') || '';
+export default function Page() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const currentPage = 1;
 
   // Get all posts and filter based on search query
   const allPosts = getAllPosts();
@@ -21,19 +16,10 @@ export function Home() {
   const { posts, totalPages } = paginatePosts(filteredPosts, currentPage, POSTS_PER_PAGE);
 
   // Get featured posts (only show on first page and when not searching)
-  const featuredPosts = (!searchQuery && currentPage === 1) ? getFeaturedPosts() : [];
+  const featuredPosts = !searchQuery ? getFeaturedPosts() : [];
 
   const handleSearchChange = (query: string) => {
-    // Update URL search params
-    if (query) {
-      setSearchParams({ q: query });
-    } else {
-      setSearchParams({});
-    }
-    // Reset to page 1 when search changes
-    if (currentPage !== 1) {
-      navigate('/');
-    }
+    setSearchQuery(query);
   };
 
   return (

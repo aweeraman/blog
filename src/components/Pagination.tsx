@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
@@ -13,20 +11,20 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
   return (
     <nav className="flex justify-center items-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
       {currentPage > 1 && (
-        <Link
-          to={currentPage === 2 ? '/' : `/page/${currentPage - 1}`}
+        <a
+          href={currentPage === 2 ? '/' : `/page/${currentPage - 1}`}
           className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
           <span className="hidden sm:inline">Previous</span>
           <span className="sm:hidden">Prev</span>
-        </Link>
+        </a>
       )}
 
       <div className="flex gap-1.5 sm:gap-2">
         {pages.map((page) => (
-          <Link
+          <a
             key={page}
-            to={page === 1 ? '/' : `/page/${page}`}
+            href={page === 1 ? '/' : `/page/${page}`}
             className={`px-3 py-1.5 sm:px-4 sm:py-2 border rounded transition-colors text-sm sm:text-base ${
               page === currentPage
                 ? 'bg-theme-accent-primary text-white border-theme-accent-primary'
@@ -34,17 +32,17 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
             }`}
           >
             {page}
-          </Link>
+          </a>
         ))}
       </div>
 
       {currentPage < totalPages && (
-        <Link
-          to={`/page/${currentPage + 1}`}
+        <a
+          href={`/page/${currentPage + 1}`}
           className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
           Next
-        </Link>
+        </a>
       )}
     </nav>
   );

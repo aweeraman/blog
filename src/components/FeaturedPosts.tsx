@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import type { Post } from '../types/post';
 
@@ -111,7 +110,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                   }}
                 >
                   <div className="max-w-3xl mt-2 pointer-events-auto">
-                    <Link to={frontmatter.path} className="block group">
+                    <a href={frontmatter.path} className="block group">
                       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight drop-shadow-lg">
                         {frontmatter.title}
                       </h3>
@@ -123,15 +122,15 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                           {frontmatter.excerpt}
                         </p>
                       )}
-                    </Link>
-                    <Link to={frontmatter.path} className="relative inline-block">
+                    </a>
+                    <a href={frontmatter.path} className="relative inline-block">
                       <div className="inline-flex items-center gap-2 text-theme-accent-primary bg-theme-accent-primary/10 hover:bg-theme-accent-primary hover:text-white font-bold text-sm sm:text-base md:text-lg px-5 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all shadow-md hover:shadow-lg hover:scale-105 cursor-pointer">
                         Read more
                         <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
