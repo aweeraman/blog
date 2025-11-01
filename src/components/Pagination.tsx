@@ -11,22 +11,23 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <nav className="flex justify-center items-center gap-2 mt-8">
+    <nav className="flex justify-center items-center gap-1.5 sm:gap-2 mt-6 sm:mt-8">
       {currentPage > 1 && (
         <Link
           to={currentPage === 2 ? '/' : `/page/${currentPage - 1}`}
-          className="px-4 py-2 border border-theme-border-primary rounded text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
+          className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
-          Previous
+          <span className="hidden sm:inline">Previous</span>
+          <span className="sm:hidden">Prev</span>
         </Link>
       )}
 
-      <div className="flex gap-2">
+      <div className="flex gap-1.5 sm:gap-2">
         {pages.map((page) => (
           <Link
             key={page}
             to={page === 1 ? '/' : `/page/${page}`}
-            className={`px-4 py-2 border rounded transition-colors ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 border rounded transition-colors text-sm sm:text-base ${
               page === currentPage
                 ? 'bg-theme-accent-primary text-white border-theme-accent-primary'
                 : 'border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-tertiary'
@@ -40,7 +41,7 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
       {currentPage < totalPages && (
         <Link
           to={`/page/${currentPage + 1}`}
-          className="px-4 py-2 border border-theme-border-primary rounded text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
+          className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
         >
           Next
         </Link>

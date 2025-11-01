@@ -44,57 +44,136 @@ body {
 /* Custom styles for better paragraph spacing and dark theme prose */
 .prose {
   color: var(--color-theme-text-secondary);
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.8;
   letter-spacing: -0.011em;
 }
 
+@media (min-width: 640px) {
+  .prose {
+    font-size: 1.0625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose {
+    font-size: 1.125rem;
+  }
+}
+
 .prose h1 {
   color: var(--color-theme-accent-primary);
-  font-size: 2.75rem;
+  font-size: 1.875rem;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.035em;
-  margin-top: 2em;
-  margin-bottom: 0.85em;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+@media (min-width: 640px) {
+  .prose h1 {
+    font-size: 2.25rem;
+    margin-top: 1.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h1 {
+    font-size: 2.75rem;
+    line-height: 1.15;
+    margin-top: 2em;
+    margin-bottom: 0.85em;
+  }
 }
 
 .prose h2 {
   color: var(--color-theme-accent-primary);
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.3;
   letter-spacing: -0.028em;
-  margin-top: 2em;
-  margin-bottom: 0.85em;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+}
+
+@media (min-width: 640px) {
+  .prose h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h2 {
+    font-size: 2.125rem;
+    line-height: 1.25;
+    margin-top: 2em;
+    margin-bottom: 0.85em;
+  }
 }
 
 .prose h3 {
   color: var(--color-theme-accent-primary);
-  font-size: 1.625rem;
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
-  margin-top: 1.75em;
-  margin-bottom: 0.7em;
-}
-
-.prose h4 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   margin-top: 1.5em;
   margin-bottom: 0.6em;
 }
 
+@media (min-width: 640px) {
+  .prose h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h3 {
+    font-size: 1.625rem;
+    line-height: 1.35;
+    margin-top: 1.75em;
+    margin-bottom: 0.7em;
+  }
+}
+
+.prose h4 {
+  color: var(--color-theme-accent-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 640px) {
+  .prose h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h4 {
+    font-size: 1.375rem;
+    line-height: 1.4;
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
+  }
+}
+
 .prose h5, .prose h6 {
   color: var(--color-theme-accent-primary);
-  font-size: 1.1875rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .prose h5, .prose h6 {
+    font-size: 1.1875rem;
+  }
 }
 
 .prose a {
@@ -138,16 +217,32 @@ body {
 /* Ensure lists are properly styled */
 .prose ol {
   list-style-type: decimal;
-  padding-left: 1.75em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+@media (min-width: 768px) {
+  .prose ol {
+    padding-left: 1.75em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
 }
 
 .prose ul {
   list-style-type: disc;
-  padding-left: 1.75em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+@media (min-width: 768px) {
+  .prose ul {
+    padding-left: 1.75em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
 }
 
 .prose ol > li,
@@ -179,23 +274,50 @@ body {
 
 /* Lead paragraph - make first paragraph stand out */
 .prose > p:first-of-type {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-theme-text-primary);
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+}
+
+@media (min-width: 640px) {
+  .prose > p:first-of-type {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose > p:first-of-type {
+    font-size: 1.25rem;
+    margin-bottom: 2em;
+  }
 }
 
 .prose pre {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   overflow-x: auto;
   background-color: var(--color-theme-bg-primary);
-  padding: 1.25em 1.5em;
+  padding: 1em;
   border-radius: 0.5rem;
   border: 1px solid var(--color-theme-border-primary);
   font-family: var(--font-family-mono);
   line-height: 1.7;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 640px) {
+  .prose pre {
+    padding: 1.25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose pre {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1.25em 1.5em;
+  }
 }
 
 .prose img {
@@ -216,14 +338,28 @@ body {
 
 /* Blockquotes */
 .prose blockquote {
-  border-left: 4px solid var(--color-theme-accent-primary);
-  padding-left: 1.5em;
-  margin: 2em 0;
+  border-left: 3px solid var(--color-theme-accent-primary);
+  padding-left: 1em;
+  margin: 1.5em 0;
   font-style: italic;
   color: var(--color-theme-text-secondary);
   background-color: var(--color-theme-bg-tertiary);
-  padding: 1.5em 1.5em 1.5em 2em;
+  padding: 1em 1em 1em 1.5em;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .prose blockquote {
+    border-left-width: 4px;
+    padding: 1.25em 1.25em 1.25em 1.75em;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose blockquote {
+    margin: 2em 0;
+    padding: 1.5em 1.5em 1.5em 2em;
+  }
 }
 
 .prose blockquote p {
@@ -240,12 +376,26 @@ body {
 /* Tables */
 .prose table {
   width: 100%;
-  margin: 2em 0;
+  margin: 1.5em 0;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--color-theme-border-primary);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .prose table {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose table {
+    margin: 2em 0;
+    font-size: 1rem;
+  }
 }
 
 .prose th {
@@ -253,13 +403,25 @@ body {
   color: var(--color-theme-accent-primary);
   font-weight: 700;
   text-align: left;
-  padding: 0.75em 1em;
+  padding: 0.5em 0.75em;
   border-bottom: 2px solid var(--color-theme-accent-primary);
 }
 
+@media (min-width: 768px) {
+  .prose th {
+    padding: 0.75em 1em;
+  }
+}
+
 .prose td {
-  padding: 0.75em 1em;
+  padding: 0.5em 0.75em;
   border-bottom: 1px solid var(--color-theme-border-primary);
+}
+
+@media (min-width: 768px) {
+  .prose td {
+    padding: 0.75em 1em;
+  }
 }
 
 .prose tr:last-child td {

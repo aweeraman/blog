@@ -33,12 +33,12 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-theme-bg-primary">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
         <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
         <main>
           {searchQuery && (
-            <div className="mb-6 text-theme-text-secondary">
+            <div className="mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base text-theme-text-secondary">
               {filteredPosts.length === 0 ? (
                 <p>No posts found for "{searchQuery}"</p>
               ) : (
