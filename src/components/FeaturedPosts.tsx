@@ -89,9 +89,9 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                 )}
 
                 {/* Enhanced radial transparency overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-secondary/80 via-theme-bg-secondary/85 to-theme-bg-secondary/90"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,transparent_0%,rgba(17,24,39,0.3)_40%,rgba(17,24,39,0.7)_100%)]"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,transparent_0%,rgba(17,24,39,0.5)_50%)]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-theme-bg-secondary/50 via-theme-bg-secondary/60 to-theme-bg-secondary/70"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,transparent_0%,rgba(17,24,39,0.2)_40%,rgba(17,24,39,0.5)_100%)]"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,transparent_0%,rgba(17,24,39,0.3)_50%)]"></div>
 
                 {/* Featured badge - responsive positioning */}
                 <div className="absolute top-4 left-4 sm:top-auto sm:left-auto sm:bottom-24 sm:right-20 md:right-24 z-20">
@@ -112,14 +112,14 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                 >
                   <Link to={frontmatter.path} className="block group">
                     <div className="max-w-3xl mt-2">
-                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight drop-shadow-lg">
                         {frontmatter.title}
                       </h3>
-                      <time className="text-sm md:text-base text-theme-text-tertiary block tracking-wide font-medium mb-6 md:mb-8 uppercase">
+                      <time className="text-sm md:text-base text-theme-text-tertiary block tracking-wide font-medium mb-6 md:mb-8 uppercase drop-shadow-md">
                         {formattedDate}
                       </time>
                       {frontmatter.excerpt && (
-                        <p className="text-sm sm:text-base md:text-lg text-theme-text-secondary leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-2xl drop-shadow-sm">
+                        <p className="text-sm sm:text-base md:text-lg text-theme-text-secondary leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-2xl drop-shadow-md">
                           {frontmatter.excerpt}
                         </p>
                       )}
