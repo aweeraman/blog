@@ -3,7 +3,7 @@ title: "Connecting to the Minnowboard over Serial"
 date: "2019-03-17"
 path: "/connecting-to-the-minnowboard-using-a-console-cable"
 excerpt: "In this post, I will walk you through the process of connecting to a Minnowboard over a serial console connection, so that you can use it without having to hook up a monitor or keyboard. For those of you that may be new to Minnowboards, they are single board computers that fall into the niche segment of SBCs that are based on Intel x86 processors."
-feature_image: "https://images.unsplash.com/photo-1475903057958-80a11c1f01d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fG1pbm5vd3xlbnwwfHx8fDE3MTExMjkyMDJ8MA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/minnow-single-board-computer.jpg"
 ---
 
 In this post, I will walk you through the process of connecting to a [Minnowboard](https://minnowboard.org/) over a serial console connection, so that you can use it without having to hook up a monitor or keyboard. For those of you that may be new to Minnowboards, they are single board computers that fall into the niche segment of SBCs that are based on Intel x86 processors unlike the ARM processors that are prevalent in the vast majority of Raspberry Pi and derivative single board computers out there. A few other alternatives in this category of boards are the [Latte Panda](https://www.lattepanda.com/) and the [Udoo](https://www.udoo.org/udoo-x86/).

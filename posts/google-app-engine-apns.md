@@ -3,7 +3,7 @@ title: "Google App Engine + APNS"
 date: "2013-04-21"
 path: "/google-app-engine-apns"
 excerpt: "Earlier this month, Google App Engine released support for outbound sockets and I figured that a Saturday spent mucking around with AppEngine to see if I could get it to work with APNS would be time well spent."
-feature_image: "https://images.unsplash.com/photo-1632298095711-d546888879ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHB1c2glMjBub3RpZmljYXRpb25zfGVufDB8fHx8MTcxMTI4NzYxNHww&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/push-notifications-mobile.jpg"
 ---
 
 Earlier this month, Google App Engine [released support for outbound sockets](http://googleappengine.blogspot.com/2013/04/app-engine-177-released.html) and I figured that a Saturday spent mucking around with AppEngine to see if I could get it to work with APNS would be time well spent. In the sandboxed world of GAE, lack out outbound socket support meant that it was not possible to communicate with external services by opening a socket, which is what the Apple Push Notification Service (APNS) required. So for a long time, it was not possible to use the AppEngine to build an APNS provider, but now you can. Services like [Urban Airship expose this capability](http://www.aschroder.com/2012/02/sending-apple-ios-notifications-via-urban-airship-on-google-app-engine/) in a way that can be consumed through a RESTful service, which works with GAE using UrlFetch, but the focus of this post is to communicate with APNS directly. There are some caveats though. Billing needs to be enabled, although the free tier should be sufficient for playing around, and there’s also the matter of [the daily quota](https://developers.google.com/appengine/docs/quotas#Sockets).

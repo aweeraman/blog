@@ -3,7 +3,7 @@ title: "FOSS-ed for Hackers, a footnote"
 date: "2006-05-30"
 path: "/foss-ed-for-hackers-a-footnote"
 excerpt: "FOSS-ed for Hackers ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won't delve much into it. Overall, it was a success."
-feature_image: "https://images.unsplash.com/photo-1562412692-26406e1bf600?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGNyZWF0aXZlJTIwY29tbW9uc3xlbnwwfHx8fDE3MTEyOTExMjV8MA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/creative-commons-open-source.jpg"
 ---
 
 [FOSS-ed for Hackers](http://www.foss.lk) ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won’t delve much into it. Overall, it was a success. The participation was extremely good and the event was organized in style, thanks largely to Devaka.

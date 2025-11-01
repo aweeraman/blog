@@ -3,7 +3,7 @@ title: "Virtual Private Networking"
 date: "2006-03-20"
 path: "/virtual-private-networking"
 excerpt: "I'm sure most of you would have had to mess around with VPNs at some point of your lives. Sometimes, VPNs can turn nasty and bind you to an OS that hinders your free spirit."
-feature_image: "https://images.unsplash.com/photo-1601898532125-bb05b244b90e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fHZwbnxlbnwwfHx8fDE3MTEyOTE4OTR8MA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/vpn-security.jpg"
 ---
 
 I’m sure most of you would have had to mess around with [VPN](http://en.wikipedia.org/wiki/Vpn)s at some point of your lives. Sometimes, VPNs can turn nasty and bind you to an OS that hinders your free spirit. But thanks to [IPSec](http://en.wikipedia.org/wiki/IPsec), that doesn’t always have to be the case. For instance, assuming your place of work has set up Cisco based VPN concentrators, connecting to it using Linux is quite simple with the help of vpnc. Cisco, being somewhat of an opensource friendly hardware manufacturer, has released their vpn client software for Linux as a free download so long as you use it with their products. vpnc on the other hand, is an opensource alternative, very easy to configure, and a delight to work with.

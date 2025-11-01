@@ -3,7 +3,7 @@ title: "The man, the myth, the rebel"
 date: "2019-07-14"
 path: "/the-man-the-myth-the-rebel"
 excerpt: "As we get ready for another Wimbledon finals between Federer and Djokovic in a few hours, I look back upon a past champion whose story I was lucky to read about this weekend. Here's the opening that clinched my interest."
-feature_image: "https://images.unsplash.com/photo-1499510318569-1a3d67dc3976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDExfHx0ZW5uaXN8ZW58MHx8fHwxNzExMDkxNDA2fDA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/tennis-agassi.jpg"
 ---
 
 As we get ready for another Wimbledon finals between Federer and Djokovic in a few hours, I look back upon a past champion whose story I was lucky to read about this weekend.

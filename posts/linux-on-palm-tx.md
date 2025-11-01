@@ -3,7 +3,7 @@ title: "Linux on Palm TX"
 date: "2008-03-03"
 path: "/linux-on-palm-tx"
 excerpt: "Here are the steps to get Linux running on a Palm TX. For the approach described, you'll need an SD card, an SD card reader and a Palm TX that you can hopefully live without."
-feature_image: "https://images.unsplash.com/photo-1533108871748-7c8c4da74fe0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyNHx8cGFsbXxlbnwwfHx8fDE3MTEyODg1NTd8MA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/palm-handheld-device.jpg"
 ---
 
 [Here](http://www.handhelds.org/moin/moin.cgi/PalmTXBinaryHowTo) are the steps to get Linux running on a Palm TX. For the approach described, you’ll need an SD card, an SD card reader and a Palm TX that you can hopefully live without. Remember, backup the handheld using a tool such as [JPilot](http://www.jpilot.org/). It’s really quite simple and you’ll thank yourself later.

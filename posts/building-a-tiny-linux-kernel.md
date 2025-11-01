@@ -3,7 +3,7 @@ title: "Building a tiny Linux kernel"
 date: "2020-03-09"
 path: "/building-a-tiny-linux-kernel"
 excerpt: "Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you'd like to try this out on."
-feature_image: "https://images.unsplash.com/photo-1612620485998-fe926eccbe18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDR8fHRpbnl8ZW58MHx8fHwxNzExMDQ2NzE1fDA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/tiny-minimal-linux.jpg"
 featured: true
 ---
 

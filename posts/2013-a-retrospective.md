@@ -3,7 +3,7 @@ title: "2013, a retrospective"
 date: "2013-12-24"
 path: "/2013-a-retrospective"
 excerpt: "It has been an interesting year in ways that I did not anticipate. Looking back, I'd like to recount a few things so that I don't forget the experiences that have dramatically altered my worldview, hopefully for the better."
-feature_image: "https://images.unsplash.com/photo-1613694435357-f3f822bad3b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUyfHxzdW5yaXNlJTIwc3JpJTIwbGFua2F8ZW58MHx8fHwxNzExMjg2ODEwfDA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/sunrise-sri-lanka-reflection.jpg"
 ---
 
 It has been an interesting year in ways that I did not anticipate. Looking back, I’d like to recount a few things so that I don’t forget the experiences that have dramatically altered my worldview, hopefully for the better. I’d like to remember these fleeting moments, as they’re too precious to be lost. Here they are, in no particular order.

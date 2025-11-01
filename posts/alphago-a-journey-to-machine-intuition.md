@@ -3,7 +3,7 @@ title: "AlphaGo: a journey to machine intuition"
 date: "2018-01-01"
 path: "/alphago-a-journey-to-machine-intuition"
 excerpt: "When IBM's Deep Blue beat Gary Kasparov, I was fifteen years old. I didn't know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade."
-feature_image: "https://images.unsplash.com/photo-1633974026122-2861ae7b6087?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGdvJTIwZ2FtZXxlbnwwfHx8fDE3MTEyMjIzMDZ8MA&ixlib=rb-4.0.3&q=80&w=2000"
+feature_image: "/images/go-game-board.jpg"
 featured: true
 ---
 
