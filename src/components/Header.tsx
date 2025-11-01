@@ -31,7 +31,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   };
 
   return (
-    <header className="border-b border-theme-border-primary mb-8 md:mb-12">
+    <header className="sticky top-0 z-50 bg-theme-bg-primary border-b border-theme-border-primary mb-8 md:mb-12">
       <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <div className="flex items-center gap-3 md:gap-4 md:flex-1">
