@@ -15,4 +15,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['buffer'],
   },
+  preview: {
+    port: 8000,
+    strictPort: false,
+    open: true,
+  },
 })
