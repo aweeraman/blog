@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { PostDetail } from './pages/PostDetail';
+import { SlugRouter } from './pages/SlugRouter';
 import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/page/:page" element={<Home />} />
-        <Route path="/:slug" element={<PostDetail />} />
+        <Route path="/:slug" element={<SlugRouter />} />
       </Routes>
     </BrowserRouter>
   );

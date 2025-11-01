@@ -41,8 +41,15 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
             <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
           </Link>
 
-          {onSearchChange && (
-            <div className="flex items-center gap-2 md:mt-1">
+          <div className="flex items-center gap-4 md:mt-1">
+            <Link
+              to="/bio"
+              className="text-sm md:text-base font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
+            >
+              Bio
+            </Link>
+            {onSearchChange && (
+              <div className="flex items-center gap-2">
               <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48 sm:w-64 md:w-80' : 'w-0'} overflow-hidden`}>
                 <input
                   ref={inputRef}
@@ -69,8 +76,9 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                   </svg>
                 )}
               </button>
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>

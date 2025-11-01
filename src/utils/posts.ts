@@ -3,7 +3,7 @@ import matter from 'gray-matter';
 import type { Post, PostFrontmatter } from '../types/post';
 
 // Make Buffer available globally for gray-matter
-globalThis.Buffer = Buffer;
+(globalThis as any).Buffer = Buffer;
 
 // Use Vite's import.meta.glob to import all markdown files
 const postFiles = import.meta.glob('../../posts/*.md', {
