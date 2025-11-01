@@ -105,13 +105,13 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
 
                 {/* Content layer with faster parallax movement */}
                 <div
-                  className="relative z-10 h-full flex flex-col justify-center px-6 sm:pl-20 sm:pr-8 md:pl-24 md:pr-10 lg:pr-12 pb-24 pt-20 sm:pt-24 transition-transform duration-700 ease-in-out"
+                  className="relative z-10 h-full flex flex-col justify-center px-6 sm:pl-20 sm:pr-8 md:pl-24 md:pr-10 lg:pr-12 pb-32 sm:pb-28 pt-20 sm:pt-24 transition-transform duration-700 ease-in-out pointer-events-none"
                   style={{
                     transform: `translateX(${offset * 105}%)`,
                   }}
                 >
-                  <Link to={frontmatter.path} className="block group">
-                    <div className="max-w-3xl mt-2">
+                  <div className="max-w-3xl mt-2 pointer-events-auto">
+                    <Link to={frontmatter.path} className="block group">
                       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-theme-accent-primary mb-4 md:mb-5 group-hover:text-theme-accent-hover transition-colors tracking-tight leading-tight drop-shadow-lg">
                         {frontmatter.title}
                       </h3>
@@ -123,14 +123,16 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                           {frontmatter.excerpt}
                         </p>
                       )}
-                      <div className="inline-flex items-center gap-2 text-theme-accent-primary bg-theme-accent-primary/10 hover:bg-theme-accent-primary hover:text-white font-bold text-sm sm:text-base md:text-lg px-5 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all shadow-md group-hover:shadow-lg group-hover:scale-105">
+                    </Link>
+                    <Link to={frontmatter.path} className="relative inline-block">
+                      <div className="inline-flex items-center gap-2 text-theme-accent-primary bg-theme-accent-primary/10 hover:bg-theme-accent-primary hover:text-white font-bold text-sm sm:text-base md:text-lg px-5 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all shadow-md hover:shadow-lg hover:scale-105 cursor-pointer">
                         Read more
                         <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </div>
                 </div>
               </article>
             );
@@ -139,12 +141,12 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
 
         {/* Navigation controls positioned at bottom to not block content */}
         {posts.length > 1 && (
-          <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 z-20 flex items-center justify-between px-4 sm:px-6 md:px-8">
+          <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 z-20 flex items-center justify-between px-4 sm:px-6 md:px-8 pointer-events-none">
             {/* Navigation arrows */}
             <button
               onClick={prevSlide}
               disabled={isTransitioning}
-              className="p-2 md:p-3 bg-theme-bg-secondary/90 hover:bg-theme-accent-primary text-theme-text-tertiary hover:text-white rounded-full transition-all shadow-lg backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 md:p-3 bg-theme-bg-secondary/90 hover:bg-theme-accent-primary text-theme-text-tertiary hover:text-white rounded-full transition-all shadow-lg backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed pointer-events-auto"
               aria-label="Previous featured post"
             >
               <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +155,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             </button>
 
             {/* Indicators */}
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-2 pointer-events-auto">
               {posts.map((_, index) => (
                 <button
                   key={index}
@@ -172,7 +174,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             <button
               onClick={nextSlide}
               disabled={isTransitioning}
-              className="p-2 md:p-3 bg-theme-bg-secondary/90 hover:bg-theme-accent-primary text-theme-text-tertiary hover:text-white rounded-full transition-all shadow-lg backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 md:p-3 bg-theme-bg-secondary/90 hover:bg-theme-accent-primary text-theme-text-tertiary hover:text-white rounded-full transition-all shadow-lg backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed pointer-events-auto"
               aria-label="Next featured post"
             >
               <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
