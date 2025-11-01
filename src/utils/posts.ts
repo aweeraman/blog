@@ -80,3 +80,8 @@ export function getAdjacentPosts(slug: string): { previous: Post | null; next: P
     next: currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null, // Next (older) post
   };
 }
+
+export function getFeaturedPosts(): Post[] {
+  const posts = getAllPosts();
+  return posts.filter((post) => post.frontmatter.featured === true);
+}

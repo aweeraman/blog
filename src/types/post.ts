@@ -4,6 +4,7 @@ export interface PostFrontmatter {
   path: string;
   excerpt?: string;
   feature_image?: string;
+  featured?: boolean;
 }
 
 export interface Post {

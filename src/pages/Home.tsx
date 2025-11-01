@@ -1,6 +1,7 @@
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
-import { getAllPosts, paginatePosts, filterPosts } from '../utils/posts';
+import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../utils/posts';
 import { PostList } from '../components/PostList';
+import { FeaturedPosts } from '../components/FeaturedPosts';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { POSTS_PER_PAGE } from '../config';
@@ -18,6 +19,9 @@ export function Home() {
   const allPosts = getAllPosts();
   const filteredPosts = filterPosts(allPosts, searchQuery);
   const { posts, totalPages } = paginatePosts(filteredPosts, currentPage, POSTS_PER_PAGE);
+
+  // Get featured posts (only show on first page and when not searching)
+  const featuredPosts = (!searchQuery && currentPage === 1) ? getFeaturedPosts() : [];
 
   const handleSearchChange = (query: string) => {
     // Update URL search params
@@ -46,6 +50,9 @@ export function Home() {
             )}
           </div>
         )}
+
+        {featuredPosts.length > 0 && <FeaturedPosts posts={featuredPosts} />}
+
         <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
       </main>
 
