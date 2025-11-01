@@ -8,11 +8,14 @@ feature_image: "/images/google-app-engine-apns/push-notifications-mobile.jpg"
 
 Earlier this month, Google App Engine [released support for outbound sockets](http://googleappengine.blogspot.com/2013/04/app-engine-177-released.html) and I figured that a Saturday spent mucking around with AppEngine to see if I could get it to work with APNS would be time well spent. In the sandboxed world of GAE, lack out outbound socket support meant that it was not possible to communicate with external services by opening a socket, which is what the Apple Push Notification Service (APNS) required. So for a long time, it was not possible to use the AppEngine to build an APNS provider, but now you can. Services like [Urban Airship expose this capability](http://www.aschroder.com/2012/02/sending-apple-ios-notifications-via-urban-airship-on-google-app-engine/) in a way that can be consumed through a RESTful service, which works with GAE using UrlFetch, but the focus of this post is to communicate with APNS directly. There are some caveats though. Billing needs to be enabled, although the free tier should be sufficient for playing around, and there’s also the matter of [the daily quota](https://developers.google.com/appengine/docs/quotas#Sockets).
 
-Here’s a whirlwind tour of getting yourself up and running on APNS with Google AppEngine.** 1 — Fun with certificates and keys**
+Here’s a whirlwind tour of getting yourself up and running on APNS with Google AppEngine.
+
+## 1 — Fun with certificates and keys
 
 Apple makes the job of working with APNS quite a fun and intellectually stimulating experience, if you have nothing else to do on a Saturday. You may also notice a couple of new gray hairs once you’re done, but at the same time, there is an elegance to the architecture that must be acknowledged, even though its painful to setup.
 
-Generate a new certificate signing request
+### Generate a new certificate signing request
+
 Fire up the mac Keychain Access tool and request a certificate from a certificate authority.
 
 ![Request a certificate from a CA](/images/google-app-engine-apns/macos-request-certificate.png)
@@ -21,8 +24,11 @@ In the resulting dialog, enter your email address an identifiable string in the 
 
 ![Certificate assistant](/images/google-app-engine-apns/macos-certificate-assistant.png)
 
-Once you’re done with this, you should have a Certificate Signing Request (CSR) in your file system.** Create a new App Id**
-Now head over to the [Apple developer site](developer.apple.com), log in with your developer credentials and navigate to the iOS Dev Center, where you should see a link to “Certificates, Identifiers and Profiles” as shown below.
+Once you're done with this, you should have a Certificate Signing Request (CSR) in your file system.
+
+### Create a new App Id
+
+Now head over to the [Apple developer site](developer.apple.com), log in with your developer credentials and navigate to the iOS Dev Center, where you should see a link to "Certificates, Identifiers and Profiles" as shown below.
 
 ![iOS Developer Program](/images/google-app-engine-apns/ios-developer-program.png)
 
@@ -38,19 +44,25 @@ Also, in the bundle ID section, remember to include an explicit fully qualified 
 
 ![Bundle Id](/images/google-app-engine-apns/apns-bundle-id.png)
 
-**Create a new push certificate**
+### Create a new push certificate
+
 Now, navigate to the certificates section, and create a new one. During creation, select the combo box as indicated below:
 
 ![Development certificate](/images/google-app-engine-apns/apns-development-certificate.png)
 
-Next, select the app Id created earlier and when prompted, upload the Certificate Signing Request created earlier. If all goes well, the certificate will be generated. Download this certificate, and double click it to open it in the KeyChain tool. You would see the private key with the common name that you entered earlier when you expand the certificate. Remember to note that the certificate name is prefixed with “Apple Development IOS Push Services”. Select both the certificate and the key, right click and “Export 2 items”. It will prompt you to enter the KeyChain password and will generate a .p12 file that you will need later to configure the server side provider.** Generate a provisioning profile**
-The last step in this process is to generate a provisioning profile so that you can deploy the app on to the device. In the devices section of the portal, create a new device and enter the 40-character device Id you get from iTunes or the Xcode Organizer. Head over to the Provisioning Profiles section and create a new profile. Remember to select “iOS App Development as shown below:
+Next, select the app Id created earlier and when prompted, upload the Certificate Signing Request created earlier. If all goes well, the certificate will be generated. Download this certificate, and double click it to open it in the KeyChain tool. You would see the private key with the common name that you entered earlier when you expand the certificate. Remember to note that the certificate name is prefixed with "Apple Development IOS Push Services". Select both the certificate and the key, right click and "Export 2 items". It will prompt you to enter the KeyChain password and will generate a .p12 file that you will need later to configure the server side provider.
+
+### Generate a provisioning profile
+
+The last step in this process is to generate a provisioning profile so that you can deploy the app on to the device. In the devices section of the portal, create a new device and enter the 40-character device Id you get from iTunes or the Xcode Organizer. Head over to the Provisioning Profiles section and create a new profile. Remember to select "iOS App Development as shown below:
 
 ![Provisioning profile](/images/google-app-engine-apns/apns-provisioning-profile.png)
 
 In the next screens, select the App Id, device and certificate created in the previous steps to create the provisioning profile. Download the profile and drag it onto the profiles section of the Xcode organizer.
 
-Now the painful part is done. Time to do some real work.** 2 — Create the web service**
+Now the painful part is done. Time to do some real work.
+
+## 2 — Create the web service
 
 A pre-requisite for this tutorial is Google App Engine, and getting a service up and running on it. If you haven’t done that before, follow the steps outlined in the [getting started page](https://developers.google.com/appengine/docs/java/gettingstarted/) and it should give you a good idea on how to work on this platform. It comes with good Eclipse integration so it should be a snap to get setup.
 
@@ -67,7 +79,9 @@ ApnsNotification notification = service.push(token, payload);
 ```
 A couple of things to note, the .p12 file exported from the Keychain needs to be included in the war file (preferably in the WEB-INF directory to prevent public access) and password protected at export time. Also, it’s important to add the “withNoErrorDetection()” method as shown above as it would otherwise try to spawn threads to detect errors and would not run in the GAE environment since thread creation is restricted. The input into this web service is a 40-character token that is received from the device, and the message that is to be sent.
 
-At this point, the server side work is done. Let’s move over to the client.** 3 — Create the iOS client**
+At this point, the server side work is done. Let’s move over to the client.
+
+## 3 — Create the iOS client
 
 For the purpose of demonstration and testing, I’ve created a simple single view application with the bundle ID specified in the provisioning profile.
 
@@ -79,24 +93,31 @@ The key methods you would need to implement in the AppDelegate would be:
 -application:didFailToRegisterForRemoteNotificationsWithError
 -application:didReceiveRemoteNotification
 ```
-1) -application:didFinishLaunchingWithOptions:
-This method gets invoked when the application finishes launching either directly or when launched through a push notification. In the case of the latter, the details of the push notification are passed in through a dictionary object so that it can be dealt with. Here’s the code to register for push notification alerts:
+
+**1) -application:didFinishLaunchingWithOptions:**
+
+This method gets invoked when the application finishes launching either directly or when launched through a push notification. In the case of the latter, the details of the push notification are passed in through a dictionary object so that it can be dealt with. Here's the code to register for push notification alerts:
 
 ```
 [[ UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
 ```
-2) -application:didRegisterForRemoteNotificationsWithDeviceToken
+
+**2) -application:didRegisterForRemoteNotificationsWithDeviceToken**
+
 This method gets invoked with the device token received from APNS. This token uniquely identifies the device and is not the same as the UDID. The token needs to be sent to the web service so that it can pass it on to the APNS and have messages sent back to this device. This token includes some special characters and spaces which needs to be removed as shown below:
 
 ```
 NSString *token = [ deviceToken description ];
 token = [ token stringByTrimmingCharactersInSet:[ NSCharacterSet characterSetWithCharactersInString:@”<>”]];
-token = [ token stringByReplacingOccurrencesOfString:@” “ withString:@”” ];
+token = [ token stringByReplacingOccurrencesOfString:@" " withString:@"" ];
 ```
-3) -application:didFailToRegisterForRemoteNotificationsWithError
-This method gets invoked if there’s some error in registering for remote notifications which causes the push token to be not available for the app.
 
-4) -application:didReceiveRemoteNotification
+**3) -application:didFailToRegisterForRemoteNotificationsWithError**
+
+This method gets invoked if there's some error in registering for remote notifications which causes the push token to be not available for the app.
+
+**4) -application:didReceiveRemoteNotification**
+
 This method can be used to trap an incoming message while in the app, and take some action. In this case it just shows it in an alert view.
 
 ```

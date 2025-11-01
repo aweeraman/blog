@@ -20,7 +20,7 @@ You can explore the components of the Minnowboard at the link below:
 
 *Source: [https://minnowboard.org/minnowboard-turbot/board-explorer](https://minnowboard.org/minnowboard-turbot/board-explorer)*
 
-Just like the Raspberry Pi, you would need to connect it to a monitor using the mini-HDMI port available on the board, and a USB keyboard or mouse to begin using it. The operating system can be loaded on to a mico-SD card slot that it has available for the purpose of booting. Alternatively, you can connect to the board from a computer using a serial connection with a USB to Serial FTDI cable.
+Just like the Raspberry Pi, you would need to connect it to a monitor using the mini-HDMI port available on the board, and a USB keyboard or mouse to begin using it. The operating system can be loaded on to a micro-SD card slot that it has available for the purpose of booting. Alternatively, you can connect to the board from a computer using a serial connection with a USB to Serial FTDI cable.
 
 ![](/images/connecting-to-the-minnowboard-using-a-console-cable/usb-serial-ftdi-cable.jpg)
 

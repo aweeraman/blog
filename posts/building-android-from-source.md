@@ -102,7 +102,9 @@ Now comes the compilation step. This is actually the easiest part.
 
 Initialize the build environment by sourcing a script, you can use the bash source command or the good old dot command — whatever strikes your fancy:
 
+```
 . build/envsetup.sh
+```
 
 This will inject a bunch of build related environment variables to your current shell. Note that you have to run this in every shell that you want to run a build from.
 
@@ -115,7 +117,9 @@ This will give a list of targets and allow you to select one. In my case, I sele
 
 One more step, and that’s to start the build.
 
+```
 time make -j4
+```
 
 You could easily just say “make”, but I would like to know how long the build took when it eventually finished running, and with the -j4 flag indicate the concurrency level for make (rule of thumb: 2 x number of cores). Now you can go for lunch.
 

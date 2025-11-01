@@ -88,4 +88,6 @@ DeepSeek-R1 was a pivotal contribution in many ways:
 
 3. It reminds us that its not just a one-horse race, and it incentivizes competition, which has already resulted in OpenAI o3-mini a cost-effective reasoning model which now shows the Chain-of-Thought reasoning. Competition is a good thing.
 
-4. We stand at the cusp of an explosion of small-models that are hyper-specialized, and optimized for a specific use case that can be trained and deployed cheaply for solving problems at the edge. It raises a lot of exciting possibilities and is why DeepSeek-R1 is one of the most pivotal moments of tech history. Truly exciting times. What will you build?
+4. We stand at the cusp of an explosion of small-models that are hyper-specialized, and optimized for a specific use case that can be trained and deployed cheaply for solving problems at the edge. It raises a lot of exciting possibilities and is why DeepSeek-R1 is one of the most pivotal moments of tech history.
+
+Truly exciting times. What will you build?

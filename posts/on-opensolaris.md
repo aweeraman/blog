@@ -8,7 +8,7 @@ feature_image: "/images/on-opensolaris/sun-opensolaris.jpg"
 
 In a [recent article](http://thunk.org/tytso/blog/2008/04/19/what-sun-was-trying-to-do-with-open-solaris/), Ted T’so makes some interesting points on Sun’s motives behind OpenSolaris, and how it fares today in the FOSS ecosystem as a result.
 
-“Fundamentally, Open Solaris has been released under a Open Source license, but it is not an Open Source development community.”It’s quite sad that this is the case simply considering the enormous potential that OpenSolaris had back in 2005, and the opportunities for cross pollination with Linux had the licenses been compatible. Given some of [killer](http://www.opensolaris.org/os/community/dtrace/) [features](http://opensolaris.org/os/community/zfs/) of the operating system, it’s quite a shame that it has not been able to rally the developer community that it deserves.
+Fundamentally, Open Solaris has been released under a Open Source license, but it is not an Open Source development community. It’s quite sad that this is the case simply considering the enormous potential that OpenSolaris had back in 2005, and the opportunities for cross pollination with Linux had the licenses been compatible. Given some of [killer](http://www.opensolaris.org/os/community/dtrace/) [features](http://opensolaris.org/os/community/zfs/) of the operating system, it’s quite a shame that it has not been able to rally the developer community that it deserves.
 
 At this point, I think the only hope for OpenSolaris is GPLv3 and a truly open development process. Then for once, Linus’ kernel will have a strong contender and a raised bar on licensing grounds.
 
