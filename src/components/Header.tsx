@@ -9,10 +9,10 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   return (
     <header className="mb-12">
       <Link to="/" className="block">
-        <h1 className="text-4xl font-bold text-theme-accent-primary mb-2 hover:text-theme-accent-hover transition-colors">
+        <h1 className="text-5xl font-black text-theme-accent-primary mb-3 hover:text-theme-accent-hover transition-colors tracking-tight">
           Anuradha Weeraman
         </h1>
-        <p className="text-theme-text-tertiary">A practitioner's views on computers, operating systems and technology</p>
+        <p className="text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on computers, operating systems and technology</p>
       </Link>
 
       {onSearchChange && (

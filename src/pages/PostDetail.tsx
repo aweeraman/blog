@@ -90,8 +90,8 @@ export function PostDetail() {
 
         <article className="bg-theme-bg-secondary rounded-lg shadow-lg shadow-black/20 overflow-hidden">
           <header className="p-8 pb-0">
-            <h1 className="text-4xl font-bold text-theme-accent-primary mb-3">{frontmatter.title}</h1>
-            <time className="text-theme-text-tertiary">{formattedDate}</time>
+            <h1 className="text-5xl font-black text-theme-accent-primary mb-4 tracking-tight leading-tight">{frontmatter.title}</h1>
+            <time className="text-base text-theme-text-tertiary tracking-wide font-medium">{formattedDate}</time>
           </header>
 
           {frontmatter.feature_image && (

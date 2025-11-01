@@ -27,10 +27,10 @@ export function PostCard({ post, currentPage = 1 }: PostCardProps) {
       <div className="absolute inset-0 bg-theme-bg-secondary/85 group-hover:bg-theme-bg-secondary/80 transition-colors"></div>
 
       <Link to={frontmatter.path} state={{ fromPage: currentPage }} className="block relative z-10">
-        <h2 className="text-2xl font-bold text-theme-accent-primary mb-2 hover:text-theme-accent-hover transition-colors">
+        <h2 className="text-2xl font-extrabold text-theme-accent-primary mb-3 hover:text-theme-accent-hover transition-colors tracking-tight leading-tight">
           {frontmatter.title}
         </h2>
-        <time className="text-sm text-theme-text-tertiary mb-3 block">{formattedDate}</time>
+        <time className="text-sm text-theme-text-tertiary mb-3 block tracking-wide font-medium">{formattedDate}</time>
         {frontmatter.excerpt && (
           <p className="text-theme-text-secondary leading-relaxed">{frontmatter.excerpt}</p>
         )}
