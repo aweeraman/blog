@@ -73,6 +73,20 @@ npm run build
 
 Generates static HTML for pages in `dist/` directory.
 
+**Build process**:
+1. Generates `sitemap.xml` with all 66 URLs
+2. Compiles TypeScript
+3. Pre-renders all pages with Vike
+4. Outputs to `dist/client/`
+
+### Generate Sitemap Only
+
+```bash
+npm run sitemap
+```
+
+Manually regenerate `sitemap.xml` from markdown files.
+
 ### Preview Production Build
 
 ```bash
@@ -113,15 +127,17 @@ Your page content...
 
 ## SEO Features
 
-- ✅ Pre-rendered HTML with full content
-- ✅ Dynamic meta tags per page
-- ✅ Open Graph tags for social sharing
-- ✅ Twitter Card support
-- ✅ Canonical URLs
-- ✅ Article metadata with publish dates
-- ✅ Robots directives
+- ✅ **Pre-rendered HTML** with full content (66 pages)
+- ✅ **Dynamic meta tags** per page (title, description, OG, Twitter Cards)
+- ✅ **Automated sitemap.xml** (66 URLs, regenerated on each build)
+- ✅ **robots.txt** for search engine guidance
+- ✅ **Open Graph tags** for social sharing (Facebook, LinkedIn)
+- ✅ **Twitter Card** support with large image previews
+- ✅ **Canonical URLs** to prevent duplicate content
+- ✅ **Article metadata** with publish dates and authorship
+- ✅ **Robots directives** (index, follow)
 
-See `docs/seo.md` for the complete SEO optimization plan.
+See `docs/seo.md` for the complete SEO optimization plan and `docs/seo-implementation.md` for implementation details.
 
 ## Deployment
 

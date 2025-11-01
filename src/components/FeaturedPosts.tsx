@@ -123,7 +123,11 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
                         </p>
                       )}
                     </a>
-                    <a href={frontmatter.path} className="relative inline-block">
+                    <a
+                      href={frontmatter.path}
+                      className="relative inline-block"
+                      aria-label={`Read more about ${frontmatter.title}`}
+                    >
                       <div className="inline-flex items-center gap-2 text-theme-accent-primary bg-theme-accent-primary/10 hover:bg-theme-accent-primary hover:text-white font-bold text-sm sm:text-base md:text-lg px-5 py-2.5 sm:px-6 sm:py-3 rounded-full transition-all shadow-md hover:shadow-lg hover:scale-105 cursor-pointer">
                         Read more
                         <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

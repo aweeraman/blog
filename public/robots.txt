@@ -1,0 +1,13 @@
+# robots.txt for weeraman.com
+
+User-agent: *
+Allow: /
+
+# Disallow duplicate content
+Disallow: /page/1$
+
+# Sitemap
+Sitemap: https://weeraman.com/sitemap.xml
+
+# Crawl-delay (optional, uncomment if needed)
+# Crawl-delay: 1
