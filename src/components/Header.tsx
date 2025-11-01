@@ -33,8 +33,8 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   return (
     <header className="border-b border-theme-border-primary mb-8 md:mb-12">
       <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
-        <div className="flex items-start justify-between gap-4">
-          <Link to="/" className="block flex-1">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <Link to="/" className="block md:flex-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
               Anuradha Weeraman
             </h1>
@@ -42,7 +42,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           </Link>
 
           {onSearchChange && (
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-2 md:mt-1">
               <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48 sm:w-64 md:w-80' : 'w-0'} overflow-hidden`}>
                 <input
                   ref={inputRef}
