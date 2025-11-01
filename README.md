@@ -1,73 +1,150 @@
-# React + TypeScript + Vite
+# Anuradha Weeraman's Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, SEO-optimized technical blog built with React, TypeScript, Vite, and Vike for static site generation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Static Site Generation (SSG)** - Pre-renders all 60+ blog posts at build time using Vike
+- **SEO Optimized** - Complete meta tags, Open Graph, Twitter Cards in pre-rendered HTML
+- **Markdown Content** - Write blog posts and pages in Markdown with frontmatter
+- **Featured Posts Carousel** - Auto-rotating carousel showcasing featured content
+- **Search Functionality** - Client-side search across all posts
+- **Pagination** - Automatic pagination with 12 posts per page
+- **Dark Theme** - Modern dark theme with custom styling
+- **Responsive Design** - Mobile-first design with TailwindCSS
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Latest React with modern features
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and dev server
+- **Vike** - SSG/SSR framework for Vite
+- **TailwindCSS** - Utility-first CSS framework
+- **React Markdown** - Render markdown content
+- **Gray Matter** - Parse markdown frontmatter
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+blog/
+├── pages/              # Vike pages (file-based routing)
+│   ├── index/         # Homepage
+│   ├── @slug/         # Dynamic routes for posts/pages
+│   ├── page/@pageNum/ # Pagination routes
+│   └── +config.ts     # Vike configuration
+├── posts/             # Markdown blog posts (60+ posts)
+├── pages/             # Markdown static pages
+├── src/
+│   ├── components/    # React components
+│   ├── utils/         # Utility functions
+│   └── types/         # TypeScript types
+├── public/
+│   └── images/        # Static images
+└── docs/
+    └── seo.md         # SEO optimization plan
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
 ```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Visit http://localhost:5173
+
+### Build
+
+```bash
+npm run build
+```
+
+Generates static HTML for pages in `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Writing Content
+
+### Blog Posts
+
+Create markdown files in `posts/` directory with frontmatter:
+
+```markdown
+---
+title: "Your Post Title"
+date: "2025-01-15"
+path: "/your-post-slug"
+excerpt: "Brief description for SEO and previews"
+feature_image: "/images/your-post/image.jpg"
+featured: true  # Optional: show in featured carousel
+---
+
+Your markdown content here...
+```
+
+### Static Pages
+
+Create markdown files in `pages/` directory:
+
+```markdown
+---
+title: "Page Title"
+slug: "page-slug"
+---
+
+Your page content...
+```
+
+## SEO Features
+
+- ✅ Pre-rendered HTML with full content
+- ✅ Dynamic meta tags per page
+- ✅ Open Graph tags for social sharing
+- ✅ Twitter Card support
+- ✅ Canonical URLs
+- ✅ Article metadata with publish dates
+- ✅ Robots directives
+
+See `docs/seo.md` for the complete SEO optimization plan.
+
+## Deployment
+
+Build output in `dist/` can be deployed to any static hosting:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Cloudflare Pages
+- AWS S3 + CloudFront
+
+```bash
+npm run build
+# Deploy dist/ directory
+```
+
+## Performance
+
+- **Pre-rendered HTML pages** for instant loading
+- **Optimized bundle size** with code splitting
+- **Fast page navigation** with client-side routing
+- **Lazy-loaded images** (planned)
+
+## License
+
+MIT
