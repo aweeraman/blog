@@ -54,9 +54,10 @@ export function PostDetail() {
 
         <Link
           to={backToPath}
-          className="text-theme-accent-primary hover:text-theme-accent-hover mb-6 inline-block cursor-pointer"
+          className="text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-4 inline-flex items-center gap-1.5 group"
         >
-          ← Back to all posts
+          <span className="group-hover:-translate-x-1 transition-transform">←</span>
+          <span>Back</span>
         </Link>
 
         {(previous || next) && (
