@@ -76,7 +76,7 @@ export function getAdjacentPosts(slug: string): { previous: Post | null; next: P
   }
 
   return {
-    next: currentIndex > 0 ? posts[currentIndex - 1] : null, // Newer post
-    previous: currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null, // Older post
+    previous: currentIndex > 0 ? posts[currentIndex - 1] : null, // Previous (newer) post
+    next: currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null, // Next (older) post
   };
 }
