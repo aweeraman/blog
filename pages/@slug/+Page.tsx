@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 import { getPostBySlug, getAdjacentPosts } from '../../src/utils/posts';
 import { getPageBySlug } from '../../src/utils/pages';
@@ -13,6 +13,17 @@ export default function Page() {
   // Try to get post first, then page
   const post = getPostBySlug(slug);
   const page = !post ? getPageBySlug(slug) : null;
+
+  // Update document title when navigating between posts/pages
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.frontmatter.title} | Anuradha Weeraman`;
+    } else if (page) {
+      document.title = `${page.frontmatter.title} | Anuradha Weeraman`;
+    } else {
+      document.title = 'Not Found | Anuradha Weeraman';
+    }
+  }, [slug, post, page]);
 
   // If neither exists, show 404
   if (!post && !page) {
