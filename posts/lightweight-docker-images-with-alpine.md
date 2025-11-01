@@ -3,7 +3,7 @@ title: "Lightweight Docker images with Alpine"
 date: "2018-05-06"
 path: "/lightweight-docker-images-with-alpine"
 excerpt: "One of the challenges in building Docker images is keeping it small and lean. For example, let's take a simple app that prints a simple message to the console, and containerize it in Docker."
-feature_image: "/images/2024/03/1-rijmo9q803d6uwxx8pmhoq-jpeg.jpg"
+feature_image: "/images/alpine-linux-cover.jpg"
 ---
 
 One of the challenges in building Docker images, is keeping it small and lean. For example, let’s take a simple app that prints a simple message to the console, and containerize it in Docker. Here’s the code of the application in Go:

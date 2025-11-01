@@ -3,14 +3,14 @@ title: "How to put that GPU to good use with Python"
 date: "2017-09-18"
 path: "/put-that-gpu-to-good-use-with-python"
 excerpt: "Graphics chip manufacturers such as NVIDIA and AMD have been seeing a surge in sales of their graphics processors thanks mostly to cryptocurrency miners and machine learning applications that have found uses for these graphics processors outside of gaming and simulations."
-feature_image: "/images/2024/03/1-rx1bct5g8dhycr92q53bjw-jpeg.jpg"
+feature_image: "/images/gpu-python-cover.jpg"
 ---
 
 Graphics chip manufacturers such as [NVIDIA](http://www.nvidia.com) and [AMD](http://www.amd.com/) have been seeing a surge in sales of their graphics processors (GPUs) thanks mostly to cryptocurrency miners and machine learning applications that have found uses for these graphics processors outside of gaming and simulations. Primarily, this is because GPUs offer capabilities for parallelism that are not found in general purpose processors that happens to be a good match for operations such such as large scale hashing and matrix calculations which are the foundations of mining, and machine learning workloads.
 
 [CUDA](https://www.youtube.com/watch?v=IzU4AVcMFys) from NVIDIA provides a massively parallel architecture for graphics processors that can be used for numerical computation. While a typical general purpose Intel processor may have 4 or 8 cores, an NVIDIA GPU may have thousands of CUDA cores and a pipeline that supports parallel processing on thousands of threads, speeding up the processing considerably. This can be used to considerably reduce training time in machine learning applications, which increases the number of experiments and iterations that can be run while tuning a model.
 
-![](/images/2024/03/0-xzpjwmqxc0nb6d69.jpg)
+![](/images/cuda-cores-vs-stream-processors.jpg)
 
 *Source: [http://graphicscardhub.com/cuda-cores-vs-stream-processors/](http://graphicscardhub.com/cuda-cores-vs-stream-processors/)*
 
@@ -44,7 +44,7 @@ Apart from these changes, the rest of the code remains unchanged. In this manner
 
 What took **35 seconds** previously, now takes only **0.36 seconds** on a GeForce GTX 1050Ti. That's nearly a **100x** improvement with minimal changes.
 
-![](/images/2024/03/1-ceeynyjad7vt0x4wkjk1qq.png)
+![](/images/gpu-performance-comparison.png)
 
 Performance comparison
 

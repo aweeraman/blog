@@ -3,7 +3,7 @@ title: "From Mahavilachchiya, with love"
 date: "2006-10-21"
 path: "/from-mahavilachchiya-with-love"
 excerpt: "I'm at Mahavilachchiya right now, at the Horizon Lanka Foundation, with the FOSS-ed on Wheels troupe. So far the experience has been breathtaking."
-feature_image: "/images/2024/03/277102005_a59a1bbfa9_b.jpg"
+feature_image: "/images/mahavilachchiya-children.jpg"
 ---
 
 I’m at [Mahavilachchiya](http://mahavilachchiya.net/) right now, at the [Horizon Lanka Foundation](http://www.horizonlanka.org/), with the FOSS-ed on Wheels troupe. So far the experience has been breathtaking.

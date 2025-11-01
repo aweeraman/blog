@@ -30,13 +30,13 @@ With traditional fiat currencies, consumers have come to trust the institution t
 
 Unlike traditional bank transactions, all Bitcoin transactions are in the public record and every transaction since the genesis block is viewable by anyone. There’s no reference or link to the identities in any of these transactions so we just don’t know who is behind them.
 
-![](/images/2024/03/1-jyengnfv8gthvlzjzarakq.png)
+![](/images/bitcoin-transaction-privacy.png)
 
 *Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
 
 Here's a transaction of 300 BTC between two parties:
 
-![](/images/2024/03/1-7phxl0i9g3lkbhvkn6sh4g.png)
+![](/images/bitcoin-transaction-example.png)
 
 *Source: [https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339](https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339)*
 

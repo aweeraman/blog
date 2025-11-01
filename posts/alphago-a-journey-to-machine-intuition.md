@@ -19,7 +19,7 @@ In addition, Go players are known to work very intuitively when it comes to game
 
 The approach that the team at Deep Mind working on AlphaGo took, was very different. In place of a handcrafted evaluation function, AlphaGo uses deep neural networks and Monte Carlo Tree Search (MCTS) of simulations for gameplay. An in-depth treatment of the techniques and results are available in the Deep Mind paper [“Master the game of Go with deep neural networks and tree search”](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5).
 
-![](/images/2024/03/1-fh3ebghpnojfomd3paqfvw.png)
+![](/images/alphago-game-tree-complexity.png)
 
 Next, I will dive into the salient aspects of this paper.
 
@@ -29,7 +29,7 @@ Taking a brute force approach is intractable for the reason that the search spac
 
 The solution that AlphaGo provides, is a deep convolutional neural network that is trained through supervised and reinforcement learning on the backdrop of an MCTS algorithm.
 
-![](/images/2024/03/1-nf5xwsmfbsrgwx3nned-rg.png)
+![](/images/alphago-training-pipeline.png)
 
 *Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
 
@@ -41,7 +41,7 @@ The third and final stage of the pipeline focuses on the problem of evaluating a
 
 The policy and value networks are then combined in an MCTS algorithm that searches a tree of simulations in four phases:
 
-![](/images/2024/03/1-f8f3v6pidj7lnuxh7icyzg.png)
+![](/images/alphago-mcts-phases.png)
 
 *Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
 
@@ -56,7 +56,7 @@ A great deal of computation power is required to efficiently combine MCTS and de
 
 AlphaGo was made to compete against several other Go engines, both free and commercial and it proved to be several dans stronger than any other program by winning 494 out of 495 games at a staggering 99.8% win rate.
 
-![](/images/2024/03/1-id685dexnti2231akxuwqa.png)
+![](/images/alphago-win-rate-comparison.png)
 
 Comparison of AlphaGo vs Free and commercial Go programs. Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)
 

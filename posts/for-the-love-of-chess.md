@@ -3,7 +3,7 @@ title: "For the love of chess"
 date: "2017-05-07"
 path: "/for-the-love-of-chess"
 excerpt: "Nearly twenty years to this day, in May 1997, a machine that IBM built challenged then world chess champion Garry Kasparov to a six game match, and won. An year earlier, in 1996, a similar match between the IBM built Deep Blue and Garry Kasparov ended with Kasparov winning the series comfortably."
-feature_image: "/images/2024/03/1-dkqxrmcqxvbnehhxqs2tig-jpeg-2.jpg"
+feature_image: "/images/chess-board-cover.jpg"
 ---
 
 Nearly twenty years to this day, in May 1997, a machine that IBM built challenged then world chess champion Garry Kasparov to a six game match, and won.

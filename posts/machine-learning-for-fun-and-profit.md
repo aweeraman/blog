@@ -3,18 +3,18 @@ title: "Machine learning for fun and profit"
 date: "2017-04-15"
 path: "/machine-learning-for-fun-and-profit"
 excerpt: "Machine learning and artificial intelligence has been going through a phase of democratization to the point that in recent years the barrier to entry for technologies that can be used to build intelligent and self learning applications is at an all time low. I will show just how easy it is to get started with machine learning by walking you through building a simple classifier using open source technologies."
-feature_image: "/images/2024/03/1-ggcalx43tz-7heh3a407da-1.png"
+feature_image: "/images/machine-learning-cover.png"
 ---
 
 Machine learning and artificial intelligence has been going through a phase of democratization to the point that in recent years the barrier to entry for technologies that can be used to build intelligent and self learning applications is at an all time low. I will show just how easy it is to get started with machine learning by walking you through building a simple classifier using open source technologies.
 
 For this example, we use a [publicly available multi-variate data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) for the identification of three species of the Iris flower based on the length and width of its sepals and petals. The British statistician and biologist Ronald Fisher collected 50 measurements each of the three species of the Iris flower on one fine day in a lush pasture in the Gaspé Peninsula and recorded the measurements of the length and width of the sepals and petals that can be used to identify the exact species of the Iris flower. Here’s a snippet of the dataset for the three species:
 
-![](/images/2024/03/1-dt3owaxje1jhixfqtuebyq.png)
+![](/images/iris-dataset-setosa.png)
 
-![](/images/2024/03/1--fgqec-e6kji_q5mp9jidg.png)
+![](/images/iris-dataset-versicolor.png)
 
-![](/images/2024/03/1-kj_8jy77d5mci3mffaekmq.png)
+![](/images/iris-dataset-virginica.png)
 
 What I’m going to show you, is how we can use this simple data set to train a classifier using machine learning techniques. But what is a classifier? In this case, it’s something that can tell you the species of the flower given the sepal and petal characteristics.
 

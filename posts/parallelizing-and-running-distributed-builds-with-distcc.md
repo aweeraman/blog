@@ -10,7 +10,7 @@ Parallelizing the compilation of a large codebase is a breeze with [distcc](http
 
 Here’s a sample network topology for a distributed build:
 
-![](/images/2024/03/distcc-2.png)
+![](/images/distcc-network-topology.png)
 
 Install distcc on the three Debian/Ubuntu-based nodes:
 

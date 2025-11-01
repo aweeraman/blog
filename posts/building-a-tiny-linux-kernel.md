@@ -56,15 +56,15 @@ The kernel builds to around ~430k. This is a 32-bit kernel by default, so let’
 $ make menuconfig
 ```
 
-![](/images/2024/03/1-qqz6s1f0iuhyvkh3la7l7q.png)
+![](/images/kernel-menuconfig-64bit.png)
 
 Enable the TTY for console support:
 
-![](/images/2024/03/1-98foepvg-qylmcy2ftbx0q.png)
+![](/images/kernel-menuconfig-tty.png)
 
 and support for printk to see console output as the kernel boots:
 
-![](/images/2024/03/1-fkls0hd5lylyd579trkgkq.png)
+![](/images/kernel-menuconfig-printk.png)
 
 Build again:
 
@@ -84,7 +84,7 @@ Boot the kernel with qemu:
 $ qemu-system-x86_64 -kernel arch/x86/boot/bzImage
 ```
 
-![](/images/2024/03/1-qfioyrtipweibd0zetpx4w.png)
+![](/images/kernel-boot-panic.png)
 
 The kernel boots and panics when attempting to start init, as expected. In order to boot into a shell as we originally set out to do, we will need a filesystem and a shell that can be started by the kernel as PID 1. Let us create a bare bones ram disk image that we can use to boot into a minimal busybox shell.
 
@@ -106,13 +106,13 @@ Building initrd... 4882 blocks
 ```
 Before we can use this ram disk, we need to enable init RAM disk (initrd) support in the kernel:
 
-![](/images/2024/03/1-pbljg65lmbzcehuxfdyhzq.png)
+![](/images/kernel-menuconfig-initrd.png)
 
 I have only included support for gzip compression and disabled the rest.
 
 We will also need to enable ELF-support to be able to start up the shell:
 
-![](/images/2024/03/1-ul_vqh5yrc4yp7j0qrkuwa.png)
+![](/images/kernel-menuconfig-elf-support.png)
 
 This time, when booting the kernel, pass in the -initrd argument and specify the initrd image that we created earlier, in addition to an argument to the kernel to specify the binary that it should look for in the ram disk and execute once the kernel has finished booting, which is in this case is ‘/bin/sh’.
 
@@ -123,11 +123,11 @@ And we have a shell.
 
 Let’s enable the /proc filesystem so we can run some standard commands:
 
-![](/images/2024/03/1-xefvifd0rrdra5ox2z86ma.png)
+![](/images/kernel-menuconfig-proc-filesystem.png)
 
 Mount the proc file system after booting, so you can use commands like ‘ps’ and ‘free’:
 
-![](/images/2024/03/1-lb3pk16_27xd402yxpnndw.png)
+![](/images/kernel-shell-proc-mounted.png)
 
 Here’s the size of the kernel that we just built:
 
@@ -142,7 +142,7 @@ $ qemu-system-x86_64 -kernel arch/x86/boot/bzImage -initrd kernel-utils/initramf
 ```
 Just for kicks, I disabled printk and booted up the kernel, that put me into a shell almost immediately:
 
-![](/images/2024/03/1-qrfhrgs6qyuov2gqjhtjua.png)
+![](/images/kernel-boot-instant-shell.png)
 
 Finally, the compressed kernel size comes down to:
 

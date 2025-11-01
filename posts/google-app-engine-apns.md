@@ -15,38 +15,38 @@ Apple makes the job of working with APNS quite a fun and intellectually stimulat
 Generate a new certificate signing request
 Fire up the mac Keychain Access tool and request a certificate from a certificate authority.
 
-![Request a certificate from a CA](/images/2024/03/0-xamvmxm-rp0v-wx-.png)
+![Request a certificate from a CA](/images/macos-request-certificate.png)
 
 In the resulting dialog, enter your email address an identifiable string in the common name field. Also, select the “Saved to disk” option, since we need to upload it later to the provisioning portal.
 
-![Certificate assistant](/images/2024/03/0-_we1luitgqesyxew.png)
+![Certificate assistant](/images/macos-certificate-assistant.png)
 
 Once you’re done with this, you should have a Certificate Signing Request (CSR) in your file system.** Create a new App Id**
 Now head over to the [Apple developer site](developer.apple.com), log in with your developer credentials and navigate to the iOS Dev Center, where you should see a link to “Certificates, Identifiers and Profiles” as shown below.
 
-![iOS Developer Program](/images/2024/03/0-uouo58feqe5hj-4o.png)
+![iOS Developer Program](/images/ios-developer-program.png)
 
 First, create a new App Id, by navigating to that section:
 
-![New App Id](/images/2024/03/0-9qaavfohfykdhgq9.png)
+![New App Id](/images/apns-new-app-id.png)
 
 In, the add screen, enter any description and select the “Push Notifications” check box:
 
-![Push notifications](/images/2024/03/0-pt_asgpge2sdab3l.png)
+![Push notifications](/images/apns-push-notifications-checkbox.png)
 
 Also, in the bundle ID section, remember to include an explicit fully qualified bundle Id in the reverse domain notation, as wild-cards are not supported for push notifications:
 
-![Bundle Id](/images/2024/03/0-osxwzpxvgnitej_v.png)
+![Bundle Id](/images/apns-bundle-id.png)
 
 **Create a new push certificate**
 Now, navigate to the certificates section, and create a new one. During creation, select the combo box as indicated below:
 
-![Development certificate](/images/2024/03/0-ekfcscrq_ledhr6h.png)
+![Development certificate](/images/apns-development-certificate.png)
 
 Next, select the app Id created earlier and when prompted, upload the Certificate Signing Request created earlier. If all goes well, the certificate will be generated. Download this certificate, and double click it to open it in the KeyChain tool. You would see the private key with the common name that you entered earlier when you expand the certificate. Remember to note that the certificate name is prefixed with “Apple Development IOS Push Services”. Select both the certificate and the key, right click and “Export 2 items”. It will prompt you to enter the KeyChain password and will generate a .p12 file that you will need later to configure the server side provider.** Generate a provisioning profile**
 The last step in this process is to generate a provisioning profile so that you can deploy the app on to the device. In the devices section of the portal, create a new device and enter the 40-character device Id you get from iTunes or the Xcode Organizer. Head over to the Provisioning Profiles section and create a new profile. Remember to select “iOS App Development as shown below:
 
-![Provisioning profile](/images/2024/03/0-gextxwtoujcvfnou.png)
+![Provisioning profile](/images/apns-provisioning-profile.png)
 
 In the next screens, select the App Id, device and certificate created in the previous steps to create the provisioning profile. Download the profile and drag it onto the profiles section of the Xcode organizer.
 
@@ -105,7 +105,7 @@ UIAlertView *alertView = [[ UIAlertView alloc ] initWithTitle:@”Push Alert” 
 ```
 To test this capability, I’ve built a test app that takes input text from a text field and sends it to the web service created in GAE. The resulting push notification is trapped and displayed in an alert view as shown in the sample code above.
 
-![Voila](/images/2024/03/0-pu9dsrqv8wd-0nh6.jpg)
+![Voila](/images/apns-push-alert-screenshot.jpg)
 
 Finally, a couple of things to keep in mind when developing apps that use push notifications:
 

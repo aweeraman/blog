@@ -8,7 +8,7 @@ feature_image: "https://images.unsplash.com/photo-1590497008432-598f04441de8?cro
 
 If you’re looking to build a modern microservices architecture that is highly scalable, observable, secure and resilient, it would make sense to consider some of the service mesh technologies that are rapidly evolving right now. At the time of this writing, [Istio](http://www.istio.io) is one of the key frameworks that have been gaining a lot of traction, and a key contender in the service mesh race.
 
-![](/images/2024/03/service-mesh.png)
+![](/images/istio-service-mesh-overview.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
@@ -16,7 +16,7 @@ For those new to the subject, a service mesh is a layer of infrastructure betwee
 
 It does so by taking the existing pattern of the central reverse proxy that sits in front of a large number of services, and colocates a lighter variant of it with each individual service. In addition to being a reverse proxy, this “sidecar” proxy (so named due to the fact that it sits alongside each service in a tightly bound configuration), is able to perform traffic routing, inter-service communication, policy enforcement, throttling and a myriad of other capabilities that make this pattern very powerful.
 
-![](/images/2024/03/1-w944xb2kpc2ninvpzjmcxq.png)
+![](/images/istio-sidecar-pattern.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
@@ -28,25 +28,25 @@ The Pilot, Mixer and CA constitute the control plane through which all the confi
 
 Each Envoy publishes metrics to a “Mixer”, which has adapters for popular monitoring backends, [prometheus](https://prometheus.io/) being a popular one. The Mixer is also used for policy evaluation, implementing quotas, and rate limiting.
 
-![](/images/2024/03/1-d3v53ldxktbknch1qb1dja.png)
+![](/images/istio-control-plane-architecture.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
 The Envoy, being both a Layer 4 and Layer 7 reverse proxy, is capable of performing complex traffic control based on rules pushed by the operators and can be made to take effect immediately without a restart. This makes the infrastructure extremely nimble for the operations team. For example, below is an example of how 1% of the traffic can be routed to an alternate route for A/B testing:
 
-![](/images/2024/03/1-foh7a_kptjkqnrs_o0_dvw.png)
+![](/images/istio-traffic-splitting-example.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
 This could be made possible by pushing out the following policy change to the Envoy:
 
-![](/images/2024/03/1-gt5cfto782nf77tbuhbpsw.png)
+![](/images/istio-traffic-routing-config.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
 Envoy can also perform L7 routing for traffic steering based on HTTP headers as in the scenario below:
 
-![](/images/2024/03/1-bkt41fq-uyohjeojn9yzew.png)
+![](/images/istio-l7-routing-example.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
@@ -58,7 +58,7 @@ One of the key differences in this pattern compared to the centralized middle pr
 
 For example, service A can be configured to only be allowed to invoke service B, and the interaction will be governed and mandated by the proxy through the use of mutual TLS certificates with the Istio CA. Previously, this type of policy enforcement was complicated in highly dynamic environments such as orchestration platforms where the IP addresses change frequently and the workload tends to be highly mobile. This made systems very difficult to protect from insider attack as there was no inherent identity bound to the service that can be cryptographically assured at the time of enforcement.
 
-![](/images/2024/03/1-qgformcys-aq0yljucxamw.png)
+![](/images/istio-mutual-tls-diagram.png)
 
 *Source: [https://www.infoq.com/presentations/istio-service-mesh](https://www.infoq.com/presentations/istio-service-mesh)*
 
