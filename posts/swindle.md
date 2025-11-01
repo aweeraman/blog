@@ -2,7 +2,7 @@
 title: "Swindle"
 date: "2010-11-17"
 path: "/swindle"
-excerpt: ""
+excerpt: "After much internal debate and turmoil, I finally succumbed to the idea of purchasing a Kindle. I must say that I'm quite pleased with the product, having been an early adopter of the Sony Reader and paying dearly for it."
 feature_image: "https://images.unsplash.com/photo-1610731826702-6ded935d39a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGtpbmRsZXxlbnwwfHx8fDE3MTEyODc5Mzl8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

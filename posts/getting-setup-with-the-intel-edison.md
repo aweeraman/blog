@@ -2,7 +2,7 @@
 title: "Getting setup with the Intel Edison"
 date: "2015-10-03"
 path: "/getting-setup-with-the-intel-edison"
-excerpt: ""
+excerpt: "Intel Edison is an adorable little system on a chip packed with all the wireless and processing capabilities to build wearables and smart things. It features a dual-core Intel Atom processor at 500 MHz, integrated Bluetooth 4 and wifi, USB controllers, 1GB of RAM and 4GB of eMMC flash memory, all in a tiny package."
 feature_image: "/images/2024/03/1-lscj2g5rosteomulkeaeka-jpeg.jpg"
 ---
 

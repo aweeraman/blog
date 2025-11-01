@@ -2,7 +2,7 @@
 title: "How to put that GPU to good use with Python"
 date: "2017-09-18"
 path: "/put-that-gpu-to-good-use-with-python"
-excerpt: "Graphics chip manufacturers such as NVIDIA and AMD have been seeing a surge in sales of their graphics processors (GPUs) thanks mostly to…"
+excerpt: "Graphics chip manufacturers such as NVIDIA and AMD have been seeing a surge in sales of their graphics processors thanks mostly to cryptocurrency miners and machine learning applications that have found uses for these graphics processors outside of gaming and simulations."
 feature_image: "/images/2024/03/1-rx1bct5g8dhycr92q53bjw-jpeg.jpg"
 ---
 

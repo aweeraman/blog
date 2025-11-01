@@ -2,7 +2,7 @@
 title: "Software Freedom Day 2008"
 date: "2008-09-24"
 path: "/software-freedom-day-2008"
-excerpt: ""
+excerpt: "An event to mark the Software Freedom Day was organized by the Free Software Foundation and held in Boston over the weekend. I felt that a long drive was just what I needed to get my mind off the series of mini catastrophes that have been taking place at work during the week."
 feature_image: "/images/2024/03/2884017200_3d2bd94d57_k.jpg"
 ---
 

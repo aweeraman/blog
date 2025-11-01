@@ -2,7 +2,7 @@
 title: "On Linux, backups and encrypted filesystems"
 date: "2019-03-10"
 path: "/on-linux-backups-and-encrypted-filesystems"
-excerpt: "Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way, that I can:"
+excerpt: "Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way that I can perform it frequently without hassle, keep it secure with encryption, and make restoration painless."
 feature_image: "https://images.unsplash.com/photo-1579702662656-f26205285141?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDM1fHx0YXBlJTIwZHJpdmV8ZW58MHx8fHwxNzExMTI4NDA3fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

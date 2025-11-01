@@ -2,7 +2,7 @@
 title: "The Magic Word"
 date: "2006-08-08"
 path: "/the-magic-word"
-excerpt: ""
+excerpt: "Once in every three years or so, I fire up an editor that I can't exit. First it was vi, many many moons ago. Then came emacs."
 feature_image: "https://images.unsplash.com/photo-1498019559366-a1cbd07b5160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE0fHxtYWdpY3xlbnwwfHx8fDE3MTEyMTQ5MDd8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

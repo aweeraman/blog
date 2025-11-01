@@ -2,7 +2,7 @@
 title: "Dissecting Bitcoin, Part 2 — Challenges"
 date: "2017-12-24"
 path: "/dissecting-bitcoin-part-2-challenges"
-excerpt: "In the previous part, we discussed the core technology behind Bitcoin and the concepts that make it tick, namely:"
+excerpt: "In the previous part, we discussed the core technology behind Bitcoin and the concepts that make it tick. In this post, we will be covering some challenges Bitcoin faces as its adoption grows at a rapid rate."
 feature_image: "https://images.unsplash.com/photo-1615992174118-9b8e9be025e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxjcnlwdG98ZW58MHx8fHwxNzExMjg1MTk2fDA&ixlib=rb-4.0.3&q=80&w=2000"
 featured: true
 ---

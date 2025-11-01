@@ -2,7 +2,7 @@
 title: "It all comes down to that, really."
 date: "2007-01-18"
 path: "/it-all-comes-down-to-that-really"
-excerpt: ""
+excerpt: "The Sony Reader that I ordered last week has finally arrived and I'm quite impressed with the little gadget. The best feature of it is probably the screen."
 feature_image: "https://images.unsplash.com/photo-1551029506-0807df4e2031?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI2fHxib29rfGVufDB8fHx8MTcxMTI4OTY2MHww&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

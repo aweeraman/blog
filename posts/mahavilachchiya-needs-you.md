@@ -2,7 +2,7 @@
 title: "Mahavilachchiya needs you!"
 date: "2010-09-23"
 path: "/mahavilachchiya-needs-you"
-excerpt: ""
+excerpt: "Several years ago, I got the opportunity to visit a small foundation in the middle of the jungle in Mahavilachchiya that made a strong impression on me and my friends in the LKLUG."
 feature_image: "/images/2024/03/277101707_0328772906_b.jpg"
 ---
 

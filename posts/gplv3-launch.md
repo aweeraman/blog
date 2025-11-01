@@ -2,7 +2,7 @@
 title: "GPLv3 Launch"
 date: "2007-07-01"
 path: "/gplv3-launch"
-excerpt: ""
+excerpt: "GPLv3 was launched on Friday after close to eighteen months of public involvement in it's drafting process. This has been an important milestone in the free software world as an upgrade to the GPL to address some of the more modern concerns have been a long time coming."
 feature_image: "/images/2024/03/663101907_6a3ae3ae5b_k.jpg"
 ---
 

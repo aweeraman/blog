@@ -2,7 +2,7 @@
 title: "A boy’s first computer"
 date: "2013-01-12"
 path: "/a-boys-first-computer"
-excerpt: ""
+excerpt: "The week so far has been an eventful one. Being bed-ridden has made me pensive and nostalgic about my childhood, and long for the simpler days."
 feature_image: "https://images.unsplash.com/photo-1554921027-b91f0beeb07d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDU4fHxyZXRybyUyMGNvbXB1dGVyfGVufDB8fHx8MTcxMTI4Nzc5OXww&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

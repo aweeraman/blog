@@ -2,7 +2,7 @@
 title: "Virtual Private Networking"
 date: "2006-03-20"
 path: "/virtual-private-networking"
-excerpt: ""
+excerpt: "I'm sure most of you would have had to mess around with VPNs at some point of your lives. Sometimes, VPNs can turn nasty and bind you to an OS that hinders your free spirit."
 feature_image: "https://images.unsplash.com/photo-1601898532125-bb05b244b90e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fHZwbnxlbnwwfHx8fDE3MTEyOTE4OTR8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

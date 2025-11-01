@@ -2,7 +2,7 @@
 title: "Mahavilachchiya — day two"
 date: "2006-10-22"
 path: "/mahavilachchiya-day-two"
-excerpt: ""
+excerpt: "Yesterday was the second day of the FOSS-ed on Wheels at Mahavilachchiya. The kids were some of the brightest I've met and they pick things up in a flash."
 feature_image: "/images/2024/03/277102384_685b5bded9_b.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "Musings on Git"
 date: "2012-12-31"
 path: "/musings-on-git"
-excerpt: ""
+excerpt: "Having spent some quality time with Git over the holidays, my appreciation for the flexibility of this DVCS and the elegance with which it has been constructed has reached a state of awe."
 feature_image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHZlcnNpb24lMjBjb250cm9sfGVufDB8fHx8MTcxMTI4Nzg4Nnww&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

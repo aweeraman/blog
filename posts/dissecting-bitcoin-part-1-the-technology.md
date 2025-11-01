@@ -2,7 +2,7 @@
 title: "Dissecting Bitcoin, Part 1 — The Technology"
 date: "2017-07-22"
 path: "/dissecting-bitcoin-part-1-the-technology"
-excerpt: "Recently, I decided to pull up Satoshi Nakamoto’s paper with the hope of getting a deeper appreciation for Bitcoin and the machinations of…"
+excerpt: "Recently, I decided to pull up Satoshi Nakamoto's paper with the hope of getting a deeper appreciation for Bitcoin and the machinations of a protocol that's driving speculators insane watching a candlestick chart. In the paper, Satoshi puts forward a solution to an old problem in distributed computing circles using Cryptography."
 feature_image: "/images/2024/03/1-qkeglmhjnyzqqrkdqjobpg-1.png"
 ---
 

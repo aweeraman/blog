@@ -2,7 +2,7 @@
 title: "RMS @ MIT"
 date: "2006-04-06"
 path: "/rms-mit"
-excerpt: ""
+excerpt: "It was a very eventful weekend. For one thing, the FSF associate member's meeting was being held at MIT on Saturday. I'm not a fan of social events, but as it turns out, geek hangouts are where I thrive."
 feature_image: "/images/2024/03/433043007_80d4632352_k.jpg"
 ---
 

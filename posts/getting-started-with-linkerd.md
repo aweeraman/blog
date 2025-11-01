@@ -2,7 +2,7 @@
 title: "Getting started with Linkerd"
 date: "2022-11-05"
 path: "/getting-started-with-linkerd"
-excerpt: "If you’ve done anything in the Kubernetes space in recent years, you’ve most likely come across the words “Service Mesh”. It’s backed by a…"
+excerpt: "If you've done anything in the Kubernetes space in recent years, you've most likely come across the words Service Mesh. It's backed by a set of mature technologies that provides cross-cutting networking, security, infrastructure capabilities to be used by workloads running in Kubernetes in a manner that is transparent to the actual workload."
 feature_image: "https://images.unsplash.com/photo-1567356270285-a001028c648d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNpZGVjYXJ8ZW58MHx8fHwxNzExMDQ1NzcwfDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

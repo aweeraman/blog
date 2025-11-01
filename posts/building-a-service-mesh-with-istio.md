@@ -2,7 +2,7 @@
 title: "Building a service mesh with Istio"
 date: "2018-03-19"
 path: "/building-a-service-mesh-with-istio"
-excerpt: "If you’re looking to build a modern microservices architecture that is highly scalable, observable, secure and resilient, it would make…"
+excerpt: "If you're looking to build a modern microservices architecture that is highly scalable, observable, secure and resilient, it would make sense to consider some of the service mesh technologies that are rapidly evolving right now. At the time of this writing, Istio is one of the key frameworks that have been gaining a lot of traction, and a key contender in the service mesh race."
 feature_image: "https://images.unsplash.com/photo-1590497008432-598f04441de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDZ8fGNvbnRhaW5lcnN8ZW58MHx8fHwxNzExMjIyMTY4fDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

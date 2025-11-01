@@ -2,7 +2,7 @@
 title: "Linux on the Desktop: a cautionary tale of distributions, GPUs and encrypted filesystems"
 date: "2019-09-27"
 path: "/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems"
-excerpt: "In the last 24 hours, I have been experimenting with this ridiculously named but absolutely gorgeous Linux distribution called Pop!_OS by…"
+excerpt: "In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by System76. An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian."
 feature_image: "https://images.unsplash.com/photo-1485470733090-0aae1788d5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxpbnV4fGVufDB8fHx8MTcxMTA5NTM2N3ww&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

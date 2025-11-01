@@ -2,7 +2,7 @@
 title: "Coaching software engineers 101"
 date: "2017-03-11"
 path: "/coaching-software-engineers-101"
-excerpt: "Software engineers are a breed apart and coaching them to bring out their best has almost been a passion for me. I’ve had the pleasure of…"
+excerpt: "Software engineers are a breed apart and coaching them to bring out their best has almost been a passion for me. I've had the pleasure of working with really good software engineers and watching them climb the ranks and achieve their career objectives has been especially fulfilling over the years."
 feature_image: "/images/2024/03/1-lyszbfqzc5rko-jdiprxqa-jpeg.jpg"
 ---
 

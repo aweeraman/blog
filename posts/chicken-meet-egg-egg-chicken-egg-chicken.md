@@ -2,7 +2,7 @@
 title: "Chicken, meet egg. Egg, Chicken. Egg. Chicken."
 date: "2006-05-04"
 path: "/chicken-meet-egg-egg-chicken-egg-chicken"
-excerpt: ""
+excerpt: "Lately I've been stuck on z/OS, among other things, and managed to somehow fill up my allocated quota of disk space with considerable ease. But here's an interesting dilemma, clearing up some space isn't all that easy."
 feature_image: "https://images.unsplash.com/photo-1601182207230-1b165dea2212?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDMzfHxkaW5vc2F1cnxlbnwwfHx8fDE3MTEyOTEyNjl8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

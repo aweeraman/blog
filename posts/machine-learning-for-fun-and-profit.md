@@ -2,7 +2,7 @@
 title: "Machine learning for fun and profit"
 date: "2017-04-15"
 path: "/machine-learning-for-fun-and-profit"
-excerpt: "Machine learning and artificial intelligence has been going through a phase of democratization to the point that in recent years the…"
+excerpt: "Machine learning and artificial intelligence has been going through a phase of democratization to the point that in recent years the barrier to entry for technologies that can be used to build intelligent and self learning applications is at an all time low. I will show just how easy it is to get started with machine learning by walking you through building a simple classifier using open source technologies."
 feature_image: "/images/2024/03/1-ggcalx43tz-7heh3a407da-1.png"
 ---
 

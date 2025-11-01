@@ -2,7 +2,7 @@
 title: "Bootstrapping Go"
 date: "2017-04-10"
 path: "/bootstrapping-go"
-excerpt: "Over the weekend, I came across a couple of videos on how the Go compiler was migrated from C to Go. The Go compiler was originally written…"
+excerpt: "Over the weekend, I came across a couple of videos on how the Go compiler was migrated from C to Go. The Go compiler was originally written in C and after it reached a certain level of maturity, the creators were looking at how to bootstrap the compiler in Go so that the language can inherit some of the benefits of Go."
 feature_image: "/images/2024/03/1-kneu6qbr0ghdb31etvrfqg-jpeg-1.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "DeepSeek-R1, at the cusp of an open revolution"
 date: "2025-02-02"
 path: "/deepseek-r1-at-the-cusp-of-an-open-revolution"
-excerpt: ""
+excerpt: "DeepSeek R1, the new entrant to the Large Language Model wars has created quite a splash over the last few weeks. Its entrance into a space dominated by the Big Corps, while pursuing asymmetric and novel strategies has been a refreshing eye-opener."
 feature_image: "https://images.unsplash.com/photo-1594267238512-d6d02583c5ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI3Mnx8ZGVlcHxlbnwwfHx8fDE3Mzg0ODE2MTV8MA&ixlib=rb-4.0.3&q=80&w=2000"
 featured: true
 ---

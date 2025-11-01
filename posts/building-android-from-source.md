@@ -2,7 +2,7 @@
 title: "Building Android from source"
 date: "2016-05-15"
 path: "/building-android-from-source"
-excerpt: ""
+excerpt: "Building Android from source seems like a daunting task at first, but it's really not that hard. I'll walk through the steps as simply as possible to get your first AOSP build running on your handset."
 feature_image: "/images/2024/03/1-p5nna6monwk97lcwjnw34a-jpeg.jpg"
 ---
 

@@ -2,7 +2,7 @@
 title: "On Perl and Poetry"
 date: "2014-06-02"
 path: "/on-perl-and-poetry"
-excerpt: ""
+excerpt: "I first learnt of Perl in the late 90's. Sometime around '98 or '99. Fresh on the heels of BASIC, I was yearning to try out something new when I heard of Perl."
 feature_image: "/images/2024/03/1-8udlzvnxsobvdt1kaq5gta-jpeg.jpg"
 ---
 

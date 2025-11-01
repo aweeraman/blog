@@ -2,7 +2,7 @@
 title: "Software Freedom Day 2013 @ Virtusa"
 date: "2013-09-22"
 path: "/software-freedom-day-2013-virtusa"
-excerpt: ""
+excerpt: "This last week, the fine folk at the Virtusa Open Source SIG organized an event to celebrate the Software Freedom Day where my good friends Mifan and Suchetha made keynotes."
 feature_image: "/images/2024/03/664006476_5ea029521a_k.jpg"
 ---
 

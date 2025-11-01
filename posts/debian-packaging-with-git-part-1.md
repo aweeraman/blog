@@ -2,7 +2,7 @@
 title: "Debian packaging with git — Part 1"
 date: "2008-05-29"
 path: "/debian-packaging-with-git-part-1"
-excerpt: ""
+excerpt: "Recently, I've been taking a look at tools to version control and maintain my Debian packages in git. Git, like mercurial, is a distributed SCM used to maintain the Linux kernel since version 2.6.12."
 feature_image: "https://images.unsplash.com/photo-1520038410233-7141be7e6f97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUwfHxwYWNrYWdpbmd8ZW58MHx8fHwxNzExMjg4MzIwfDA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

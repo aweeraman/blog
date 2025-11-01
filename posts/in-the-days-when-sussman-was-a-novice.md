@@ -2,7 +2,7 @@
 title: "In the days when Sussman was a novice…"
 date: "2006-04-07"
 path: "/in-the-days-when-sussman-was-a-novice"
-excerpt: ""
+excerpt: "Minsky once came to him as he sat hacking at the PDP-6. I am training a randomly wired neural net to play Tic-tac-toe, Sussman replied."
 feature_image: "/images/2024/03/433036452_f7b42875bb_k-1.jpg"
 ---
 

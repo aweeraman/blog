@@ -2,7 +2,7 @@
 title: "The Onion Router"
 date: "2006-03-14"
 path: "/the-onion-router"
-excerpt: ""
+excerpt: "I recently tried out TOR for the first time as this has been something in my TODO list for a while. It was just a matter of apt-get install tor privoxy."
 feature_image: "https://images.unsplash.com/photo-1588613000171-55fe9ac1e10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE1fHxvbmlvbiUyMHJvdXRlcnxlbnwwfHx8fDE3MTEyOTIxMDh8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 

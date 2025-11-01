@@ -2,7 +2,7 @@
 title: "Git guts"
 date: "2013-01-14"
 path: "/git-guts"
-excerpt: ""
+excerpt: "Today I will dive into the guts of git to showcase the simplicity and elegance in which git manages the content internally in it's own content addressable file system."
 feature_image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGdpdHxlbnwwfHx8fDE3MTEyODc2OTR8MA&ixlib=rb-4.0.3&q=80&w=2000"
 ---
 
