@@ -64,12 +64,15 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             const isActive = index === currentIndex;
             const offset = index - currentIndex;
 
+            // Keep slides visible when they're actively transitioning (offset is -1, 0, or 1)
+            const isVisible = Math.abs(offset) <= 1;
+
             return (
               <article
                 key={index}
                 className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out ${
-                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-                }`}
+                  isActive ? 'opacity-100 z-10' : isVisible ? 'opacity-100 z-0' : 'opacity-0 z-0'
+                } ${!isActive ? 'pointer-events-none' : ''}`}
                 style={{ transform: `translateX(${offset * 100}%)` }}
               >
                 {/* Background image layer with slower parallax movement */}
