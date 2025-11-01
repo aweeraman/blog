@@ -144,7 +144,3 @@ npm run build
 - **Optimized bundle size** with code splitting
 - **Fast page navigation** with client-side routing
 - **Lazy-loaded images** (planned)
-
-## License
-
-MIT
