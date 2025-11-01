@@ -1,10 +1,11 @@
-import { Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
 import { getPostBySlug, getAdjacentPosts } from '../../src/utils/posts';
 import { getPageBySlug } from '../../src/utils/pages';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
 import { MarkdownRenderer } from '../../src/components/MarkdownRenderer';
+import { GiscusComments } from '../../src/components/GiscusComments';
 
 export default function Page() {
   const pageContext = usePageContext();
@@ -58,7 +59,6 @@ export default function Page() {
     });
 
     const { previous, next } = getAdjacentPosts(slug);
-    const description = frontmatter.excerpt || content.slice(0, 160).replace(/[#*\[\]]/g, '').trim();
 
     return (
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
@@ -157,6 +157,8 @@ export default function Page() {
               </nav>
             )}
           </article>
+
+          <GiscusComments />
         </div>
         <Footer />
       </div>
@@ -166,7 +168,6 @@ export default function Page() {
   // Render page
   if (page) {
     const { frontmatter, content } = page;
-    const description = content.slice(0, 160).replace(/[#*\[\]]/g, '').trim();
 
     return (
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
