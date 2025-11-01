@@ -3,7 +3,7 @@ title: "Dissecting Bitcoin, Part 2 — Challenges"
 date: "2017-12-24"
 path: "/dissecting-bitcoin-part-2-challenges"
 excerpt: "In the previous part, we discussed the core technology behind Bitcoin and the concepts that make it tick. In this post, we will be covering some challenges Bitcoin faces as its adoption grows at a rapid rate."
-feature_image: "/images/crypto-cryptocurrency-blockchain.jpg"
+feature_image: "/images/dissecting-bitcoin-part-2-challenges/crypto-cryptocurrency-blockchain.jpg"
 featured: true
 ---
 
@@ -30,13 +30,13 @@ With traditional fiat currencies, consumers have come to trust the institution t
 
 Unlike traditional bank transactions, all Bitcoin transactions are in the public record and every transaction since the genesis block is viewable by anyone. There’s no reference or link to the identities in any of these transactions so we just don’t know who is behind them.
 
-![](/images/bitcoin-transaction-privacy.png)
+![](/images/dissecting-bitcoin-part-2-challenges/bitcoin-transaction-privacy.png)
 
 *Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
 
 Here's a transaction of 300 BTC between two parties:
 
-![](/images/bitcoin-transaction-example.png)
+![](/images/dissecting-bitcoin-part-2-challenges/bitcoin-transaction-example.png)
 
 *Source: [https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339](https://blockchain.info/tx/e07734c68f8dccb4e0b7406988b5b0890812acae4bca24abc24ce092f21b7339)*
 

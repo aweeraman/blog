@@ -3,7 +3,7 @@ title: "Dissecting Bitcoin, Part 1 — The Technology"
 date: "2017-07-22"
 path: "/dissecting-bitcoin-part-1-the-technology"
 excerpt: "Recently, I decided to pull up Satoshi Nakamoto's paper with the hope of getting a deeper appreciation for Bitcoin and the machinations of a protocol that's driving speculators insane watching a candlestick chart. In the paper, Satoshi puts forward a solution to an old problem in distributed computing circles using Cryptography."
-feature_image: "/images/bitcoin-network-cover.png"
+feature_image: "/images/dissecting-bitcoin-part-1-the-technology/bitcoin-network-cover.png"
 ---
 
 Recently, I decided to pull up Satoshi Nakamoto’s [paper](https://www.semanticscholar.org/paper/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System-Nakamoto/22718d4694e51a78a70899cda24ec321869f9a43) with the hope of getting a deeper appreciation for Bitcoin and the machinations of a protocol that’s driving speculators insane watching a candlestick chart.
@@ -16,7 +16,7 @@ What’s even more interesting is, who is Satoshi Nakamoto, the mysterious creat
 
 At its heart, the peer to peer system proposed by Satoshi Nakomoto is meant to address the [double spending problem](https://en.wikipedia.org/wiki/Double-spending) of digital currency that is completely decentralized and does not require trust between entities in the network in order to function. It does so by maintaining a public chain of transactions whose integrity is assured by hash-based proof-of-work that is nearly impossible to tamper with using present-day technologies. This block chain acts as an immutable ledger where transactions can be recorded using public key cryptography for maintaining integrity.
 
-![](/images/bitcoin-blockchain-diagram.png)
+![](/images/dissecting-bitcoin-part-1-the-technology/bitcoin-blockchain-diagram.png)
 
 *Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
 
@@ -50,13 +50,13 @@ Mining is a critical part of the running Bitcoin network, and there are incentiv
 
 As of today, the reward for mining a Bitcoin is 12.5 BTC.
 
-![](/images/bitcoin-supply-schedule.png)
+![](/images/dissecting-bitcoin-part-1-the-technology/bitcoin-supply-schedule.png)
 
 *Source: [https://en.bitcoin.it/wiki/Controlled_supply](https://en.bitcoin.it/wiki/Controlled_supply)*
 
 When mining is no longer possible, the miner who successfully generates a new block is also incentivized with transaction fees. This is the difference between the input and the output of a transaction.
 
-![](/images/bitcoin-transaction-structure.png)
+![](/images/dissecting-bitcoin-part-1-the-technology/bitcoin-transaction-structure.png)
 
 *Reference: Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." (2008).*
 

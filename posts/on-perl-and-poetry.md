@@ -3,7 +3,7 @@ title: "On Perl and Poetry"
 date: "2014-06-02"
 path: "/on-perl-and-poetry"
 excerpt: "I first learnt of Perl in the late 90's. Sometime around '98 or '99. Fresh on the heels of BASIC, I was yearning to try out something new when I heard of Perl."
-feature_image: "/images/perl-poetry-cover.jpg"
+feature_image: "/images/on-perl-and-poetry/perl-poetry-cover.jpg"
 ---
 
 I first learnt of Perl in the late 90’s. Sometime around ’98 or ’99. Fresh on the heels of BASIC, I was yearning to try out something new when I heard of Perl. I heard it’s what the Internet ran on and it had an almost mythical air to it that made me want to learn it. If you wanted to build dynamic web sites at that time, you had few options, and Perl, Apache and UNIX was the workhorse. I wanted to build dynamic web sites so what I had to do was pretty clear. There was a new fangled thing called Java, but no way was it ever going to catch up to the dominance that Perl had over the Internet. Or so people thought.

@@ -3,7 +3,7 @@ title: "Sony Reader Wishlist"
 date: "2007-01-19"
 path: "/sony-reader-wishlist"
 excerpt: "Here's a list of things I'd like to see in a future version of the Sony Reader."
-feature_image: "/images/book-reading-ereader.jpg"
+feature_image: "/images/sony-reader-wishlist/book-reading-ereader.jpg"
 ---
 
 Here’s a list of things I’d like to see in a future version of the Sony Reader.

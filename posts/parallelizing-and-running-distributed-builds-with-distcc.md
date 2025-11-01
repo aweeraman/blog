@@ -3,14 +3,14 @@ title: "Parallelizing and running distributed builds with distcc"
 date: "2023-01-08"
 path: "/parallelizing-and-running-distributed-builds-with-distcc"
 excerpt: "Parallelizing the compilation of a large codebase is a breeze with distcc, which allows you to spread the load across multiple nodes and speed up the compilation time."
-feature_image: "/images/workers-distributed-computing.jpg"
+feature_image: "/images/parallelizing-and-running-distributed-builds-with-distcc/workers-distributed-computing.jpg"
 ---
 
 Parallelizing the compilation of a large codebase is a breeze with [distcc](https://www.distcc.org/), which allows you to spread the load across multiple nodes and speed up the compilation time.
 
 Here’s a sample network topology for a distributed build:
 
-![](/images/distcc-network-topology.png)
+![](/images/parallelizing-and-running-distributed-builds-with-distcc/distcc-network-topology.png)
 
 Install distcc on the three Debian/Ubuntu-based nodes:
 

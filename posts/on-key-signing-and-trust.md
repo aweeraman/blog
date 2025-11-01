@@ -3,7 +3,7 @@ title: "On key signing and trust"
 date: "2015-01-11"
 path: "/on-key-signing-and-trust"
 excerpt: "Key signing is a hallowed tradition in the open source world with a very specific protocol for validating and confirming an identity before accepting someone to the web of trust."
-feature_image: "/images/gpg-key-signing-cover.jpg"
+feature_image: "/images/on-key-signing-and-trust/gpg-key-signing-cover.jpg"
 ---
 
 Key signing is a hallowed tradition in the open source world with a very specific protocol for validating and confirming an identity before accepting someone to the web of trust. It’s almost never done without meeting the person being admitted into the trust relationship and it goes like this:

@@ -3,7 +3,7 @@ title: "Chicken, meet egg. Egg, Chicken. Egg. Chicken."
 date: "2006-05-04"
 path: "/chicken-meet-egg-egg-chicken-egg-chicken"
 excerpt: "Lately I've been stuck on z/OS, among other things, and managed to somehow fill up my allocated quota of disk space with considerable ease. But here's an interesting dilemma, clearing up some space isn't all that easy."
-feature_image: "/images/dinosaur-mainframe.jpg"
+feature_image: "/images/chicken-meet-egg-egg-chicken-egg-chicken/dinosaur-mainframe.jpg"
 ---
 
 Lately I’ve been stuck on z/OS, among other things, and managed to somehow fill up my allocated quota of disk space with considerable ease. But here’s an interesting dilemma, clearing up some space isn’t all that easy. Apparently, it doesn’t let me delete files because there is not enough disk space. Now there’s a paradigm shift for you.

@@ -3,7 +3,7 @@ title: "Behold, the blinking marquee"
 date: "2010-10-11"
 path: "/behold-the-blinking-marquee"
 excerpt: "I recently picked up Handcrafted CSS at the local bookstore and flipping through it has revived my old love of design."
-feature_image: "/images/css-web-design.jpg"
+feature_image: "/images/behold-the-blinking-marquee/css-web-design.jpg"
 ---
 
 I recently picked up “[Handcrafted CSS](http://www.amazon.com/Handcrafted-CSS-Bulletproof-Design-Essentials/dp/0321658531/ref=sr_1_2?ie=UTF8&s=books&qid=1286834099&sr=8-2)” at the local bookstore and flipping through it has revived my old love of design.

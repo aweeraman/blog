@@ -3,7 +3,7 @@ title: "Windows of Opportunity: Microsoft's Open Source Renaissance"
 date: "2024-07-13"
 path: "/windows-of-opportunity-microsofts-open-source-renaissance"
 excerpt: "Twenty years ago, it was easy to dislike Microsoft. It was the quintessential evil MegaCorp that was quick to squash competition, often ruthlessly, but in some cases slowly through a more insidious process of embracing, extending, and exterminating anything that got in the way."
-feature_image: "/images/transformation-microsoft.jpg"
+feature_image: "/images/windows-of-opportunity-microsofts-open-source-renaissance/transformation-microsoft.jpg"
 ---
 
 Twenty years ago, it was easy to dislike Microsoft. It was the quintessential evil MegaCorp that was quick to squash competition, often ruthlessly, but in some cases slowly through a more insidious process of embracing, extending, and exterminating anything that got in the way. This was the signature personality of Ballmer-era Microsoft that also inspired and united the software freedom fighting forces that came together to safeguard things that mattered to them and were at risk.

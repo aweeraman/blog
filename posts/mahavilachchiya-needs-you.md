@@ -3,7 +3,7 @@ title: "Mahavilachchiya needs you!"
 date: "2010-09-23"
 path: "/mahavilachchiya-needs-you"
 excerpt: "Several years ago, I got the opportunity to visit a small foundation in the middle of the jungle in Mahavilachchiya that made a strong impression on me and my friends in the LKLUG."
-feature_image: "/images/mahavilachchiya-school.jpg"
+feature_image: "/images/mahavilachchiya-needs-you/mahavilachchiya-school.jpg"
 ---
 
 Several years ago, I got the opportunity to visit [a small foundation in the middle of the jungle](http://www.flickr.com/photos/aweeraman/sets/72157594341258104/) in Mahavilachchiya that made a strong impression on me and my friends in the [LKLUG](http://www.linux.lk). We were there to teach kids computers and introduce them to the wealth of free and open source software. As an active community, we have been to many advocacy and training sessions, but this one was quite unlike any other.

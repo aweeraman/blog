@@ -3,7 +3,7 @@ title: "AlphaGo: a journey to machine intuition"
 date: "2018-01-01"
 path: "/alphago-a-journey-to-machine-intuition"
 excerpt: "When IBM's Deep Blue beat Gary Kasparov, I was fifteen years old. I didn't know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade."
-feature_image: "/images/go-game-board.jpg"
+feature_image: "/images/alphago-a-journey-to-machine-intuition/go-game-board.jpg"
 featured: true
 ---
 
@@ -19,7 +19,7 @@ In addition, Go players are known to work very intuitively when it comes to game
 
 The approach that the team at Deep Mind working on AlphaGo took, was very different. In place of a handcrafted evaluation function, AlphaGo uses deep neural networks and Monte Carlo Tree Search (MCTS) of simulations for gameplay. An in-depth treatment of the techniques and results are available in the Deep Mind paper [“Master the game of Go with deep neural networks and tree search”](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5).
 
-![](/images/alphago-game-tree-complexity.png)
+![](/images/alphago-a-journey-to-machine-intuition/alphago-game-tree-complexity.png)
 
 Next, I will dive into the salient aspects of this paper.
 
@@ -29,7 +29,7 @@ Taking a brute force approach is intractable for the reason that the search spac
 
 The solution that AlphaGo provides, is a deep convolutional neural network that is trained through supervised and reinforcement learning on the backdrop of an MCTS algorithm.
 
-![](/images/alphago-training-pipeline.png)
+![](/images/alphago-a-journey-to-machine-intuition/alphago-training-pipeline.png)
 
 *Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
 
@@ -41,7 +41,7 @@ The third and final stage of the pipeline focuses on the problem of evaluating a
 
 The policy and value networks are then combined in an MCTS algorithm that searches a tree of simulations in four phases:
 
-![](/images/alphago-mcts-phases.png)
+![](/images/alphago-a-journey-to-machine-intuition/alphago-mcts-phases.png)
 
 *Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)*
 
@@ -56,7 +56,7 @@ A great deal of computation power is required to efficiently combine MCTS and de
 
 AlphaGo was made to compete against several other Go engines, both free and commercial and it proved to be several dans stronger than any other program by winning 494 out of 495 games at a staggering 99.8% win rate.
 
-![](/images/alphago-win-rate-comparison.png)
+![](/images/alphago-a-journey-to-machine-intuition/alphago-win-rate-comparison.png)
 
 Comparison of AlphaGo vs Free and commercial Go programs. Source: [https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5](https://www.semanticscholar.org/paper/Mastering-the-game-of-Go-with-deep-neural-networks-Silver-Huang/1740eb993cc8ca81f1e46ddaadce1f917e8000b5)
 

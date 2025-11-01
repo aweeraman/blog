@@ -3,7 +3,7 @@ title: "Getting setup with the Intel Edison"
 date: "2015-10-03"
 path: "/getting-setup-with-the-intel-edison"
 excerpt: "Intel Edison is an adorable little system on a chip packed with all the wireless and processing capabilities to build wearables and smart things. It features a dual-core Intel Atom processor at 500 MHz, integrated Bluetooth 4 and wifi, USB controllers, 1GB of RAM and 4GB of eMMC flash memory, all in a tiny package."
-feature_image: "/images/intel-edison-cover.jpg"
+feature_image: "/images/getting-setup-with-the-intel-edison/intel-edison-cover.jpg"
 ---
 
 Intel Edison is an adorable little system on a chip packed with all the wireless and processing capabilities to build wearables and smart things. It features a dual-core Intel Atom processor @ 500 MHz, integrated Bluetooth 4 and wifi, USB controllers, 1GB of RAM and 4GB of eMMC flash memory, all in a tiny package. It also features a 32-bit onboard Intel Quark @ 100MHz that can be used as a micro-controller. Unlike the Raspberry Pi, it has no video output capabilities however. It runs Linux, specifically, [Yocto Linux](https://www.yoctoproject.org/) that is especially targetted for embedded systems.
@@ -29,15 +29,15 @@ Fun fact: the Edison is powered by 3.3 to 4.5v and supports 40 GPIO pins that us
 
 Step 1: To get started, take out the Xadow expansion board from the kit. It features a 70-pin hirose connector on the back where the Edison can be attached.
 
-![Expansion board and edison](/images/intel-edison-expansion-board.jpg)
+![Expansion board and edison](/images/getting-setup-with-the-intel-edison/intel-edison-expansion-board.jpg)
 
 Step 2: Place the Edison on top and press until you hear a click. You should then have a fairly firmly attached Edison to the Xadow expansion board.
 
-![Edison attached to expansion board](/images/intel-edison-attached.jpg)
+![Edison attached to expansion board](/images/getting-setup-with-the-intel-edison/intel-edison-attached.jpg)
 
 Step 3: Take the Xadow programmer module and a FFC (Flat Flexible Connector) cable from kit, flip open the connector locks on both the programmer module and expansion board. Place the FFC connector as shown below and close the connector lock to keep it in place. It should now look a little like what you see below. Flip the switch that’s highlighted in the red circle to the right, towards the “Device” label indicated by the arrow.
 
-![Programmer module and expansion board](/images/intel-edison-programmer-module.jpg)
+![Programmer module and expansion board](/images/getting-setup-with-the-intel-edison/intel-edison-programmer-module.jpg)
 
 Step 4: Connect two micro-USB cables to the connectors on the programmer module and the other end to the computer. This should power up the Edison.
 
@@ -45,7 +45,7 @@ Step 5: Head over to Intel to [download and install the IoT Developer Kit](https
 
 Step 6: Your Edison should be mostly setup now. There’s one last thing you may want to do, which is configure it to connect to your home wifi. You should see the boards all lit up by now:
 
-![Edison all set](/images/intel-edison-all-connected.jpg)
+![Edison all set](/images/getting-setup-with-the-intel-edison/intel-edison-all-connected.jpg)
 
 At this point, the only way to connect it to is via a serial connection made possible through the USB port by FTDI drivers installed with the IoT developer kit. In fact, on the mac, you should see a device such as */dev/cu.usbserial-** which will be used to initiate this serial connection.
 

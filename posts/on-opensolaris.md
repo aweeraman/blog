@@ -3,7 +3,7 @@ title: "On OpenSolaris"
 date: "2008-04-26"
 path: "/on-opensolaris"
 excerpt: "In a recent article, Ted T'so makes some interesting points on Sun's motives behind OpenSolaris, and how it fares today in the FOSS ecosystem as a result."
-feature_image: "/images/sun-opensolaris.jpg"
+feature_image: "/images/on-opensolaris/sun-opensolaris.jpg"
 ---
 
 In a [recent article](http://thunk.org/tytso/blog/2008/04/19/what-sun-was-trying-to-do-with-open-solaris/), Ted T’so makes some interesting points on Sun’s motives behind OpenSolaris, and how it fares today in the FOSS ecosystem as a result.

@@ -3,7 +3,7 @@ title: "On Linux, backups and encrypted filesystems"
 date: "2019-03-10"
 path: "/on-linux-backups-and-encrypted-filesystems"
 excerpt: "Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way that I can perform it frequently without hassle, keep it secure with encryption, and make restoration painless."
-feature_image: "/images/tape-drive-backup.jpg"
+feature_image: "/images/on-linux-backups-and-encrypted-filesystems/tape-drive-backup.jpg"
 ---
 
 Today, I want to focus on backups. Specifically, how can I backup my Linux filesystems in a way, that I can:

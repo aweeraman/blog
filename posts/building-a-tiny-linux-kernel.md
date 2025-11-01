@@ -3,7 +3,7 @@ title: "Building a tiny Linux kernel"
 date: "2020-03-09"
 path: "/building-a-tiny-linux-kernel"
 excerpt: "Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you'd like to try this out on."
-feature_image: "/images/tiny-minimal-linux.jpg"
+feature_image: "/images/building-a-tiny-linux-kernel/tiny-minimal-linux.jpg"
 featured: true
 ---
 
@@ -56,15 +56,15 @@ The kernel builds to around ~430k. This is a 32-bit kernel by default, so let’
 $ make menuconfig
 ```
 
-![](/images/kernel-menuconfig-64bit.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit.png)
 
 Enable the TTY for console support:
 
-![](/images/kernel-menuconfig-tty.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty.png)
 
 and support for printk to see console output as the kernel boots:
 
-![](/images/kernel-menuconfig-printk.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk.png)
 
 Build again:
 
@@ -84,7 +84,7 @@ Boot the kernel with qemu:
 $ qemu-system-x86_64 -kernel arch/x86/boot/bzImage
 ```
 
-![](/images/kernel-boot-panic.png)
+![](/images/building-a-tiny-linux-kernel/kernel-boot-panic.png)
 
 The kernel boots and panics when attempting to start init, as expected. In order to boot into a shell as we originally set out to do, we will need a filesystem and a shell that can be started by the kernel as PID 1. Let us create a bare bones ram disk image that we can use to boot into a minimal busybox shell.
 
@@ -106,13 +106,13 @@ Building initrd... 4882 blocks
 ```
 Before we can use this ram disk, we need to enable init RAM disk (initrd) support in the kernel:
 
-![](/images/kernel-menuconfig-initrd.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd.png)
 
 I have only included support for gzip compression and disabled the rest.
 
 We will also need to enable ELF-support to be able to start up the shell:
 
-![](/images/kernel-menuconfig-elf-support.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support.png)
 
 This time, when booting the kernel, pass in the -initrd argument and specify the initrd image that we created earlier, in addition to an argument to the kernel to specify the binary that it should look for in the ram disk and execute once the kernel has finished booting, which is in this case is ‘/bin/sh’.
 
@@ -123,11 +123,11 @@ And we have a shell.
 
 Let’s enable the /proc filesystem so we can run some standard commands:
 
-![](/images/kernel-menuconfig-proc-filesystem.png)
+![](/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem.png)
 
 Mount the proc file system after booting, so you can use commands like ‘ps’ and ‘free’:
 
-![](/images/kernel-shell-proc-mounted.png)
+![](/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted.png)
 
 Here’s the size of the kernel that we just built:
 
@@ -142,7 +142,7 @@ $ qemu-system-x86_64 -kernel arch/x86/boot/bzImage -initrd kernel-utils/initramf
 ```
 Just for kicks, I disabled printk and booted up the kernel, that put me into a shell almost immediately:
 
-![](/images/kernel-boot-instant-shell.png)
+![](/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell.png)
 
 Finally, the compressed kernel size comes down to:
 

@@ -3,7 +3,7 @@ title: "Git guts"
 date: "2013-01-14"
 path: "/git-guts"
 excerpt: "Today I will dive into the guts of git to showcase the simplicity and elegance in which git manages the content internally in it's own content addressable file system."
-feature_image: "/images/git-version-control.jpg"
+feature_image: "/images/git-guts/git-version-control.jpg"
 ---
 
 Today I will dive into the guts of git to showcase the simplicity and elegance in which git manages the content internally in it’s own content addressable file system. Armed with this knowledge, you will be able to get a deeper understanding of the underlying data structure to help you figure out and troubleshoot issues that may inevitably come up as you use git.

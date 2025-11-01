@@ -3,7 +3,7 @@ title: "Quilt"
 date: "2006-09-29"
 path: "/quilt"
 excerpt: "Quilt is a great tool to maintain patchsets. For those new to quilt, let me brief you on how it works."
-feature_image: "/images/quilt-patches.jpg"
+feature_image: "/images/quilt/quilt-patches.jpg"
 ---
 
 Quilt is a great tool to maintain patchsets.

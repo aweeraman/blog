@@ -3,7 +3,7 @@ title: "DeepSeek-R1, at the cusp of an open revolution"
 date: "2025-02-02"
 path: "/deepseek-r1-at-the-cusp-of-an-open-revolution"
 excerpt: "DeepSeek R1, the new entrant to the Large Language Model wars has created quite a splash over the last few weeks. Its entrance into a space dominated by the Big Corps, while pursuing asymmetric and novel strategies has been a refreshing eye-opener."
-feature_image: "/images/deep-ai-intelligence.jpg"
+feature_image: "/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deep-ai-intelligence.jpg"
 featured: true
 ---
 
@@ -26,7 +26,7 @@ DeepMind went on to build a series of Alpha* projects that achieved many notable
 
 All of these systems achieved mastery in its own area through self-training/self-play and by optimizing and maximizing the cumulative reward over time by interacting with its environment where intelligence was observed as an emergent property of the system.
 
-![](/images/deepseek-rl-feedback-loop.png)
+![](/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deepseek-rl-feedback-loop.png)
 
 *The RL feedback loop*
 
@@ -36,7 +36,7 @@ RL mimics the process through which a baby would learn to walk, through trial, e
 
 At a technical level, DeepSeek-R1 leverages a combination of Reinforcement Learning (RL) and Supervised Fine-Tuning (SFT) for its training pipeline:
 
-![](/images/deepseek-r1-training-pipeline.png)
+![](/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deepseek-r1-training-pipeline.png)
 
 *DeepSeek-R1 Model Training Pipeline*
 
@@ -60,7 +60,7 @@ Although, it did degrade in its language capabilities during the process, its Ch
 
 The below analysis of DeepSeek-R1-Zero and OpenAI o1-0912 shows that it is viable to attain robust reasoning capabilities purely through RL alone, which can be further augmented with other techniques to deliver even better reasoning performance.
 
-![](/images/deepseek-r1-zero-benchmark.png)
+![](/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deepseek-r1-zero-benchmark.png)
 
 *Source: [https://github.com/deepseek-ai/DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)*
 
@@ -70,13 +70,13 @@ Its quite interesting, that the application of RL gives rise to seemingly human 
 
 DeepSeek-R1 also demonstrated that larger models can be distilled into smaller models which makes advanced capabilities accessible to resource-constrained environments, such as your laptop. While its not possible to run a 671b model on a stock laptop, you can still run a distilled 14b model that is distilled from the larger model which still performs better than most publicly available models out there. This enables intelligence to be brought closer to the edge, to allow faster inference at the point of experience (such as on a smartphone, or on a Raspberry Pi), which paves way for more use cases and possibilities for innovation.
 
-![](/images/deepseek-model-distillation-results.png)
+![](/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deepseek-model-distillation-results.png)
 
 *Source: [https://github.com/deepseek-ai/DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1)*
 
 Distilled models are very different to R1, which is a massive model with a completely different model architecture than the distilled variants, and so are not directly comparable in terms of capability, but are instead built to be more smaller and efficient for more constrained environments. This technique of being able to distill a larger model's capabilities down to a smaller model for portability, accessibility, speed, and cost will bring about a lot of possibilities for applying artificial intelligence in places where it would have otherwise not been possible. This is another key contribution of this technology from DeepSeek, which I believe has even further potential for democratization and accessibility of AI.
 
-![](/images/deepseek-r1-architecture.png)
+![](/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deepseek-r1-architecture.png)
 
 ### Why is this moment so significant?
 

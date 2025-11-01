@@ -3,7 +3,7 @@ title: "Linux on the Desktop: a cautionary tale of distributions, GPUs and encry
 date: "2019-09-27"
 path: "/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems"
 excerpt: "In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by System76. An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian."
-feature_image: "/images/linux-desktop-operating-system.jpg"
+feature_image: "/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/linux-desktop-operating-system.jpg"
 ---
 
 In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by [System76](https://system76.com/) (a maker of Linux-friendly hardware). An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian.
@@ -12,7 +12,7 @@ I first started using Debian back in 2000, when I got a few CDs of Debian 2.2 (t
 
 Debian has always been and will continue to be the uber-distribution. With hundreds of offshoots, it is a testament to its longevity, and the excellent foundation that it has built over the years. There was a period of time about ten years ago that I was actively contributing to Debian, but have since lapsed due to the time commitment needed. It was a fun time, special shout out to my Debian mentor [Niibe Yutaka](http://www.gniibe.org/).
 
-![](/images/fsf-meetup-mit-2006.jpg)
+![](/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.jpg)
 
 With Niibe at an FSF meetup at MIT, 2006At the time, Debian had a stable curses installer, and installation meant pecking at the enter key about 20 times, enter a few details and passwords and you’re good to go — this was miles ahead of text mode installers. 20 years later, things haven’t changed much on this front for Debian. Enter Pop!_OS. While still based on Ubuntu, the whole design aesthetic is so much cleaner and elegant, required very little user input and before I knew it, the installation was done and I was dual-booting.
 

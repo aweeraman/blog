@@ -3,7 +3,7 @@ title: "A boy’s first computer"
 date: "2013-01-12"
 path: "/a-boys-first-computer"
 excerpt: "The week so far has been an eventful one. Being bed-ridden has made me pensive and nostalgic about my childhood, and long for the simpler days."
-feature_image: "/images/retro-computer-vintage.jpg"
+feature_image: "/images/a-boys-first-computer/retro-computer-vintage.jpg"
 ---
 
 The week so far has been an eventful one. Being bed-ridden has made me pensive and nostalgic about my childhood, and long for the simpler days. I was specifically dwelling on the subject of interpreters and compilers which took me back to when I was nine, when I asked my uncle, who I considered as the pre-eminent guru in all things computers at the time, how to compile a .bat file.

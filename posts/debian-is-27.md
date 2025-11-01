@@ -3,7 +3,7 @@ title: "Debian is 27"
 date: "2020-08-17"
 path: "/debian-is-27"
 excerpt: "Today, Debian celebrates its 27th birthday. It is now one of the oldest and most widespread Linux distributions with many offshoots and derivatives while continuing to deliver rock solid stable releases in its own measured pace."
-feature_image: "/images/vintage-birthday-celebration.jpg"
+feature_image: "/images/debian-is-27/vintage-birthday-celebration.jpg"
 ---
 
 Today, Debian celebrates its 27th birthday. It is now one of the oldest and most widespread Linux distributions with many offshoots and derivatives while continuing to deliver rock solid stable releases in its own measured pace.

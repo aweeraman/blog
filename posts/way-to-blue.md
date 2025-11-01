@@ -3,7 +3,7 @@ title: "Way to blue"
 date: "2006-06-02"
 path: "/way-to-blue"
 excerpt: "Been playing Nick Drake on endless repeat the past few weeks and it amazes me how it never gets old. I've been nursing a Drake obsession for more than three years now, but then I've been known to hook onto particular works for exceedingly long periods of time."
-feature_image: "/images/fruit-tree-nick-drake.jpg"
+feature_image: "/images/way-to-blue/fruit-tree-nick-drake.jpg"
 ---
 
 Been playing [Nick Drake](http://en.wikipedia.org/wiki/Nick_Drake) on endless repeat the past few weeks and it amazes me how it never gets old. I’ve been nursing a Drake obsession for more than three years now, but then I’ve been known to hook onto particular works for exceedingly long periods of time. Its part of my obsessive compulsive personality, please don’t let it scare you.

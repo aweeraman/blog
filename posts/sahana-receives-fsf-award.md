@@ -3,7 +3,7 @@ title: "Sahana receives FSF award"
 date: "2007-03-25"
 path: "/sahana-receives-fsf-award"
 excerpt: "I attended the 2007 FSF members meeting today, codenamed Year of the upgrade. Four members from the Sahana team were present at the meeting to receive the Free Software award for Project of Social Benefit."
-feature_image: "/images/sahana-fsf-award-cover.jpg"
+feature_image: "/images/sahana-receives-fsf-award/sahana-fsf-award-cover.jpg"
 ---
 
 I attended the 2007 FSF members meeting today — codenamed “Year of the upgrade”.

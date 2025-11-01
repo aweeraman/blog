@@ -3,7 +3,7 @@ title: "Getting started with Linkerd"
 date: "2022-11-05"
 path: "/getting-started-with-linkerd"
 excerpt: "If you've done anything in the Kubernetes space in recent years, you've most likely come across the words Service Mesh. It's backed by a set of mature technologies that provides cross-cutting networking, security, infrastructure capabilities to be used by workloads running in Kubernetes in a manner that is transparent to the actual workload."
-feature_image: "/images/sidecar-service-mesh.jpg"
+feature_image: "/images/getting-started-with-linkerd/sidecar-service-mesh.jpg"
 ---
 
 If you’ve done anything in the Kubernetes space in recent years, you’ve most likely come across the words “Service Mesh”. It’s backed by a set of mature technologies that provides cross-cutting networking, security, infrastructure capabilities to be used by workloads running in Kubernetes in a manner that is transparent to the actual workload. This abstraction enables application developers to not worry about building in otherwise sophisticated capabilities for networking, routing, circuit-breaking and security, and simply rely on the services offered by the service mesh.
@@ -14,7 +14,7 @@ It achieves this with a side-car container that communicates with a Linkerd cont
 
 Here are the broad architectural components of Linkerd:
 
-![](/images/linkerd-architecture-diagram.png)
+![](/images/getting-started-with-linkerd/linkerd-architecture-diagram.png)
 
 The components are separated into the control plane and the data plane.
 
@@ -305,7 +305,7 @@ Opening Linkerd dashboard in the default browser
 Opening in existing browser session.
 ```
 
-![](/images/linkerd-viz-dashboard.png)
+![](/images/getting-started-with-linkerd/linkerd-viz-dashboard.png)
 
 The “Meshed” column indicates the workload that is currently integrated with the Linkerd control plane. As you can see, there are no application deployments right now that are running.
 
@@ -345,7 +345,7 @@ $ kubectl apply -f deploy.yaml
 ```
 Back in the viz dashboard, I do see the workload deployed, but it isn’t currently communicating with the Linkerd control plane, and so doesn’t show any metrics, and the “Meshed” count is 0:
 
-![](/images/linkerd-unmeshed-deployment.png)
+![](/images/getting-started-with-linkerd/linkerd-unmeshed-deployment.png)
 
 Looking at the Pod’s deployment YAML, I can see that it only includes the nginx container:
 
@@ -473,7 +473,7 @@ $ kubectl get deploy nginx-deployment -o yaml | linkerd inject - | kubectl apply
 ```
 Back in the viz dashboard, the workload now is integrated into Linkerd control plane.
 
-![](/images/linkerd-meshed-deployment.png)
+![](/images/getting-started-with-linkerd/linkerd-meshed-deployment.png)
 
 Looking at the updated Pod definition, we see a number of changes that the linkerd has injected that allows it to integrate with the control plane. Let’s have a look:
 

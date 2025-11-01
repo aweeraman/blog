@@ -3,7 +3,7 @@ title: "RMS @ MIT"
 date: "2006-04-06"
 path: "/rms-mit"
 excerpt: "It was a very eventful weekend. For one thing, the FSF associate member's meeting was being held at MIT on Saturday. I'm not a fan of social events, but as it turns out, geek hangouts are where I thrive."
-feature_image: "/images/rms-mit-cover.jpg"
+feature_image: "/images/rms-mit/rms-mit-cover.jpg"
 ---
 
 It was a very eventful weekend. For one thing, the FSF associate member’s meeting was being held at MIT on Saturday. I’m not a fan of social events, but as it turns out, geek hangouts are where I thrive. Made the long and arduous journey to Boston with Supun, a colleague of mine and a free software aficionado, and took the subway to Kendall/MIT. It was a very pleasant day, perfect for some good ol’ curbside hackin’.

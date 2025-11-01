@@ -3,7 +3,7 @@ title: "Building Android from source"
 date: "2016-05-15"
 path: "/building-android-from-source"
 excerpt: "Building Android from source seems like a daunting task at first, but it's really not that hard. I'll walk through the steps as simply as possible to get your first AOSP build running on your handset."
-feature_image: "/images/android-build-cover.jpg"
+feature_image: "/images/building-android-from-source/android-build-cover.jpg"
 ---
 
 Building Android from source seems like a daunting task at first, but it’s really not that hard. I’ll walk through the steps as simply as possible to get your first AOSP build running on your handset. This is a rite of passage for many, and guaranteed to give insights on the inner workings of Android. First, let’s do a few push-ups and jumping jacks to mentally and physically prepare for the journey, and at the end of it, you’d wonder why you even had to do that.

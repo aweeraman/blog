@@ -3,7 +3,7 @@ title: "Dukes and Kings"
 date: "2006-08-24"
 path: "/dukes-and-kings"
 excerpt: "ApacheCon Asia was last week, and it featured some very interesting talks. The BSF4Rexx talk sparked an interest in Rexx and I was around looking for open source Rexx interpreters when I stumbled upon Regina!"
-feature_image: "/images/crazy-programming-languages.jpg"
+feature_image: "/images/dukes-and-kings/crazy-programming-languages.jpg"
 ---
 
 ApacheCon Asia was last week, and it featured some very interesting talks.
