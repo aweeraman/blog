@@ -2,6 +2,7 @@ import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { getAllPosts, paginatePosts, filterPosts } from '../utils/posts';
 import { PostList } from '../components/PostList';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { POSTS_PER_PAGE } from '../config';
 
 export function Home() {
@@ -32,8 +33,8 @@ export function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-theme-bg-primary">
-      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
+    <div className="min-h-screen bg-theme-bg-primary flex flex-col">
+      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 flex-1">
         <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
         <main>
@@ -49,6 +50,7 @@ export function Home() {
           <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

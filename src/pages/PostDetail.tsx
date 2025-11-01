@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getPostBySlug, getAdjacentPosts } from '../utils/posts';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 export function PostDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,8 +21,8 @@ export function PostDetail() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-theme-bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+      <div className="min-h-screen bg-theme-bg-primary flex flex-col">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 flex-1">
           <Header />
           <div className="text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-theme-text-primary mb-3 md:mb-4">Post Not Found</h1>
@@ -34,6 +35,7 @@ export function PostDetail() {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -48,8 +50,8 @@ export function PostDetail() {
   const { previous, next } = getAdjacentPosts(slug);
 
   return (
-    <div className="min-h-screen bg-theme-bg-primary">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+    <div className="min-h-screen bg-theme-bg-primary flex flex-col">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8 flex-1">
         <Header />
 
         <Link
@@ -139,6 +141,7 @@ export function PostDetail() {
           )}
         </article>
       </div>
+      <Footer />
     </div>
   );
 }
