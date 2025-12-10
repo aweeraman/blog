@@ -8,28 +8,28 @@
  * Change these values to customize your site's appearance
  */
 @theme {
-  /* Background colors - Deep dark with warm undertones */
-  --color-theme-bg-primary: #0a0e1a;
-  --color-theme-bg-secondary: #111827;
-  --color-theme-bg-tertiary: #1f2937;
+  /* Background colors - Warm dark tones */
+  --color-theme-bg-primary: #1A1512;
+  --color-theme-bg-secondary: #252019;
+  --color-theme-bg-tertiary: #36302A;
 
-  /* Text colors - Warm whites and grays */
-  --color-theme-text-primary: #f9fafb;
-  --color-theme-text-secondary: #d1d5db;
-  --color-theme-text-tertiary: #9ca3af;
+  /* Text colors - Warm neutrals */
+  --color-theme-text-primary: #F5F0EB;
+  --color-theme-text-secondary: #D9D0C7;
+  --color-theme-text-tertiary: #A8A099;
 
-  /* Accent colors - Emerald/teal for tech aesthetic */
-  --color-theme-accent-primary: #10b981;
-  --color-theme-accent-hover: #059669;
-  --color-theme-accent-muted: #34d399;
+  /* Accent colors - Elegant terracotta */
+  --color-theme-accent-primary: #C2703A;
+  --color-theme-accent-hover: #A65B2A;
+  --color-theme-accent-muted: #D4896A;
 
-  /* Border colors - Subtle gray borders */
-  --color-theme-border-primary: #374151;
-  --color-theme-border-secondary: #1f2937;
+  /* Border colors - Warm dark borders */
+  --color-theme-border-primary: #4A433C;
+  --color-theme-border-secondary: #2E2823;
 
-  /* Font families - Modern, professional fonts */
-  --font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  /* Font families - Elegant serif for body, professional fallbacks */
+  --font-family-sans: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -398,7 +398,7 @@ body {
 .prose h1,
 .prose h2,
 .prose h3 {
-  text-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  text-shadow: 0 0 20px rgba(194, 112, 58, 0.15);
 }
 
 /* Tables */
