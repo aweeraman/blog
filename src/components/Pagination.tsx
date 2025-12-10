@@ -9,27 +9,26 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <nav className="flex justify-center items-center gap-1.5 sm:gap-2 mt-6 sm:mt-8" aria-label="Blog pagination">
+    <nav className="flex justify-center items-center gap-4 mt-12 pt-8 border-t border-theme-border-secondary" aria-label="Blog pagination">
       {currentPage > 1 && (
         <a
           href={currentPage === 2 ? '/' : `/page/${currentPage - 1}`}
-          className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
+          className="text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors"
           aria-label={`Go to page ${currentPage - 1}`}
         >
-          <span className="hidden sm:inline">Previous</span>
-          <span className="sm:hidden">Prev</span>
+          ← Previous
         </a>
       )}
 
-      <div className="flex gap-1.5 sm:gap-2">
+      <div className="flex gap-2">
         {pages.map((page) => (
           <a
             key={page}
             href={page === 1 ? '/' : `/page/${page}`}
-            className={`px-3 py-1.5 sm:px-4 sm:py-2 border rounded transition-colors text-sm sm:text-base ${
+            className={`w-8 h-8 flex items-center justify-center text-sm rounded transition-colors ${
               page === currentPage
-                ? 'bg-theme-accent-primary text-white border-theme-accent-primary'
-                : 'border-theme-border-primary text-theme-text-primary hover:bg-theme-bg-tertiary'
+                ? 'bg-theme-accent-primary text-white'
+                : 'text-theme-text-tertiary hover:text-theme-accent-primary'
             }`}
             aria-label={page === currentPage ? `Current page, page ${page}` : `Go to page ${page}`}
             aria-current={page === currentPage ? 'page' : undefined}
@@ -42,10 +41,10 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
       {currentPage < totalPages && (
         <a
           href={`/page/${currentPage + 1}`}
-          className="px-3 py-1.5 sm:px-4 sm:py-2 border border-theme-border-primary rounded text-sm sm:text-base text-theme-text-primary hover:bg-theme-bg-tertiary transition-colors"
+          className="text-sm text-theme-text-tertiary hover:text-theme-accent-primary transition-colors"
           aria-label={`Go to page ${currentPage + 1}`}
         >
-          Next
+          Next →
         </a>
       )}
     </nav>

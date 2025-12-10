@@ -27,7 +27,7 @@ export function GiscusComments() {
   }, []);
 
   return (
-    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+    <div className="mt-16 pt-8 border-t border-theme-border-secondary">
       <div ref={commentsRef} />
     </div>
   );

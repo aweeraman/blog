@@ -7,28 +7,28 @@ export default {
       colors: {
         // Theme colors - Elegant Terracotta palette
         theme: {
-          // Background colors - Warm dark tones
+          // Background colors - Warm dark tones with depth
           bg: {
-            primary: '#1A1512',    // Deep warm black
-            secondary: '#252019',  // Warm charcoal
-            tertiary: '#36302A',   // Warm slate
+            primary: '#151210',    // Deep warm black
+            secondary: '#1E1A17', // Warm charcoal
+            tertiary: '#2A2520',   // Warm slate
           },
-          // Text colors - Warm neutrals
+          // Text colors - Warm neutrals with excellent readability
           text: {
-            primary: '#F5F0EB',    // Warm off-white
-            secondary: '#D9D0C7',  // Warm light gray
-            tertiary: '#A8A099',   // Warm muted gray
+            primary: '#F8F4F0',    // Warm off-white
+            secondary: '#D4CCC4',  // Warm light gray
+            tertiary: '#9A938C',   // Warm muted gray
           },
-          // Accent colors - Terracotta tones
+          // Accent colors - Refined terracotta
           accent: {
-            primary: '#C2703A',    // Rich terracotta
-            hover: '#A65B2A',      // Deep terracotta
-            muted: '#D4896A',      // Soft terracotta
+            primary: '#C67D4A',    // Rich terracotta
+            hover: '#D4935F',      // Lighter terracotta for hover
+            muted: '#B06A3A',      // Deep terracotta
           },
-          // Border colors - Warm dark borders
+          // Border colors - Subtle warm borders
           border: {
-            primary: '#4A433C',    // Warm dark border
-            secondary: '#2E2823',  // Subtle warm border
+            primary: '#3A3430',    // Warm dark border
+            secondary: '#2A2520',  // Subtle warm border
           },
         },
       },

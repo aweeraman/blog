@@ -26,9 +26,9 @@ export default function Page() {
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
-      <main className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex-1 pb-8 md:pb-12">
+      <main className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
         {searchQuery && (
-          <div className="mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base text-theme-text-secondary">
+          <div className="mb-6 text-sm text-theme-text-tertiary">
             {filteredPosts.length === 0 ? (
               <p>No posts found for "{searchQuery}"</p>
             ) : (

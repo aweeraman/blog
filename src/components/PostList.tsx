@@ -11,17 +11,19 @@ interface PostListProps {
 export function PostList({ posts, currentPage, totalPages }: PostListProps) {
   if (posts.length === 0) {
     return (
-      <div className="text-center py-12">
-        <p className="text-gray-600 text-lg">No posts found. Add some markdown files to the posts/ directory.</p>
+      <div className="text-center py-16">
+        <p className="text-theme-text-tertiary">No posts found.</p>
       </div>
     );
   }
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 md:gap-6 auto-rows-fr">
+      <div className="divide-y divide-theme-border-secondary">
         {posts.map((post) => (
-          <PostCard key={post.slug} post={post} currentPage={currentPage} />
+          <div key={post.slug} className="py-6 first:pt-0">
+            <PostCard post={post} currentPage={currentPage} />
+          </div>
         ))}
       </div>
       <Pagination currentPage={currentPage} totalPages={totalPages} />

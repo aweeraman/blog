@@ -5,252 +5,275 @@
 
 /*
  * Theme Configuration
- * Change these values to customize your site's appearance
+ * Elegant terracotta theme with professional typography
  */
 @theme {
-  /* Background colors - Warm dark tones */
-  --color-theme-bg-primary: #1A1512;
-  --color-theme-bg-secondary: #252019;
-  --color-theme-bg-tertiary: #36302A;
+  /* Background colors - Warm dark tones with depth */
+  --color-theme-bg-primary: #151210;
+  --color-theme-bg-secondary: #1E1A17;
+  --color-theme-bg-tertiary: #2A2520;
 
-  /* Text colors - Warm neutrals */
-  --color-theme-text-primary: #F5F0EB;
-  --color-theme-text-secondary: #D9D0C7;
-  --color-theme-text-tertiary: #A8A099;
+  /* Text colors - Warm neutrals with excellent readability */
+  --color-theme-text-primary: #F8F4F0;
+  --color-theme-text-secondary: #D4CCC4;
+  --color-theme-text-tertiary: #9A938C;
 
-  /* Accent colors - Elegant terracotta */
-  --color-theme-accent-primary: #C2703A;
-  --color-theme-accent-hover: #A65B2A;
-  --color-theme-accent-muted: #D4896A;
+  /* Accent colors - Refined terracotta */
+  --color-theme-accent-primary: #C67D4A;
+  --color-theme-accent-hover: #D4935F;
+  --color-theme-accent-muted: #B06A3A;
 
-  /* Border colors - Warm dark borders */
-  --color-theme-border-primary: #4A433C;
-  --color-theme-border-secondary: #2E2823;
+  /* Border colors - Subtle warm borders */
+  --color-theme-border-primary: #3A3430;
+  --color-theme-border-secondary: #2A2520;
 
-  /* Font families - Elegant serif for body, professional fallbacks */
+  /* Font families - Elegant serif for body */
   --font-family-sans: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* Set default font to sans */
+/* Base styles */
 body {
   font-family: var(--font-family-sans);
-  font-feature-settings: "liga" 1, "calt" 1; /* Enable ligatures */
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-theme-accent-primary);
+  color: var(--color-theme-bg-primary);
 }
 
 /* Custom styles for better paragraph spacing and dark theme prose */
 .prose {
   color: var(--color-theme-text-secondary);
-  font-size: 1rem;
-  line-height: 1.8;
-  letter-spacing: -0.011em;
+  font-size: 1.1875rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
 @media (min-width: 640px) {
   .prose {
-    font-size: 1.0625rem;
+    font-size: 1.25rem;
+    line-height: 1.9;
   }
 }
 
 @media (min-width: 768px) {
   .prose {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
+    line-height: 1.95;
   }
 }
 
+/* Headings - elegant hierarchy with refined spacing */
 .prose h1 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.875rem;
-  font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
+  color: var(--color-theme-text-primary);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
 }
 
 @media (min-width: 640px) {
-  .prose h1 {
-    font-size: 2.25rem;
-    margin-top: 1.75em;
-  }
-}
-
-@media (min-width: 768px) {
   .prose h1 {
     font-size: 2.75rem;
-    line-height: 1.15;
-    margin-top: 2em;
-    margin-bottom: 0.85em;
+    margin-top: 2.25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h1 {
+    font-size: 3.25rem;
+    line-height: 1.2;
+    margin-top: 2.5em;
+    margin-bottom: 0.9em;
   }
 }
 
 .prose h2 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.5rem;
-  font-weight: 800;
+  color: var(--color-theme-text-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
   line-height: 1.3;
-  letter-spacing: -0.028em;
-  margin-top: 1.5em;
-  margin-bottom: 0.7em;
+  letter-spacing: -0.015em;
+  margin-top: 2.25em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--color-theme-border-primary);
 }
 
 @media (min-width: 640px) {
   .prose h2 {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h2 {
-    font-size: 2.125rem;
+    font-size: 2.375rem;
     line-height: 1.25;
-    margin-top: 2em;
+    margin-top: 2.5em;
     margin-bottom: 0.85em;
   }
 }
 
 .prose h3 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.25rem;
-  font-weight: 700;
+  color: var(--color-theme-text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.4;
-  letter-spacing: -0.02em;
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+  margin-bottom: 0.65em;
 }
 
 @media (min-width: 640px) {
   .prose h3 {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h3 {
-    font-size: 1.625rem;
+    font-size: 1.875rem;
     line-height: 1.35;
-    margin-top: 1.75em;
+    margin-top: 2.25em;
     margin-bottom: 0.7em;
   }
 }
 
 .prose h4 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.125rem;
-  font-weight: 700;
+  color: var(--color-theme-text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
   line-height: 1.45;
-  letter-spacing: -0.015em;
-  margin-top: 1.25em;
+  letter-spacing: -0.005em;
+  margin-top: 1.75em;
   margin-bottom: 0.5em;
 }
 
 @media (min-width: 640px) {
   .prose h4 {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h4 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     line-height: 1.4;
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 0.6em;
   }
 }
 
 .prose h5, .prose h6 {
-  color: var(--color-theme-accent-primary);
-  font-size: 1.0625rem;
-  font-weight: 700;
+  color: var(--color-theme-text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
   line-height: 1.5;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 @media (min-width: 768px) {
   .prose h5, .prose h6 {
-    font-size: 1.1875rem;
+    font-size: 1.25rem;
   }
 }
 
+/* Links - subtle underline styling */
 .prose a {
   color: var(--color-theme-accent-primary);
   text-decoration: underline;
+  text-decoration-color: var(--color-theme-accent-primary);
   text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  transition: all 0.2s ease;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .prose a:hover {
   color: var(--color-theme-accent-hover);
-  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-theme-accent-hover);
 }
 
+/* Inline code - subtle styling */
 .prose code {
-  color: var(--color-theme-accent-muted);
-  background-color: var(--color-theme-bg-primary);
-  padding: 0.2em 0.45em;
-  border-radius: 0.3rem;
-  font-size: 0.9em;
+  color: var(--color-theme-accent-primary);
+  background-color: var(--color-theme-bg-tertiary);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
   font-family: var(--font-family-mono);
   font-weight: 500;
-  border: 1px solid var(--color-theme-border-primary);
 }
 
 .prose pre code {
   background-color: transparent;
   padding: 0;
   border-radius: 0;
-  font-size: 0.95em;
+  font-size: 0.9em;
   font-weight: 400;
-  border: none;
+  color: var(--color-theme-text-secondary);
 }
 
+/* Strong text */
 .prose strong {
   color: var(--color-theme-text-primary);
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Ensure lists are properly styled */
+/* Lists - clean and readable */
 .prose ol {
   list-style-type: decimal;
-  padding-left: 1.5em;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  padding-left: 1.25em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 @media (min-width: 768px) {
   .prose ol {
-    padding-left: 1.75em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
   }
 }
 
 .prose ul {
   list-style-type: disc;
-  padding-left: 1.5em;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  padding-left: 1.25em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 @media (min-width: 768px) {
   .prose ul {
-    padding-left: 1.75em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
   }
 }
 
 .prose ol > li,
 .prose ul > li {
-  margin-top: 0.65em;
-  margin-bottom: 0.65em;
-  padding-left: 0.5em;
-  line-height: 1.75;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0.375em;
+  line-height: 1.8;
 }
 
 .prose ul > li::marker {
@@ -258,135 +281,123 @@ body {
 }
 
 .prose ol > li::marker {
-  color: var(--color-theme-accent-primary);
-  font-weight: 600;
+  color: var(--color-theme-text-tertiary);
+  font-weight: 500;
 }
 
+/* Paragraphs */
 .prose p {
-  margin-top: 1.65em;
-  margin-bottom: 1.65em;
-  max-width: 65ch;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .prose p:first-child {
   margin-top: 0;
 }
 
-/* Lead paragraph - make first paragraph stand out */
+/* Lead paragraph - subtle emphasis */
 .prose > p:first-of-type {
-  font-size: 1.0625rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: var(--color-theme-text-primary);
-  margin-bottom: 1.5em;
+  margin-bottom: 1.75em;
 }
 
 @media (min-width: 640px) {
   .prose > p:first-of-type {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose > p:first-of-type {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.85;
     margin-bottom: 2em;
   }
 }
 
+/* Code blocks - clean and professional */
 .prose pre {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   overflow-x: auto;
   background-color: var(--color-theme-bg-primary);
-  padding: 1em;
+  padding: 1.25em;
   border-radius: 0.5rem;
   border: 1px solid var(--color-theme-border-primary);
   font-family: var(--font-family-mono);
-  line-height: 1.7;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
 }
 
 @media (min-width: 640px) {
   .prose pre {
-    padding: 1.25em;
+    padding: 1.5em;
   }
 }
 
 @media (min-width: 768px) {
   .prose pre {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 1.25em 1.5em;
+    margin-top: 2.25em;
+    margin-bottom: 2.25em;
+    padding: 1.5em 1.75em;
+    border-radius: 0.625rem;
   }
 }
 
+/* Images - clean presentation */
 .prose img {
   max-width: 100%;
   height: auto;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  /* Performance optimizations for lazy-loaded images */
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
   content-visibility: auto;
-  /* Prevent layout shift */
   display: block;
-  /* Smooth loading transition */
   opacity: 0;
-  animation: fadeIn 0.3s ease-in forwards;
-  /* Add subtle shadow for depth */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-  border-radius: 0.375rem;
+  animation: fadeIn 0.4s ease-out forwards;
+  border-radius: 0.5rem;
 }
 
-/* Fade-in animation for images */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Ensure images that fail to load don't break layout */
+/* Image fallback styling */
 .prose img[alt] {
   background-color: var(--color-theme-bg-tertiary);
-  border: 1px solid var(--color-theme-border-primary);
 }
 
-/* Center align image captions (italic text following images) */
+/* Image captions */
 .prose img + p,
 .prose p:has(> em:only-child) {
   text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-top: 0.75em;
+  margin-bottom: 2.5em;
   font-style: italic;
   color: var(--color-theme-text-tertiary);
-  font-size: 0.95em;
+  font-size: 0.9em;
 }
 
-/* Blockquotes */
+/* Blockquotes - elegant styling */
 .prose blockquote {
   border-left: 3px solid var(--color-theme-accent-primary);
-  padding-left: 1em;
-  margin: 1.5em 0;
+  margin: 2em 0;
   font-style: italic;
   color: var(--color-theme-text-secondary);
-  background-color: var(--color-theme-bg-tertiary);
-  padding: 1em 1em 1em 1.5em;
-  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5em 0 0.5em 1.5em;
 }
 
 @media (min-width: 640px) {
   .prose blockquote {
-    border-left-width: 4px;
-    padding: 1.25em 1.25em 1.25em 1.75em;
+    padding-left: 1.75em;
   }
 }
 
 @media (min-width: 768px) {
   .prose blockquote {
-    margin: 2em 0;
-    padding: 1.5em 1.5em 1.5em 2em;
+    margin: 2.25em 0;
+    padding-left: 2em;
   }
 }
 
@@ -394,68 +405,46 @@ body {
   margin: 0;
 }
 
-/* Add subtle glow to headings */
-.prose h1,
-.prose h2,
-.prose h3 {
-  text-shadow: 0 0 20px rgba(194, 112, 58, 0.15);
-}
-
-/* Tables */
+/* Tables - clean and readable */
 .prose table {
   width: 100%;
-  margin: 1.5em 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  border: 1px solid var(--color-theme-border-primary);
-  font-size: 0.875rem;
-}
-
-@media (min-width: 640px) {
-  .prose table {
-    font-size: 0.9375rem;
-  }
+  margin: 2em 0;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
 }
 
 @media (min-width: 768px) {
   .prose table {
-    margin: 2em 0;
+    margin: 2.25em 0;
     font-size: 1rem;
   }
 }
 
 .prose th {
-  background-color: var(--color-theme-bg-tertiary);
-  color: var(--color-theme-accent-primary);
-  font-weight: 700;
+  color: var(--color-theme-text-primary);
+  font-weight: 600;
   text-align: left;
-  padding: 0.5em 0.75em;
-  border-bottom: 2px solid var(--color-theme-accent-primary);
+  padding: 0.75em 1em;
+  border-bottom: 2px solid var(--color-theme-border-primary);
 }
 
 @media (min-width: 768px) {
   .prose th {
-    padding: 0.75em 1em;
+    padding: 0.875em 1.25em;
   }
 }
 
 .prose td {
-  padding: 0.5em 0.75em;
-  border-bottom: 1px solid var(--color-theme-border-primary);
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--color-theme-border-secondary);
 }
 
 @media (min-width: 768px) {
   .prose td {
-    padding: 0.75em 1em;
+    padding: 0.875em 1.25em;
   }
 }
 
 .prose tr:last-child td {
   border-bottom: none;
-}
-
-.prose tr:hover td {
-  background-color: var(--color-theme-bg-tertiary);
 }

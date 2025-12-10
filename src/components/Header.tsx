@@ -30,111 +30,69 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-theme-bg-primary border-b border-theme-border-primary mb-8 md:mb-12">
-      <div className="max-w-4xl xl:max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-8">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-theme-bg-primary/95 backdrop-blur-sm border-b border-theme-border-secondary">
+      <div className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 py-6 sm:py-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
           {/* Profile and Title */}
-          <div className="flex items-center gap-3 md:gap-4 md:flex-1">
+          <div className="flex items-center gap-4">
             <a href="/bio" className="flex-shrink-0" aria-label="View bio page">
               <img
                 src="/images/anuradha-weeraman.jpg"
                 alt="Anuradha Weeraman"
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover ring-2 ring-theme-accent-primary hover:ring-theme-accent-hover transition-all mt-0.5 sm:mt-1"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-2 ring-theme-border-primary hover:ring-theme-accent-primary transition-all"
               />
             </a>
             <div className="flex-1 min-w-0">
               <a href="/" aria-label="Go to homepage">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-theme-accent-primary mb-1.5 md:mb-2 hover:text-theme-accent-hover transition-colors tracking-tight">
+                <h1 className="text-2xl sm:text-3xl font-bold text-theme-text-primary hover:text-theme-accent-primary transition-colors tracking-tight">
                   Anuradha Weeraman
                 </h1>
-                <p className="text-base md:text-lg text-theme-text-tertiary tracking-wide">A practitioner's views on software development, systems programming and technology</p>
+                <p className="text-sm sm:text-base text-theme-text-tertiary mt-0.5">On software</p>
               </a>
             </div>
           </div>
 
-          {/* Desktop: Bio and Search */}
-          <div className="hidden md:flex items-center gap-4 md:mt-1">
+          {/* Navigation */}
+          <nav className="flex items-center gap-4 sm:gap-5">
             <a
               href="/bio"
-              className="text-sm md:text-base font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
+              className="text-sm font-medium text-theme-text-tertiary hover:text-theme-accent-primary transition-colors"
               aria-label="View bio page"
             >
-              Bio
+              About
             </a>
             {onSearchChange && (
-              <div className="flex items-center gap-2">
-              <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48 sm:w-64 md:w-80' : 'w-0'} overflow-hidden`}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  placeholder="Search posts..."
-                  value={searchQuery}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                  onBlur={handleSearchBlur}
-                  className="w-full px-1 py-2 bg-transparent text-theme-text-primary border-b-2 border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
-                  aria-label="Search blog posts"
-                />
-              </div>
-              <button
-                onClick={handleSearchToggle}
-                className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors rounded-lg hover:bg-theme-bg-secondary"
-                aria-label="Search"
-              >
-                {isSearchOpen && searchQuery ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                )}
-              </button>
+              <div className="flex items-center">
+                <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isSearchOpen ? 'w-40 sm:w-52' : 'w-0'}`}>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={(e) => onSearchChange(e.target.value)}
+                    onBlur={handleSearchBlur}
+                    className="w-full px-3 py-1.5 bg-theme-bg-secondary text-theme-text-primary rounded-md border border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
+                    aria-label="Search blog posts"
+                  />
+                </div>
+                <button
+                  onClick={handleSearchToggle}
+                  className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors"
+                  aria-label="Search"
+                >
+                  {isSearchOpen && searchQuery ? (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  )}
+                </button>
               </div>
             )}
-          </div>
-        </div>
-
-        {/* Mobile: Bio and Search below title/subtitle */}
-        <div className="flex md:hidden items-center justify-center gap-4 mt-4">
-          <a
-            href="/bio"
-            className="text-sm font-medium text-theme-text-secondary hover:text-theme-accent-primary transition-colors uppercase tracking-wide"
-            aria-label="View bio page"
-          >
-            Bio
-          </a>
-          {onSearchChange && (
-            <div className="flex items-center gap-2">
-              <div className={`transition-all duration-300 ease-in-out ${isSearchOpen ? 'w-48' : 'w-0'} overflow-hidden`}>
-                <input
-                  ref={inputRef}
-                  type="text"
-                  placeholder="Search posts..."
-                  value={searchQuery}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                  onBlur={handleSearchBlur}
-                  className="w-full px-1 py-2 bg-transparent text-theme-text-primary border-b-2 border-theme-border-primary focus:outline-none focus:border-theme-accent-primary placeholder-theme-text-tertiary text-sm transition-colors"
-                  aria-label="Search blog posts"
-                />
-              </div>
-              <button
-                onClick={handleSearchToggle}
-                className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors rounded-lg hover:bg-theme-bg-secondary"
-                aria-label="Search"
-              >
-                {isSearchOpen && searchQuery ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                )}
-              </button>
-            </div>
-          )}
+          </nav>
         </div>
       </div>
     </header>
