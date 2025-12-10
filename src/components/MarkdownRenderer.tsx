@@ -15,7 +15,23 @@ function generateImageSources(src?: string) {
   const basePath = src.substring(0, lastDotIndex);
   const ext = src.substring(lastDotIndex);
 
-  // Define responsive sizes
+  // Check if this is an image in a post-specific folder (has width variants)
+  // Images directly in /images/ (like profile photo) don't have width variants
+  const hasWidthVariants = basePath.includes('/images/') && basePath.split('/').length > 3;
+
+  if (!hasWidthVariants) {
+    // Simple fallback for images without width variants
+    return {
+      avif: `${basePath}.avif`,
+      avifSrcset: `${basePath}.avif`,
+      webp: `${basePath}.webp`,
+      webpSrcset: `${basePath}.webp`,
+      original: src,
+      originalSrcset: src,
+    };
+  }
+
+  // Define responsive sizes for images with width variants
   const sizes = [400, 800, 1200];
 
   // Generate srcset for each format
@@ -43,6 +59,26 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
             const sources = generateImageSources(src);
             if (!sources) {
               return <img src={src} alt={alt || ''} loading="lazy" decoding="async" />;
+            }
+
+            // Check if we have width variants (srcset contains width descriptors)
+            const hasWidthVariants = sources.avifSrcset.includes(' ') && sources.avifSrcset.includes('w');
+
+            if (!hasWidthVariants) {
+              // Simple picture without srcset/sizes for images without width variants
+              return (
+                <picture>
+                  <source type="image/avif" srcSet={sources.avif} />
+                  <source type="image/webp" srcSet={sources.webp} />
+                  <img
+                    src={sources.original}
+                    alt={alt || ''}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-w-full h-auto"
+                  />
+                </picture>
+              );
             }
 
             return (
