@@ -14,7 +14,9 @@ An year earlier, in 1996, a similar match between the IBM built Deep Blue and Ga
 
 This clash between man and machine had all the hallmarks of a thriller, one that is best enjoyed by the nerdier demographic. Chess has been the poster child for computer scientists working on advanced algorithms and techniques in artificial intelligence for decades, and the face off in 1997 was the culmination of the work of many brilliant minds.
 
-### It’s all about search
+https://www.youtube.com/watch?v=NJarxpYyoFI
+
+### It's all about search
 
 Deep Blue used [a hybrid search approach that combined both software and hardware search for maximum effect](https://www.semanticscholar.org/paper/Deep-Blue-Campbell-Hoane/378f933bbdb70d6f373e32e7182b6a5669c95d02). The upper levels of the search take place in software and made use of transposition tables for improving search efficiency. The leaf positions are distributed to the specialized hardware chess chips where fixed-depth null window alpha-beta and quiescence search takes place. There were 16 such chips per processor in the 30-node RS/6000SP system and the host processor distributes the work to chess chips and uses MPI (Message Passing Interface) for communication with other nodes over a high speed switch to run a distributed and parallel search.
 

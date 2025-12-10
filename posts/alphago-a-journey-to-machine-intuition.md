@@ -68,6 +68,8 @@ During 9–15 March 2016, [AlphaGo played against Lee Sedol](https://en.wikipedi
 
 In game 2, AlphaGo displayed a surprising creative streak with its move 37 which displayed an unconventional approach, yet somehow masterful in hindsight.
 
+https://www.youtube.com/watch?v=JNrXgpSEEIE
+
 It was one that scored a low probability as a human move but somehow had scored a high action value through RL self-play over millions of games. In effect, AlphaGo has discovered a new technique that challenged the existing knowledge of Go norms by learning from more games than we have ever played in the aggregate of all human existence.
 
 Another aspect that this highlighted was the fact that our conventional assessment of what is a good or a bad move is based on moves that lead to higher scores, and yet AlphaGo was less concerned purely on material advantage and tended to favor outcome and less on the degree of victory, which often led to “unconventional” moves and new strategies.

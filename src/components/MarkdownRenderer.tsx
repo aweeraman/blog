@@ -1,9 +1,37 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 interface MarkdownRendererProps {
   content: string;
   className?: string;
+}
+
+// Helper function to extract YouTube video ID from various URL formats
+function getYouTubeVideoId(url: string): { id: string; start?: string } | null {
+  const patterns = [
+    // youtube.com/watch?v=VIDEO_ID
+    /(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})(?:&t=(\d+))?/,
+    // youtube.com/watch?v=VIDEO_ID&t=123
+    /(?:youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11}).*?(?:&t=(\d+))?/,
+    // youtu.be/VIDEO_ID
+    /(?:youtu\.be\/)([a-zA-Z0-9_-]{11})(?:\?t=(\d+))?/,
+    // youtube.com/embed/VIDEO_ID
+    /(?:youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})(?:\?start=(\d+))?/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return { id: match[1], start: match[2] };
+    }
+  }
+  return null;
+}
+
+// Helper function to check if a URL is a YouTube link
+function isYouTubeUrl(url: string): boolean {
+  return /(?:youtube\.com|youtu\.be)/.test(url);
 }
 
 // Helper function to generate responsive image sources
@@ -54,7 +82,65 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
     <div className={className}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={{
+          // Convert standalone YouTube links to embedded iframes
+          a: ({ href, children }) => {
+            // Check if this is a standalone YouTube link (link text equals the URL)
+            const childText = String(children);
+            const isStandaloneLink = href && (childText === href || childText.includes('youtube.com') || childText.includes('youtu.be'));
+
+            if (href && isYouTubeUrl(href) && isStandaloneLink) {
+              const video = getYouTubeVideoId(href);
+              if (video) {
+                const embedUrl = video.start
+                  ? `https://www.youtube.com/embed/${video.id}?start=${video.start}`
+                  : `https://www.youtube.com/embed/${video.id}`;
+                return (
+                  <div className="relative w-full my-8" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                      src={embedUrl}
+                      title="YouTube video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                );
+              }
+            }
+            // Regular link
+            return <a href={href}>{children}</a>;
+          },
+          // Handle paragraphs that contain only a YouTube URL (plain text, not a link)
+          p: ({ children, node }) => {
+            // Check if paragraph contains only text that is a YouTube URL
+            if (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string') {
+              const text = children[0].trim();
+              if (isYouTubeUrl(text)) {
+                const video = getYouTubeVideoId(text);
+                if (video) {
+                  const embedUrl = video.start
+                    ? `https://www.youtube.com/embed/${video.id}?start=${video.start}`
+                    : `https://www.youtube.com/embed/${video.id}`;
+                  return (
+                    <div className="relative w-full my-8" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                        src={embedUrl}
+                        title="YouTube video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  );
+                }
+              }
+            }
+            return <p>{children}</p>;
+          },
           img: ({ src, alt }) => {
             const sources = generateImageSources(src);
             if (!sources) {

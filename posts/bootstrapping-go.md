@@ -8,9 +8,13 @@ feature_image: "/images/bootstrapping-go/bootstrapping-go-cover.jpg"
 
 Over the weekend, I came across a couple of videos on how the [Go](https://golang.org/) compiler was migrated from C to Go. The Go compiler was originally written in C and after it reached a certain level of maturity, the creators were looking at how to bootstrap the compiler in Go so that the language can inherit some of the benefits of Go and to be able to do things that would not have been possible if still based on C.
 
-Here’s the first video from the GopherCon where Russ Cox talks about his approach:
+Here's the first video from the GopherCon where Russ Cox talks about his approach:
 
-And here’s a session by Rob Pike the following year on how it went, with further details on the migration:
+https://www.youtube.com/watch?v=QIE5nV5fDwA
+
+And here's a session by Rob Pike the following year on how it went, with further details on the migration:
+
+https://www.youtube.com/watch?v=cF1zJYkBW4A
 
 The approach is brilliant in theory and goes somewhat like this:
 

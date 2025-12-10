@@ -21,4 +21,6 @@ And so it comes down to a handful. On the one hand, GNU/Linux, the irreverent an
 
 And that brings me to the end of this otherwise hyperbolic ramble. In my next post, I will touch upon some of the key differences between these two great variants and what I think of them, so stay tuned.
 
-Until then, here’s Ken Thompson on the origin story:
+Until then, here's Ken Thompson on the origin story:
+
+https://www.youtube.com/watch?v=EY6q5dv_B-o&t=1158
