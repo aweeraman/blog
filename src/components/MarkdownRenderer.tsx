@@ -114,7 +114,7 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
             return <a href={href}>{children}</a>;
           },
           // Handle paragraphs that contain only a YouTube URL (plain text, not a link)
-          p: ({ children, node }) => {
+          p: ({ children }) => {
             // Check if paragraph contains only text that is a YouTube URL
             if (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string') {
               const text = children[0].trim();

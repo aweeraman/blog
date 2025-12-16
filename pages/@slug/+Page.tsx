@@ -6,6 +6,7 @@ import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
 import { MarkdownRenderer } from '../../src/components/MarkdownRenderer';
 import { GiscusComments } from '../../src/components/GiscusComments';
+import { ScrollProgress } from '../../src/components/ScrollProgress';
 
 export default function Page() {
   const pageContext = usePageContext();
@@ -62,6 +63,7 @@ export default function Page() {
 
     return (
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
+        <ScrollProgress />
         <Header />
 
         <main className="max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
@@ -97,16 +99,21 @@ export default function Page() {
           </article>
 
           {(previous || next) && (
-            <nav className="mt-16 pt-8 border-t border-theme-border-secondary" aria-label="Post navigation">
+            <nav className="mt-16 pt-10 border-t border-theme-border-secondary/50" aria-label="Post navigation">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {previous && (
                   <a
                     href={`/${previous.slug}`}
-                    className="group"
+                    className="group p-4 -m-4 rounded-xl hover:bg-theme-bg-secondary/30 transition-all duration-300"
                     aria-label={`Previous post: ${previous.frontmatter.title}`}
                   >
-                    <div className="text-base text-theme-text-tertiary mb-2">← Previous</div>
-                    <div className="text-lg text-theme-text-primary group-hover:text-theme-accent-primary transition-colors font-medium">
+                    <div className="flex items-center gap-2 text-sm text-theme-text-tertiary mb-2 font-medium">
+                      <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Previous
+                    </div>
+                    <div className="text-lg text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 font-medium leading-snug">
                       {previous.frontmatter.title}
                     </div>
                   </a>
@@ -114,11 +121,16 @@ export default function Page() {
                 {next && (
                   <a
                     href={`/${next.slug}`}
-                    className={`group ${!previous ? 'sm:col-start-2' : ''} text-right`}
+                    className={`group p-4 -m-4 rounded-xl hover:bg-theme-bg-secondary/30 transition-all duration-300 ${!previous ? 'sm:col-start-2' : ''} text-right`}
                     aria-label={`Next post: ${next.frontmatter.title}`}
                   >
-                    <div className="text-base text-theme-text-tertiary mb-2">Next →</div>
-                    <div className="text-lg text-theme-text-primary group-hover:text-theme-accent-primary transition-colors font-medium">
+                    <div className="flex items-center justify-end gap-2 text-sm text-theme-text-tertiary mb-2 font-medium">
+                      Next
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <div className="text-lg text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 font-medium leading-snug">
                       {next.frontmatter.title}
                     </div>
                   </a>

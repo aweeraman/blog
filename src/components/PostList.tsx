@@ -19,9 +19,9 @@ export function PostList({ posts, currentPage, totalPages }: PostListProps) {
 
   return (
     <div>
-      <div className="divide-y divide-theme-border-secondary">
+      <div className="divide-y divide-theme-border-secondary/50">
         {posts.map((post) => (
-          <div key={post.slug} className="py-6 first:pt-0">
+          <div key={post.slug} className="py-8 first:pt-0 last:pb-0">
             <PostCard post={post} currentPage={currentPage} />
           </div>
         ))}
