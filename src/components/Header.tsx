@@ -47,7 +47,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                 <h1 className="text-xl sm:text-2xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 tracking-tight">
                   Anuradha Weeraman
                 </h1>
-                <p className="text-xs sm:text-sm text-theme-text-tertiary mt-0.5 tracking-wide">CTO · Architect · Advisor</p>
+                <p className="text-xs sm:text-sm text-theme-text-tertiary mt-0.5 tracking-wide">CTO · Architect · Advisor · Forbes Technology Council</p>
               </a>
             </div>
           </div>

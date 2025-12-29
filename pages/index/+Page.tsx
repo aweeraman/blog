@@ -3,6 +3,7 @@ import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../..
 import { PostList } from '../../src/components/PostList';
 import { FeaturedPosts } from '../../src/components/FeaturedPosts';
 import { HeroSection } from '../../src/components/HeroSection';
+import { BottomCTA } from '../../src/components/BottomCTA';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
 import { POSTS_PER_PAGE } from '../../src/config';
@@ -46,6 +47,8 @@ export default function Page() {
           <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
         </div>
       </main>
+
+      <BottomCTA />
 
       <Footer />
     </div>
