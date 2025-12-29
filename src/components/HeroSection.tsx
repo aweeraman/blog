@@ -15,10 +15,9 @@ export function HeroSection() {
         className="text-4xl sm:text-5xl lg:text-6xl font-normal text-theme-text-primary leading-tight tracking-tight"
         style={{ fontFamily: "'Instrument Serif', serif" }}
       >
-        Building products at the intersection of{' '}
-        <span className="italic text-amber-400">technology</span>
-        {' '}&{' '}
-        <span className="italic text-amber-400">business</span>
+        Technology strategy for{' '}
+        <span className="italic text-amber-400">AI-powered</span>
+        {' '}products
       </h2>
 
       <p className="mt-5 sm:mt-6 text-lg sm:text-xl text-theme-text-secondary leading-relaxed max-w-2xl mx-auto">
