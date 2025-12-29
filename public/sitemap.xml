@@ -7,26 +7,8 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/2013-a-retrospective</loc>
-    <lastmod>2013-12-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/a-boys-first-computer</loc>
-    <lastmod>2013-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://weeraman.com/alphago-a-journey-to-machine-intuition</loc>
     <lastmod>2018-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/behold-the-blinking-marquee</loc>
-    <lastmod>2010-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -301,32 +283,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/sony-reader-wishlist</loc>
-    <lastmod>2007-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://weeraman.com/stop-worrying-and-just-get-things-done</loc>
     <lastmod>2016-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/swindle</loc>
-    <lastmod>2010-11-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://weeraman.com/the-magic-word</loc>
     <lastmod>2006-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/the-man-the-myth-the-rebel</loc>
-    <lastmod>2019-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -368,6 +332,18 @@
   </url>
   <url>
     <loc>https://weeraman.com/bio</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/publications</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/speaking</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
