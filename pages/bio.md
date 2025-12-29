@@ -1,5 +1,5 @@
 ---
-title: "A brief intro"
+title: "Meet Anuradha"
 slug: "bio"
 ---
 

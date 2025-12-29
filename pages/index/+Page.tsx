@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../../src/utils/posts';
 import { PostList } from '../../src/components/PostList';
 import { FeaturedPosts } from '../../src/components/FeaturedPosts';
@@ -10,6 +10,11 @@ import { POSTS_PER_PAGE } from '../../src/config';
 
 export default function Page() {
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Update document title on client-side navigation
+  useEffect(() => {
+    document.title = 'Anuradha Weeraman - CTO · Architect · Advisor';
+  }, []);
   const currentPage = 1;
 
   // Get all posts and filter based on search query
