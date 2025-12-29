@@ -11,7 +11,7 @@ export function Footer() {
             </span>
             <span className="hidden sm:inline text-theme-border-primary">·</span>
             <span className="text-xs text-theme-text-tertiary/60">
-              On software
+              CTO · Architect · Advisor
             </span>
           </div>
 
