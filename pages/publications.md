@@ -8,7 +8,7 @@ slug: "publications"
 ### [System and method for accelerating modernization of user interfaces in a computing environment](https://patents.google.com/patent/US11604662B2)
 **US-11604662-B2 · Issued March 14, 2023**
 
-This patent describes a system and method for automating the modernization of user interfaces in computing environments. It's a technology that helps upgrade legacy web applications to newer frameworks with minimal manual effort. The system works by capturing both runtime application attributes (how users interact with the interface) and static attributes (from the source code) during active sessions. It then creates an application attribute model that represents the relationships between these attributes, automatically generates code in the target programming language, and outputs both executable program code and necessary source assets. This significantly reduces the time, complexity, and errors typically associated with manually modernizing legacy software interfaces.
+A system for automating the migration of legacy web applications to modern frameworks, reducing manual effort and errors in UI modernization.
 
 ---
 
