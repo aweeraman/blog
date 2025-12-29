@@ -53,7 +53,21 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-4 sm:gap-6">
+          <nav className="flex items-center gap-3 sm:gap-4">
+            <button
+              onClick={() => {
+                const element = document.getElementById('writing');
+                if (element) {
+                  const headerOffset = window.innerWidth < 640 ? 180 : 120;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+              className="px-4 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+            >
+              Writing
+            </button>
             <a
               href="/bio"
               className="px-4 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300"
