@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { getAllPosts, paginatePosts, filterPosts, getFeaturedPosts } from '../../src/utils/posts';
 import { PostList } from '../../src/components/PostList';
 import { FeaturedPosts } from '../../src/components/FeaturedPosts';
+import { HeroSection } from '../../src/components/HeroSection';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
 import { POSTS_PER_PAGE } from '../../src/config';
@@ -37,9 +38,13 @@ export default function Page() {
           </div>
         )}
 
-        {featuredPosts.length > 0 && <FeaturedPosts posts={featuredPosts} />}
+        {!searchQuery && <HeroSection />}
 
-        <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+        <div id="writing">
+          {featuredPosts.length > 0 && <FeaturedPosts posts={featuredPosts} />}
+
+          <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+        </div>
       </main>
 
       <Footer />
