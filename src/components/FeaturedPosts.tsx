@@ -55,7 +55,7 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
 
   return (
     <section
-      className="mb-12 sm:mb-16"
+      className="mb-12 sm:mb-16 -mx-5 sm:-mx-8 px-5 sm:px-8 py-8 sm:py-10 bg-theme-bg-secondary/40 border-y border-theme-border-secondary/50"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -134,7 +134,6 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
         </div>
       )}
 
-      <div className="mt-12 sm:mt-14 border-b border-theme-border-secondary/50"></div>
-    </section>
+      </section>
   );
 }
