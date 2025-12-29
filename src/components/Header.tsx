@@ -56,10 +56,10 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           <nav className="flex items-center gap-4 sm:gap-6">
             <a
               href="/bio"
-              className="relative text-sm font-medium text-theme-text-tertiary hover:text-theme-accent-primary transition-colors duration-300 after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-0 after:bg-theme-accent-primary after:transition-all after:duration-300 hover:after:w-full"
+              className="px-4 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300"
               aria-label="View bio page"
             >
-              About
+              Bio
             </a>
             {onSearchChange && (
               <div className="flex items-center">
