@@ -79,6 +79,17 @@ function generateSitemap(): string {
     }
   }
 
+  // Add TSX-based pages (not markdown)
+  const tsxPages = ['speaking'];
+  for (const page of tsxPages) {
+    entries.push({
+      url: `${SITE_URL}/${page}`,
+      lastmod: new Date().toISOString().split('T')[0],
+      changefreq: 'monthly',
+      priority: 0.7,
+    });
+  }
+
   // Add pagination pages
   const POSTS_PER_PAGE = 12;
   const totalPages = Math.ceil(postFiles.length / POSTS_PER_PAGE);
