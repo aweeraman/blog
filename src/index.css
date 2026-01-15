@@ -525,3 +525,13 @@ article:nth-child(10) { animation-delay: 0.5s; }
 .prose tr:last-child td {
   border-bottom: none;
 }
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

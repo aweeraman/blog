@@ -53,30 +53,30 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-2 sm:gap-3">
+          <nav className="flex items-center gap-2 sm:gap-3 min-w-0">
             {/* Nav links - hidden when search is open */}
-            <div className={`flex items-center gap-2 sm:gap-3 transition-all duration-300 ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
+            <div className={`flex items-center gap-1.5 sm:gap-3 transition-all duration-300 overflow-x-auto scrollbar-hide ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
               <a
                 href="/publications"
-                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Publications
               </a>
               <a
                 href="/speaking"
-                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Speaking
               </a>
               <a
                 href="/testimonials"
-                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Testimonials
               </a>
               <a
                 href="/bio"
-                className="px-3 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300"
+                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 aria-label="View bio page"
               >
                 Bio

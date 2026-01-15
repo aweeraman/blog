@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="pt-4 sm:pt-6 pb-10 sm:pb-14 text-center">
       <h2
-        className="text-4xl sm:text-5xl lg:text-6xl font-normal text-theme-text-primary leading-tight tracking-tight"
+        className="text-3xl sm:text-5xl lg:text-6xl font-normal text-theme-text-primary leading-tight tracking-tight break-words"
         style={{ fontFamily: "'Instrument Serif', serif" }}
       >
         Technology strategy for{' '}
@@ -20,7 +20,7 @@ export function HeroSection() {
         {' '}products
       </h2>
 
-      <p className="mt-5 sm:mt-6 text-lg sm:text-xl text-theme-text-secondary leading-relaxed max-w-2xl mx-auto">
+      <p className="mt-5 sm:mt-6 text-base sm:text-xl text-theme-text-secondary leading-relaxed max-w-2xl mx-auto px-1">
         I design and build intelligent products and software systems that scale. CTO of Verdentra,
         speaker, and contributor to Linux & Debian.
       </p>
@@ -43,7 +43,7 @@ export function HeroSection() {
       </div>
 
       {/* Authority badges */}
-      <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-theme-text-tertiary">
+      <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 sm:gap-y-3 text-xs sm:text-sm text-theme-text-tertiary px-2">
         <span className="flex items-center gap-2">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
