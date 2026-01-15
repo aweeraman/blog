@@ -53,29 +53,38 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-3 sm:gap-4">
-            <a
-              href="/publications"
-              className="px-4 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
-            >
-              Publications
-            </a>
-            <a
-              href="/speaking"
-              className="px-4 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
-            >
-              Speaking
-            </a>
-            <a
-              href="/bio"
-              className="px-4 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300"
-              aria-label="View bio page"
-            >
-              Bio
-            </a>
+          <nav className="flex items-center gap-2 sm:gap-3">
+            {/* Nav links - hidden when search is open */}
+            <div className={`flex items-center gap-2 sm:gap-3 transition-all duration-300 ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
+              <a
+                href="/publications"
+                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+              >
+                Publications
+              </a>
+              <a
+                href="/speaking"
+                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+              >
+                Speaking
+              </a>
+              <a
+                href="/testimonials"
+                className="px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300"
+              >
+                Testimonials
+              </a>
+              <a
+                href="/bio"
+                className="px-3 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300"
+                aria-label="View bio page"
+              >
+                Bio
+              </a>
+            </div>
             {onSearchChange && (
               <div className="flex items-center">
-                <div className={`transition-all duration-300 ease-out overflow-hidden ${isSearchOpen ? 'w-44 sm:w-56' : 'w-0'}`}>
+                <div className={`transition-all duration-300 ease-out overflow-hidden ${isSearchOpen ? 'w-56 sm:w-72' : 'w-0'}`}>
                   <input
                     ref={inputRef}
                     type="text"
@@ -89,10 +98,10 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                 </div>
                 <button
                   onClick={handleSearchToggle}
-                  className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors duration-300 hover:bg-theme-bg-secondary/50 rounded-full"
-                  aria-label="Search"
+                  className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors duration-300 hover:bg-theme-bg-secondary/50 rounded-full flex-shrink-0"
+                  aria-label={isSearchOpen ? "Close search" : "Search"}
                 >
-                  {isSearchOpen && searchQuery ? (
+                  {isSearchOpen ? (
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
                     </svg>

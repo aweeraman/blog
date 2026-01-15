@@ -2,31 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://weeraman.com</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/alphago-a-journey-to-machine-intuition</loc>
-    <lastmod>2018-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/bootstrapping-go</loc>
-    <lastmod>2017-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/building-a-service-mesh-with-istio</loc>
-    <lastmod>2018-03-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/building-a-tiny-linux-kernel</loc>
-    <lastmod>2020-03-09</lastmod>
+    <loc>https://weeraman.com/the-onion-router</loc>
+    <lastmod>2006-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,8 +19,68 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/chicken-meet-egg-egg-chicken-egg-chicken</loc>
-    <lastmod>2006-05-04</lastmod>
+    <loc>https://weeraman.com/getting-setup-with-the-intel-edison</loc>
+    <lastmod>2015-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/gplv3-launch</loc>
+    <lastmod>2007-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/alphago-a-journey-to-machine-intuition</loc>
+    <lastmod>2018-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/on-linux-backups-and-encrypted-filesystems</loc>
+    <lastmod>2019-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/mahavilachchiya-needs-you</loc>
+    <lastmod>2010-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/mahavilachchiya-day-two</loc>
+    <lastmod>2006-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/software-freedom-day-2008</loc>
+    <lastmod>2008-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/musings-on-git</loc>
+    <lastmod>2012-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/dissecting-bitcoin-part-2-challenges</loc>
+    <lastmod>2017-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/linux-on-palm-tx</loc>
+    <lastmod>2008-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/it-all-comes-down-to-that-really</loc>
+    <lastmod>2007-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,20 +91,104 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/compiling-the-linux-kernel-with-clang</loc>
-    <lastmod>2020-02-20</lastmod>
+    <loc>https://weeraman.com/google-app-engine-apns</loc>
+    <lastmod>2013-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/connecting-to-the-minnowboard-using-a-console-cable</loc>
-    <lastmod>2019-03-17</lastmod>
+    <loc>https://weeraman.com/machine-learning-for-fun-and-profit</loc>
+    <lastmod>2017-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/building-a-service-mesh-with-istio</loc>
+    <lastmod>2018-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/dissecting-bitcoin-part-1-the-technology</loc>
+    <lastmod>2017-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/sahana-receives-fsf-award</loc>
+    <lastmod>2007-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://weeraman.com/debian-is-27</loc>
     <lastmod>2020-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/in-the-days-when-sussman-was-a-novice</loc>
+    <lastmod>2006-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/bootstrapping-go</loc>
+    <lastmod>2017-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/virtual-private-networking</loc>
+    <lastmod>2006-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/foss-ed-for-hackers-a-footnote</loc>
+    <lastmod>2006-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/chicken-meet-egg-egg-chicken-egg-chicken</loc>
+    <lastmod>2006-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/dukes-and-kings</loc>
+    <lastmod>2006-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/compiling-the-linux-kernel-with-clang</loc>
+    <lastmod>2020-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems</loc>
+    <lastmod>2019-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/parallelizing-and-running-distributed-builds-with-distcc</loc>
+    <lastmod>2023-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/on-perl-and-poetry</loc>
+    <lastmod>2014-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/messing-with-the-colonel</loc>
+    <lastmod>2006-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -79,140 +205,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/dissecting-bitcoin-part-1-the-technology</loc>
-    <lastmod>2017-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/dissecting-bitcoin-part-2-challenges</loc>
-    <lastmod>2017-12-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/dukes-and-kings</loc>
-    <lastmod>2006-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/for-the-love-of-chess</loc>
-    <lastmod>2017-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/foss-ed-for-hackers-a-footnote</loc>
-    <lastmod>2006-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/from-mahavilachchiya-with-love</loc>
-    <lastmod>2006-10-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/getting-setup-with-the-intel-edison</loc>
-    <lastmod>2015-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/getting-started-with-linkerd</loc>
-    <lastmod>2022-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/git-guts</loc>
-    <lastmod>2013-01-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/google-app-engine-apns</loc>
-    <lastmod>2013-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/gplv3-launch</loc>
-    <lastmod>2007-07-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://weeraman.com/hut-8-bletchley-park</loc>
     <lastmod>2006-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/in-the-days-when-sussman-was-a-novice</loc>
-    <lastmod>2006-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/it-all-comes-down-to-that-really</loc>
-    <lastmod>2007-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/lightweight-docker-images-with-alpine</loc>
-    <lastmod>2018-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/linux-on-palm-tx</loc>
-    <lastmod>2008-03-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems</loc>
-    <lastmod>2019-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/machine-learning-for-fun-and-profit</loc>
-    <lastmod>2017-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/mahavilachchiya-day-two</loc>
-    <lastmod>2006-10-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/mahavilachchiya-needs-you</loc>
-    <lastmod>2010-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/messing-with-the-colonel</loc>
-    <lastmod>2006-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/musings-on-git</loc>
-    <lastmod>2012-12-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/on-blood-lines-forks-and-survivors</loc>
-    <lastmod>2021-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -223,62 +217,20 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/on-linux-backups-and-encrypted-filesystems</loc>
-    <lastmod>2019-03-10</lastmod>
+    <loc>https://weeraman.com/way-to-blue</loc>
+    <lastmod>2006-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/on-opensolaris</loc>
-    <lastmod>2008-04-26</lastmod>
+    <loc>https://weeraman.com/building-a-tiny-linux-kernel</loc>
+    <lastmod>2020-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/on-perl-and-poetry</loc>
-    <lastmod>2014-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/parallelizing-and-running-distributed-builds-with-distcc</loc>
-    <lastmod>2023-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/put-that-gpu-to-good-use-with-python</loc>
-    <lastmod>2017-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/quilt</loc>
-    <lastmod>2006-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/rms-mit</loc>
-    <lastmod>2006-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/sahana-receives-fsf-award</loc>
-    <lastmod>2007-03-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/software-freedom-day-2008</loc>
-    <lastmod>2008-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://weeraman.com/software-freedom-day-2013-virtusa</loc>
-    <lastmod>2013-09-22</lastmod>
+    <loc>https://weeraman.com/on-blood-lines-forks-and-survivors</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -289,38 +241,44 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://weeraman.com/windows-of-opportunity-microsofts-open-source-renaissance</loc>
+    <lastmod>2024-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://weeraman.com/the-magic-word</loc>
     <lastmod>2006-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/the-onion-router</loc>
-    <lastmod>2006-03-14</lastmod>
+    <loc>https://weeraman.com/rms-mit</loc>
+    <lastmod>2006-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/us-11604662-b2</loc>
-    <lastmod>2023-03-14</lastmod>
+    <loc>https://weeraman.com/connecting-to-the-minnowboard-using-a-console-cable</loc>
+    <lastmod>2019-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/virtual-private-networking</loc>
-    <lastmod>2006-03-20</lastmod>
+    <loc>https://weeraman.com/getting-started-with-linkerd</loc>
+    <lastmod>2022-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/way-to-blue</loc>
-    <lastmod>2006-06-02</lastmod>
+    <loc>https://weeraman.com/put-that-gpu-to-good-use-with-python</loc>
+    <lastmod>2017-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/windows-of-opportunity-microsofts-open-source-renaissance</loc>
-    <lastmod>2024-07-13</lastmod>
+    <loc>https://weeraman.com/from-mahavilachchiya-with-love</loc>
+    <lastmod>2006-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -331,44 +289,92 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/bio</loc>
-    <lastmod>2025-12-29</lastmod>
+    <loc>https://weeraman.com/git-guts</loc>
+    <lastmod>2013-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/software-freedom-day-2013-virtusa</loc>
+    <lastmod>2013-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/for-the-love-of-chess</loc>
+    <lastmod>2017-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/on-opensolaris</loc>
+    <lastmod>2008-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/lightweight-docker-images-with-alpine</loc>
+    <lastmod>2018-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/quilt</loc>
+    <lastmod>2006-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/us-11604662-b2</loc>
+    <lastmod>2023-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/publications</loc>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://weeraman.com/publications</loc>
-    <lastmod>2025-12-29</lastmod>
+    <loc>https://weeraman.com/bio</loc>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/speaking</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/testimonials</loc>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/2</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/3</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/4</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/5</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
