@@ -7,7 +7,7 @@ feature_image: "/images/clawdbot-running-your-own-ai-agent-on-debian/clawdbot-co
 featured: true
 ---
 
-The rise of agentic AI has been one of the most fascinating developments in the post-ChatGPT era. We've moved from conversational interfaces that answer questions to autonomous systems that can take action—reading your emails, managing your calendar, executing code, and interfacing with the physical world through APIs and automation.
+The rise of agentic AI has been one of the most fascinating developments in the post-ChatGPT era. We've moved from conversational interfaces that answer questions to autonomous systems that can take action by reading your emails, managing your calendar, executing code, and interfacing with the physical world through APIs and automation.
 
 Anthropic's recent announcement of Claude Cowork signals that the major players see this as the next frontier. But what's particularly interesting is the parallel emergence of open, self-hosted alternatives that put these capabilities directly in the hands of individuals.
 
@@ -19,7 +19,7 @@ We're entering an era where personal AI infrastructure becomes as fundamental as
 
 What makes Clawdbot interesting isn't just that it's self-hosted, it's the architecture. The system consists of a Gateway that runs continuously, managing sessions, memory, and connections to various channels. The agent itself is stateless; persistence comes from markdown files in a workspace directory and session logs on disk.
 
-This design choice is significant. Your agent's "soul" — its personality, memories, and context—lives in plain text files you control. Want to back it up? It's just a git repository. Want to migrate to a new machine? Clone the repo and re-authenticate your channels.
+This design choice is significant. Your agent's "soul", its personality, memories, and context, lives in plain text files you control. Want to back it up? It's just a git repository. Want to migrate to a new machine? Clone the repo and re-authenticate your channels.
 
 The Gateway binds to localhost by default, exposing no external ports. All communication flows through the messaging platforms themselves, which act as the transport layer. This is a sensible security model: rather than exposing a new attack surface, it piggybacks on the authentication and encryption of established platforms.
 
