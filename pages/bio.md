@@ -34,6 +34,8 @@ I have built and led global engineering teams, delivering technology solutions t
 
 ## Track Record
 
+**Founder & Technology Executive**: Co-Founder and CTO of Verdentra, a consulting startup delivering product engineering, strategic consulting, and trusted advisory services.
+
 **Enterprise Architecture at Scale**: Technology governance and delivery assurance for large distributed engineering organizations. Lead architect across a 900+ member engineering organization serving a Big Four US bank.
 
 **Regulatory & Compliance Delivery**: Architected PSD2/open banking and HIPAA-compliant solutions under hard deadlines. Track record: zero missed compliance dates.
