@@ -14,6 +14,8 @@ Debian has always been and will continue to be the uber-distribution. With hundr
 
 ![With Niibe at an FSF meetup at MIT, 2006.](/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.jpg)
 
+*With Niibe at an FSF meetup at MIT, 2006.*
+
 At the time, Debian had a stable curses installer, and installation meant pecking at the enter key about 20 times, enter a few details and passwords and you’re good to go — this was miles ahead of text mode installers. 20 years later, things haven’t changed much on this front for Debian. Enter Pop!_OS. While still based on Ubuntu, the whole design aesthetic is so much cleaner and elegant, required very little user input and before I knew it, the installation was done and I was dual-booting.
 
 There used to be a time, when you install X, configure XF86Config by hand, run xinit, breathe a sigh of relief when you see the checkered background and decoration-less terminal and spend hours tweaking files, layering-in the right window manager, applets, backgrounds and themes until you have a desktop that you can truly be proud of and really call your own. No two desktops were alike. The process of getting an [Nvidia Optimus](https://wiki.debian.org/NvidiaGraphicsDrivers/Optimus) hardware setup on Debian, still feels a lot like those days, with Xorg configuration, xrandr, display managers requiring non-trivial time commitment to get things working on a dual-monitor setup the way you really want. This doesn’t take into account the myriad of ways this can be achieved through [Bumblebee](https://wiki.debian.org/Bumblebee), [nvidia-xrun](https://wiki.archlinux.org/index.php/Nvidia-xrun) and the like.
