@@ -72,7 +72,6 @@ I have built and led global engineering teams, delivering technology solutions t
 ## Giving Back
 
 **4th Angel Mentoring Program** — Cleveland Clinic
-*Volunteer Mentor, 2020 – Present*
 
 Trained volunteer mentor in Cleveland Clinic's cancer support initiative, providing one-on-one guidance to patients and caregivers navigating their cancer journey. Focused on empowering individuals with knowledge, emotional support, and practical resources.
 
