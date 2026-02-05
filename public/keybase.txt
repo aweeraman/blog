@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/aweeraman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://weeraman.com
+  * I am aweeraman (https://keybase.io/aweeraman) on keybase.
+  * I have a public key ASB76Z1Rlli9QAXq0e63NdI4ZSloVRSDAzXYRS46wHOwLwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01019f9c246d37ed0e5dba27ac24109ca312384996fef765a28e1f6803475d17e5940a",
+      "host": "keybase.io",
+      "kid": "01207be99d519658bd4005ead1eeb735d2386529685514830335d8452e3ac073b02f0a",
+      "uid": "1a045d20950572e8b5c5139bb7f9b919",
+      "username": "aweeraman"
+    },
+    "merkle_root": {
+      "ctime": 1770296973,
+      "hash": "ccabb1eb3d5425fb3090a83b3e7017f846183d98d660806d4df57662ed9c3b32b037cfdf8f574d33010e805faaa0716c7475f7500a9e25fc4811068abc5c8f9c",
+      "hash_meta": "8582255e88718531601f2aa89b1ab7fd6aa458365657e00c92cd407945abd45f",
+      "seqno": 27389709
+    },
+    "service": {
+      "entropy": "YYcwQyChQYwfUaROcJ86P5Gu",
+      "hostname": "weeraman.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.3.1"
+  },
+  "ctime": 1770297001,
+  "expire_in": 504576000,
+  "prev": "a78bb4d4e8cdb4afcfdc1d5b177126dc954fb072b6f93897d398acd7ad85bc8f",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEge+mdUZZYvUAF6tHutzXSOGUpaFUUgwM12EUuOsBzsC8Kp3BheWxvYWTESpcCFMQgp4u01OjNtK/P3B1bF3Em3JVPsHK2+TiX05is162FvI/EIPvHJhlQkI/36+gdbBbQDNEmWGbIU1TRX6XdFkVoCvmAAgHCo3NpZ8RASoR2Q75o3EIOg76Lz/9KCxRMaiDnwASl6DkiA+X3V/oGfDdV0hRnMjjSYeriolMfTkzo0fcEnbgS4BqL3BycA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPYuEeAGjnra7JjakeVgCcG+Kezd0xpW0OdA060oYzcHo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aweeraman
+
+==================================================================
