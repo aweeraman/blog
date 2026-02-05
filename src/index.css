@@ -490,7 +490,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
   margin: 0;
 }
 
-/* Tables - clean and readable */
+/* Tables - responsive card layout on mobile, traditional on desktop */
 .prose table {
   width: 100%;
   margin: 2em 0;
@@ -498,6 +498,82 @@ article:nth-child(10) { animation-delay: 0.5s; }
   font-size: 0.9375rem;
 }
 
+/* Mobile: Transform table into stacked cards */
+@media (max-width: 767px) {
+  .prose table {
+    display: block;
+  }
+
+  .prose thead {
+    display: none;
+  }
+
+  .prose tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .prose tr {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-theme-bg-secondary);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--color-theme-border-primary);
+  }
+
+  .prose td {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    border-bottom: none;
+    line-height: 1.5;
+  }
+
+  /* First cell (Domain) - card title, no label */
+  .prose td:first-child {
+    font-weight: 600;
+    color: var(--color-theme-text-primary);
+    font-size: 1.0625rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 1px solid var(--color-theme-border-secondary);
+  }
+
+  .prose td:first-child::before {
+    display: none;
+  }
+
+  /* Other cells get labels */
+  .prose td:nth-child(2)::before {
+    content: 'Engagement';
+  }
+
+  .prose td:nth-child(3)::before {
+    content: 'Scale';
+  }
+
+  .prose td:nth-child(4)::before {
+    content: 'Outcome';
+  }
+
+  .prose td:not(:first-child)::before {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-theme-accent-primary);
+    margin-bottom: 0.125rem;
+  }
+
+  .prose tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+/* Desktop: Traditional table layout */
 @media (min-width: 768px) {
   .prose table {
     margin: 2.25em 0;
@@ -532,6 +608,36 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose tr:last-child td {
   border-bottom: none;
+}
+
+/* Social links - mobile-friendly grid */
+.prose .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.prose .social-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 1rem;
+  background: var(--color-theme-bg-secondary);
+  border: 1px solid var(--color-theme-border-primary);
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.prose .social-links a:hover {
+  background: var(--color-theme-bg-tertiary);
+  border-color: var(--color-theme-accent-primary);
+}
+
+.prose .social-links a::after {
+  display: none;
 }
 
 /* Hide scrollbar but allow scrolling */

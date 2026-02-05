@@ -161,7 +161,7 @@ export default function Page() {
             aria-label="Back to homepage"
           >
             <span className="group-hover:-translate-x-1 transition-transform">←</span>
-            <span>All posts</span>
+            <span>Home</span>
           </a>
 
           <article>

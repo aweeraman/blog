@@ -48,7 +48,7 @@ I have built and led global engineering teams, delivering technology solutions t
 
 **Recognition**
 - US Patent 11,604,662 B2 — Co-inventor, UI modernization in computing environments
-- Inductee, Virtusa Winners Club for Engineering and Technology Excellence
+- Virtusa Winners Club for Engineering and Technology Excellence - Inductee
 - Gold Stevie Award — "Best New Product or Service of the Year (Software/Healthcare Technology)"
 - Virtusa "Idol" Hackathon - Winner
 - Citi Mobile Challenge EMEA 2015 — Finalist
@@ -86,4 +86,12 @@ Trained volunteer mentor in Cleveland Clinic's cancer support initiative, provid
 
 ---
 
-[Schedule a Call](https://cal.com/anuradha) · [GitHub](https://github.com/aweeraman) · [Twitter](https://twitter.com/anuradha) · [LinkedIn](https://www.linkedin.com/in/anuradha-weeraman) · [YouTube](https://www.youtube.com/channel/UCCJaXCP9hRNbJ5az1PHOhtw?view_as=subscriber) · [Keybase](https://keybase.io/aweeraman) · [PGP Key](https://keys.openpgp.org/vks/v1/by-fingerprint/F56B8F14E014CDEF5D047FC1636DB5A1D91860FD)
+<div class="social-links">
+<a href="https://cal.com/anuradha">Schedule a Call</a>
+<a href="https://github.com/aweeraman">GitHub</a>
+<a href="https://twitter.com/anuradha">Twitter</a>
+<a href="https://www.linkedin.com/in/anuradha-weeraman">LinkedIn</a>
+<a href="https://www.youtube.com/channel/UCCJaXCP9hRNbJ5az1PHOhtw?view_as=subscriber">YouTube</a>
+<a href="https://keybase.io/aweeraman">Keybase</a>
+<a href="https://keys.openpgp.org/vks/v1/by-fingerprint/F56B8F14E014CDEF5D047FC1636DB5A1D91860FD">PGP Key</a>
+</div>
