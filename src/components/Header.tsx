@@ -56,28 +56,36 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           {/* Navigation */}
           <nav className="flex items-center gap-2 sm:gap-3 min-w-0">
             {/* Nav links - hidden when search is open */}
-            <div className={`flex items-center gap-1.5 sm:gap-3 transition-all duration-300 ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
+            <div className={`flex items-center gap-1.5 transition-all duration-300 ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
               <a
                 href="/publications"
-                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-2 py-1.5 text-xs font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Publications
               </a>
               <a
                 href="/speaking"
-                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-2 py-1.5 text-xs font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Speaking
               </a>
               <a
                 href="/testimonials"
-                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-2 py-1.5 text-xs font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Testimonials
               </a>
               <a
+                href="https://isengard.anuradha.dev/subscription/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex px-2 py-1.5 text-xs font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+              >
+                Newsletter
+              </a>
+              <a
                 href="/bio"
-                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-2 py-1.5 text-xs font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 aria-label="View bio page"
               >
                 Bio
@@ -104,6 +112,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                     <a href="/publications" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Publications</a>
                     <a href="/speaking" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Speaking</a>
                     <a href="/testimonials" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Testimonials</a>
+                    <a href="https://isengard.anuradha.dev/subscription/form" target="_blank" rel="noopener noreferrer" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Newsletter</a>
                     <a href="/bio" className="block px-4 py-2.5 text-sm font-medium text-amber-400 hover:bg-theme-bg-tertiary transition-colors">Bio</a>
                   </div>
                 )}
