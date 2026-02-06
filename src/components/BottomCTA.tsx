@@ -7,15 +7,11 @@ export function BottomCTA() {
         className="text-3xl sm:text-4xl font-normal text-theme-text-primary leading-tight"
         style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
       >
-        Let's build something{' '}
-        <span className="italic text-amber-400">together</span>
+        Let's talk{' '}
+        <span className="italic text-amber-400">strategy</span>
       </h3>
 
-      <p className="mt-4 sm:mt-5 text-lg text-theme-text-secondary max-w-xl mx-auto">
-        Looking for a technology partner to help scale your product or navigate complex architectural decisions?
-      </p>
-
-      <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div className="mt-6 sm:mt-8 flex items-center justify-center">
         <a
           href="https://cal.com/anuradha"
           target="_blank"
@@ -23,12 +19,6 @@ export function BottomCTA() {
           className="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-theme-bg-primary font-semibold rounded-lg transition-all duration-300 hover:scale-105"
         >
           Schedule a Call
-        </a>
-        <a
-          href="/bio"
-          className="px-6 py-3 bg-theme-bg-secondary hover:bg-theme-bg-tertiary text-theme-text-primary font-semibold rounded-lg border border-theme-border-primary transition-all duration-300 hover:scale-105"
-        >
-          Learn More
         </a>
       </div>
     </section>
