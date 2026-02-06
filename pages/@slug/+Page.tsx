@@ -69,7 +69,7 @@ export default function Page() {
         <ScrollProgress />
         <Header />
 
-        <main className="max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
+        <main className="w-full max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12 overflow-hidden">
           <a
             href="/"
             className="text-base text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-10 inline-flex items-center gap-2 group"
@@ -82,7 +82,7 @@ export default function Page() {
           <article>
             <header className="mb-10 sm:mb-12">
               <time className="text-base text-theme-text-tertiary block mb-4">{formattedDate}</time>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight">{frontmatter.title}</h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
             </header>
 
             {frontmatter.feature_image && (
@@ -167,7 +167,7 @@ export default function Page() {
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
         <Header />
 
-        <main className="max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
+        <main className="w-full max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12 overflow-hidden">
           <a
             href="/"
             className="text-base text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-10 inline-flex items-center gap-2 group"
@@ -179,7 +179,7 @@ export default function Page() {
 
           <article>
             <header className="mb-10 sm:mb-12">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight">{frontmatter.title}</h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
             </header>
 
             <MarkdownRenderer

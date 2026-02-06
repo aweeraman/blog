@@ -42,9 +42,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling and prevent horizontal overflow on mobile */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Fade in animation for main content */
@@ -102,6 +103,8 @@ article:nth-child(10) { animation-delay: 0.5s; }
   line-height: 1.85;
   letter-spacing: 0.01em;
   font-weight: 400;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @media (min-width: 640px) {
@@ -379,6 +382,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
   margin-top: 2em;
   margin-bottom: 2em;
   overflow-x: auto;
+  max-width: 100%;
   background: linear-gradient(135deg, var(--color-theme-bg-primary) 0%, var(--color-theme-bg-secondary) 100%);
   padding: 1.25em;
   border-radius: 0.75rem;

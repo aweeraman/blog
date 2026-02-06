@@ -9,7 +9,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
 
   return (
     <div>
-      <h3 className="text-xl font-semibold text-theme-text-primary mb-6">You might also enjoy</h3>
+      <h3 className="text-xl font-semibold text-theme-text-primary mb-6">You might also like</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post) => {
           const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-US', {
