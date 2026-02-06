@@ -17,8 +17,7 @@ export default defineConfig({
         process: true,
       },
     }),
-    compression({ algorithm: 'gzip' }),
-    compression({ algorithm: 'brotliCompress' }),
+    compression({ algorithms: ['gzip', 'brotliCompress'] }),
   ],
   build: {
     rollupOptions: {
