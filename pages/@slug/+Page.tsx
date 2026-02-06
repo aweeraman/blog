@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { usePageContext } from 'vike-react/usePageContext';
-import { getPostBySlug, getAdjacentPosts } from '../../src/utils/posts';
+import { getPostBySlug, getAdjacentPosts, getRelatedPosts } from '../../src/utils/posts';
 import { getPageBySlug } from '../../src/utils/pages';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
 import { MarkdownRenderer } from '../../src/components/MarkdownRenderer';
 import { GiscusComments } from '../../src/components/GiscusComments';
 import { ScrollProgress } from '../../src/components/ScrollProgress';
+import { AuthorBio } from '../../src/components/AuthorBio';
+import { RelatedPosts } from '../../src/components/RelatedPosts';
 
 export default function Page() {
   const pageContext = usePageContext();
@@ -60,6 +62,7 @@ export default function Page() {
     });
 
     const { previous, next } = getAdjacentPosts(slug);
+    const relatedPosts = getRelatedPosts(slug, 3);
 
     return (
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
@@ -138,6 +141,16 @@ export default function Page() {
               </div>
             </nav>
           )}
+
+          {/* Author bio */}
+          <div className="mt-14 pt-10 border-t border-theme-border-secondary/50">
+            <AuthorBio />
+          </div>
+
+          {/* Related posts */}
+          <div className="mt-12">
+            <RelatedPosts posts={relatedPosts} />
+          </div>
 
           <GiscusComments />
         </main>

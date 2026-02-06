@@ -13,7 +13,7 @@ export function HeroSection() {
     <section className="pt-4 sm:pt-6 pb-10 sm:pb-14 text-center">
       <h2
         className="text-3xl sm:text-5xl lg:text-6xl font-normal text-theme-text-primary leading-tight tracking-tight break-words"
-        style={{ fontFamily: "'Instrument Serif', serif" }}
+        style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
       >
         Technology strategy for{' '}
         <span className="italic text-amber-400">AI-powered</span>

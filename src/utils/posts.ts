@@ -81,3 +81,31 @@ export function getFeaturedPosts(): Post[] {
   const posts = getAllPosts();
   return posts.filter((post) => post.frontmatter.featured === true);
 }
+
+export function getRelatedPosts(slug: string, count: number = 3): Post[] {
+  const posts = getAllPosts();
+  const currentIndex = posts.findIndex((post) => post.slug === slug);
+  if (currentIndex === -1) return [];
+
+  // Pick nearby posts (neighbors in the timeline), excluding the current one
+  const related: Post[] = [];
+  const before = currentIndex - 1;
+  const after = currentIndex + 1;
+  const twoAfter = currentIndex + 2;
+
+  if (before >= 0) related.push(posts[before]);
+  if (after < posts.length) related.push(posts[after]);
+  if (twoAfter < posts.length && related.length < count) related.push(posts[twoAfter]);
+
+  // If we still need more (edge cases), grab from the start
+  if (related.length < count) {
+    for (const post of posts) {
+      if (related.length >= count) break;
+      if (post.slug !== slug && !related.includes(post)) {
+        related.push(post);
+      }
+    }
+  }
+
+  return related.slice(0, count);
+}

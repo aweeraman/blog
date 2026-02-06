@@ -5,7 +5,7 @@ export function BottomCTA() {
 
       <h3
         className="text-3xl sm:text-4xl font-normal text-theme-text-primary leading-tight"
-        style={{ fontFamily: "'Instrument Serif', serif" }}
+        style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
       >
         Let's build something{' '}
         <span className="italic text-amber-400">together</span>

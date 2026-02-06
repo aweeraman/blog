@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vike from 'vike/plugin'
 import react from '@vitejs/plugin-react'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
+import { compression } from 'vite-plugin-compression2'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,6 +17,8 @@ export default defineConfig({
         process: true,
       },
     }),
+    compression({ algorithm: 'gzip' }),
+    compression({ algorithm: 'brotliCompress' }),
   ],
   build: {
     rollupOptions: {

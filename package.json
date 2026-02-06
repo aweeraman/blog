@@ -22,7 +22,8 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "vike": "^0.4.252",
-    "vike-react": "^0.6.18"
+    "vike-react": "^0.6.18",
+    "vite-plugin-compression2": "^2.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

@@ -7,6 +7,7 @@ interface HeaderProps {
 
 export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -55,32 +56,58 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
           {/* Navigation */}
           <nav className="flex items-center gap-2 sm:gap-3 min-w-0">
             {/* Nav links - hidden when search is open */}
-            <div className={`flex items-center gap-1.5 sm:gap-3 transition-all duration-300 overflow-x-auto scrollbar-hide ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
+            <div className={`flex items-center gap-1.5 sm:gap-3 transition-all duration-300 ${isSearchOpen ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'}`}>
               <a
                 href="/publications"
-                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Publications
               </a>
               <a
                 href="/speaking"
-                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Speaking
               </a>
               <a
                 href="/testimonials"
-                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
                 Testimonials
               </a>
               <a
                 href="/bio"
-                className="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
+                className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-bg-primary bg-amber-400 hover:bg-amber-300 rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
                 aria-label="View bio page"
               >
                 Bio
               </a>
+              {/* Mobile hamburger menu */}
+              <div className="sm:hidden relative">
+                <button
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary transition-colors duration-300 hover:bg-theme-bg-secondary/50 rounded-lg"
+                  aria-label="Toggle menu"
+                >
+                  {isMenuOpen ? (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
+                </button>
+                {isMenuOpen && (
+                  <div className="absolute left-0 top-full mt-2 w-44 bg-theme-bg-secondary border border-theme-border-primary rounded-xl shadow-xl shadow-black/20 py-2 z-50">
+                    <a href="/publications" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Publications</a>
+                    <a href="/speaking" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Speaking</a>
+                    <a href="/testimonials" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Testimonials</a>
+                    <a href="/bio" className="block px-4 py-2.5 text-sm font-medium text-amber-400 hover:bg-theme-bg-tertiary transition-colors">Bio</a>
+                  </div>
+                )}
+              </div>
             </div>
             {onSearchChange && (
               <div className="flex items-center">
