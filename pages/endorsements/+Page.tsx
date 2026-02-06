@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Header } from '../../src/components/Header';
 import { Footer } from '../../src/components/Footer';
-import testimonialData from '../../data/testimonials.json';
+import endorsementData from '../../data/endorsements.json';
 
-interface Testimonial {
+interface Endorsement {
   name: string;
   title: string;
   linkedin_url: string;
@@ -12,11 +12,11 @@ interface Testimonial {
   testimonial: string;
 }
 
-const testimonials: Testimonial[] = testimonialData.testimonials;
+const endorsements: Endorsement[] = endorsementData.endorsements;
 
 export default function Page() {
   useEffect(() => {
-    document.title = 'Testimonials | Anuradha Weeraman';
+    document.title = 'Endorsements | Anuradha Weeraman';
   }, []);
 
   return (
@@ -35,15 +35,15 @@ export default function Page() {
 
         <header className="mb-10 sm:mb-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight">
-            Testimonials
+            Endorsements
           </h1>
           <p className="mt-4 text-lg text-theme-text-secondary">
-            LinkedIn recommendations from colleagues, clients, and industry leaders.
+            LinkedIn endorsements from colleagues, clients, and industry leaders.
           </p>
         </header>
 
         <section className="space-y-6">
-          {testimonials.map((testimonial, index) => (
+          {endorsements.map((endorsement, index) => (
             <article
               key={index}
               className="bg-theme-bg-secondary border border-theme-border-primary rounded-xl p-6 sm:p-8 hover:border-theme-border-primary/80 transition-all duration-300"
@@ -54,7 +54,7 @@ export default function Page() {
                   "
                 </span>
                 <blockquote className="text-theme-text-secondary leading-relaxed pl-4 sm:pl-6">
-                  {testimonial.testimonial}
+                  {endorsement.testimonial}
                 </blockquote>
               </div>
 
@@ -62,13 +62,13 @@ export default function Page() {
               <div className="mt-6 pt-6 border-t border-theme-border-secondary/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="flex-1">
                   <a
-                    href={testimonial.linkedin_url}
+                    href={endorsement.linkedin_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 group"
                   >
                     <span className="text-lg font-semibold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors">
-                      {testimonial.name}
+                      {endorsement.name}
                     </span>
                     <svg
                       className="w-5 h-5 text-[#0A66C2] group-hover:scale-110 transition-transform"
@@ -80,16 +80,16 @@ export default function Page() {
                     </svg>
                   </a>
                   <p className="text-sm text-theme-text-tertiary mt-1">
-                    {testimonial.title}
+                    {endorsement.title}
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:items-end gap-1 text-sm">
                   <span className="inline-flex items-center px-3 py-1 bg-theme-bg-tertiary text-theme-text-tertiary rounded-full text-xs">
-                    {testimonial.relationship}
+                    {endorsement.relationship}
                   </span>
                   <span className="text-theme-text-tertiary">
-                    {testimonial.date}
+                    {endorsement.date}
                   </span>
                 </div>
               </div>

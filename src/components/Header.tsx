@@ -70,10 +70,10 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                 Speaking
               </a>
               <a
-                href="/testimonials"
+                href="/endorsements"
                 className="hidden sm:inline-flex px-3 py-2 text-sm font-medium text-theme-text-primary bg-theme-bg-secondary hover:bg-theme-bg-tertiary border border-theme-border-primary rounded-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
               >
-                Testimonials
+                Endorsements
               </a>
               <a
                 href="/bio"
@@ -103,7 +103,7 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                   <div className="absolute left-0 top-full mt-2 w-44 bg-theme-bg-secondary border border-theme-border-primary rounded-xl shadow-xl shadow-black/20 py-2 z-50">
                     <a href="/publications" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Publications</a>
                     <a href="/speaking" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Speaking</a>
-                    <a href="/testimonials" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Testimonials</a>
+                    <a href="/endorsements" className="block px-4 py-2.5 text-sm text-theme-text-primary hover:bg-theme-bg-tertiary hover:text-theme-accent-primary transition-colors">Endorsements</a>
                     <a href="/bio" className="block px-4 py-2.5 text-sm font-medium text-amber-400 hover:bg-theme-bg-tertiary transition-colors">Bio</a>
                   </div>
                 )}

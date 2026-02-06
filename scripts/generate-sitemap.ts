@@ -80,7 +80,7 @@ function generateSitemap(): string {
   }
 
   // Add TSX-based pages (not markdown)
-  const tsxPages = ['speaking', 'testimonials'];
+  const tsxPages = ['speaking', 'endorsements'];
   for (const page of tsxPages) {
     entries.push({
       url: `${SITE_URL}/${page}`,
