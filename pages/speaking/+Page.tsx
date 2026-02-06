@@ -99,7 +99,7 @@ export default function Page() {
         </a>
 
         <header className="mb-10 sm:mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight">
             Speaking
           </h1>
         </header>
@@ -110,7 +110,7 @@ export default function Page() {
           <div className="space-y-12">
             {speakingEvents.map((event, index) => (
               <article key={index} className="border-b border-theme-border-secondary/50 pb-10 last:border-0">
-                <h3 className="text-xl sm:text-2xl font-semibold text-theme-text-primary mb-2">
+                <h3 className="text-lg sm:text-xl font-semibold text-theme-text-primary mb-2">
                   {event.title}
                 </h3>
                 <p className="text-theme-text-secondary font-medium mb-4">

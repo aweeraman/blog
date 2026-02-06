@@ -34,10 +34,10 @@ export default function Page() {
         </a>
 
         <header className="mb-10 sm:mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight">
             Testimonials
           </h1>
-          <p className="mt-4 text-lg text-theme-text-secondary">
+          <p className="mt-4 text-base text-theme-text-secondary">
             LinkedIn recommendations from colleagues, clients, and industry leaders.
           </p>
         </header>

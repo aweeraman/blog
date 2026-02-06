@@ -99,8 +99,8 @@ article:nth-child(10) { animation-delay: 0.5s; }
 /* Custom styles for better paragraph spacing and dark theme prose */
 .prose {
   color: var(--color-theme-text-secondary);
-  font-size: 1.1875rem;
-  line-height: 1.85;
+  font-size: 1rem;
+  line-height: 1.75;
   letter-spacing: 0.01em;
   font-weight: 400;
   overflow-wrap: break-word;
@@ -109,22 +109,22 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose {
-    font-size: 1.25rem;
-    line-height: 1.9;
+    font-size: 1.0625rem;
+    line-height: 1.75;
   }
 }
 
 @media (min-width: 768px) {
   .prose {
-    font-size: 1.375rem;
-    line-height: 1.95;
+    font-size: 1.125rem;
+    line-height: 1.8;
   }
 }
 
 /* Headings - elegant hierarchy with refined spacing */
 .prose h1 {
   color: var(--color-theme-text-primary);
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -134,14 +134,14 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose h1 {
-    font-size: 2.75rem;
+    font-size: 2.125rem;
     margin-top: 2.25em;
   }
 }
 
 @media (min-width: 768px) {
   .prose h1 {
-    font-size: 3.25rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     margin-top: 2.5em;
     margin-bottom: 0.9em;
@@ -150,7 +150,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose h2 {
   color: var(--color-theme-text-primary);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.015em;
@@ -162,13 +162,13 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose h2 {
-    font-size: 2rem;
+    font-size: 1.625rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h2 {
-    font-size: 2.375rem;
+    font-size: 1.875rem;
     line-height: 1.25;
     margin-top: 2.5em;
     margin-bottom: 0.85em;
@@ -177,7 +177,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose h3 {
   color: var(--color-theme-text-primary);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -187,13 +187,13 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose h3 {
-    font-size: 1.625rem;
+    font-size: 1.375rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h3 {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     line-height: 1.35;
     margin-top: 2.25em;
     margin-bottom: 0.7em;
@@ -202,7 +202,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose h4 {
   color: var(--color-theme-text-primary);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.45;
   letter-spacing: -0.005em;
@@ -212,13 +212,13 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose h4 {
-    font-size: 1.375rem;
+    font-size: 1.1875rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.4;
     margin-top: 2em;
     margin-bottom: 0.6em;
@@ -227,7 +227,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose h5, .prose h6 {
   color: var(--color-theme-text-primary);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0;
@@ -237,7 +237,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 768px) {
   .prose h5, .prose h6 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -357,7 +357,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 /* Lead paragraph - subtle emphasis */
 .prose > p:first-of-type {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   line-height: 1.8;
   color: var(--color-theme-text-primary);
   margin-bottom: 1.75em;
@@ -365,13 +365,13 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 @media (min-width: 640px) {
   .prose > p:first-of-type {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 768px) {
   .prose > p:first-of-type {
-    font-size: 1.5rem;
+    font-size: 1.1875rem;
     line-height: 1.85;
     margin-bottom: 2em;
   }

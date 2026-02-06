@@ -69,11 +69,11 @@ export function FeaturedPosts({ posts }: FeaturedPostsProps) {
             <span className="text-theme-border-primary">|</span>
             <time className="text-sm text-theme-text-tertiary font-medium">{formattedDate}</time>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-tight mb-4">
             {frontmatter.title}
           </h2>
           {frontmatter.excerpt && (
-            <p className="text-lg sm:text-xl text-theme-text-secondary leading-relaxed max-w-2xl group-hover:text-theme-text-primary/80 transition-colors duration-300">
+            <p className="text-base sm:text-lg text-theme-text-secondary leading-relaxed max-w-2xl group-hover:text-theme-text-primary/80 transition-colors duration-300">
               {frontmatter.excerpt}
             </p>
           )}

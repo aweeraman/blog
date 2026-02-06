@@ -4,7 +4,7 @@ export function BottomCTA() {
       <div className="border-t border-theme-border-primary mb-8 sm:mb-10"></div>
 
       <h3
-        className="text-3xl sm:text-4xl font-normal text-theme-text-primary leading-tight"
+        className="text-2xl sm:text-3xl font-normal text-theme-text-primary leading-tight"
         style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
       >
         Let's talk{' '}

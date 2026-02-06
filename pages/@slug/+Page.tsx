@@ -82,7 +82,7 @@ export default function Page() {
           <article>
             <header className="mb-10 sm:mb-12">
               <time className="text-base text-theme-text-tertiary block mb-4">{formattedDate}</time>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
             </header>
 
             {frontmatter.feature_image && (
@@ -179,7 +179,7 @@ export default function Page() {
 
           <article>
             <header className="mb-10 sm:mb-12">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
             </header>
 
             <MarkdownRenderer

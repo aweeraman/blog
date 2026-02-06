@@ -34,11 +34,11 @@ export function PostCard({ post }: PostCardProps) {
               <span className="text-theme-text-tertiary/40">·</span>
               <span className="text-sm text-theme-text-tertiary font-medium">{readingTime} min read</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-snug mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-snug mb-3">
               {frontmatter.title}
             </h2>
             {frontmatter.excerpt && (
-              <p className="text-base sm:text-lg text-theme-text-tertiary leading-relaxed line-clamp-2 group-hover:text-theme-text-secondary transition-colors duration-300">{frontmatter.excerpt}</p>
+              <p className="text-sm sm:text-base text-theme-text-tertiary leading-relaxed line-clamp-2 group-hover:text-theme-text-secondary transition-colors duration-300">{frontmatter.excerpt}</p>
             )}
           </div>
           {frontmatter.feature_image && (

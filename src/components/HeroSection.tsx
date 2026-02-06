@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section className="pt-4 sm:pt-6 pb-10 sm:pb-14 text-center">
       <h2
-        className="text-3xl sm:text-5xl lg:text-6xl font-normal text-theme-text-primary leading-tight tracking-tight break-words"
+        className="text-2xl sm:text-4xl lg:text-5xl font-normal text-theme-text-primary leading-tight tracking-tight break-words"
         style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
       >
         Technology strategy for{' '}
@@ -20,7 +20,7 @@ export function HeroSection() {
         {' '}products
       </h2>
 
-      <p className="mt-5 sm:mt-6 text-base sm:text-xl text-theme-text-secondary leading-relaxed max-w-2xl mx-auto px-1">
+      <p className="mt-5 sm:mt-6 text-sm sm:text-base lg:text-lg text-theme-text-secondary leading-relaxed max-w-2xl mx-auto px-1">
         I design and build intelligent products and software systems that scale. CTO of Verdentra,
         speaker, and contributor to Linux & Debian.
       </p>
