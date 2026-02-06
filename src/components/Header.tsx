@@ -43,9 +43,9 @@ export function Header({ searchQuery = '', onSearchChange }: HeaderProps) {
                 className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover ring-2 ring-theme-border-primary group-hover:ring-theme-accent-primary transition-all duration-300 group-hover:scale-105"
               />
             </a>
-            <div className="flex-1 min-w-0">
+            <div className="flex-shrink-0">
               <a href="/" className="group" aria-label="Go to homepage">
-                <h1 className="text-xl sm:text-2xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 tracking-tight">
+                <h1 className="text-xl sm:text-2xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 tracking-tight whitespace-nowrap">
                   Anuradha Weeraman
                 </h1>
                 <p className="text-xs sm:text-sm text-theme-text-tertiary mt-0.5 tracking-wide">CTO · Architect · Advisor</p>
