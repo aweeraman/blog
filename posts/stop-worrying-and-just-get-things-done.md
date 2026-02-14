@@ -8,7 +8,9 @@ feature_image: "/images/stop-worrying-and-just-get-things-done/build-tools-cover
 
 Two years ago, I pulled out my dusty copy of David Allen’s “Getting Things Done” and decided to do a another skim through. Things were getting out of hand and I really needed to get my act together in managing the daily barrage of endless activity. It was during that reading that things somewhat clicked and I decided to come up with my own personalized system to get things under control.
 
-Here are a few things that I’ve learnt during the journey.** Write things down**
+Here are a few things that I’ve learnt during the journey.
+
+**Write things down**
 
 Despite millions of years of evolution, our brains really aren’t that good at keeping concurrent threads of thought. What they’re really good at is reminding us of things we have to do at the least opportune moment. Both of these “attributes” is the primary cause of stress in our lives as we attempt to valiantly juggle a multitude of threads, and even fool ourselves into thinking that we’re actually good at it.
 
