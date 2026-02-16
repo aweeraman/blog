@@ -1,0 +1,76 @@
+/* Anuradha's Newsletter — Elegant Terracotta branding overrides */
+
+body {
+  background: #F8F4F0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #3A3430;
+}
+
+a {
+  color: #C67D4A;
+  text-decoration-color: #D4935F;
+}
+a:hover {
+  color: #B06A3A;
+}
+
+label {
+  color: #3A3430;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  border-color: #E8E0D8;
+  box-shadow: 2px 2px 0 #F0EBE6;
+}
+input:focus {
+  border-color: #C67D4A;
+}
+
+.wrap {
+  background: #fff;
+  box-shadow: 2px 2px 0 #F0EBE6;
+  border-color: #E8E0D8;
+}
+
+.header {
+  border-bottom-color: #E8E0D8;
+}
+
+.button {
+  background: #C67D4A;
+}
+.button:hover {
+  background: #B06A3A;
+  color: #fff;
+}
+.button.button-outline {
+  background: #fff;
+  border-color: #C67D4A;
+  color: #C67D4A;
+}
+.button.button-outline:hover {
+  border-color: #B06A3A;
+  background-color: #B06A3A;
+  color: #fff;
+}
+
+.unsub-all {
+  border-top-color: #E8E0D8;
+}
+
+.archive .date {
+  color: #9A938C;
+}
+
+footer.container {
+  color: #9A938C;
+}
+footer a {
+  color: #9A938C;
+}
+footer a:hover {
+  color: #C67D4A;
+}

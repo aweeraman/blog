@@ -1,7 +1,8 @@
 {{ define "subscription-form" }}
 {{ template "header" . }}
 <section>
-    <h2>{{ L.T "public.subTitle" }}</h2>
+    <h2>Subscribe to Anuradha's Newsletter</h2>
+    <p style="color:#9A938C;font-size:0.9em;margin-bottom:25px;">Technology leadership, AI and intelligent products.</p>
 
     <form method="post" action="" class="form">
         <div>
@@ -41,7 +42,7 @@
                 </div>
             {{ end }}
             <p>
-                <button type="submit" class="button">{{ L.T "public.sub" }}</button>
+                <button type="submit" class="button">Subscribe</button>
 
                 {{ if .EnablePublicArchive }}
                     <p class="right">

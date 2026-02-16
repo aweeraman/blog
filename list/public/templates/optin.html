@@ -1,10 +1,11 @@
 {{ define "optin" }}
 {{ template "header" .}}
 <section>
-    <h2>{{ L.T "public.confirmSubTitle" }}</h2>
+    <h2>Confirm subscription to Anuradha's Newsletter</h2>
     <p>
-        {{ L.T "public.confirmSubInfo" }}
+        Thanks for your interest in <strong>Anuradha's Notes</strong> — a newsletter on technology leadership, AI and intelligent products.
     </p>
+    <p>Please confirm your subscription to the following lists:</p>
 
     <form method="post" class="optin-form">
         <ul>
@@ -20,10 +21,14 @@
         <p>
             <input type="hidden" name="confirm" value="true" />
             <button type="submit" class="button" id="btn-unsub">
-                {{ L.Ts "public.confirmSub" }}
+                Yes, subscribe me
             </button>
         </p>
     </form>
+
+    <p style="font-size:0.85em;color:#9A938C;">
+        If you did not request this subscription, you can safely ignore this page.
+    </p>
 </section>
 
 {{ template "footer" .}}

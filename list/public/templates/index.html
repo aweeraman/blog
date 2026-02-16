@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>{{ .Data.Title }} - {{ .SiteName }}</title>
 	<meta name="description" content="{{ .Data.Description }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -28,9 +28,9 @@
 			<div class="logo">
 				<a href="{{ if .EnablePublicSubPage }}{{ .RootURL}}/subscription/form{{ end }}">
 				{{ if ne .LogoURL "" }}
-					<img src="{{ .LogoURL }}" alt="{{ .Data.Title }}" />
+					<img src="{{ .LogoURL }}" alt="Anuradha's Newsletter" />
 				{{ else }}
-					<img src="/public/static/logo.svg?v={{ .AssetVersion }}" alt="{{ .Data.Title }}" />
+					<img src="/public/static/logo.svg?v={{ .AssetVersion }}" alt="Anuradha's Newsletter" />
 				{{ end }}
 				</a>
 			</div>
@@ -39,9 +39,10 @@
 
 {{ define "footer" }}
 	</div>
-	
+
 	<footer class="container">
-		{{ L.T "public.poweredBy" }} <a target="_blank" rel="noreferrer" href="https://listmonk.app">listmonk</a>
+		Anuradha Weeraman &middot; CTO &amp; Co-Founder, Verdentra<br>
+		<a href="https://weeraman.com">weeraman.com</a>
 	</footer>
 </body>
 </html>
