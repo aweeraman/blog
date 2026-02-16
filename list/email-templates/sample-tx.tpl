@@ -7,25 +7,25 @@
 
         <style>
             body {
-                background-color: #F0F1F3;
-                font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, sans-serif;
+                background-color: #F8F4F0;
+                font-family: Georgia, 'Times New Roman', serif;
                 font-size: 15px;
                 line-height: 26px;
                 margin: 0;
-                color: #444;
+                color: #3A3430;
             }
 
             pre {
-                background: #f4f4f4f4;
+                background: #F0EBE6;
                 padding: 2px;
             }
 
             table {
                 width: 100%;
-                border: 1px solid #ddd;
+                border: 1px solid #E8E0D8;
             }
             table td {
-                border-color: #ddd;
+                border-color: #E8E0D8;
                 padding: 5px;
             }
 
@@ -38,7 +38,7 @@
             }
 
             .button {
-                background: #0055d4;
+                background: #C67D4A;
                 border-radius: 3px;
                 text-decoration: none !important;
                 color: #fff !important;
@@ -47,16 +47,16 @@
                 display: inline-block;
             }
             .button:hover {
-                background: #111;
+                background: #B06A3A;
             }
 
             .footer {
                 text-align: center;
                 font-size: 12px;
-                color: #888;
+                color: #9A938C;
             }
                 .footer a {
-                    color: #888;
+                    color: #9A938C;
                     margin-right: 5px;
                 }
 
@@ -70,10 +70,10 @@
             }
 
             a {
-                color: #0055d4;
+                color: #C67D4A;
             }
                 a:hover {
-                    color: #111;
+                    color: #B06A3A;
                 }
             @media screen and (max-width: 600px) {
                 .wrap {
@@ -85,7 +85,7 @@
             }
         </style>
     </head>
-<body style="background-color: #F0F1F3;font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, sans-serif;font-size: 15px;line-height: 26px;margin: 0;color: #444;">
+<body style="background-color: #F8F4F0;font-family: Georgia, 'Times New Roman', serif;font-size: 15px;line-height: 26px;margin: 0;color: #3A3430;">
     <div class="gutter" style="padding: 30px;">&nbsp;</div>
     <div class="wrap" style="background-color: #fff;padding: 30px;max-width: 525px;margin: 0 auto;border-radius: 5px;">
         <p>Hello {{ .Subscriber.Name }}</p>
@@ -100,9 +100,14 @@
             see the transactional mailing <a href="https://listmonk.app/docs/transactional">documentation</a>.
         </p>
     </div>
-    
-    <div class="footer" style="text-align: center;font-size: 12px;color: #888;">
-        <p>{{ L.T "public.poweredBy" }} <a href="https://listmonk.app" target="_blank" rel="noreferrer" style="color: #888;">listmonk</a></p>
+
+    <div class="footer" style="text-align: center;font-size: 12px;color: #9A938C;">
+        <div style="border-top:1px solid #E8E0D8;padding-top:16px;margin-top:16px;max-width:525px;margin-left:auto;margin-right:auto;">
+            <p style="font-size:13px;color:#9A938C;margin:0 0 8px 0;">
+                Anuradha Weeraman &middot; CTO &amp; Co-Founder, Verdentra<br>
+                <a href="https://weeraman.com" style="color:#C67D4A;">weeraman.com</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>
