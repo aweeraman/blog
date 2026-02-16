@@ -443,9 +443,8 @@ article:nth-child(10) { animation-delay: 0.5s; }
   background-color: var(--color-theme-bg-tertiary);
 }
 
-/* Image captions */
-.prose img + p,
-.prose p:has(> em:only-child) {
+/* Image captions - only style paragraphs immediately after images */
+.prose img + p {
   text-align: center;
   margin-top: 0.75em;
   margin-bottom: 2.5em;
