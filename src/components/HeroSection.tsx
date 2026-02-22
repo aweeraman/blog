@@ -41,7 +41,7 @@ export function HeroSection() {
           Schedule a Call
         </a>
         <a
-          href="https://isengard.anuradha.dev/subscription/form"
+          href="https://newsletter.anuradha.dev/subscription/form"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 bg-theme-bg-secondary hover:bg-theme-bg-tertiary text-theme-text-primary font-semibold rounded-lg border border-theme-border-primary transition-all duration-300 hover:scale-105"
