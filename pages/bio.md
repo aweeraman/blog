@@ -55,7 +55,7 @@ I have built and led global engineering teams, delivering technology solutions t
 
 **Certifications**
 - Software Architecture Professional Certificate — Software Engineering Institute, Carnegie Mellon University, 2019
-- Applied AI and Data Science — MIT Professional Education, 2026
+- Applied Data Science Program: Leveraging AI for Effective Decision-Making — MIT Professional Education, 2026
 - Advanced Reinforcement Learning — MIT Professional Education, 2025
 - TOGAF 9.1 — The Open Group, 2015
 - Certified Scrum Master (CSM) — Scrum Alliance, 2014
