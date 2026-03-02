@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://weeraman.com</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
@@ -85,6 +85,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://weeraman.com/the-compounding-problem</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://weeraman.com/coaching-software-engineers-101</loc>
     <lastmod>2017-03-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -111,6 +117,12 @@
   <url>
     <loc>https://weeraman.com/dissecting-bitcoin-part-1-the-technology</loc>
     <lastmod>2017-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/webmcp-the-agentic-web-gets-a-front-door</loc>
+    <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,6 +219,12 @@
   <url>
     <loc>https://weeraman.com/hut-8-bletchley-park</loc>
     <lastmod>2006-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://weeraman.com/specs-are-the-new-source-code</loc>
+    <lastmod>2026-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -338,49 +356,49 @@
   </url>
   <url>
     <loc>https://weeraman.com/publications</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/bio</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/speaking</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/testimonials</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/2</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/3</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/4</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://weeraman.com/page/5</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

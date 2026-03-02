@@ -171,10 +171,41 @@ function formatBytes(bytes) {
 
 async function main() {
   const imagesDir = path.join(__dirname, '../public/images');
+  const targetArg = process.argv[2];
 
-  console.log('Finding images...');
-  const imageFiles = await getImageFiles(imagesDir);
-  console.log(`Found ${imageFiles.length} images\n`);
+  let imageFiles;
+
+  if (targetArg) {
+    // Resolve the target path relative to cwd or as absolute
+    const targetPath = path.resolve(targetArg);
+
+    if (!fs.existsSync(targetPath)) {
+      console.error(`File not found: ${targetPath}`);
+      process.exit(1);
+    }
+
+    const targetStat = await stat(targetPath);
+
+    if (targetStat.isDirectory()) {
+      imageFiles = await getImageFiles(targetPath);
+    } else if (targetStat.isFile()) {
+      const ext = path.extname(targetPath).toLowerCase();
+      if (ext !== '.jpg' && ext !== '.jpeg' && ext !== '.png') {
+        console.error(`Unsupported format: ${ext} (only .jpg, .jpeg, .png)`);
+        process.exit(1);
+      }
+      imageFiles = [targetPath];
+    } else {
+      console.error(`Invalid path: ${targetPath}`);
+      process.exit(1);
+    }
+
+    console.log(`Optimizing ${imageFiles.length} image(s) from: ${targetArg}\n`);
+  } else {
+    console.log('Finding images...');
+    imageFiles = await getImageFiles(imagesDir);
+    console.log(`Found ${imageFiles.length} images\n`);
+  }
 
   let totalBefore = 0;
   let totalAfter = 0;
@@ -205,7 +236,7 @@ async function main() {
   }
 
   const totalSaved = totalBefore - totalAfter;
-  const totalPercent = ((totalSaved / totalBefore) * 100).toFixed(1);
+  const totalPercent = totalBefore > 0 ? ((totalSaved / totalBefore) * 100).toFixed(1) : '0.0';
 
   console.log('\n' + '='.repeat(60));
   console.log('Optimization Summary:');
