@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "bun run build && vite preview",
     "build": "bun run sitemap && tsc -b && vite build",
     "sitemap": "bun scripts/generate-sitemap.ts",
     "optimize-images": "bun scripts/optimize-images.js",
