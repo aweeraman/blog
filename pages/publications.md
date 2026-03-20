@@ -14,6 +14,13 @@ A system for automating the migration of legacy web applications to modern frame
 
 ## Forbes Technology Council
 
+### ['Jagged Intelligence': The Illusion Of Reasoning In Modern LLMs](https://www.forbes.com/councils/forbestechcouncil/2026/03/20/jagged-intelligence-the-illusion-of-reasoning-in-modern-llms/)
+**March 20, 2026**
+
+Modern LLMs exhibit "jagged intelligence", excelling at complex tasks while failing at simple common-sense reasoning. This article explores what this means for builders and why keeping humans in the loop remains essential.
+
+---
+
 ### [The Risks Of Third-Party AI Reliance: How To Prevent Vulnerability](https://www.forbes.com/councils/forbestechcouncil/2025/09/25/the-risks-of-third-party-ai-reliance-how-to-prevent-vulnerability/)
 **September 25, 2025**
 
