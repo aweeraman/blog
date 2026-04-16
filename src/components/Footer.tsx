@@ -9,7 +9,7 @@ export function Footer() {
             </span>
             <span className="hidden sm:inline text-theme-border-primary">·</span>
             <span className="text-xs text-theme-text-tertiary/60">
-              CTO · Architect · Advisor
+              Technologist · Architect · Founder
             </span>
           </div>
 

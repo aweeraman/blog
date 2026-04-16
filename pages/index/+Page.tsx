@@ -13,7 +13,7 @@ export default function Page() {
 
   // Update document title on client-side navigation
   useEffect(() => {
-    document.title = 'Anuradha Weeraman - CTO · Architect · Advisor';
+    document.title = 'Anuradha Weeraman - Technologist · Architect · Founder';
   }, []);
   const currentPage = 1;
 
