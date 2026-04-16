@@ -21,8 +21,7 @@ export function HeroSection() {
       </h2>
 
       <p className="mt-5 sm:mt-6 text-sm sm:text-base lg:text-lg text-theme-text-secondary leading-relaxed max-w-2xl mx-auto px-1">
-        I design and build intelligent products and software systems that scale. CTO of Verdentra,
-        speaker, and contributor to Linux & Debian.
+        I design and build intelligent products and software systems that scale.
       </p>
 
       <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

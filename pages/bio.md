@@ -7,10 +7,13 @@ slug: "bio"
 
 ### I'm a Technologist, Software Architect, [CTO](https://www.linkedin.com/in/anuradha-weeraman/), [Debian Developer](https://qa.debian.org/developer.php?login=anuradha), Member of the [Forbes Technology Council](https://councils.forbes.com/profile/Anuradha-Weeraman-Co-Founder-Chief-Technology-Officer-Verdentra/1f9ab90d-e656-4043-8569-988cf403c237)
 
+I'm a technologist and software architect who builds and leads engineering teams across AI, distributed systems, and enterprise software.
+ 
+I've spearheaded product engineering initiatives across diverse sectors, spanning AI, IoT, mobile, Web3, blockchain, digital assets, cryptography, and distributed systems. I've built and led global engineering teams delivering technology solutions at scale.
 
-I specialize in architecting and delivering software solutions that deliver business outcomes. As Co-Founder and CTO of [Verdentra](https://verdentra.com), I lead the firm's commitment to excellence in product engineering, strategic consulting, and trusted advisory services.
-
-I have built and led global engineering teams, delivering technology solutions that span AI, IoT, mobile, Web3, blockchain, digital assets, cryptography, and distributed systems. I have spearheaded successful product engineering initiatives across diverse sectors and industries. A strong advocate for Software Freedom, I contribute to the [Linux kernel](https://kernel.org/) and [Debian](https://debian.org/) communities.
+As the Co-Founder and CTO of [Verdentra](https://verdentra.com), I led the firm's commitment to excellence in product engineering, strategic consulting, and trusted advisory services.
+ 
+A strong advocate for Software Freedom, I contribute to the Linux kernel and Debian communities. I'm a Forbes Technology Council member and co-inventor on US Patent 11,604,662.
 
 ---
 
