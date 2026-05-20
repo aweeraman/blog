@@ -58,7 +58,7 @@ A strong advocate for Software Freedom, I contribute to the Linux kernel and Deb
 
 **Certifications**
 - Software Architecture Professional Certificate — Software Engineering Institute, Carnegie Mellon University, 2019
-- Applied Data Science Program: Leveraging AI for Effective Decision-Making — MIT Professional Education, 2026
+- Applied AI and Data Science — MIT Professional Education, 2026
 - Advanced Reinforcement Learning — MIT Professional Education, 2025
 - TOGAF 9.1 — The Open Group, 2015
 - Certified Scrum Master (CSM) — Scrum Alliance, 2014
