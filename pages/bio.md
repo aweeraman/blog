@@ -57,9 +57,10 @@ A strong advocate for Software Freedom, I contribute to the Linux kernel and Deb
 - Citi Mobile Challenge EMEA 2015 — Finalist
 
 **Certifications**
-- Software Architecture Professional Certificate — Software Engineering Institute, Carnegie Mellon University, 2019
+- Graph Algorithms and Machine Learning — MIT Professional Education, 2026
 - Applied AI and Data Science — MIT Professional Education, 2026
 - Advanced Reinforcement Learning — MIT Professional Education, 2025
+- Software Architecture Professional Certificate — Software Engineering Institute, Carnegie Mellon University, 2019
 - TOGAF 9.1 — The Open Group, 2015
 - Certified Scrum Master (CSM) — Scrum Alliance, 2014
 - Artificial Intelligence Nanodegree — Udacity, 2017
