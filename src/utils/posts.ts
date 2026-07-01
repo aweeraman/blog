@@ -8,15 +8,20 @@ const postFiles = import.meta.glob('../../posts/*.md', {
   eager: true
 });
 
+function getPostSlug(path: string, frontmatter: PostFrontmatter): string {
+  return frontmatter.path?.replace(/^\/+|\/+$/g, '') || path.split('/').pop()?.replace('.md', '') || '';
+}
+
 export function getAllPosts(): Post[] {
   const posts: Post[] = [];
 
   for (const [path, content] of Object.entries(postFiles)) {
     const { data, content: markdownContent } = matter(content as string);
-    const slug = path.split('/').pop()?.replace('.md', '') || '';
+    const frontmatter = data as PostFrontmatter;
+    const slug = getPostSlug(path, frontmatter);
 
     posts.push({
-      frontmatter: data as PostFrontmatter,
+      frontmatter,
       content: markdownContent,
       slug,
     });

@@ -13,8 +13,7 @@ export function AuthorBio() {
           Anuradha Weeraman
         </a>
         <p className="text-sm text-theme-text-tertiary mt-1 leading-relaxed">
-          CTO of Verdentra, software architect, and contributor to Linux &amp; Debian.
-          Building intelligent products and systems that scale.
+          Founder, CTO and Debian Developer. Building intelligent products and systems that scale.
         </p>
         <div className="mt-3 flex items-center gap-4">
           <a
