@@ -41,6 +41,11 @@ export default defineConfig({
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 600,
   },
+  server: {
+    port: 8000,
+    strictPort: false,
+    open: true,
+  },
   preview: {
     port: 8000,
     strictPort: false,
