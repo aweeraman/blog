@@ -1,0 +1,24 @@
+---
+title: "Because We Can"
+date: "2026-07-26"
+path: "/because-we-can"
+excerpt: "Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun."
+feature_image: "/images/because-we-can/because-we-can.jpg"
+featured: true
+---
+
+Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun. It was a project I believed in, and a community that was fighting an impassioned campaign to assert access to strong cryptography for everyone, no matter where they were.
+
+The CD and a t-shirt arrived a few weeks later, with OpenBSD 3.0. The t-shirt featured the iconic puffer fish on the front. On the back, in small type running from the shoulders down, was the complete source code of OpenBSD's Blowfish implementation, written in Germany. Written in the United States, it would have been classified as a weapon.
+
+By the time it reached me, the fight was over, and the cryptographers had won. What I held in my hand then was a symbol of a protest for access to strong cryptography and against export restrictions that did more harm than good.
+
+Today the reflex is back. The fears have changed. The worry is now cyber capability, biology and models that do things nobody asked them to do. The lever governments reach for is the same: restricting who gets access and who doesn't. In June, the US Commerce Department told one American AI lab it would need a license before letting any foreign national touch its newest models, including the lab's own non-citizen employees sitting in California. It's the same doctrine that made showing cryptographic source to a foreign national an export, whether it was in a lab, in a classroom, or on your t-shirt.
+
+In the nineties, the rest of the world got forty-bit encryption while the Americans got a hundred and twenty-eight, and it made no difference to anyone who was determined. Strong cryptography was already being sold abroad. The controls bound the law-abiding and nobody else. That is the asymmetry. The determined will have the frontier. The rest of us are asked to go without, and told it is for our safety.
+
+The OpenBSD team didn't work around the export controls. They arranged the project so that the controls couldn't reach it. Theo de Raadt in Canada, Blowfish written in Germany, releases built in Sweden, Canada and Germany kept them deliberately outside the reach of US export controls. The project openly asked non-American cryptographers to come and help, and American developers, as the story goes, would cross the border to Canada to work on the system and bring the results home legally. Asked [why they shipped strong cryptography](https://www.openbsd.org/crypto.html) at all, the project's answer, still on their site today was three words: "because we can".
+
+The same arrangement is being made now, at a national scale. Mistral, DeepSeek, Moonshot and Zhipu publish weights that, once downloaded, no export letter can recall. The sovereignty argument that used to live in Brussels think tanks is now government policy, accelerated by watching access to a frontier model withdrawn worldwide by letter.
+
+More than twenty-five years ago, it took a small number of stubborn, careful people to win the freedoms we now take for granted. What arrived in my letterbox after two weeks on a CD can be downloaded today in fifteen minutes, by anyone, from anywhere, and nobody asks where you live. That is what winning looked like. I think frontier AI ends up in the same place. But it will not happen by itself. Last time, someone put the source on a t-shirt.
