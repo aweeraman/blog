@@ -9,7 +9,7 @@ featured: true
 
 Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun. It was a project I believed in, and a community that was fighting an impassioned campaign to assert access to strong cryptography for everyone, no matter where they were.
 
-The CD and a t-shirt arrived a few weeks later, with OpenBSD 3.0. The t-shirt featured the iconic puffer fish on the front. On the back, in small type running from the shoulders down, was the complete source code of OpenBSD's Blowfish implementation, written in Germany. Written in the United States, it would have been classified as a weapon.
+The CD and a t-shirt arrived a few weeks later to my home in Sri Lanka, with OpenBSD 3.0. The t-shirt featured the iconic puffer fish on the front. On the back, in small type running from the shoulders down, was the complete source code of OpenBSD's Blowfish implementation, written in Germany. Written in the United States, it would have been classified as a weapon.
 
 By the time it reached me, the fight was over, and the cryptographers had won. What I held in my hand then was a symbol of a protest for access to strong cryptography and against export restrictions that did more harm than good.
 
