@@ -15,6 +15,17 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a
+              href="/rss.xml"
+              data-vike="false"
+              className="p-2 text-theme-text-tertiary hover:text-theme-accent-primary hover:bg-theme-bg-secondary/50 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="RSS feed"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.18 17.82a2.18 2.18 0 1 1-4.36 0 2.18 2.18 0 0 1 4.36 0ZM1.82 8.56v3.1c5.82 0 10.52 4.71 10.52 10.52h3.1c0-7.52-6.1-13.62-13.62-13.62Zm0-6.74v3.1c9.54 0 17.26 7.73 17.26 17.26h3.1C22.18 10.93 13.07 1.82 1.82 1.82Z" />
+              </svg>
+            </a>
+
+            <a
               href="https://x.com/anuradha"
               target="_blank"
               rel="noopener noreferrer"

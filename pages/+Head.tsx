@@ -4,6 +4,7 @@ export function Head() {
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="alternate" type="application/rss+xml" title="Anuradha Weeraman" href="https://weeraman.com/rss.xml" />
 
       {/* Preload critical fonts to avoid layout shifts */}
       <link rel="preload" href="/fonts/instrument-serif/instrument-serif-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

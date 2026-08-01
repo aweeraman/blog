@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "bun run sitemap && tsc -b && vite build",
+    "build": "bun run sitemap && bun run rss && tsc -b && vite build",
     "sitemap": "bun scripts/generate-sitemap.ts",
+    "rss": "bun scripts/generate-rss.tsx",
     "optimize-images": "bun scripts/optimize-images.js",
     "lint": "eslint .",
     "preview": "vite preview"
