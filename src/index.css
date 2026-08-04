@@ -438,6 +438,22 @@ article:nth-child(10) { animation-delay: 0.5s; }
   margin-right: auto;
 }
 
+.prose figure {
+  margin: 2.5em 0;
+}
+
+.prose figure img {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+.prose figcaption {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-theme-text-tertiary);
+  font-size: 0.9em;
+}
+
 /* Image fallback styling */
 .prose img[alt] {
   background-color: var(--color-theme-bg-tertiary);

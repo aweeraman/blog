@@ -4,7 +4,6 @@ date: "2026-02-16"
 path: "/specs-are-the-new-source-code"
 excerpt: "For decades, specifications served code. They were the scaffolding we built and then quietly abandoned once the real work of coding began. That relationship is now being inverted. And the implications for how we build software, and who leads that process, are profound."
 feature_image: "/images/specs-are-the-new-source-code/specs-are-the-new-source-code.jpg"
-featured: true
 ---
 
 For decades, specifications served code. They were the scaffolding we built and then quietly abandoned once the "real work" of coding began. PRDs were written to guide development, architecture diagrams drawn to inform implementation, acceptance criteria drafted to give QA something to validate against. But these were always subordinate to the code itself. Code was truth. Everything else was, at best, good intentions.

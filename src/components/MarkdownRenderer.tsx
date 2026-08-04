@@ -34,6 +34,22 @@ function isYouTubeUrl(url: string): boolean {
   return /(?:youtube\.com|youtu\.be)/.test(url);
 }
 
+function isExternalUrl(url?: string): boolean {
+  if (!url) return false;
+
+  try {
+    const siteUrl = new URL('https://weeraman.com');
+    const linkUrl = new URL(url, siteUrl);
+
+    return (
+      (linkUrl.protocol === 'http:' || linkUrl.protocol === 'https:') &&
+      linkUrl.origin !== siteUrl.origin
+    );
+  } catch {
+    return false;
+  }
+}
+
 // Helper function to generate responsive image sources
 function generateImageSources(src?: string) {
   if (!src) return null;
@@ -111,7 +127,16 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
               }
             }
             // Regular link
-            return <a href={href}>{children}</a>;
+            const external = isExternalUrl(href);
+            return (
+              <a
+                href={href}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+              >
+                {children}
+              </a>
+            );
           },
           // Handle paragraphs that contain only a YouTube URL (plain text, not a link)
           p: ({ children }) => {

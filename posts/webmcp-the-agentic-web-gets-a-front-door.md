@@ -4,7 +4,6 @@ date: "2026-02-22"
 path: "/webmcp-the-agentic-web-gets-a-front-door"
 excerpt: "Google and Microsoft have jointly proposed WebMCP, a proposed web standard currently being incubated by the W3C Web Machine Learning Community Group, that allows websites to expose structured, callable tools directly to AI agents through the browser."
 feature_image: "/images/webmcp-the-agentic-web-gets-a-front-door/webmcp-agentic-web.jpg"
-featured: true
 ---
 
 For the past year, AI agents have been interacting with the web the way a blindfolded person navigates a room, by bumping into things. They take screenshots, parse raw DOM trees, and synthesize click events, hoping the button they need hasn't moved five pixels to the left. It's slow, brittle, expensive, and fundamentally at odds with how the web was designed to work.

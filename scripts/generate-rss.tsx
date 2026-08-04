@@ -18,6 +18,11 @@ interface FeedPost {
   path: string;
   excerpt: string;
   featureImage?: string;
+  featureImageAlt?: string;
+  featureImageAttribution?: string;
+  featureImageAttributionUrl?: string;
+  featureImageLicense?: string;
+  featureImageLicenseUrl?: string;
   content: string;
 }
 
@@ -68,9 +73,23 @@ function renderPostContent(post: FeedPost): string {
   const articleHtml = renderToStaticMarkup(
     React.createElement(MarkdownRenderer, { content: post.content }),
   );
-  const featureImageHtml = post.featureImage
-    ? `<p><img src="${escapeXml(absoluteUrl(post.featureImage))}" alt="${escapeXml(post.title)}" /></p>`
-    : '';
+  let featureImageHtml = '';
+
+  if (post.featureImage) {
+    const attribution = post.featureImageAttribution
+      ? post.featureImageAttributionUrl
+        ? `<a href="${escapeXml(post.featureImageAttributionUrl)}" target="_blank" rel="noopener noreferrer">${escapeXml(post.featureImageAttribution)}</a>`
+        : escapeXml(post.featureImageAttribution)
+      : '';
+    const license = post.featureImageLicense
+      ? post.featureImageLicenseUrl
+        ? `<a href="${escapeXml(post.featureImageLicenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeXml(post.featureImageLicense)}</a>`
+        : escapeXml(post.featureImageLicense)
+      : '';
+    const caption = [attribution, license].filter(Boolean).join(' · ');
+
+    featureImageHtml = `<figure><img src="${escapeXml(absoluteUrl(post.featureImage))}" alt="${escapeXml(post.featureImageAlt || post.title)}" />${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
+  }
 
   return makeHtmlUrlsAbsolute(`${featureImageHtml}${articleHtml}`);
 }
@@ -100,6 +119,11 @@ function loadPosts(): FeedPost[] {
         path: String(data.path),
         excerpt: String(data.excerpt),
         featureImage: data.feature_image ? String(data.feature_image) : undefined,
+        featureImageAlt: data.feature_image_alt ? String(data.feature_image_alt) : undefined,
+        featureImageAttribution: data.feature_image_attribution ? String(data.feature_image_attribution) : undefined,
+        featureImageAttributionUrl: data.feature_image_attribution_url ? String(data.feature_image_attribution_url) : undefined,
+        featureImageLicense: data.feature_image_license ? String(data.feature_image_license) : undefined,
+        featureImageLicenseUrl: data.feature_image_license_url ? String(data.feature_image_license_url) : undefined,
         content,
       };
     })

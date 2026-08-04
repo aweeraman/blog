@@ -4,7 +4,6 @@ date: "2018-01-01"
 path: "/alphago-a-journey-to-machine-intuition"
 excerpt: "When IBM's Deep Blue beat Gary Kasparov, I was fifteen years old. I didn't know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade."
 feature_image: "/images/alphago-a-journey-to-machine-intuition/go-game-board.jpg"
-featured: true
 ---
 
 When [IBM’s Deep Blue beat Gary Kasparov](/for-the-love-of-chess), I was fifteen years old. I didn’t know the significance of the event at the time, nor was I even interested in the epic battle that was to define the technology advancements in AI in that decade. It was a really huge deal, as it proved that machines were capable of accomplishing something that was clearly the domain of humans, requiring ingenuity and skill that nobody expected an algorithm, much less a machine, to match.

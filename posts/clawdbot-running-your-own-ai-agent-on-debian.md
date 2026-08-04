@@ -4,7 +4,6 @@ date: "2026-01-27"
 path: "/clawdbot-running-your-own-ai-agent-on-debian"
 excerpt: "We're entering an era where personal AI infrastructure becomes as fundamental as personal computing was in the 1980s. Clawdbot is an open-source AI assistant that runs entirely on your own infrastructure, connecting to messaging platforms you already use while maintaining persistent memory and the ability to execute real actions on your behalf."
 feature_image: "/images/clawdbot-running-your-own-ai-agent-on-debian/clawdbot-cover.png"
-featured: true
 ---
 
 The rise of agentic AI has been one of the most fascinating developments in the post-ChatGPT era. We've moved from conversational interfaces that answer questions to autonomous systems that can take action by reading your emails, managing your calendar, executing code, and interfacing with the physical world through APIs and automation.

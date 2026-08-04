@@ -4,7 +4,6 @@ date: "2025-02-02"
 path: "/deepseek-r1-at-the-cusp-of-an-open-revolution"
 excerpt: "DeepSeek R1, the new entrant to the Large Language Model wars has created quite a splash over the last few weeks. Its entrance into a space dominated by the Big Corps, while pursuing asymmetric and novel strategies has been a refreshing eye-opener."
 feature_image: "/images/deepseek-r1-at-the-cusp-of-an-open-revolution/deep-ai-intelligence.jpg"
-featured: true
 ---
 
 DeepSeek R1, the new entrant to the Large Language Model wars has created quite a splash over the last few weeks. Its entrance into a space dominated by the Big Corps, while pursuing asymmetric and novel strategies has been a refreshing eye-opener.

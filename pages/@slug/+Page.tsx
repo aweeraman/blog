@@ -86,13 +86,40 @@ export default function Page() {
             </header>
 
             {frontmatter.feature_image && (
-              <div className="mb-10 sm:mb-12">
+              <figure className="mb-10 sm:mb-12">
                 <img
                   src={frontmatter.feature_image}
-                  alt={frontmatter.title}
+                  alt={frontmatter.feature_image_alt || frontmatter.title}
                   className="w-full h-auto rounded-lg"
                 />
-              </div>
+                {frontmatter.feature_image_attribution && (
+                  <figcaption className="mt-2 text-xs text-theme-text-tertiary text-right">
+                    {frontmatter.feature_image_attribution_url ? (
+                      <a
+                        href={frontmatter.feature_image_attribution_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {frontmatter.feature_image_attribution}
+                      </a>
+                    ) : frontmatter.feature_image_attribution}
+                    {frontmatter.feature_image_license && (
+                      <>
+                        {' · '}
+                        {frontmatter.feature_image_license_url ? (
+                          <a
+                            href={frontmatter.feature_image_license_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {frontmatter.feature_image_license}
+                          </a>
+                        ) : frontmatter.feature_image_license}
+                      </>
+                    )}
+                  </figcaption>
+                )}
+              </figure>
             )}
 
             <MarkdownRenderer
