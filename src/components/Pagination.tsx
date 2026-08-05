@@ -30,7 +30,7 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
             href={page === 1 ? '/' : `/page/${page}`}
             className={`w-9 h-9 flex items-center justify-center text-sm rounded-lg transition-all duration-300 font-medium ${
               page === currentPage
-                ? 'bg-theme-accent-primary text-white shadow-md shadow-theme-accent-primary/20'
+                ? 'bg-theme-accent-primary text-theme-bg-primary shadow-md shadow-theme-accent-primary/20'
                 : 'text-theme-text-tertiary hover:text-theme-accent-primary hover:bg-theme-bg-secondary/50'
             }`}
             aria-label={page === currentPage ? `Current page, page ${page}` : `Go to page ${page}`}

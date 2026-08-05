@@ -9,7 +9,8 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
 
   return (
     <div>
-      <h3 className="text-xl font-semibold text-theme-text-primary mb-6">You might also like</h3>
+      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-theme-accent-hover">Continue exploring</p>
+      <h3 className="font-display mb-6 text-3xl font-normal text-theme-text-primary">Related writing</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post) => {
           const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-US', {
@@ -22,7 +23,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
             <a
               key={post.slug}
               href={post.frontmatter.path}
-              className="group block p-4 -m-0 rounded-xl bg-theme-bg-secondary/30 border border-theme-border-secondary/30 hover:bg-theme-bg-secondary/60 hover:border-theme-border-primary/50 transition-all duration-300"
+              className="group block rounded-xl border border-theme-border-secondary/60 bg-theme-bg-secondary/30 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-theme-border-primary hover:bg-theme-bg-secondary/60"
             >
               {post.frontmatter.feature_image && (
                 <div className="w-full h-32 rounded-lg overflow-hidden mb-3">

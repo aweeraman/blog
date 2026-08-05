@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="border-t border-theme-border-secondary/50 mt-16 sm:mt-20 bg-gradient-to-b from-transparent to-theme-bg-secondary/30">
-      <div className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 py-10 sm:py-12">
+      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-12">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <span className="text-sm text-theme-text-tertiary font-medium">

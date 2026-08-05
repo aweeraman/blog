@@ -88,7 +88,7 @@ export default function Page() {
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
       <Header />
 
-      <main className="max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
+      <main className="page-enter mx-auto w-full max-w-3xl flex-1 px-5 py-8 sm:px-8 sm:py-12">
         <a
           href="/"
           className="text-base text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-10 inline-flex items-center gap-2 group"
@@ -99,7 +99,7 @@ export default function Page() {
         </a>
 
         <header className="mb-10 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight">
+          <h1 className="font-display text-4xl font-normal leading-tight tracking-tight text-theme-text-primary sm:text-5xl lg:text-6xl">
             Speaking
           </h1>
         </header>

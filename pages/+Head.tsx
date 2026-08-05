@@ -7,8 +7,8 @@ export function Head() {
       <link rel="alternate" type="application/rss+xml" title="Anuradha Weeraman" href="https://weeraman.com/rss.xml" />
 
       {/* Preload critical fonts to avoid layout shifts */}
-      <link rel="preload" href="/fonts/instrument-serif/instrument-serif-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/fonts/instrument-serif/instrument-serif-400-italic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/inter/inter-400-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/inter/inter-600-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 
       {/* Google Analytics */}

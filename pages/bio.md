@@ -7,12 +7,8 @@ slug: "bio"
 
 ### I'm a Technologist, Software Architect, [CTO](https://www.linkedin.com/in/anuradha-weeraman/), [Debian Developer](https://qa.debian.org/developer.php?login=anuradha), Member of the [Forbes Technology Council](https://councils.forbes.com/profile/Anuradha-Weeraman-Co-Founder-Chief-Technology-Officer-Verdentra/1f9ab90d-e656-4043-8569-988cf403c237)
 
-I'm a technologist and software architect who builds and leads engineering teams across AI, distributed systems, and enterprise software.
- 
 I've spearheaded product engineering initiatives across diverse sectors, spanning AI, IoT, mobile, Web3, blockchain, digital assets, cryptography, and distributed systems. I've built and led global engineering teams delivering technology solutions at scale.
 
-As the Co-Founder and CTO of [Verdentra](https://verdentra.com), I led the firm's commitment to excellence in product engineering, strategic consulting, and trusted advisory services.
- 
 A strong advocate for Software Freedom, I contribute to the Linux kernel and Debian communities. I'm a Forbes Technology Council member and co-inventor on US Patent 11,604,662.
 
 ---
@@ -37,7 +33,7 @@ A strong advocate for Software Freedom, I contribute to the Linux kernel and Deb
 
 ## Track Record
 
-**Founder & Technology Executive**: Co-Founder and CTO of Verdentra, a consulting startup delivering product engineering, strategic consulting, and trusted advisory services.
+**Founder & Technology Executive**: Co-Founder and CTO of a consulting startup delivering product engineering, strategic consulting, and trusted advisory services.
 
 **Enterprise Architecture at Scale**: Technology governance and delivery assurance for large distributed engineering organizations. Lead architect across a 900+ member engineering organization serving a Big Four US bank.
 
@@ -74,11 +70,13 @@ A strong advocate for Software Freedom, I contribute to the Linux kernel and Deb
 
 ---
 
-## Giving Back
+## Community & Service
 
 **4th Angel Mentoring Program** — Cleveland Clinic
 
 Trained volunteer mentor in Cleveland Clinic's cancer support initiative, providing one-on-one guidance to patients and caregivers navigating their cancer journey. Focused on empowering individuals with knowledge, emotional support, and practical resources.
+
+**[Weekly Office Hours](https://cal.com/anuradha/pathfinder-session)** — Mentorship for students and early-career technologists
 
 **Open Source Contributions**
 - Debian Linux — Package maintainer for AT&T KornShell (ksh, ksh93u+m) and system utilities
@@ -87,7 +85,6 @@ Trained volunteer mentor in Cleveland Clinic's cancer support initiative, provid
 
 **Community**
 - VirtusaX 2014 — Organized startup hackathon in partnership with SLASSCOM
-- Mentorship — Weekly office hours for students and early-career technologists
 
 ---
 

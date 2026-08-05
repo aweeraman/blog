@@ -1,24 +1,23 @@
 export function BottomCTA() {
   return (
-    <section className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 py-10 sm:py-12 text-center">
-      <div className="border-t border-theme-border-primary mb-8 sm:mb-10"></div>
-
-      <h3
-        className="text-2xl sm:text-3xl font-normal text-theme-text-primary leading-tight"
-        style={{ fontFamily: "'Instrument Serif', 'Instrument Serif Fallback', serif" }}
-      >
-        Let's talk{' '}
-        <span className="italic text-amber-400">strategy</span>
-      </h3>
-
-      <div className="mt-6 sm:mt-8 flex items-center justify-center">
+    <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
+      <div className="relative overflow-hidden rounded-2xl border border-theme-border-primary bg-theme-bg-secondary px-6 py-10 text-center sm:px-10 sm:py-12">
+        <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-theme-accent-primary/10 blur-3xl" aria-hidden="true" />
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-theme-accent-hover">Have a hard technology problem?</p>
+        <h2 className="font-display text-3xl font-normal leading-tight text-theme-text-primary sm:text-4xl">
+          Let's turn strategy into something{' '}
+          <span className="italic text-theme-accent-hover">real.</span>
+        </h2>
+        <p className="font-editorial mx-auto mt-4 max-w-xl text-base leading-relaxed text-theme-text-secondary sm:text-lg">
+          I work with leaders building intelligent products, modern platforms, and high-performing engineering organizations.
+        </p>
         <a
           href="https://cal.com/anuradha"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-theme-bg-primary font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+          className="mt-7 inline-flex items-center justify-center rounded-full bg-theme-accent-primary px-6 py-3 text-sm font-semibold text-theme-bg-primary transition hover:-translate-y-0.5 hover:bg-theme-accent-hover"
         >
-          Schedule a Call
+          Schedule a conversation <span className="ml-2" aria-hidden="true">↗</span>
         </a>
       </div>
     </section>

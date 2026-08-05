@@ -18,28 +18,45 @@
   --color-theme-text-secondary: #D4CCC4;
   --color-theme-text-tertiary: #9A938C;
 
-  /* Accent colors - Refined terracotta */
-  --color-theme-accent-primary: #C67D4A;
-  --color-theme-accent-hover: #D4935F;
-  --color-theme-accent-muted: #B06A3A;
+  /* Accent colors - burnished copper */
+  --color-theme-accent-primary: #D78A55;
+  --color-theme-accent-hover: #E7A16F;
+  --color-theme-accent-muted: #B86C3D;
 
   /* Border colors - Subtle warm borders */
   --color-theme-border-primary: #3A3430;
   --color-theme-border-secondary: #2A2520;
 
-  /* Font families - Elegant serif for body */
-  --font-family-sans: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-family-serif: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  /* Font families - crisp UI, editorial reading, expressive display */
+  --font-family-ui: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-serif: "Source Serif 4", serif;
+  --font-family-display: "Source Serif 4", serif;
   --font-family-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Base styles */
 body {
-  font-family: var(--font-family-sans);
+  margin: 0;
+  background: var(--color-theme-bg-primary);
+  color: var(--color-theme-text-primary);
+  font-family: var(--font-family-ui);
   font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-family-display);
+}
+
+/* Preserve the warmer, classic display treatment used in the homepage launch. */
+.font-brand-display {
+  font-family: var(--font-family-display);
+}
+
+.font-editorial {
+  font-family: var(--font-family-serif);
 }
 
 /* Smooth scrolling and prevent horizontal overflow on mobile */
@@ -48,7 +65,7 @@ html {
   overflow-x: hidden;
 }
 
-/* Fade in animation for main content */
+/* Restrained entrance animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -69,26 +86,27 @@ html {
   }
 }
 
-/* Apply fade-in to main content */
-main {
+.page-enter {
   animation: fadeInUp 0.5s ease-out;
 }
 
-/* Staggered animation for post cards */
-article {
-  animation: fadeInUp 0.4s ease-out backwards;
+:focus-visible {
+  outline: 2px solid var(--color-theme-accent-hover);
+  outline-offset: 3px;
 }
 
-article:nth-child(1) { animation-delay: 0.05s; }
-article:nth-child(2) { animation-delay: 0.1s; }
-article:nth-child(3) { animation-delay: 0.15s; }
-article:nth-child(4) { animation-delay: 0.2s; }
-article:nth-child(5) { animation-delay: 0.25s; }
-article:nth-child(6) { animation-delay: 0.3s; }
-article:nth-child(7) { animation-delay: 0.35s; }
-article:nth-child(8) { animation-delay: 0.4s; }
-article:nth-child(9) { animation-delay: 0.45s; }
-article:nth-child(10) { animation-delay: 0.5s; }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* Selection styling */
 ::selection {
@@ -98,6 +116,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 /* Custom styles for better paragraph spacing and dark theme prose */
 .prose {
+  font-family: var(--font-family-serif);
   color: var(--color-theme-text-secondary);
   font-size: 1rem;
   line-height: 1.75;
@@ -123,6 +142,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 /* Headings - elegant hierarchy with refined spacing */
 .prose h1 {
+  font-family: var(--font-family-display);
   color: var(--color-theme-text-primary);
   font-size: 1.875rem;
   font-weight: 700;
@@ -149,6 +169,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 }
 
 .prose h2 {
+  font-family: var(--font-family-display);
   color: var(--color-theme-text-primary);
   font-size: 1.5rem;
   font-weight: 700;
@@ -156,8 +177,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
   letter-spacing: -0.015em;
   margin-top: 2.25em;
   margin-bottom: 0.75em;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid var(--color-theme-border-primary);
+  padding-bottom: 0.15em;
 }
 
 @media (min-width: 640px) {
@@ -176,6 +196,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 }
 
 .prose h3 {
+  font-family: var(--font-family-ui);
   color: var(--color-theme-text-primary);
   font-size: 1.25rem;
   font-weight: 600;
@@ -201,6 +222,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 }
 
 .prose h4 {
+  font-family: var(--font-family-ui);
   color: var(--color-theme-text-primary);
   font-size: 1.125rem;
   font-weight: 600;
@@ -509,25 +531,48 @@ article:nth-child(10) { animation-delay: 0.5s; }
   margin: 0;
 }
 
-/* Tables - card layout */
-.prose table {
+/* Default article tables */
+.prose:not(.prose-cards) table {
+  width: 100%;
+  margin: 2em 0;
+  border-collapse: collapse;
+  font-family: var(--font-family-ui);
+  font-size: 0.875rem;
+}
+
+.prose:not(.prose-cards) th,
+.prose:not(.prose-cards) td {
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--color-theme-border-primary);
+  text-align: left;
+}
+
+.prose:not(.prose-cards) th {
+  color: var(--color-theme-text-primary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Bio engagement table - card layout */
+.prose.prose-cards table {
   width: 100%;
   margin: 2em 0;
   display: block;
   font-size: 0.9375rem;
 }
 
-.prose thead {
+.prose.prose-cards thead {
   display: none;
 }
 
-.prose tbody {
+.prose.prose-cards tbody {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.prose tr {
+.prose.prose-cards tr {
   display: flex;
   flex-direction: column;
   background: var(--color-theme-bg-secondary);
@@ -536,7 +581,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
   border: 1px solid var(--color-theme-border-primary);
 }
 
-.prose td {
+.prose.prose-cards td {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
@@ -545,7 +590,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
 }
 
 /* First cell (Domain) - card title, no label */
-.prose td:first-child {
+.prose.prose-cards td:first-child {
   font-weight: 600;
   color: var(--color-theme-text-primary);
   font-size: 1.0625rem;
@@ -554,24 +599,24 @@ article:nth-child(10) { animation-delay: 0.5s; }
   border-bottom: 1px solid var(--color-theme-border-secondary);
 }
 
-.prose td:first-child::before {
+.prose.prose-cards td:first-child::before {
   display: none;
 }
 
 /* Other cells get labels */
-.prose td:nth-child(2)::before {
+.prose.prose-cards td:nth-child(2)::before {
   content: 'Engagement';
 }
 
-.prose td:nth-child(3)::before {
+.prose.prose-cards td:nth-child(3)::before {
   content: 'Scale';
 }
 
-.prose td:nth-child(4)::before {
+.prose.prose-cards td:nth-child(4)::before {
   content: 'Outcome';
 }
 
-.prose td:not(:first-child)::before {
+.prose.prose-cards td:not(:first-child)::before {
   display: block;
   font-size: 0.6875rem;
   font-weight: 600;
@@ -581,7 +626,7 @@ article:nth-child(10) { animation-delay: 0.5s; }
   margin-bottom: 0.125rem;
 }
 
-.prose tr:last-child td {
+.prose.prose-cards tr:last-child td {
   border-bottom: none;
 }
 
@@ -613,6 +658,78 @@ article:nth-child(10) { animation-delay: 0.5s; }
 
 .prose .social-links a::after {
   display: none;
+}
+
+/* Editorial bio introduction: identity first, portrait integrated with the copy. */
+.prose-bio {
+  display: flex;
+  flex-direction: column;
+}
+
+.prose-bio > h3:first-of-type {
+  order: -2;
+  margin-top: 0;
+}
+
+.prose-bio > p:first-child {
+  order: -1;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.prose-bio > p:first-child img {
+  width: 9rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  margin: 0;
+  border-radius: 1rem;
+  border: 1px solid var(--color-theme-border-primary);
+}
+
+/* Keep bio subsection lists close to labels such as Recognition. */
+.prose-bio > p + ul {
+  margin-top: 0.25em;
+}
+
+@media (min-width: 768px) {
+  .prose-bio {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 14rem;
+    column-gap: 2.75rem;
+    align-items: start;
+  }
+
+  .prose-bio > h3:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    order: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-bio > p:first-child {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    order: 0;
+    margin: 0;
+  }
+
+  .prose-bio > p:first-child img {
+    width: 100%;
+  }
+
+  .prose-bio > p:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .prose-bio > p:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .prose-bio > :nth-child(n + 5) {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Hide scrollbar but allow scrolling */

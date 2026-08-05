@@ -24,6 +24,9 @@ export default function Page() {
 
   // Get featured posts (only show on first page and when not searching)
   const featuredPosts = !searchQuery ? getFeaturedPosts() : [];
+  const visiblePosts = !searchQuery
+    ? posts.filter((post) => !featuredPosts.some((featured) => featured.slug === post.slug))
+    : posts;
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
@@ -33,7 +36,7 @@ export default function Page() {
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
-      <main className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
+      <main className="page-enter mx-auto w-full max-w-6xl flex-1 px-5 sm:px-8">
         {searchQuery && (
           <div className="mb-6 text-sm text-theme-text-tertiary">
             {filteredPosts.length === 0 ? (
@@ -49,7 +52,7 @@ export default function Page() {
         <div id="writing">
           {featuredPosts.length > 0 && <FeaturedPosts posts={featuredPosts} />}
 
-          <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+          <PostList posts={visiblePosts} currentPage={currentPage} totalPages={totalPages} />
         </div>
       </main>
 

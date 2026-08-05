@@ -69,7 +69,7 @@ export default function Page() {
         <ScrollProgress />
         <Header />
 
-        <main className="w-full max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12 overflow-hidden">
+        <main className="page-enter mx-auto w-full max-w-6xl flex-1 overflow-hidden px-5 py-8 sm:px-8 sm:py-12">
           <a
             href="/"
             className="text-base text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-10 inline-flex items-center gap-2 group"
@@ -80,17 +80,17 @@ export default function Page() {
           </a>
 
           <article>
-            <header className="mb-10 sm:mb-12">
+            <header className="mx-auto mb-10 max-w-4xl sm:mb-12">
               <time className="text-base text-theme-text-tertiary block mb-4">{formattedDate}</time>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
+              <h1 className="font-display break-words text-[1.25rem] font-normal leading-[1.02] tracking-tight text-theme-text-primary sm:text-[2rem] lg:text-[2.75rem]">{frontmatter.title}</h1>
             </header>
 
             {frontmatter.feature_image && (
-              <figure className="mb-10 sm:mb-12">
+              <figure className="mx-auto mb-10 max-w-3xl sm:mb-12">
                 <img
                   src={frontmatter.feature_image}
                   alt={frontmatter.feature_image_alt || frontmatter.title}
-                  className="w-full h-auto rounded-lg"
+                  className="h-auto w-full rounded-2xl border border-theme-border-secondary"
                 />
                 {frontmatter.feature_image_attribution && (
                   <figcaption className="mt-2 text-xs text-theme-text-tertiary text-right">
@@ -124,12 +124,12 @@ export default function Page() {
 
             <MarkdownRenderer
               content={content}
-              className="prose max-w-none"
+              className="prose mx-auto max-w-3xl"
             />
           </article>
 
           {(previous || next) && (
-            <nav className="mt-16 pt-10 border-t border-theme-border-secondary/50" aria-label="Post navigation">
+            <nav className="mx-auto mt-16 max-w-3xl border-t border-theme-border-secondary/50 pt-10" aria-label="Post navigation">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {previous && (
                   <a
@@ -170,16 +170,18 @@ export default function Page() {
           )}
 
           {/* Author bio */}
-          <div className="mt-14 pt-10 border-t border-theme-border-secondary/50">
+          <div className="mx-auto mt-14 max-w-3xl border-t border-theme-border-secondary/50 pt-10">
             <AuthorBio />
           </div>
 
           {/* Related posts */}
-          <div className="mt-12">
+          <div className="mx-auto mt-12 max-w-3xl">
             <RelatedPosts posts={relatedPosts} />
           </div>
 
-          <GiscusComments />
+          <div className="mx-auto max-w-3xl">
+            <GiscusComments />
+          </div>
         </main>
         <Footer />
       </div>
@@ -194,7 +196,7 @@ export default function Page() {
       <div className="min-h-screen bg-theme-bg-primary flex flex-col">
         <Header />
 
-        <main className="w-full max-w-3xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12 overflow-hidden">
+        <main className="page-enter mx-auto w-full max-w-3xl flex-1 overflow-hidden px-5 py-8 sm:px-8 sm:py-12">
           <a
             href="/"
             className="text-base text-theme-text-tertiary hover:text-theme-accent-primary transition-colors mb-10 inline-flex items-center gap-2 group"
@@ -206,12 +208,12 @@ export default function Page() {
 
           <article>
             <header className="mb-10 sm:mb-12">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-text-primary leading-tight tracking-tight break-words">{frontmatter.title}</h1>
+              <h1 className="font-display break-words text-4xl font-normal leading-[1.02] tracking-tight text-theme-text-primary sm:text-5xl lg:text-6xl">{frontmatter.title}</h1>
             </header>
 
             <MarkdownRenderer
               content={content}
-              className="prose max-w-none"
+              className={`prose max-w-none ${slug === 'bio' ? 'prose-bio prose-cards' : ''}`}
             />
           </article>
         </main>

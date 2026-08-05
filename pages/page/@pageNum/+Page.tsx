@@ -15,7 +15,8 @@ export default function Page() {
   // Get all posts and filter based on search query
   const allPosts = getAllPosts();
   const filteredPosts = filterPosts(allPosts, searchQuery);
-  const { posts, totalPages } = paginatePosts(filteredPosts, currentPage, POSTS_PER_PAGE);
+  const displayPage = searchQuery ? 1 : currentPage;
+  const { posts, totalPages } = paginatePosts(filteredPosts, displayPage, POSTS_PER_PAGE);
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
@@ -39,7 +40,7 @@ export default function Page() {
     <div className="min-h-screen bg-theme-bg-primary flex flex-col">
       <Header searchQuery={searchQuery} onSearchChange={handleSearchChange} />
 
-      <main className="max-w-3xl lg:max-w-4xl mx-auto px-5 sm:px-8 flex-1 py-8 sm:py-12">
+      <main className="page-enter mx-auto w-full max-w-6xl flex-1 px-5 pb-12 sm:px-8">
         {searchQuery && (
           <div className="mb-6 text-sm text-theme-text-tertiary">
             {filteredPosts.length === 0 ? (
@@ -50,7 +51,7 @@ export default function Page() {
           </div>
         )}
 
-        <PostList posts={posts} currentPage={currentPage} totalPages={totalPages} />
+        <PostList posts={posts} currentPage={displayPage} totalPages={totalPages} />
       </main>
 
       <Footer />

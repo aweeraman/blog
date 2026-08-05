@@ -1,15 +1,15 @@
 export function AuthorBio() {
   return (
-    <div className="flex items-start gap-5 p-6 bg-theme-bg-secondary/40 border border-theme-border-secondary/50 rounded-xl">
+    <div className="flex items-start gap-5 rounded-2xl border border-theme-border-primary bg-theme-bg-secondary/45 p-6 sm:p-7">
       <a href="/bio" className="flex-shrink-0">
         <img
           src="/images/anuradha-weeraman.jpg"
           alt="Anuradha Weeraman"
-          className="w-16 h-16 rounded-full object-cover ring-2 ring-theme-border-primary hover:ring-theme-accent-primary transition-all duration-300"
+          className="h-16 w-16 rounded-full object-cover ring-1 ring-theme-border-primary transition duration-300 hover:ring-theme-accent-primary"
         />
       </a>
       <div className="min-w-0">
-        <a href="/bio" className="text-lg font-semibold text-theme-text-primary hover:text-theme-accent-primary transition-colors duration-300">
+        <a href="/bio" className="font-editorial text-xl font-semibold text-theme-text-primary transition-colors duration-300 hover:text-theme-accent-hover">
           Anuradha Weeraman
         </a>
         <p className="text-sm text-theme-text-tertiary mt-1 leading-relaxed">
@@ -20,7 +20,7 @@ export function AuthorBio() {
             href="https://cal.com/anuradha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors duration-300"
+            className="text-sm font-semibold text-theme-accent-hover transition-colors duration-300 hover:text-theme-text-primary"
           >
             Schedule a Call
           </a>

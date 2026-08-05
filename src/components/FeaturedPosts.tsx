@@ -1,139 +1,91 @@
-import { useState, useEffect, useCallback } from 'react';
 import type { Post } from '../types/post';
 
 interface FeaturedPostsProps {
   posts: Post[];
 }
 
-export function FeaturedPosts({ posts }: FeaturedPostsProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  if (posts.length === 0) return null;
-
-  const nextSlide = useCallback(() => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % posts.length);
-      setIsTransitioning(false);
-    }, 200);
-  }, [posts.length]);
-
-  const prevSlide = useCallback(() => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + posts.length) % posts.length);
-      setIsTransitioning(false);
-    }, 200);
-  }, [posts.length]);
-
-  const goToSlide = (index: number) => {
-    if (index === currentIndex) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setIsTransitioning(false);
-    }, 200);
-  };
-
-  // Auto-advance every 6 seconds (paused on hover)
-  useEffect(() => {
-    if (isPaused || posts.length <= 1) return;
-
-    const interval = setInterval(nextSlide, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused, posts.length, nextSlide]);
-
-  const currentPost = posts[currentIndex];
-  const { frontmatter } = currentPost;
-  const formattedDate = new Date(frontmatter.date).toLocaleDateString('en-US', {
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   });
+}
+
+export function FeaturedPosts({ posts }: FeaturedPostsProps) {
+  if (posts.length === 0) return null;
+
+  const [primary, ...more] = posts;
+  const { frontmatter } = primary;
 
   return (
-    <section
-      className="mb-12 sm:mb-16 -mx-5 sm:-mx-8 px-5 sm:px-8 py-8 sm:py-10 bg-theme-bg-secondary/40 border-y border-theme-border-secondary/50"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
-      <article className={`group relative transition-all duration-300 ease-out ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
-        <a href={frontmatter.path} className="block">
-          <div className="flex items-center gap-3 mb-5">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-theme-accent-primary uppercase tracking-widest px-3 py-1 bg-theme-accent-primary/10 rounded-full border border-theme-accent-primary/20">
-              <span className="w-1.5 h-1.5 bg-theme-accent-primary rounded-full animate-pulse"></span>
-              Featured
-            </span>
-            <span className="text-theme-border-primary">|</span>
-            <time className="text-sm text-theme-text-tertiary font-medium">{formattedDate}</time>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-tight mb-4">
-            {frontmatter.title}
-          </h2>
-          {frontmatter.excerpt && (
-            <p className="text-base sm:text-lg text-theme-text-secondary leading-relaxed max-w-2xl group-hover:text-theme-text-primary/80 transition-colors duration-300">
-              {frontmatter.excerpt}
-            </p>
-          )}
-          {/* Read more indicator */}
-          <span className="inline-flex items-center gap-2 mt-6 text-theme-accent-primary font-medium opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all duration-300">
-            Read article
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </span>
-        </a>
-      </article>
+    <section className="border-b border-theme-border-primary/70 py-12 sm:py-16" aria-labelledby="featured-heading">
+      <div className="mb-7 flex items-end justify-between gap-4">
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-theme-accent-hover">Selected work</p>
+          <h2 id="featured-heading" className="font-brand-display text-3xl font-normal text-theme-text-primary sm:text-4xl">Featured writing</h2>
+        </div>
+        <span className="hidden text-xs font-semibold uppercase tracking-[0.14em] text-theme-text-tertiary sm:block">From the archive</span>
+      </div>
 
-      {/* Carousel controls */}
-      {posts.length > 1 && (
-        <div className="flex items-center gap-4 mt-10">
-          {/* Navigation arrows */}
-          <button
-            onClick={prevSlide}
-            className="p-2.5 text-theme-text-tertiary hover:text-theme-accent-primary hover:bg-theme-bg-secondary/50 rounded-full transition-all duration-300"
-            aria-label="Previous featured post"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          {/* Indicators */}
-          <div className="flex items-center gap-2">
-            {posts.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? 'w-8 h-2 bg-theme-accent-primary'
-                    : 'w-2 h-2 bg-theme-border-primary hover:bg-theme-text-tertiary hover:scale-125'
-                }`}
-                aria-label={`Go to featured post ${index + 1}`}
+      <div className="grid gap-7 lg:grid-cols-[minmax(0,1.5fr)_minmax(20rem,0.85fr)]">
+        <a href={frontmatter.path} className="group grid overflow-hidden rounded-2xl border border-theme-border-primary bg-theme-bg-secondary transition hover:-translate-y-0.5 hover:border-theme-accent-primary/50 sm:grid-cols-[1.05fr_1fr]">
+          {frontmatter.feature_image && (
+            <div className="aspect-[16/10] overflow-hidden bg-theme-bg-tertiary sm:aspect-auto sm:min-h-72">
+              <img
+                src={frontmatter.feature_image}
+                alt={frontmatter.feature_image_alt || ''}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
               />
+            </div>
+          )}
+          <div className="flex flex-col justify-center p-6 sm:p-8">
+            <time className="text-xs font-semibold uppercase tracking-[0.14em] text-theme-text-tertiary">{formatDate(frontmatter.date)}</time>
+            <h3 className="font-brand-display mt-3 text-3xl font-normal leading-[1.05] text-theme-text-primary transition-colors group-hover:text-theme-accent-hover sm:text-4xl">
+              {frontmatter.title}
+            </h3>
+            {frontmatter.excerpt && (
+              <p className="font-editorial mt-4 line-clamp-3 text-base leading-relaxed text-theme-text-secondary">{frontmatter.excerpt}</p>
+            )}
+            <span className="mt-6 inline-flex items-center text-sm font-semibold text-theme-accent-hover">
+              Read article <span className="ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+
+        {more.length > 0 && (
+          <div className="divide-y divide-theme-border-secondary rounded-2xl border border-theme-border-primary bg-theme-bg-secondary/40 px-5 sm:px-6">
+            {more.slice(0, 3).map((post) => (
+              <a key={post.slug} href={post.frontmatter.path} className="group grid grid-cols-[5.5rem_minmax(0,1fr)] gap-4 py-5 first:pt-6 last:pb-6">
+                {post.frontmatter.feature_image ? (
+                  <div className="aspect-square overflow-hidden rounded-lg bg-theme-bg-tertiary">
+                    <img
+                      src={post.frontmatter.feature_image}
+                      alt={post.frontmatter.feature_image_alt || ''}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-square rounded-lg border border-theme-border-secondary bg-theme-bg-tertiary/50" aria-hidden="true" />
+                )}
+                <div className="min-w-0">
+                  <time className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-theme-text-tertiary">{formatDate(post.frontmatter.date)}</time>
+                  <h3 className="font-editorial mt-1.5 line-clamp-2 text-lg font-semibold leading-snug text-theme-text-primary transition-colors group-hover:text-theme-accent-hover">
+                    {post.frontmatter.title}
+                  </h3>
+                  {post.frontmatter.excerpt && (
+                    <p className="font-editorial mt-2 line-clamp-2 text-sm leading-relaxed text-theme-text-tertiary">
+                      {post.frontmatter.excerpt}
+                    </p>
+                  )}
+                  <span className="mt-3 inline-block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-theme-accent-primary">Read story →</span>
+                </div>
+              </a>
             ))}
           </div>
-
-          <button
-            onClick={nextSlide}
-            className="p-2.5 text-theme-text-tertiary hover:text-theme-accent-primary hover:bg-theme-bg-secondary/50 rounded-full transition-all duration-300"
-            aria-label="Next featured post"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Counter */}
-          <span className="text-xs text-theme-text-tertiary ml-auto font-medium tabular-nums">
-            {String(currentIndex + 1).padStart(2, '0')} / {String(posts.length).padStart(2, '0')}
-          </span>
-        </div>
-      )}
-
-      </section>
+        )}
+      </div>
+    </section>
   );
 }

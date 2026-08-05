@@ -21,43 +21,36 @@ export function PostCard({ post }: PostCardProps) {
   const readingTime = estimateReadingTime(content);
 
   return (
-    <article className="group relative">
+    <article className="group relative h-full">
       <a
         href={frontmatter.path}
-        className="block py-2 -mx-4 px-4 rounded-lg transition-all duration-300 ease-out hover:bg-theme-bg-secondary/50"
+        className="flex h-full flex-col overflow-hidden rounded-xl border border-theme-border-secondary bg-theme-bg-secondary/25 transition duration-300 hover:-translate-y-0.5 hover:border-theme-border-primary hover:bg-theme-bg-secondary/60"
         aria-label={`Read article: ${frontmatter.title}`}
       >
-        <div className="flex gap-5">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-3 mb-2">
-              <time className="text-sm text-theme-text-tertiary font-medium tracking-wide uppercase">{formattedDate}</time>
-              <span className="text-theme-text-tertiary/40">·</span>
-              <span className="text-sm text-theme-text-tertiary font-medium">{readingTime} min read</span>
-            </div>
-            <h2 className="text-lg sm:text-xl font-semibold text-theme-text-primary group-hover:text-theme-accent-primary transition-colors duration-300 leading-snug mb-3">
-              {frontmatter.title}
-            </h2>
-            {frontmatter.excerpt && (
-              <p className="text-sm sm:text-base text-theme-text-tertiary leading-relaxed line-clamp-2 group-hover:text-theme-text-secondary transition-colors duration-300">{frontmatter.excerpt}</p>
-            )}
+        {frontmatter.feature_image && (
+          <div className="aspect-[16/8] overflow-hidden bg-theme-bg-tertiary">
+            <img
+              src={frontmatter.feature_image}
+              alt=""
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
+              loading="lazy"
+            />
           </div>
-          {frontmatter.feature_image && (
-            <div className="hidden sm:block flex-shrink-0 w-32 h-24 lg:w-40 lg:h-28 rounded-lg overflow-hidden self-center">
-              <img
-                src={frontmatter.feature_image}
-                alt=""
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
+        )}
+        <div className="flex flex-1 flex-col p-5 sm:p-6">
+            <div className="mb-3 flex items-center gap-2.5">
+              <time className="text-xs font-semibold uppercase tracking-[0.12em] text-theme-text-tertiary">{formattedDate}</time>
+              <span className="text-theme-text-tertiary/40">·</span>
+              <span className="text-xs font-medium text-theme-text-tertiary">{readingTime} min read</span>
             </div>
-          )}
+            <h3 className="font-editorial text-xl font-semibold leading-snug text-theme-text-primary transition-colors duration-300 group-hover:text-theme-accent-hover sm:text-2xl">
+              {frontmatter.title}
+            </h3>
+            {frontmatter.excerpt && (
+              <p className="font-editorial mt-3 line-clamp-3 text-sm leading-relaxed text-theme-text-tertiary transition-colors duration-300 group-hover:text-theme-text-secondary sm:text-base">{frontmatter.excerpt}</p>
+            )}
+            <span className="mt-auto pt-5 text-xs font-semibold uppercase tracking-[0.12em] text-theme-accent-primary">Read article →</span>
         </div>
-        {/* Subtle arrow indicator on hover */}
-        <span className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-300 text-theme-accent-primary sm:hidden">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-          </svg>
-        </span>
       </a>
     </article>
   );
