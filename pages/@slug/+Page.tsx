@@ -81,7 +81,7 @@ export default function Page() {
 
           <article>
             <header className="mx-auto mb-10 max-w-4xl sm:mb-12">
-              <time className="text-base text-theme-text-tertiary block mb-4">{formattedDate}</time>
+              <time dateTime={new Date(frontmatter.date).toISOString()} className="text-base text-theme-text-tertiary block mb-4">{formattedDate}</time>
               <h1 className="font-display break-words text-[1.25rem] font-normal leading-[1.02] tracking-tight text-theme-text-primary sm:text-[2rem] lg:text-[2.75rem]">{frontmatter.title}</h1>
             </header>
 

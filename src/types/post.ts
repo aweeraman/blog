@@ -1,6 +1,7 @@
 export interface PostFrontmatter {
   title: string;
   date: string;
+  updated?: string;
   path: string;
   excerpt?: string;
   feature_image?: string;

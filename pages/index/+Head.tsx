@@ -1,3 +1,6 @@
+import { JsonLd } from '../../src/components/JsonLd';
+import { personJsonLd } from '../../src/utils/structuredData';
+
 export function Head() {
   return (
     <>
@@ -25,6 +28,8 @@ export function Head() {
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
       <link rel="canonical" href="https://weeraman.com/" />
+
+      <JsonLd data={personJsonLd} />
     </>
   );
 }
