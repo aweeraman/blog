@@ -4,6 +4,7 @@ date: "2008-09-24"
 path: "/software-freedom-day-2008"
 excerpt: "An event to mark the Software Freedom Day was organized by the Free Software Foundation and held in Boston over the weekend. I felt that a long drive was just what I needed to get my mind off the series of mini catastrophes that have been taking place at work during the week."
 feature_image: "/images/software-freedom-day-2008/sfd-2008-cover.jpg"
+tags: [opensource]
 ---
 
 An event to mark the [Software Freedom Day](http://softwarefreedomday.org/) was organized by the [Free Software Foundation](http://www.fsf.org/) and held in [Boston](http://www.encuentro5.org/) over the weekend. I felt that a long drive was just what I needed to get my mind off the series of mini catastrophes that have been taking place at work during the week.

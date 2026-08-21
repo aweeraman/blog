@@ -4,6 +4,7 @@ date: "2019-09-27"
 path: "/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems"
 excerpt: "In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by System76. An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian."
 feature_image: "/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/linux-desktop-operating-system.jpg"
+tags: [opensource]
 ---
 
 In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by [System76](https://system76.com/) (a maker of Linux-friendly hardware). An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian.

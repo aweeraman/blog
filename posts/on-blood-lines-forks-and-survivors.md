@@ -4,6 +4,7 @@ date: "2021-10-02"
 path: "/on-blood-lines-forks-and-survivors"
 excerpt: "UNIX has a colorful history that goes back many decades and the stories of how certain aspects of the operating system evolved or came to be, usually at the hands of one luminary or the other over a weekend, is now well documented in the lore of this sub-culture."
 feature_image: "/images/on-blood-lines-forks-and-survivors/unix-history-terminal.jpg"
+tags: [opensource]
 ---
 
 UNIX has a colorful history that goes back many decades and the stories of how certain aspects of the operating system evolved or came to be, usually at the hands of one luminary or the other over a weekend, is now well documented in the lore of this sub-culture, and continues to kept alive and passed orally from generation to generation in the back alleys of Usenet and IRC. Some stories have also been known to surface on YouTube, every now and then.

@@ -4,6 +4,7 @@ date: "2006-05-30"
 path: "/foss-ed-for-hackers-a-footnote"
 excerpt: "FOSS-ed for Hackers ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won't delve much into it. Overall, it was a success."
 feature_image: "/images/foss-ed-for-hackers-a-footnote/creative-commons-open-source.jpg"
+tags: [opensource]
 ---
 
 [FOSS-ed for Hackers](http://www.foss.lk) ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won’t delve much into it. Overall, it was a success. The participation was extremely good and the event was organized in style, thanks largely to Devaka.

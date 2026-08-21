@@ -11,6 +11,13 @@ const FEED_TITLE = 'Anuradha Weeraman';
 const FEED_DESCRIPTION = 'Writing on technology, open source, distributed systems, artificial intelligence, security, and software engineering.';
 const AUTHOR = 'Anuradha Weeraman';
 const MAX_ITEMS = 30;
+const OPEN_SOURCE_TAG = 'opensource';
+
+interface FeedMetadata {
+  url: string;
+  title: string;
+  description: string;
+}
 
 interface FeedPost {
   title: string;
@@ -23,6 +30,7 @@ interface FeedPost {
   featureImageAttributionUrl?: string;
   featureImageLicense?: string;
   featureImageLicenseUrl?: string;
+  tags: string[];
   content: string;
 }
 
@@ -113,6 +121,8 @@ function loadPosts(): FeedPost[] {
         throw new Error(`${filename} has an invalid publication date: ${data.date}`);
       }
 
+      const rawTags = Array.isArray(data.tags) ? data.tags : data.tags ? [data.tags] : [];
+
       return {
         title: String(data.title),
         date: publishedAt,
@@ -124,13 +134,21 @@ function loadPosts(): FeedPost[] {
         featureImageAttributionUrl: data.feature_image_attribution_url ? String(data.feature_image_attribution_url) : undefined,
         featureImageLicense: data.feature_image_license ? String(data.feature_image_license) : undefined,
         featureImageLicenseUrl: data.feature_image_license_url ? String(data.feature_image_license_url) : undefined,
+        tags: rawTags.map((tag) => String(tag).trim().toLowerCase()).filter(Boolean),
         content,
       };
     })
     .sort((a, b) => b.date.getTime() - a.date.getTime());
 }
 
-function generateRss(posts: FeedPost[]): string {
+function generateRss(
+  posts: FeedPost[],
+  feed: FeedMetadata = {
+    url: FEED_URL,
+    title: FEED_TITLE,
+    description: FEED_DESCRIPTION,
+  },
+): string {
   if (posts.length === 0) {
     throw new Error('Cannot generate RSS without any posts.');
   }
@@ -158,13 +176,13 @@ function generateRss(posts: FeedPost[]): string {
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>${escapeXml(FEED_TITLE)}</title>
+    <title>${escapeXml(feed.title)}</title>
     <link>${escapeXml(SITE_URL)}</link>
-    <description>${escapeXml(FEED_DESCRIPTION)}</description>
+    <description>${escapeXml(feed.description)}</description>
     <language>en</language>
     <lastBuildDate>${posts[0].date.toUTCString()}</lastBuildDate>
     <generator>weeraman.com RSS generator</generator>
-    <atom:link href="${escapeXml(FEED_URL)}" rel="self" type="application/rss+xml" />
+    <atom:link href="${escapeXml(feed.url)}" rel="self" type="application/rss+xml" />
 ${items.join('\n')}
   </channel>
 </rss>
@@ -173,7 +191,17 @@ ${items.join('\n')}
 
 const posts = loadPosts();
 const outputPath = path.join(process.cwd(), 'public', 'rss.xml');
+const openSourcePosts = posts.filter((post) => post.tags.includes(OPEN_SOURCE_TAG));
+const openSourceOutputPath = path.join(process.cwd(), 'public', 'opensource.xml');
 
 fs.writeFileSync(outputPath, generateRss(posts));
 console.log(`✓ RSS feed generated at ${outputPath}`);
 console.log(`  Items: ${Math.min(posts.length, MAX_ITEMS)}`);
+
+fs.writeFileSync(openSourceOutputPath, generateRss(openSourcePosts, {
+  url: `${SITE_URL}/opensource.xml`,
+  title: 'Anuradha Weeraman — Open Source',
+  description: 'Writing on free and open source software.',
+}));
+console.log(`✓ Open source RSS feed generated at ${openSourceOutputPath}`);
+console.log(`  Items: ${Math.min(openSourcePosts.length, MAX_ITEMS)}`);

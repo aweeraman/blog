@@ -5,6 +5,7 @@ path: "/because-we-can"
 excerpt: "Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun."
 feature_image: "/images/because-we-can/because-we-can.jpg"
 featured: true
+tags: [opensource]
 ---
 
 Twenty-five years ago, I made my first donation to an open source project and purchased a CD with an operating system as downloading a few hundred megabytes over a 14.4kbps dial-up wasn't very fun. It was a project I believed in, and a community that was fighting an impassioned campaign to assert access to strong cryptography for everyone, no matter where they were.

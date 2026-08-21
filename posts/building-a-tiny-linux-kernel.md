@@ -4,6 +4,7 @@ date: "2020-03-09"
 path: "/building-a-tiny-linux-kernel"
 excerpt: "Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you'd like to try this out on."
 feature_image: "/images/building-a-tiny-linux-kernel/tiny-minimal-linux.jpg"
+tags: [opensource]
 ---
 
 Today we will go over the process of building a tiny Linux kernel, and booting into a shell. To start with, fetch the Linux source tree that you’d like to try this out on. I’m using staging tree for this post. You can get it here:

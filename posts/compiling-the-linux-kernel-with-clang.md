@@ -4,6 +4,7 @@ date: "2020-02-20"
 path: "/compiling-the-linux-kernel-with-clang"
 excerpt: "I decided to give Clang a spin to compile the kernel, and given that I'm not exactly an early adopter in attempting this, it was pretty smooth and straightforward overall. All it took was make CC=clang HOSTCC=clang -j12."
 feature_image: "/images/compiling-the-linux-kernel-with-clang/cymbals-compilation.jpg"
+tags: [opensource]
 ---
 
 I decided to give Clang a spin to compile the kernel, and given that I’m not exactly an early adopter in attempting this, it was pretty smooth and straightforward overall. All it took was:

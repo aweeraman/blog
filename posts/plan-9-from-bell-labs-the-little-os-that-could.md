@@ -10,6 +10,7 @@ feature_image_attribution_url: "https://commons.wikimedia.org/wiki/File:Plan_9_F
 feature_image_license: "MIT License"
 feature_image_license_url: "https://opensource.org/license/mit"
 featured: true
+tags: [opensource]
 ---
 
 I first heard of [Plan 9](https://p9f.org/sys/doc/9.html) from my friend [Vajra](https://vajra.me) in 1999 or so, as we were distro-hopping on early Linux distributions and trying to find our way. Vajra is now a Nebula Award-winning science fiction author - have a look at his work. We had just been through [Tom's Root Boot](https://en.wikipedia.org/wiki/Tomsrtbt), a UNIX-like operating system crammed into a single floppy, and through it discovered a whole new world outside of DOS 6.22. Combing through old UNIX manuals, we went in search of the perfect OS, through Slackware, Caldera, TurboLinux, SUSE and Red Hat. I finally settled on Debian, which lived up to everything I stood for.

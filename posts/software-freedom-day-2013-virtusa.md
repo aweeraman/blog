@@ -4,6 +4,7 @@ date: "2013-09-22"
 path: "/software-freedom-day-2013-virtusa"
 excerpt: "This last week, the fine folk at the Virtusa Open Source SIG organized an event to celebrate the Software Freedom Day where my good friends Mifan and Suchetha made keynotes."
 feature_image: "/images/software-freedom-day-2013-virtusa/stallman-bangalore-cover.jpg"
+tags: [opensource]
 ---
 
 This last week, the fine folk at the Virtusa Open Source SIG organized an event to celebrate the [Software Freedom Day](http://wiki.softwarefreedomday.org/2013/Sri%20Lanka/Colombo/Virtusa%20Open%20Source%20Interest%20Group) where my good friends Mifan and Suchetha made keynotes. Also in attendance was Arunan, so it was a re-union of sorts with some old friends. It’s been a while since I have participated in anything open source / free software, and it was great to see the old flame is still alive at Virtusa, and I hope it helps in shaping their worldviews and brings as much purpose to them as it did to me more than 10 years ago.

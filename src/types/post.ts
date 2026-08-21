@@ -10,6 +10,7 @@ export interface PostFrontmatter {
   feature_image_license?: string;
   feature_image_license_url?: string;
   featured?: boolean;
+  tags?: string[];
 }
 
 export interface Post {
