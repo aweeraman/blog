@@ -206,6 +206,10 @@ html {
   margin-bottom: 0.65em;
 }
 
+.prose h3.font-display {
+  font-family: var(--font-family-display);
+}
+
 @media (min-width: 640px) {
   .prose h3 {
     font-size: 1.375rem;

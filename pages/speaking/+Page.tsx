@@ -10,6 +10,28 @@ const awsCommunityDayImages = [
   { src: '/images/speaking/aws-community-day-2025/1759070776387.jpeg', alt: 'AWS Community Day 2025' },
 ];
 
+const nsbmAiAssociationImages = [
+  {
+    src: '/images/speaking/nsbm-ai-association-2026/nsbm-ai-association-2026.jpeg',
+    alt: 'Anuradha Weeraman with students and organizers at the inaugural NSBM Artificial Intelligence Association session',
+  },
+  {
+    src: '/images/speaking/nsbm-ai-association-2026/anuradha-speaking-nsbm-ai-association-2026.jpeg',
+    alt: 'Anuradha Weeraman speaking about the changing path into software engineering at NSBM Green University',
+  },
+];
+
+const awsStudentCommunityDayImages = [
+  {
+    src: '/images/speaking/aws-student-community-day-2026/panel-stage.jpeg',
+    alt: 'Panel discussion on stage at AWS Student Community Day Sri Lanka at the University of Kelaniya',
+  },
+  {
+    src: '/images/speaking/aws-student-community-day-2026/panel-discussion.jpeg',
+    alt: 'Anuradha Weeraman and fellow panelists at AWS Student Community Day Sri Lanka',
+  },
+];
+
 interface SpeakingEvent {
   title: string;
   type: string;
@@ -17,9 +39,30 @@ interface SpeakingEvent {
   date: string;
   description: string;
   images?: { src: string; alt: string }[];
+  link?: { href: string; label: string };
 }
 
 const speakingEvents: SpeakingEvent[] = [
+  {
+    title: 'Moving up the stack',
+    type: 'Guest Speaker',
+    organization: 'NSBM Artificial Intelligence Association, NSBM Green University',
+    date: 'August 18, 2026',
+    description: 'Spoke at the association\'s inaugural session about reframing anxiety over AI and the future of software into a forward-looking plan for building strong foundations, contributing to open source, working effectively with agents, and shipping useful software for real users.',
+    images: nsbmAiAssociationImages,
+    link: {
+      href: 'https://www.linkedin.com/feed/update/urn:li:activity:7496509838336610304/',
+      label: 'Read the LinkedIn post',
+    },
+  },
+  {
+    title: 'AI on the Cloud: Opportunities and Challenges for Early Developers',
+    type: 'Panelist',
+    organization: 'AWS Student Community Day Sri Lanka, University of Kelaniya',
+    date: 'April 25, 2026',
+    description: 'Joined a panel discussion exploring the opportunities cloud-based AI creates for early-career developers, along with the technical and professional challenges they need to navigate.',
+    images: awsStudentCommunityDayImages,
+  },
   {
     title: 'Building Resilient AI: Architecture Strategies for Mission-Critical Deployments',
     type: 'Keynote',
@@ -110,7 +153,7 @@ export default function Page() {
           <div className="space-y-12">
             {speakingEvents.map((event, index) => (
               <article key={index} className="border-b border-theme-border-secondary/50 pb-10 last:border-0">
-                <h3 className="text-lg sm:text-xl font-semibold text-theme-text-primary mb-2">
+                <h3 className="font-display text-lg sm:text-xl font-semibold text-theme-text-primary mb-2">
                   {event.title}
                 </h3>
                 <p className="text-theme-text-secondary font-medium mb-4">
@@ -121,6 +164,18 @@ export default function Page() {
                 <p className="text-theme-text-secondary leading-relaxed">
                   {event.description}
                 </p>
+                {event.link && (
+                  <p className="mt-4">
+                    <a
+                      href={event.link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-theme-accent-primary hover:text-theme-accent-hover transition-colors"
+                    >
+                      {event.link.label} <span aria-hidden="true">→</span>
+                    </a>
+                  </p>
+                )}
                 {event.images && <ImageGallery images={event.images} />}
               </article>
             ))}

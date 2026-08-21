@@ -20,7 +20,7 @@ export function ImageGallery({ images }: ImageGalleryProps) {
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              className="absolute inset-0 !m-0 !h-full !w-full !rounded-none object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
               <svg
