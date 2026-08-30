@@ -32,6 +32,13 @@ const awsStudentCommunityDayImages = [
   },
 ];
 
+const openSourceSummit2024Images = [
+  {
+    src: '/images/speaking/open-source-summit-2024/contributing-to-foss.jpeg',
+    alt: 'Anuradha Weeraman speaking about contributing to free and open source software at Open-Source Summit 2024',
+  },
+];
+
 interface SpeakingEvent {
   title: string;
   type: string;
@@ -84,6 +91,14 @@ const speakingEvents: SpeakingEvent[] = [
     organization: '',
     date: 'March 2025',
     description: 'Participated in an expert panel discussion exploring the evolution of AI, reinforcement learning, and emerging quantum computing applications and use cases for customer operations. Shared insights alongside Tim Budden, with moderation by Dilanka Kalutota.',
+  },
+  {
+    title: 'Contributing to Free and Open Source Software',
+    type: 'Presenter',
+    organization: 'Open-Source Summit ’24, University of Kelaniya',
+    date: 'April 27, 2024',
+    description: 'Explored both the practical path into free and open source software and the deeper reasons to take part. Encouraged aspiring contributors to start now, and how to get started.',
+    images: openSourceSummit2024Images,
   },
   {
     title: 'IEEE Sri Lanka Robotics Meetup',
