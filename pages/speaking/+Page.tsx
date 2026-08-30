@@ -39,6 +39,17 @@ const openSourceSummit2024Images = [
   },
 ];
 
+const velarisPanelImages = [
+  {
+    src: '/images/speaking/velaris-panel-2025/panel-discussion-wide.jpg',
+    alt: 'Anuradha Weeraman speaking during a panel discussion at Velaris',
+  },
+  {
+    src: '/images/speaking/velaris-panel-2025/anuradha-weeraman-speaking.jpg',
+    alt: 'Anuradha Weeraman sharing his perspective during the Velaris panel discussion',
+  },
+];
+
 interface SpeakingEvent {
   title: string;
   type: string;
@@ -91,6 +102,7 @@ const speakingEvents: SpeakingEvent[] = [
     organization: '',
     date: 'March 2025',
     description: 'Participated in an expert panel discussion exploring the evolution of AI, reinforcement learning, and emerging quantum computing applications and use cases for customer operations. Shared insights alongside Tim Budden, with moderation by Dilanka Kalutota.',
+    images: velarisPanelImages,
   },
   {
     title: 'Contributing to Free and Open Source Software',
