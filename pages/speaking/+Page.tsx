@@ -107,6 +107,10 @@ const speakingEvents: SpeakingEvent[] = [
     dateTime: '2026-09-10',
     description: 'Joined a discussion on AI and innovation, drawing on lessons from my own career and exploring how students can develop the mindset, adaptability, and curiosity the industry needs.',
     images: nsbmAiAndInnovationImages,
+    link: {
+      href: 'https://lnkd.in/p/gCgDPvkM',
+      label: 'Read the LinkedIn post',
+    },
   },
   {
     title: 'Moving up the stack',
