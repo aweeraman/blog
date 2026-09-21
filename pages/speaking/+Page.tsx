@@ -21,6 +21,28 @@ const nsbmAiAssociationImages = [
   },
 ];
 
+const nsbmMovingUpTheStackImages = [
+  {
+    src: '/images/speaking/nsbm-moving-up-the-stack-2026/anuradha-presenting-moving-up-the-stack.webp',
+    alt: 'Anuradha Weeraman presenting Moving up the stack to students at NSBM Green University',
+  },
+  {
+    src: '/images/speaking/nsbm-moving-up-the-stack-2026/nsbm-student-audience-1200w.webp',
+    alt: 'Students attending the Moving up the stack guest lecture at NSBM Green University',
+  },
+];
+
+const nsbmAiAndInnovationImages = [
+  {
+    src: '/images/speaking/nsbm-ai-and-innovation-2026/ai-and-innovation-discussion-1200w.webp',
+    alt: 'Anuradha Weeraman discussing AI, innovation, and lessons from his career at NSBM Green University',
+  },
+  {
+    src: '/images/speaking/nsbm-ai-and-innovation-2026/cssl-genz-group-photo-1200w.webp',
+    alt: 'Anuradha Weeraman with CSSL GenZ Chapter organizers and attendees after the AI and Innovation session at NSBM Green University',
+  },
+];
+
 const awsStudentCommunityDayImages = [
   {
     src: '/images/speaking/aws-student-community-day-2026/panel-stage.jpeg',
@@ -65,6 +87,27 @@ interface SpeakingEvent {
 }
 
 const speakingEvents: SpeakingEvent[] = [
+  {
+    title: 'Moving up the stack',
+    type: 'Guest Speaker',
+    organization: 'NSBM Green University',
+    location: 'Sri Lanka',
+    date: 'September 10, 2026',
+    dateTime: '2026-09-10',
+    description: 'Spoke with students preparing to enter the software industry about what to expect, how to build on their technical foundations, and the mindset and skills that help early-career engineers move up the stack.',
+    images: nsbmMovingUpTheStackImages,
+  },
+  {
+    title: 'AI & Innovation',
+    type: 'Guest Speaker',
+    organization: 'CSSL GenZ Chapter',
+    venue: 'NSBM Green University',
+    location: 'Sri Lanka',
+    date: 'September 10, 2026',
+    dateTime: '2026-09-10',
+    description: 'Joined a discussion on AI and innovation, drawing on lessons from my own career and exploring how students can develop the mindset, adaptability, and curiosity the industry needs.',
+    images: nsbmAiAndInnovationImages,
+  },
   {
     title: 'Moving up the stack',
     type: 'Guest Speaker',
