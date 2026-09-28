@@ -96,6 +96,10 @@ const speakingEvents: SpeakingEvent[] = [
     dateTime: '2026-09-10',
     description: 'Spoke with students preparing to enter the software industry about what to expect, how to build on their technical foundations, and the mindset and skills that help early-career engineers move up the stack.',
     images: nsbmMovingUpTheStackImages,
+    link: {
+      href: 'https://lnkd.in/p/gwktngJY',
+      label: 'Read the LinkedIn post',
+    },
   },
   {
     title: 'AI & Innovation',
