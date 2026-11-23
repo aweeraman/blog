@@ -21,6 +21,24 @@ const nsbmAiAssociationImages = [
   },
 ];
 
+const nsbmProject360Images = [
+  {
+    src: '/images/speaking/nsbm-project-360-2026/project-360-panel-discussion-1200w.webp',
+    alt: 'Anuradha Weeraman on the Project 360° panel on AI and sustainable project management at NSBM Green University',
+  },
+  {
+    src: '/images/speaking/nsbm-project-360-2026/project-360-magazine-launch-1200w.webp',
+    alt: 'Panelists and guests at the launch of the Project 360° Magazine at NSBM Green University',
+  },
+];
+
+const nsbmTechnoVacImages = [
+  {
+    src: '/images/speaking/nsbm-technovac-2026/technovac-group-photo-1200w.webp',
+    alt: 'Anuradha Weeraman with students and IEEE Computer Society Student Branch Chapter members at TechnoVac 3.1, NSBM Green University',
+  },
+];
+
 const nsbmMovingUpTheStackImages = [
   {
     src: '/images/speaking/nsbm-moving-up-the-stack-2026/anuradha-presenting-moving-up-the-stack.webp',
@@ -87,6 +105,36 @@ interface SpeakingEvent {
 }
 
 const speakingEvents: SpeakingEvent[] = [
+  {
+    title: 'Green Intelligence: AI for Sustainable Project Success',
+    type: 'Panelist',
+    organization: 'Project Management Circle',
+    venue: 'NSBM Green University',
+    location: 'Sri Lanka',
+    date: 'November 16, 2026',
+    dateTime: '2026-11-16',
+    description: 'Joined a panel on AI and project management, discussing how agentic engineering shifts the bottleneck from throughput to judgement: building the right thing, verifying that what was built matches what was intended, and keeping technical debt in check.',
+    images: nsbmProject360Images,
+    link: {
+      href: 'https://www.linkedin.com/feed/update/urn:li:activity:7530492543516545024/',
+      label: 'Read the LinkedIn post',
+    },
+  },
+  {
+    title: 'TechnoVac 3.1: Contributing to Open Source',
+    type: 'Guest Speaker',
+    organization: 'IEEE Computer Society Student Branch Chapter',
+    venue: 'NSBM Green University',
+    location: 'Sri Lanka',
+    date: 'September 24, 2026',
+    dateTime: '2026-09-24',
+    description: 'Introduced undergraduates to the open source ecosystem, covering open source practices and collaboration, with practical steps towards becoming Debian contributors. Also donated a copy of Free Software, Free Society: Selected Essays of Richard M. Stallman to the NSBM University Library.',
+    images: nsbmTechnoVacImages,
+    link: {
+      href: 'https://www.linkedin.com/feed/update/urn:li:activity:7525437084548009985/',
+      label: 'Read the LinkedIn post',
+    },
+  },
   {
     title: 'Moving up the stack',
     type: 'Guest Speaker',
